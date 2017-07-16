@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang"en">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="content-language" content="en-GB" />
+  <title >Maths</title>
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+       <!-- Custom styles for this template -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel ="stylesheet" type ="text/css" href ="stuff.css" />
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+
+  <script type="text/javascript" src="stuff.js"></script>
+
+</head> 
+  
+  <body class="doc_body" ng-app = "maths_stuff">
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Alok</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#all_maths">Maths</a></li>
+            <li><a href="#all_algos">Algorithms</a></li>
+            <li><a href="#all_probs">Probability</a></li>
+            <li><a href="#all_ML">ML</a></li>
+            <li><a href="#all_deep_learning">Deep Learning</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="top_line"></div>
+    <div class="slide_menu">
+      <a href="my_projects.html" class="projects hoh">
+        Projects
+      </a>
+      <a href="my_apps.html" class="apps hoh">
+        Apps
+      </a>
+      <a href="my_resume.html" class="resume hoh">
+        Resume
+      </a>
+      <a href="my_blog.html" class="blog hoh">
+        Blog
+      </a>
+      <a href="my_stream.html" class="photos hoh">
+        Photos
+      </a>
+      <a href="my_travel_map.html" class="my_travel_map hoh">
+        My travel Map
+      </a>
+    </div>
+    <div class="center_container" ng-controller= "feed_generator">
+    
+    <div ng-view></div>  
+
+    
+    </div>
+    <script type="text/javascript">
+    </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body> 
+</html> 

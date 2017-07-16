@@ -1,0 +1,30 @@
+body{
+	height: 100%;
+	/*position: relative;*/
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto; 
+	margin-right: auto;
+	padding: 0px;
+	/*background-color: #e37151;*/
+	background-color: #fff;
+	overflow-y:scroll; 
+	overflow: auto;
+  	/*background-color: rgba(54,70,93, .4);*/
+  
+}
+.resume_container{
+	position: relative;
+	top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	height:555px;
+	width: 1000px;
+	/*background-color: #434a50;*/
+}
+.resume_container img{
+	position: absolute;
+	top: 127px;
+	/*cursor: pointer;*/
+	left: 300px;
+}
