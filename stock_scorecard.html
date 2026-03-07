@@ -83,6 +83,23 @@ font-size:15px;
 font-weight:bold;
 }
 
+/* help icon */
+
+.help{
+cursor:pointer;
+color:#007bff;
+margin-left:4px;
+font-weight:bold;
+}
+
+.help-text{
+display:none;
+font-size:11px;
+color:#666;
+line-height:1.2;
+margin-bottom:2px;
+}
+
 </style>
 </head>
 
@@ -99,17 +116,26 @@ font-weight:bold;
 <div class="grid">
 
 <div class="field">
-<label>Revenue %</label>
+<label>Revenue % <span class="help" onclick="toggleHelp('revHelp')">ⓘ</span></label>
+<div id="revHelp" class="help-text">
+Year-over-year revenue growth from the latest quarterly result.
+</div>
 <input id="revenue" class="form-control">
 </div>
 
 <div class="field">
-<label>ROCE %</label>
+<label>ROCE % <span class="help" onclick="toggleHelp('roceHelp')">ⓘ</span></label>
+<div id="roceHelp" class="help-text">
+Return on Capital Employed. Measures how efficiently capital generates profit.
+</div>
 <input id="roce" class="form-control">
 </div>
 
 <div class="field">
-<label>Margin YoY %</label>
+<label>Margin YoY % <span class="help" onclick="toggleHelp('marginHelp')">ⓘ</span></label>
+<div id="marginHelp" class="help-text">
+Operating margin change compared to same quarter last year.
+</div>
 <input id="margin" class="form-control">
 </div>
 
@@ -132,32 +158,50 @@ font-weight:bold;
 </div>
 
 <div class="field">
-<label>P/E</label>
+<label>P/E <span class="help" onclick="toggleHelp('peHelp')">ⓘ</span></label>
+<div id="peHelp" class="help-text">
+Price divided by earnings per share.
+</div>
 <input id="pe" class="form-control">
 </div>
 
 <div class="field">
-<label>P/B</label>
+<label>P/B <span class="help" onclick="toggleHelp('pbHelp')">ⓘ</span></label>
+<div id="pbHelp" class="help-text">
+Price divided by book value per share.
+</div>
 <input id="pb" class="form-control">
 </div>
 
 <div class="field">
-<label>PEG</label>
+<label>PEG <span class="help" onclick="toggleHelp('pegHelp')">ⓘ</span></label>
+<div id="pegHelp" class="help-text">
+PE divided by earnings growth rate. PEG < 1 often indicates undervaluation.
+</div>
 <input id="peg" class="form-control">
 </div>
 
 <div class="field">
-<label>P/S</label>
+<label>P/S <span class="help" onclick="toggleHelp('psHelp')">ⓘ</span></label>
+<div id="psHelp" class="help-text">
+Price-to-sales ratio. Important for high growth tech firms.
+</div>
 <input id="ps" class="form-control">
 </div>
 
 <div class="field">
-<label>Sector P/S Avg</label>
+<label>Sector P/S Avg <span class="help" onclick="toggleHelp('spsHelp')">ⓘ</span></label>
+<div id="spsHelp" class="help-text">
+Average price-to-sales ratio of the sector.
+</div>
 <input id="sectorPs" class="form-control">
 </div>
 
 <div class="field">
-<label>5Y Median P/E</label>
+<label>5Y Median P/E <span class="help" onclick="toggleHelp('pemHelp')">ⓘ</span></label>
+<div id="pemHelp" class="help-text">
+Median P/E of the company over the last 5 years.
+</div>
 <input id="peMedian" class="form-control">
 </div>
 
@@ -193,7 +237,10 @@ font-weight:bold;
 <div class="grid">
 
 <div class="field">
-<label>Drop from High %</label>
+<label>Drop from High % <span class="help" onclick="toggleHelp('dropHelp')">ⓘ</span></label>
+<div id="dropHelp" class="help-text">
+Percentage fall from 52-week high.
+</div>
 <input id="priceDrop" class="form-control">
 </div>
 
@@ -235,7 +282,6 @@ font-weight:bold;
 Calculate
 </button>
 
-
 <div id="result" class="result"></div>
 
 </div>
@@ -244,60 +290,78 @@ Calculate
 
 <script>
 
+/* help toggle */
+
+function toggleHelp(id){
+
+let el=document.getElementById(id)
+
+if(el.style.display==="block"){
+el.style.display="none"
+}else{
+el.style.display="block"
+}
+
+}
+
+
+
+/* valuation scoring */
+
 function valuationScore(){
 
-let sector = sector.value
+let sector=sector.value
 
-let pe = parseFloat(document.getElementById("pe").value) || 0
-let pb = parseFloat(document.getElementById("pb").value) || 0
-let peg = parseFloat(document.getElementById("peg").value) || 0
-let ps = parseFloat(document.getElementById("ps").value) || 0
-let sectorPs = parseFloat(document.getElementById("sectorPs").value) || 0
-let peMedian = parseFloat(document.getElementById("peMedian").value) || 0
+let pe=parseFloat(document.getElementById("pe").value)||0
+let pb=parseFloat(document.getElementById("pb").value)||0
+let peg=parseFloat(document.getElementById("peg").value)||0
+let ps=parseFloat(document.getElementById("ps").value)||0
+let sectorPs=parseFloat(document.getElementById("sectorPs").value)||0
+let peMedian=parseFloat(document.getElementById("peMedian").value)||0
 
-let score = 0
+let score=0
 
 
 if(sector=="tech"){
 
-if(peg < 1) score+=0
-else if(peg <=1.5) score+=10
+if(peg<1) score+=0
+else if(peg<=1.5) score+=10
 else score+=20
 
-if(ps > 2*sectorPs) score+=5
+if(ps>2*sectorPs) score+=5
 
 }
 
 
 if(sector=="bank"){
 
-if(pb <2) score+=0
+if(pb<2) score+=0
 else if(pb<=4) score+=10
 else score+=20
 
-if(pe > 1.5*peMedian) score+=5
+if(pe>1.5*peMedian) score+=5
 
 }
 
 
 if(sector=="manufacturing"){
 
-if(pe <15) score+=0
+if(pe<15) score+=0
 else if(pe<=30) score+=10
 else score+=20
 
-if(pb >3) score+=5
+if(pb>3) score+=5
 
 }
 
 
 if(sector=="consumer"){
 
-if(pe <25) score+=0
+if(pe<25) score+=0
 else if(pe<=50) score+=10
 else score+=20
 
-if(peg >1.5) score+=5
+if(peg>1.5) score+=5
 
 }
 
@@ -306,6 +370,8 @@ return Math.min(score,25)
 }
 
 
+
+/* main scoring */
 
 function calculateScore(){
 
@@ -331,9 +397,7 @@ let moatScore=parseFloat(moat.value)
 
 
 
-/* Growth */
-
-if(revenue <8) score+=25
+if(revenue<8) score+=25
 else if(revenue<12) score+=10
 
 if(roce<15) score+=10
@@ -341,49 +405,28 @@ if(roce<15) score+=10
 if(margin<-3) score+=5
 
 
+score+=valuationScore()
 
-/* Valuation */
-
-score += valuationScore()
-
-
-
-/* Balance */
 
 if(debt>0.5) score+=10
 if(pledge>20) score+=10
 if(stake<-2) score+=5
 
 
-
-/* Market */
-
 if(priceDrop>40 && revenue<12) score+=10
 else if(priceDrop>25 && revenue<12) score+=5
 
-
-
-/* Value Cushion */
 
 if(pe<15 || pb<2) score-=5
 if(dividend>3) score-=5
 if(cash>30) score-=5
 
 
-
-/* Winner momentum */
-
 if(price1yr>25) score-=5
 
 
-
-/* Moat */
-
 score+=moatScore
 
-
-
-/* Verdict */
 
 let verdict=""
 
@@ -391,7 +434,6 @@ if(score<=25) verdict="💎 Diamond Hands"
 else if(score<=45) verdict="👀 Watch"
 else if(score<=65) verdict="⚠️ Trim 50%"
 else verdict="❌ Exit"
-
 
 
 result.innerHTML=`
