@@ -41,7 +41,7 @@ text-transform:uppercase;
 margin-bottom:6px;
 }
 
-input{
+input, select{
 height:30px !important;
 font-size:13px !important;
 }
@@ -193,9 +193,9 @@ title="Decline from the 52-week high.">ⓘ</span>
 <div class="row">
 <div class="col-md-4">
 <label>
-Promoter Stake Change (1Y)
+Promoter Δ (1Y)
 <span class="help" data-toggle="tooltip"
-title="Change in promoter holding over the last 1 year.">ⓘ</span>
+title="Δ = Change in promoter holding over the last 1 year. Negative value means promoters reduced stake.">ⓘ</span>
 </label>
 <input id="promoter" class="form-control">
 </div>
@@ -204,9 +204,12 @@ title="Change in promoter holding over the last 1 year.">ⓘ</span>
 <label>
 Moat Weakening?
 <span class="help" data-toggle="tooltip"
-title="Signs the company's competitive advantage is deteriorating. 1 = Yes, 0 = No.">ⓘ</span>
+title="Signs the company's competitive advantage is deteriorating.">ⓘ</span>
 </label>
-<input id="moat" class="form-control">
+<select id="moat" class="form-control">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
 </div>
 </div>
 
@@ -298,8 +301,8 @@ else if(peg < 1.5) score += 1
 let promoter = val("promoter")
 if(promoter < 0) score -= 2
 
-let moat = val("moat")
-if(moat == 1) score -= 2
+let moat = parseFloat(document.getElementById("moat").value)
+if(moat === 1) score -= 2
 
 let debt = val("debt")
 if(debt > 1) score -= 2
