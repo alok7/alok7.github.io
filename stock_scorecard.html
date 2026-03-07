@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<title>Stock Exit Scorecard</title>
+
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+<style>
+
+.container-box{
+max-width:750px;
+margin:auto;
+margin-top:40px;
+}
+
+.result{
+margin-top:30px;
+padding:20px;
+border:1px solid #ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container container-box">
+
+<h2>Stock Exit Scorecard</h2>
+<p>Run this after quarterly earnings.</p>
+
+<hr>
+
+<h4>Growth & Efficiency</h4>
+
+<label>Revenue Growth (%)</label>
+<input id="revenue" class="form-control">
+
+<label>ROCE (%)</label>
+<input id="roce" class="form-control">
+
+<label>Operating Margin Change YoY (%)</label>
+<input id="margin" class="form-control">
+
+<hr>
+
+<h4>Valuation</h4>
+
+<label>Is the stock overvalued vs sector/history?</label>
+
+<select id="valuation" class="form-control">
+<option value="0">No</option>
+<option value="25">Yes</option>
+</select>
+
+<hr>
+
+<h4>Balance Sheet & Governance</h4>
+
+<label>Debt to Equity</label>
+<input id="debt" class="form-control">
+
+<label>Promoter Pledge (%)</label>
+<input id="pledge" class="form-control">
+
+<label>Promoter Stake Change (%)</label>
+<input id="stake" class="form-control">
+
+<hr>
+
+<h4>Market Signals</h4>
+
+<label>Price Change from 52W High (%)</label>
+<input id="priceChange" class="form-control">
+
+<label>1-Year Price Return (%)</label>
+<input id="price1yr" class="form-control">
+
+<hr>
+
+<h4>Value Cushion</h4>
+
+<label>P/E Ratio</label>
+<input id="pe" class="form-control">
+
+<label>P/B Ratio</label>
+<input id="pb" class="form-control">
+
+<label>PEG Ratio</label>
+<input id="peg" class="form-control">
+
+<label>Dividend Yield (%)</label>
+<input id="dividend" class="form-control">
+
+<label>Cash as % of Market Cap</label>
+<input id="cash" class="form-control">
+
+<hr>
+
+<h4>Moat Check</h4>
+
+<label>
+<input type="checkbox" id="moat"> Structural moat weakening
+</label>
+
+<br><br>
+
+<button onclick="calculateScore()" class="btn btn-primary">Calculate Score</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+<script>
+
+function calculateScore(){
+
+let score = 0
+
+let revenue = parseFloat(document.getElementById("revenue").value)
+let roce = parseFloat(document.getElementById("roce").value)
+let margin = parseFloat(document.getElementById("margin").value)
+let valuation = parseFloat(document.getElementById("valuation").value)
+
+let debt = parseFloat(document.getElementById("debt").value)
+let pledge = parseFloat(document.getElementById("pledge").value)
+let stake = parseFloat(document.getElementById("stake").value)
+
+let priceChange = parseFloat(document.getElementById("priceChange").value)
+let price1yr = parseFloat(document.getElementById("price1yr").value)
+
+let pe = parseFloat(document.getElementById("pe").value)
+let pb = parseFloat(document.getElementById("pb").value)
+let peg = parseFloat(document.getElementById("peg").value)
+
+let dividend = parseFloat(document.getElementById("dividend").value)
+let cash = parseFloat(document.getElementById("cash").value)
+
+let moat = document.getElementById("moat").checked
+
+
+
+// Growth
+
+if(revenue < 8){
+score += 25
+}
+else if(revenue < 12){
+score += 10
+}
+
+if(roce < 15){
+score += 10
+}
+
+if(margin < -3){
+score += 5
+}
+
+
+// valuation
+
+score += valuation
+
+
+// balance sheet
+
+if(debt > 0.5){
+score += 10
+}
+
+if(pledge > 20){
+score += 10
+}
+
+if(stake < -2){
+score += 5
+}
+
+
+// market signal
+
+if(priceChange < -25 && revenue < 12){
+score += 5
+}
+
+if(priceChange < -40 && revenue < 12){
+score += 10
+}
+
+
+// value cushion
+
+if(pe < 15 || pb < 2 || peg < 1){
+score -= 5
+}
+
+if(dividend > 3){
+score -= 5
+}
+
+if(cash > 30){
+score -= 5
+}
+
+
+// winner momentum
+
+if(price1yr > 25){
+score -= 5
+}
+
+
+// moat check
+
+if(moat){
+score += 15
+}
+
+
+// verdict
+
+let verdict = ""
+
+if(score <= 25){
+verdict = "💎 Diamond Hands"
+}
+else if(score <= 45){
+verdict = "👀 Watch Carefully"
+}
+else if(score <= 65){
+verdict = "⚠️ Trim 50%"
+}
+else{
+verdict = "❌ Hard Exit"
+}
+
+
+document.getElementById("result").innerHTML =
+"<h3>Final Score: "+score+"</h3>" +
+"<h4>Verdict: "+verdict+"</h4>"
+
+}
+
+</script>
+
+</body>
+
+</html>
