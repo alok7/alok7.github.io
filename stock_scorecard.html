@@ -951,6 +951,29 @@ function liveScore() {
   const raw = Object.values(s).reduce((a, b) => a + b, 0);
   const total = Math.max(0, raw);
 
+  // Check if any input has been touched
+  const anyNumber = Array.from(document.querySelectorAll('input[type=number]')).some(i => i.value.trim() !== '');
+  const anySelect = (['auditor','revTrend','moat']).some(id => { const e = document.getElementById(id); return e && parseInt(e.value) !== 0; });
+  const anyCheck = (['chk_valcushion','chk_dividend','chk_cash','chk_momentum']).some(id => document.getElementById(id)?.checked);
+  const hasSector = currentSector !== null;
+  const hasInput = anyNumber || anySelect || anyCheck || hasSector;
+
+  if (!hasInput) {
+    // Blank state — no inputs yet
+    document.getElementById('headerScore').textContent = '—';
+    document.getElementById('headerScore').style.color = 'var(--muted)';
+    document.getElementById('sideScore').textContent = '—';
+    document.getElementById('sideScore').style.color = 'var(--muted)';
+    document.getElementById('progressFill').style.width = '0%';
+    const va = document.getElementById('verdictAction');
+    va.textContent = '— Awaiting inputs';
+    va.style.background = 'var(--surface2)'; va.style.color = 'var(--muted)';
+    document.getElementById('verdictDesc').textContent = 'Enter financials on the left to generate your exit signal.';
+    for (let i = 0; i < 4; i++) { const mc = document.getElementById('mc'+i); mc.classList.remove('active'); mc.style.background = 'transparent'; }
+    document.getElementById('breakdownRows').innerHTML = '<div class="breakdown-row"><span class="breakdown-name" style="color:var(--muted);font-style:italic">Fill in the form above</span></div>';
+    return;
+  }
+
   document.getElementById('headerScore').textContent = total;
   document.getElementById('sideScore').textContent = total;
   document.getElementById('progressFill').style.width = Math.min(100, (total / 115) * 100) + '%';
