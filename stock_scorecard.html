@@ -1,93 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<title>Stock Scorecard</title>
 
-<title>Stock Exit Scorecard</title>
-
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 <style>
 
 body{
-font-family:Arial;
-background:#f7f7f7;
-}
-
-.container{
-max-width:900px;
-margin-top:25px;
-background:white;
+font-size:14px;
+background:#f7f8fa;
 padding:18px;
+}
+
+.container-box{
+max-width:780px;
+margin:auto;
+background:white;
+padding:18px 20px;
 border-radius:6px;
+box-shadow:0 1px 4px rgba(0,0,0,0.08);
 }
 
-h2{
-font-size:20px;
-margin-bottom:2px;
+h4{
+margin-bottom:14px;
+font-weight:600;
 }
 
-.subtitle{
-color:#777;
-font-size:12px;
-margin-bottom:12px;
+.section{
+margin-bottom:16px;
 }
 
 .section-title{
 font-size:13px;
-font-weight:bold;
-margin-top:10px;
-margin-bottom:4px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:6px 10px;
+font-weight:600;
+margin-bottom:6px;
+color:#666;
+text-transform:uppercase;
 }
 
 .field{
-display:flex;
-flex-direction:column;
+margin-bottom:6px;
 }
 
 label{
-font-size:11px;
-margin-bottom:1px;
-color:#555;
+font-size:13px;
+margin-bottom:2px;
 }
 
-input,select{
-height:26px !important;
-font-size:12px !important;
-padding:2px 6px !important;
-}
-
-button{
-margin-top:12px;
-}
-
-.result{
-margin-top:15px;
-padding:10px;
-border:1px solid #eee;
-}
-
-.score{
-font-size:24px;
-font-weight:bold;
-}
-
-.verdict{
-font-size:15px;
-font-weight:bold;
+input{
+height:28px!important;
+font-size:13px!important;
 }
 
 .help{
 cursor:pointer;
-color:#007bff;
+font-size:11px;
 margin-left:4px;
+color:#6c757d;
+}
+
+.tooltip-inner{
 font-size:12px;
+padding:6px 8px;
+max-width:220px;
+text-align:left;
+}
+
+.result{
+margin-top:16px;
+font-weight:600;
+}
+
+.score{
+font-size:20px;
+font-weight:700;
+}
+
+.verdict{
+font-size:16px;
 }
 
 </style>
@@ -95,208 +87,145 @@ font-size:12px;
 
 <body>
 
-<div class="container">
+<div class="container-box">
 
-<h2>Stock Exit Scorecard</h2>
-<div class="subtitle">Run after quarterly earnings</div>
+<h4>Stock Scorecard</h4>
 
+<!-- ================= QUALITY ================= -->
 
-<div class="section-title">Growth & Efficiency</div>
+<div class="section">
 
-<div class="grid">
-
-<div class="field">
-<label>
-Revenue %
-<span class="help" data-toggle="tooltip" title="Year-over-year revenue growth from latest quarterly result.">ⓘ</span>
-</label>
-<input id="revenue" class="form-control">
-</div>
+<div class="section-title">Quality</div>
 
 <div class="field">
 <label>
 ROCE %
-<span class="help" data-toggle="tooltip" title="Return on Capital Employed. Measures capital efficiency.">ⓘ</span>
+<span class="help" data-toggle="tooltip" title="Return on capital employed. Measures capital efficiency.">ⓘ</span>
 </label>
 <input id="roce" class="form-control">
 </div>
 
 <div class="field">
 <label>
-Margin YoY %
-<span class="help" data-toggle="tooltip" title="Operating margin change compared to same quarter last year.">ⓘ</span>
+Operating Margin %
+<span class="help" data-toggle="tooltip" title="Operating profit margin from latest results.">ⓘ</span>
 </label>
 <input id="margin" class="form-control">
 </div>
 
+<div class="field">
+<label>
+Margin YoY Decline %
+<span class="help" data-toggle="tooltip" title="How much operating margin dropped compared to last year.">ⓘ</span>
+</label>
+<input id="marginDecline" class="form-control">
 </div>
 
+</div>
 
+<!-- ================= GROWTH ================= -->
 
-<div class="section-title">Valuation</div>
+<div class="section">
 
-<div class="grid">
+<div class="section-title">Growth</div>
 
 <div class="field">
-<label>Sector</label>
-<select id="sector" class="form-control">
-<option value="tech">IT / Tech</option>
-<option value="bank">Banks / Financials</option>
-<option value="manufacturing">Manufacturing / Defense</option>
-<option value="consumer">Consumer / General</option>
-</select>
+<label>
+Revenue Growth YoY %
+<span class="help" data-toggle="tooltip" title="Revenue growth vs same quarter last year.">ⓘ</span>
+</label>
+<input id="revenue" class="form-control">
 </div>
 
 <div class="field">
 <label>
-P/E
-<span class="help" data-toggle="tooltip" title="Price divided by earnings per share.">ⓘ</span>
+EPS Growth YoY %
+<span class="help" data-toggle="tooltip" title="Earnings per share growth vs last year.">ⓘ</span>
+</label>
+<input id="eps" class="form-control">
+</div>
+
+</div>
+
+<!-- ================= VALUATION ================= -->
+
+<div class="section">
+
+<div class="section-title">Valuation</div>
+
+<div class="field">
+<label>
+PE Ratio
+<span class="help" data-toggle="tooltip" title="Current price to earnings ratio.">ⓘ</span>
 </label>
 <input id="pe" class="form-control">
 </div>
 
 <div class="field">
 <label>
-P/B
-<span class="help" data-toggle="tooltip" title="Price divided by book value per share.">ⓘ</span>
-</label>
-<input id="pb" class="form-control">
-</div>
-
-<div class="field">
-<label>
-PEG
-<span class="help" data-toggle="tooltip" title="PE divided by earnings growth rate. PEG below 1 often indicates undervaluation.">ⓘ</span>
+PEG Ratio
+<span class="help" data-toggle="tooltip" title="PE divided by earnings growth. PEG below 1 is attractive.">ⓘ</span>
 </label>
 <input id="peg" class="form-control">
 </div>
 
+</div>
+
+<!-- ================= RISK ================= -->
+
+<div class="section">
+
+<div class="section-title">Risk Signals</div>
+
 <div class="field">
 <label>
-P/S
-<span class="help" data-toggle="tooltip" title="Price-to-sales ratio, important for high growth tech companies.">ⓘ</span>
+Promoter Stake Change (1Y) %
+<span class="help" data-toggle="tooltip" title="Change in promoter holding over the last 1 year.">ⓘ</span>
 </label>
-<input id="ps" class="form-control">
+<input id="promoter" class="form-control">
 </div>
 
 <div class="field">
 <label>
-Sector P/S Avg
-<span class="help" data-toggle="tooltip" title="Average price-to-sales ratio of the sector.">ⓘ</span>
+Moat Weakening?
+<span class="help" data-toggle="tooltip" title="Signs competition is eroding the company's advantage. 1 = yes, 0 = no.">ⓘ</span>
 </label>
-<input id="sectorPs" class="form-control">
+<input id="moat" class="form-control">
 </div>
 
 <div class="field">
 <label>
-5Y Median P/E
-<span class="help" data-toggle="tooltip" title="Median P/E of the company over the last five years.">ⓘ</span>
-</label>
-<input id="peMedian" class="form-control">
-</div>
-
-</div>
-
-
-
-<div class="section-title">Balance Sheet</div>
-
-<div class="grid">
-
-<div class="field">
-<label>
-Debt / Eq
-<span class="help" data-toggle="tooltip" title="Total debt divided by shareholder equity.">ⓘ</span>
+Debt / Equity
+<span class="help" data-toggle="tooltip" title="Financial leverage ratio.">ⓘ</span>
 </label>
 <input id="debt" class="form-control">
 </div>
 
 <div class="field">
 <label>
-Pledge %
-<span class="help" data-toggle="tooltip" title="Percentage of promoter shares pledged as collateral.">ⓘ</span>
-</label>
-<input id="pledge" class="form-control">
-</div>
-
-<div class="field">
-<label>
-Stake Δ %
-<span class="help" data-toggle="tooltip" title="Change in promoter stake over last quarter.">ⓘ</span>
-</label>
-<input id="stake" class="form-control">
-</div>
-
-</div>
-
-
-
-<div class="section-title">Market</div>
-
-<div class="grid">
-
-<div class="field">
-<label>
 Drop from High %
-<span class="help" data-toggle="tooltip" title="Percentage decline from the 52-week high price.">ⓘ</span>
+<span class="help" data-toggle="tooltip" title="Decline from the stock's 52 week high.">ⓘ</span>
 </label>
 <input id="priceDrop" class="form-control">
 </div>
 
-<div class="field">
-<label>
-1Y Return %
-<span class="help" data-toggle="tooltip" title="Stock price return over the past 12 months.">ⓘ</span>
-</label>
-<input id="price1yr" class="form-control">
 </div>
 
-<div class="field">
-<label>
-Moat Weak
-<span class="help" data-toggle="tooltip" title="Business competitive advantage deteriorating.">ⓘ</span>
-</label>
-<select id="moat" class="form-control">
-<option value="0">No</option>
-<option value="15">Yes</option>
-</select>
+<button class="btn btn-primary btn-sm" onclick="computeScore()">Compute Score</button>
+
+<div class="result">
+
+<div class="score">
+Score: <span id="score">0</span>
+</div>
+
+<div class="verdict">
+Verdict: <span id="verdict">-</span>
 </div>
 
 </div>
 
-
-
-<div class="section-title">Value Cushion</div>
-
-<div class="grid">
-
-<div class="field">
-<label>
-Dividend %
-<span class="help" data-toggle="tooltip" title="Dividend yield relative to stock price.">ⓘ</span>
-</label>
-<input id="dividend" class="form-control">
 </div>
-
-<div class="field">
-<label>
-Cash %
-<span class="help" data-toggle="tooltip" title="Cash reserves as percentage of market capitalization.">ⓘ</span>
-</label>
-<input id="cash" class="form-control">
-</div>
-
-</div>
-
-
-<button onclick="calculateScore()" class="btn btn-primary btn-sm">
-Calculate
-</button>
-
-<div id="result" class="result"></div>
-
-</div>
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -304,147 +233,90 @@ Calculate
 
 <script>
 
-/* enable tooltips */
-
 $(function () {
 $('[data-toggle="tooltip"]').tooltip({
-trigger:'hover click',
+trigger:'hover',
 placement:'top'
 })
 })
 
-
-
-function valuationScore(){
-
-let sector=sector.value
-
-let pe=parseFloat(document.getElementById("pe").value)||0
-let pb=parseFloat(document.getElementById("pb").value)||0
-let peg=parseFloat(document.getElementById("peg").value)||0
-let ps=parseFloat(document.getElementById("ps").value)||0
-let sectorPs=parseFloat(document.getElementById("sectorPs").value)||0
-let peMedian=parseFloat(document.getElementById("peMedian").value)||0
-
-let score=0
-
-
-if(sector=="tech"){
-
-if(peg<1) score+=0
-else if(peg<=1.5) score+=10
-else score+=20
-
-if(ps>2*sectorPs) score+=5
-
+function val(id){
+return parseFloat(document.getElementById(id).value)||0
 }
 
+function computeScore(){
 
-if(sector=="bank"){
+let score = 0
 
-if(pb<2) score+=0
-else if(pb<=4) score+=10
-else score+=20
+// ================= QUALITY =================
 
-if(pe>1.5*peMedian) score+=5
+let roce = val("roce")
+if(roce>20) score+=3
+else if(roce>15) score+=2
+else if(roce>10) score+=1
 
-}
+let margin = val("margin")
+if(margin>25) score+=2
+else if(margin>15) score+=1
 
-
-if(sector=="manufacturing"){
-
-if(pe<15) score+=0
-else if(pe<=30) score+=10
-else score+=20
-
-if(pb>3) score+=5
-
-}
+let marginDecline = val("marginDecline")
+if(marginDecline>5) score-=2
+else if(marginDecline>2) score-=1
 
 
-if(sector=="consumer"){
+// ================= GROWTH =================
 
-if(pe<25) score+=0
-else if(pe<=50) score+=10
-else score+=20
+let revenue = val("revenue")
+if(revenue>20) score+=3
+else if(revenue>10) score+=2
+else if(revenue>5) score+=1
 
-if(peg>1.5) score+=5
-
-}
-
-return Math.min(score,25)
-
-}
+let eps = val("eps")
+if(eps>20) score+=3
+else if(eps>10) score+=2
+else if(eps>5) score+=1
 
 
+// ================= VALUATION =================
 
-function calculateScore(){
+let pe = val("pe")
+if(pe<20) score+=2
+else if(pe<30) score+=1
 
-let score=0
-
-let revenue=parseFloat(revenue.value)||0
-let roce=parseFloat(roce.value)||0
-let margin=parseFloat(margin.value)||0
-
-let debt=parseFloat(debt.value)||0
-let pledge=parseFloat(pledge.value)||0
-let stake=parseFloat(stake.value)||0
-
-let priceDrop=parseFloat(priceDrop.value)||0
-let price1yr=parseFloat(price1yr.value)||0
-
-let pe=parseFloat(pe.value)||0
-let pb=parseFloat(pb.value)||0
-let dividend=parseFloat(dividend.value)||0
-let cash=parseFloat(cash.value)||0
-
-let moatScore=parseFloat(moat.value)
+let peg = val("peg")
+if(peg<1) score+=2
+else if(peg<1.5) score+=1
 
 
+// ================= RISK =================
 
-if(revenue<8) score+=25
-else if(revenue<12) score+=10
+let promoter = val("promoter")
+if(promoter<0) score-=2
 
-if(roce<15) score+=10
+let moat = val("moat")
+if(moat==1) score-=2
 
-if(margin<-3) score+=5
+let debt = val("debt")
+if(debt>1) score-=2
+else if(debt>0.5) score-=1
 
-
-score+=valuationScore()
-
-
-if(debt>0.5) score+=10
-if(pledge>20) score+=10
-if(stake<-2) score+=5
-
-
-if(priceDrop>40 && revenue<12) score+=10
-else if(priceDrop>25 && revenue<12) score+=5
+let drop = val("priceDrop")
+if(drop>40) score+=2
+else if(drop>20) score+=1
 
 
-if(pe<15 || pb<2) score-=5
-if(dividend>3) score-=5
-if(cash>30) score-=5
+// ================= FINAL =================
 
+document.getElementById("score").innerText = score
 
-if(price1yr>25) score-=5
+let verdict = "Avoid"
 
+if(score>=14) verdict="Strong Buy"
+else if(score>=10) verdict="Buy"
+else if(score>=6) verdict="Hold"
+else if(score>=3) verdict="Weak Hold"
 
-score+=moatScore
-
-
-let verdict=""
-
-if(score<=25) verdict="💎 Diamond Hands"
-else if(score<=45) verdict="👀 Watch"
-else if(score<=65) verdict="⚠️ Trim 50%"
-else verdict="❌ Exit"
-
-
-result.innerHTML=`
-<div class="score">${score}/100</div>
-<div class="verdict">${verdict}</div>
-`
+document.getElementById("verdict").innerText = verdict
 
 }
 
