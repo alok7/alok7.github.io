@@ -1,5 +1,6 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Stock Scorecard</title>
@@ -11,47 +12,44 @@
 body{
 font-size:14px;
 background:#f7f8fa;
-padding:18px;
+padding:20px;
 }
 
 .container-box{
-max-width:780px;
+max-width:900px;
 margin:auto;
 background:white;
-padding:18px 20px;
+padding:18px 22px;
 border-radius:6px;
-box-shadow:0 1px 4px rgba(0,0,0,0.08);
+box-shadow:0 1px 5px rgba(0,0,0,0.08);
 }
 
 h4{
-margin-bottom:14px;
-font-weight:600;
-}
-
-.section{
 margin-bottom:16px;
+font-weight:600;
 }
 
 .section-title{
 font-size:13px;
 font-weight:600;
+color:#6c757d;
+margin-top:12px;
 margin-bottom:6px;
-color:#666;
 text-transform:uppercase;
 }
 
-.field{
+.row{
 margin-bottom:6px;
+}
+
+input{
+height:30px !important;
+font-size:13px !important;
 }
 
 label{
 font-size:13px;
 margin-bottom:2px;
-}
-
-input{
-height:28px!important;
-font-size:13px!important;
 }
 
 .help{
@@ -62,10 +60,14 @@ color:#6c757d;
 }
 
 .tooltip-inner{
-font-size:12px;
-padding:6px 8px;
-max-width:220px;
-text-align:left;
+font-size:11px;
+padding:5px 7px;
+max-width:200px;
+background:#2f3640;
+}
+
+.tooltip.bs-tooltip-top .arrow::before{
+border-top-color:#2f3640;
 }
 
 .result{
@@ -91,127 +93,126 @@ font-size:16px;
 
 <h4>Stock Scorecard</h4>
 
-<!-- ================= QUALITY ================= -->
-
-<div class="section">
-
 <div class="section-title">Quality</div>
 
-<div class="field">
+<div class="row">
+<div class="col-md-4">
 <label>
 ROCE %
-<span class="help" data-toggle="tooltip" title="Return on capital employed. Measures capital efficiency.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Return on capital employed. Measures capital efficiency.">ⓘ</span>
 </label>
 <input id="roce" class="form-control">
 </div>
 
-<div class="field">
+<div class="col-md-4">
 <label>
 Operating Margin %
-<span class="help" data-toggle="tooltip" title="Operating profit margin from latest results.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Operating profit margin from latest results.">ⓘ</span>
 </label>
 <input id="margin" class="form-control">
 </div>
 
-<div class="field">
+<div class="col-md-4">
 <label>
 Margin YoY Decline %
-<span class="help" data-toggle="tooltip" title="How much operating margin dropped compared to last year.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Operating margin drop compared to last year.">ⓘ</span>
 </label>
 <input id="marginDecline" class="form-control">
 </div>
-
 </div>
 
-<!-- ================= GROWTH ================= -->
-
-<div class="section">
 
 <div class="section-title">Growth</div>
 
-<div class="field">
+<div class="row">
+<div class="col-md-4">
 <label>
 Revenue Growth YoY %
-<span class="help" data-toggle="tooltip" title="Revenue growth vs same quarter last year.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Revenue growth compared to same quarter last year.">ⓘ</span>
 </label>
 <input id="revenue" class="form-control">
 </div>
 
-<div class="field">
+<div class="col-md-4">
 <label>
 EPS Growth YoY %
-<span class="help" data-toggle="tooltip" title="Earnings per share growth vs last year.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Earnings per share growth vs last year.">ⓘ</span>
 </label>
 <input id="eps" class="form-control">
 </div>
 
-</div>
-
-<!-- ================= VALUATION ================= -->
-
-<div class="section">
-
-<div class="section-title">Valuation</div>
-
-<div class="field">
+<div class="col-md-4">
 <label>
 PE Ratio
-<span class="help" data-toggle="tooltip" title="Current price to earnings ratio.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Current price to earnings ratio.">ⓘ</span>
 </label>
 <input id="pe" class="form-control">
 </div>
+</div>
 
-<div class="field">
+
+<div class="section-title">Valuation</div>
+
+<div class="row">
+<div class="col-md-4">
 <label>
 PEG Ratio
-<span class="help" data-toggle="tooltip" title="PE divided by earnings growth. PEG below 1 is attractive.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="PE divided by earnings growth. PEG below 1 indicates attractive valuation.">ⓘ</span>
 </label>
 <input id="peg" class="form-control">
 </div>
 
-</div>
-
-<!-- ================= RISK ================= -->
-
-<div class="section">
-
-<div class="section-title">Risk Signals</div>
-
-<div class="field">
-<label>
-Promoter Stake Change (1Y) %
-<span class="help" data-toggle="tooltip" title="Change in promoter holding over the last 1 year.">ⓘ</span>
-</label>
-<input id="promoter" class="form-control">
-</div>
-
-<div class="field">
-<label>
-Moat Weakening?
-<span class="help" data-toggle="tooltip" title="Signs competition is eroding the company's advantage. 1 = yes, 0 = no.">ⓘ</span>
-</label>
-<input id="moat" class="form-control">
-</div>
-
-<div class="field">
+<div class="col-md-4">
 <label>
 Debt / Equity
-<span class="help" data-toggle="tooltip" title="Financial leverage ratio.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Financial leverage ratio.">ⓘ</span>
 </label>
 <input id="debt" class="form-control">
 </div>
 
-<div class="field">
+<div class="col-md-4">
 <label>
 Drop from High %
-<span class="help" data-toggle="tooltip" title="Decline from the stock's 52 week high.">ⓘ</span>
+<span class="help" data-toggle="tooltip"
+title="Decline from the 52-week high.">ⓘ</span>
 </label>
 <input id="priceDrop" class="form-control">
 </div>
-
 </div>
 
-<button class="btn btn-primary btn-sm" onclick="computeScore()">Compute Score</button>
+
+<div class="section-title">Risk Signals</div>
+
+<div class="row">
+<div class="col-md-4">
+<label>
+Promoter Stake Change (1Y)
+<span class="help" data-toggle="tooltip"
+title="Change in promoter holding over the last 1 year.">ⓘ</span>
+</label>
+<input id="promoter" class="form-control">
+</div>
+
+<div class="col-md-4">
+<label>
+Moat Weakening?
+<span class="help" data-toggle="tooltip"
+title="Signs the company's competitive advantage is deteriorating. 1 = Yes, 0 = No.">ⓘ</span>
+</label>
+<input id="moat" class="form-control">
+</div>
+</div>
+
+
+<button class="btn btn-primary btn-sm mt-2" onclick="computeScore()">Compute Score</button>
 
 <div class="result">
 
@@ -236,7 +237,8 @@ Verdict: <span id="verdict">-</span>
 $(function () {
 $('[data-toggle="tooltip"]').tooltip({
 trigger:'hover',
-placement:'top'
+placement:'top',
+delay:{show:200,hide:100}
 })
 })
 
@@ -248,73 +250,78 @@ function computeScore(){
 
 let score = 0
 
+
 // ================= QUALITY =================
 
 let roce = val("roce")
-if(roce>20) score+=3
-else if(roce>15) score+=2
-else if(roce>10) score+=1
+if(roce > 20) score += 3
+else if(roce > 15) score += 2
+else if(roce > 10) score += 1
 
 let margin = val("margin")
-if(margin>25) score+=2
-else if(margin>15) score+=1
+if(margin > 25) score += 2
+else if(margin > 15) score += 1
 
 let marginDecline = val("marginDecline")
-if(marginDecline>5) score-=2
-else if(marginDecline>2) score-=1
+if(marginDecline > 5) score -= 2
+else if(marginDecline > 2) score -= 1
+
 
 
 // ================= GROWTH =================
 
 let revenue = val("revenue")
-if(revenue>20) score+=3
-else if(revenue>10) score+=2
-else if(revenue>5) score+=1
+if(revenue > 20) score += 3
+else if(revenue > 10) score += 2
+else if(revenue > 5) score += 1
 
 let eps = val("eps")
-if(eps>20) score+=3
-else if(eps>10) score+=2
-else if(eps>5) score+=1
+if(eps > 20) score += 3
+else if(eps > 10) score += 2
+else if(eps > 5) score += 1
+
 
 
 // ================= VALUATION =================
 
 let pe = val("pe")
-if(pe<20) score+=2
-else if(pe<30) score+=1
+if(pe < 20) score += 2
+else if(pe < 30) score += 1
 
 let peg = val("peg")
-if(peg<1) score+=2
-else if(peg<1.5) score+=1
+if(peg < 1) score += 2
+else if(peg < 1.5) score += 1
+
 
 
 // ================= RISK =================
 
 let promoter = val("promoter")
-if(promoter<0) score-=2
+if(promoter < 0) score -= 2
 
 let moat = val("moat")
-if(moat==1) score-=2
+if(moat == 1) score -= 2
 
 let debt = val("debt")
-if(debt>1) score-=2
-else if(debt>0.5) score-=1
+if(debt > 1) score -= 2
+else if(debt > 0.5) score -= 1
 
 let drop = val("priceDrop")
-if(drop>40) score+=2
-else if(drop>20) score+=1
+if(drop > 40) score += 2
+else if(drop > 20) score += 1
 
 
-// ================= FINAL =================
+
+// ================= FINAL VERDICT =================
 
 document.getElementById("score").innerText = score
 
 let verdict = "Avoid"
 
-if(score>=14) verdict="Strong Buy"
-else if(score>=10) verdict="Buy"
-else if(score>=6) verdict="Hold"
-else if(score>=3) verdict="Weak Hold"
+if(score >= 14) verdict = "Strong Buy"
+else if(score >= 10) verdict = "Buy"
+else if(score >= 6) verdict = "Hold"
+else if(score >= 3) verdict = "Weak Hold"
 
 document.getElementById("verdict").innerText = verdict
 
@@ -324,3 +331,4 @@ document.getElementById("verdict").innerText = verdict
 
 </body>
 </html>
+```
