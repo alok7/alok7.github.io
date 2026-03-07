@@ -1,119 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
 
-<meta charset="utf-8">
 <title>Stock Exit Scorecard</title>
 
-<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
 <style>
 
+body{
+background:#f5f5f5;
+font-family:Arial;
+}
+
 .container-box{
-max-width:750px;
+max-width:900px;
 margin:auto;
 margin-top:40px;
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section{
+margin-bottom:25px;
+padding:15px;
+border:1px solid #eee;
+border-radius:6px;
+background:#fafafa;
+}
+
+.section h4{
+margin-bottom:10px;
+font-size:16px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px 20px;
+}
+
+input, select{
+height:32px !important;
+font-size:13px !important;
+}
+
+label{
+font-size:13px;
+margin-bottom:2px;
 }
 
 .result{
-margin-top:30px;
+margin-top:25px;
 padding:20px;
 border:1px solid #ddd;
+background:#fff;
+border-radius:6px;
+}
+
+.score{
+font-size:32px;
+font-weight:bold;
+}
+
+.verdict{
+font-size:20px;
+font-weight:bold;
 }
 
 </style>
-
 </head>
+
 
 <body>
 
 <div class="container container-box">
 
 <h2>Stock Exit Scorecard</h2>
-<p>Run this after quarterly earnings.</p>
+<p style="color:#777">Run every quarter after earnings</p>
 
-<hr>
 
+<!-- Growth -->
+
+<div class="section">
 <h4>Growth & Efficiency</h4>
 
+<div class="grid">
+
+<div>
 <label>Revenue Growth (%)</label>
 <input id="revenue" class="form-control">
+</div>
 
+<div>
 <label>ROCE (%)</label>
 <input id="roce" class="form-control">
+</div>
 
+<div>
 <label>Operating Margin Change YoY (%)</label>
 <input id="margin" class="form-control">
+</div>
 
-<hr>
+</div>
+</div>
 
+
+<!-- Valuation -->
+
+<div class="section">
 <h4>Valuation</h4>
 
-<label>Is the stock overvalued vs sector/history?</label>
+<div class="grid">
 
+<div>
+<label>Overvalued vs Sector / History</label>
 <select id="valuation" class="form-control">
 <option value="0">No</option>
 <option value="25">Yes</option>
 </select>
+</div>
 
-<hr>
-
-<h4>Balance Sheet & Governance</h4>
-
-<label>Debt to Equity</label>
-<input id="debt" class="form-control">
-
-<label>Promoter Pledge (%)</label>
-<input id="pledge" class="form-control">
-
-<label>Promoter Stake Change (%)</label>
-<input id="stake" class="form-control">
-
-<hr>
-
-<h4>Market Signals</h4>
-
-<label>Price Change from 52W High (%)</label>
-<input id="priceChange" class="form-control">
-
-<label>1-Year Price Return (%)</label>
-<input id="price1yr" class="form-control">
-
-<hr>
-
-<h4>Value Cushion</h4>
-
-<label>P/E Ratio</label>
-<input id="pe" class="form-control">
-
-<label>P/B Ratio</label>
-<input id="pb" class="form-control">
-
+<div>
 <label>PEG Ratio</label>
 <input id="peg" class="form-control">
+</div>
 
+</div>
+</div>
+
+
+<!-- Balance Sheet -->
+
+<div class="section">
+<h4>Balance Sheet & Governance</h4>
+
+<div class="grid">
+
+<div>
+<label>Debt / Equity</label>
+<input id="debt" class="form-control">
+</div>
+
+<div>
+<label>Promoter Pledge (%)</label>
+<input id="pledge" class="form-control">
+</div>
+
+<div>
+<label>Promoter Stake Change (%)</label>
+<input id="stake" class="form-control">
+</div>
+
+</div>
+</div>
+
+
+<!-- Market -->
+
+<div class="section">
+<h4>Market Signals</h4>
+
+<div class="grid">
+
+<div>
+<label>Price Drop from 52W High (%)</label>
+<input id="priceDrop" class="form-control">
+</div>
+
+<div>
+<label>1 Year Price Return (%)</label>
+<input id="price1yr" class="form-control">
+</div>
+
+</div>
+</div>
+
+
+<!-- Value -->
+
+<div class="section">
+<h4>Value Cushion</h4>
+
+<div class="grid">
+
+<div>
+<label>P/E</label>
+<input id="pe" class="form-control">
+</div>
+
+<div>
+<label>P/B</label>
+<input id="pb" class="form-control">
+</div>
+
+<div>
 <label>Dividend Yield (%)</label>
 <input id="dividend" class="form-control">
+</div>
 
-<label>Cash as % of Market Cap</label>
+<div>
+<label>Cash / Market Cap (%)</label>
 <input id="cash" class="form-control">
+</div>
 
-<hr>
+</div>
+</div>
 
-<h4>Moat Check</h4>
 
+<!-- Moat -->
+
+<div class="section">
 <label>
-<input type="checkbox" id="moat"> Structural moat weakening
+<input type="checkbox" id="moat">
+Moat clearly weakening
 </label>
+</div>
 
-<br><br>
 
-<button onclick="calculateScore()" class="btn btn-primary">Calculate Score</button>
+<button onclick="calculateScore()" class="btn btn-primary">
+Calculate Score
+</button>
+
 
 <div id="result" class="result"></div>
 
 </div>
+
+
 
 <script>
 
@@ -121,133 +238,107 @@ function calculateScore(){
 
 let score = 0
 
-let revenue = parseFloat(document.getElementById("revenue").value)
-let roce = parseFloat(document.getElementById("roce").value)
-let margin = parseFloat(document.getElementById("margin").value)
+let revenue = parseFloat(document.getElementById("revenue").value) || 0
+let roce = parseFloat(document.getElementById("roce").value) || 0
+let margin = parseFloat(document.getElementById("margin").value) || 0
+
 let valuation = parseFloat(document.getElementById("valuation").value)
 
-let debt = parseFloat(document.getElementById("debt").value)
-let pledge = parseFloat(document.getElementById("pledge").value)
-let stake = parseFloat(document.getElementById("stake").value)
+let debt = parseFloat(document.getElementById("debt").value) || 0
+let pledge = parseFloat(document.getElementById("pledge").value) || 0
+let stake = parseFloat(document.getElementById("stake").value) || 0
 
-let priceChange = parseFloat(document.getElementById("priceChange").value)
-let price1yr = parseFloat(document.getElementById("price1yr").value)
+let priceDrop = parseFloat(document.getElementById("priceDrop").value) || 0
+let price1yr = parseFloat(document.getElementById("price1yr").value) || 0
 
-let pe = parseFloat(document.getElementById("pe").value)
-let pb = parseFloat(document.getElementById("pb").value)
-let peg = parseFloat(document.getElementById("peg").value)
-
-let dividend = parseFloat(document.getElementById("dividend").value)
-let cash = parseFloat(document.getElementById("cash").value)
+let pe = parseFloat(document.getElementById("pe").value) || 0
+let pb = parseFloat(document.getElementById("pb").value) || 0
+let dividend = parseFloat(document.getElementById("dividend").value) || 0
+let cash = parseFloat(document.getElementById("cash").value) || 0
 
 let moat = document.getElementById("moat").checked
 
 
 
-// Growth
+/* Growth */
 
-if(revenue < 8){
-score += 25
-}
-else if(revenue < 12){
-score += 10
-}
+if(revenue < 8) score += 25
+else if(revenue < 12) score += 10
 
-if(roce < 15){
-score += 10
-}
+if(roce < 15) score += 10
 
-if(margin < -3){
-score += 5
-}
+if(margin < -3) score += 5
 
 
-// valuation
+/* Valuation */
 
 score += valuation
 
 
-// balance sheet
+/* Balance Sheet */
 
-if(debt > 0.5){
-score += 10
-}
-
-if(pledge > 20){
-score += 10
-}
-
-if(stake < -2){
-score += 5
-}
+if(debt > 0.5) score += 10
+if(pledge > 20) score += 10
+if(stake < -2) score += 5
 
 
-// market signal
+/* Market signals */
 
-if(priceChange < -25 && revenue < 12){
-score += 5
-}
-
-if(priceChange < -40 && revenue < 12){
-score += 10
-}
+if(priceDrop > 40 && revenue < 12) score += 10
+else if(priceDrop > 25 && revenue < 12) score += 5
 
 
-// value cushion
+/* Value Cushion */
 
-if(pe < 15 || pb < 2 || peg < 1){
-score -= 5
-}
+if(pe < 15 || pb < 2) score -= 5
 
-if(dividend > 3){
-score -= 5
-}
+if(dividend > 3) score -= 5
 
-if(cash > 30){
-score -= 5
-}
+if(cash > 30) score -= 5
 
 
-// winner momentum
+/* Winner momentum */
 
-if(price1yr > 25){
-score -= 5
-}
+if(price1yr > 25) score -= 5
 
 
-// moat check
+/* Moat */
 
-if(moat){
-score += 15
-}
+if(moat) score += 15
 
 
-// verdict
+
+/* Verdict */
 
 let verdict = ""
 
-if(score <= 25){
+if(score <= 25)
 verdict = "💎 Diamond Hands"
-}
-else if(score <= 45){
+
+else if(score <= 45)
 verdict = "👀 Watch Carefully"
-}
-else if(score <= 65){
+
+else if(score <= 65)
 verdict = "⚠️ Trim 50%"
-}
-else{
+
+else
 verdict = "❌ Hard Exit"
-}
 
 
-document.getElementById("result").innerHTML =
-"<h3>Final Score: "+score+"</h3>" +
-"<h4>Verdict: "+verdict+"</h4>"
+
+document.getElementById("result").innerHTML = `
+
+<div class="score">Score: ${score} / 100</div>
+
+<br>
+
+<div class="verdict">${verdict}</div>
+
+`
 
 }
 
 </script>
 
 </body>
-
 </html>
