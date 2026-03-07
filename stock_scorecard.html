@@ -226,11 +226,12 @@ select { cursor: pointer; appearance: none; background-image: url("data:image/sv
         <span class="signal-chip" id="sig_roce"></span>
       </div>
 
+      <!-- ✏️ ONLY CHANGE: label, placeholder, and tooltip updated for margin field -->
       <div class="input-group">
-        <div class="input-label">Op. Margin YoY Decline %
-          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">How many percentage points has operating margin fallen vs last year? Enter a positive number (e.g. 3 if margin dropped from 22% to 19%).</div></div>
+        <div class="input-label">Op. Margin Change YoY (pp)
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Change in operating margin vs last year in percentage points. Enter negative if it fell (e.g. –4), positive if it improved (e.g. +2). Only a decline beyond –3pp adds to the exit score.</div></div>
         </div>
-        <input type="number" id="marginDecline" placeholder="e.g. 2" oninput="liveScore()">
+        <input type="number" id="marginDecline" placeholder="e.g. –4 or +2" oninput="liveScore()">
         <span class="signal-chip" id="sig_marginDecline"></span>
       </div>
 
@@ -513,11 +514,6 @@ select { cursor: pointer; appearance: none; background-image: url("data:image/sv
 </div><!-- end page -->
 
 <script>
-// ── SECTOR CONFIG ──────────────────────────────────────────────────────────
-// Each sector defines:
-//   context: benchmarks shown as reference card
-//   primary: { id, label, placeholder, tip, scorer(val)→pts }
-//   secondary: { id, label, placeholder, tip, scorer(val)→pts }  (optional)
 const SECTORS = {
   saas: {
     name: 'SaaS / Software',
@@ -778,16 +774,12 @@ function setSector(key) {
   currentSector = key;
   const cfg = SECTORS[key];
   document.querySelectorAll('.sector-tab').forEach(t => t.classList.toggle('active', t.dataset.sector === key));
-
-  // Context box
   const ctxBox = document.getElementById('val-context-box');
   document.getElementById('val-ctx-title').textContent = cfg.name + ' — Valuation Benchmarks';
   document.getElementById('val-ctx-body').innerHTML = cfg.context.map(c =>
     `<div class="val-context-item"><strong>${c.k}:</strong> ${c.v}</div>`
   ).join('');
   ctxBox.style.display = 'block';
-
-  // Fields
   const fields = document.getElementById('val-fields');
   let html = `<div class="input-grid">`;
   html += renderValField(cfg.primary, true);
@@ -811,7 +803,6 @@ function renderValField(f, isPrimary) {
     </div>`;
 }
 
-// ── UTILITIES ────────────────────────────────────────────────────────────────
 function v(id) { const e = document.getElementById(id); if (!e) return null; const n = parseFloat(e.value); return isNaN(n) ? null : n; }
 function sv(id) { const e = document.getElementById(id); return e ? parseInt(e.value) : 0; }
 
@@ -828,7 +819,6 @@ function toggleCheck(id) {
   wrap.classList.toggle('checked', cb.checked);
 }
 
-// ── SCORING ──────────────────────────────────────────────────────────────────
 function liveScore() {
   let s = {};
 
@@ -860,11 +850,13 @@ function liveScore() {
   } else sig('roce', 0, null);
   p1 += roce_pts;
 
+  // ✏️ ONLY CHANGE: reads negative values; penalises only when < –3
   const md = v('marginDecline');
   let md_pts = 0;
   if (md !== null) {
-    if (md > 3) { md_pts = 5; sig('marginDecline', md_pts, `> 3% decline`, 'sig-warn'); }
-    else sig('marginDecline', 0, 'Margin stable', 'sig-ok');
+    if (md < -3)     { md_pts = 5; sig('marginDecline', md_pts, `${md}pp — significant drop`, 'sig-warn'); }
+    else if (md < 0) {             sig('marginDecline', 0,      `${md}pp — minor dip`,         'sig-info'); }
+    else             {             sig('marginDecline', 0,      `+${md}pp — improving`,         'sig-ok');  }
   } else sig('marginDecline', 0, null);
   p1 += md_pts;
 
@@ -886,7 +878,6 @@ function liveScore() {
     if (pv !== null) { sig(cfg.primary.id, pp, pp > 0 ? 'Stretched valuation' : 'Within range', pp > 0 ? 'sig-warn' : 'sig-ok'); }
     else sig(cfg.primary.id, 0, null);
     p2 += pp;
-
     if (cfg.secondary) {
       const sv2 = v(cfg.secondary.id);
       let sp = sv2 !== null ? cfg.secondary.scorer(sv2) : 0;
@@ -963,12 +954,10 @@ function liveScore() {
   const raw = Object.values(s).reduce((a, b) => a + b, 0);
   const total = Math.max(0, raw);
 
-  // Update scores
   document.getElementById('headerScore').textContent = total;
   document.getElementById('sideScore').textContent = total;
   document.getElementById('progressFill').style.width = Math.min(100, (total / 115) * 100) + '%';
 
-  // Verdict
   let color, verdict, desc, cell;
   if (total <= 25)      { color='#2a7a4f'; verdict='💎 Diamond Hands'; cell=0; desc='Strong compounder. Hold with conviction. Revisit next quarter.'; }
   else if (total <= 45) { color='#1e4d8c'; verdict='👀 Watch Carefully'; cell=1; desc='Early weakness detected. Do not act until signal persists for 2 quarters.'; }
@@ -988,7 +977,6 @@ function liveScore() {
     mc.style.background = i === cell ? mc.style.color + '14' : 'transparent';
   }
 
-  // Breakdown
   document.getElementById('breakdownRows').innerHTML =
     Object.entries(s).map(([k, val]) =>
       `<div class="breakdown-row">
@@ -1004,7 +992,6 @@ function liveScore() {
 
 function resetAll() {
   document.querySelectorAll('input[type=number]').forEach(i => i.value = '');
-  document.querySelectorAll('select').forEach(s => { if(s.id !== 'revTrend' && s.id !== 'auditor' && s.id !== 'moat') return; s.selectedIndex = 0; });
   document.querySelectorAll('select').forEach(s => s.selectedIndex = 0);
   document.querySelectorAll('input[type=checkbox]').forEach(c => { c.checked = false; c.closest('.checkbox-item')?.classList.remove('checked'); });
   document.querySelectorAll('.signal-chip').forEach(c => { c.className = 'signal-chip'; c.textContent = ''; });
