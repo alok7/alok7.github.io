@@ -1,335 +1,1232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Stock Scorecard</title>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Exit Scorecard</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-
-body{
-font-size:14px;
-background:#f7f8fa;
-padding:20px;
+:root {
+  --bg: #f5f2ed;
+  --surface: #ffffff;
+  --surface2: #faf9f7;
+  --border: #e2ddd6;
+  --border2: #ccc8c0;
+  --ink: #1a1714;
+  --ink2: #4a4540;
+  --muted: #8a8480;
+  --accent: #b5460f;
+  --accent-light: #f5ede8;
+  --gold: #c49a2a;
+  --gold-light: #fdf6e3;
+  --green: #2a7a4f;
+  --green-light: #e8f5ee;
+  --blue: #1e4d8c;
+  --blue-light: #e8eef7;
+  --warn: #d97706;
+  --warn-light: #fffbeb;
+  --danger: #b91c1c;
+  --danger-light: #fef2f2;
+  --r0: 6px;
+  --r1: 10px;
+  --r2: 14px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.container-box{
-max-width:900px;
-margin:auto;
-background:white;
-padding:18px 22px;
-border-radius:6px;
-box-shadow:0 1px 5px rgba(0,0,0,0.08);
+/* ── LAYOUT ── */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
 }
 
-h4{
-margin-bottom:16px;
-font-weight:600;
+/* ── HEADER ── */
+.header {
+  padding: 44px 0 32px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.header-left {}
+.header-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+}
+.header h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.header-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.header-score-widget {
+  text-align: right;
+  flex-shrink: 0;
+}
+.live-score-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.live-score-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.4s;
+  color: var(--ink);
+}
+.live-score-max {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: var(--muted);
 }
 
-.section-title{
-font-size:13px;
-font-weight:600;
-color:#6c757d;
-margin-top:12px;
-margin-bottom:6px;
-text-transform:uppercase;
+/* ── MAIN GRID ── */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
 }
 
-.row{
-margin-bottom:6px;
+/* ── SECTIONS ── */
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+}
+.section-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.section-pts-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  transition: all 0.3s;
+}
+.section-pts-badge.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+.section-body {
+  padding: 20px;
+}
+.new-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid #b3c8e8;
+  border-radius: 3px;
+  padding: 2px 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.improved-note {
+  background: var(--blue-light);
+  border-left: 3px solid var(--blue);
+  padding: 9px 13px;
+  border-radius: 0 var(--r0) var(--r0) 0;
+  font-size: 12px;
+  color: var(--blue);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+.improved-note strong { font-weight: 600; }
+
+/* ── INPUT GRID ── */
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink2);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+}
+.tip-icon {
+  width: 15px; height: 15px;
+  background: var(--border2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px;
+  color: var(--muted);
+  cursor: default;
+  font-family: 'IBM Plex Mono', monospace;
+  flex-shrink: 0;
+}
+.tip-icon:hover + .tip-popup,
+.tip-icon:focus + .tip-popup { opacity: 1; pointer-events: auto; transform: translateY(-4px); }
+.tip-popup {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(0px);
+  background: var(--ink);
+  color: #fff;
+  font-size: 11px;
+  padding: 7px 10px;
+  border-radius: var(--r0);
+  white-space: normal;
+  width: 190px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+}
+.tip-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--ink);
+}
+input[type=number], input[type=text], select {
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--border2);
+  border-radius: var(--r0);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--surface);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { -webkit-appearance: none; }
+input:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(181,70,15,0.1);
+}
+input.filled { border-color: var(--ink2); background: var(--surface2); }
+select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8480' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+.input-hint {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+}
+.input-score-chip {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 3px;
+  margin-top: 3px;
+  transition: all 0.2s;
+  min-height: 16px;
+}
+.chip-pos { background: #fef0e8; color: var(--accent); border: 1px solid #f5d0be; }
+.chip-neg { background: var(--green-light); color: var(--green); border: 1px solid #b3dcc4; }
+.chip-zero { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+
+/* ── SECTOR SELECT ── */
+.sector-wrap {
+  margin-bottom: 18px;
+}
+.sector-wrap label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink2);
+  margin-bottom: 5px;
+}
+.sector-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sector-tab {
+  padding: 6px 14px;
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--ink2);
+  background: var(--surface);
+  user-select: none;
+}
+.sector-tab:hover { border-color: var(--ink2); }
+.sector-tab.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
 }
 
-input, select{
-height:30px !important;
-font-size:13px !important;
+/* ── CHECKBOXES ── */
+.checkbox-list { display: flex; flex-direction: column; gap: 10px; }
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--r0);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+.checkbox-item:hover { border-color: var(--border2); background: var(--surface2); }
+.checkbox-item.checked { border-color: var(--green); background: var(--green-light); }
+.checkbox-item.checked.deduct { border-color: var(--green); background: var(--green-light); }
+.checkbox-item input { display: none; }
+.custom-check {
+  width: 18px; height: 18px;
+  border: 2px solid var(--border2);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.checkbox-item.checked .custom-check {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.custom-check::after {
+  content: '✓';
+  font-size: 11px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.checkbox-item.checked .custom-check::after { opacity: 1; }
+.check-text { flex: 1; font-size: 13px; line-height: 1.4; }
+.check-pts {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: 1px;
 }
 
-label{
-font-size:13px;
-margin-bottom:2px;
+/* ── SIDEBAR ── */
+.sidebar { position: sticky; top: 20px; }
+.verdict-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.verdict-top {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.verdict-score-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.4s;
+}
+.verdict-score-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+.verdict-action {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: var(--r0);
+  transition: all 0.4s;
+  text-align: center;
+}
+.verdict-desc {
+  font-size: 12px;
+  color: var(--ink2);
+  text-align: center;
+  padding: 0 20px 16px;
+  line-height: 1.5;
 }
 
-.help{
-cursor:pointer;
-font-size:11px;
-margin-left:4px;
-color:#6c757d;
+/* Progress bar */
+.progress-wrap { padding: 0 20px 16px; }
+.progress-track {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease, background 0.4s;
+  width: 0%;
 }
 
-.tooltip-inner{
-font-size:11px;
-padding:5px 7px;
-max-width:200px;
-background:#2f3640;
+/* Matrix */
+.matrix-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 14px 20px 8px;
+  border-top: 1px solid var(--border);
+}
+.matrix-rows { padding: 0 20px 16px; display: flex; flex-direction: column; gap: 6px; }
+.matrix-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--r0);
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.matrix-row.active { border-color: currentColor !important; }
+.matrix-emoji { font-size: 16px; width: 22px; text-align: center; }
+.matrix-range {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  width: 40px;
+  flex-shrink: 0;
+}
+.matrix-label { font-size: 12px; font-weight: 500; flex: 1; }
+.matrix-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.matrix-row.active .matrix-dot { opacity: 1; }
+
+/* Breakdown */
+.breakdown-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 14px 20px 8px;
+  border-top: 1px solid var(--border);
+}
+.breakdown-rows { padding: 0 20px 16px; display: flex; flex-direction: column; gap: 5px; }
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+.breakdown-row:last-child { border-bottom: none; }
+.breakdown-name { color: var(--ink2); }
+.breakdown-pts {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
 }
 
-.tooltip.bs-tooltip-top .arrow::before{
-border-top-color:#2f3640;
+/* CTA */
+.compute-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  background: var(--surface2);
 }
-
-.result{
-margin-top:16px;
-font-weight:600;
+.btn-compute {
+  flex: 1;
+  height: 40px;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: var(--r0);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
 }
-
-.score{
-font-size:20px;
-font-weight:700;
+.btn-compute:hover { background: var(--accent); }
+.btn-compute:active { transform: scale(0.98); }
+.btn-reset {
+  height: 40px;
+  padding: 0 16px;
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: var(--r0);
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
 }
+.btn-reset:hover { border-color: var(--ink2); color: var(--ink); }
 
-.verdict{
-font-size:16px;
+/* ── CONFIRMATION RULE ── */
+.info-card {
+  background: var(--gold-light);
+  border: 1px solid #e8d99a;
+  border-radius: var(--r1);
+  padding: 16px;
+  margin-bottom: 16px;
 }
+.info-card-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.info-card p { font-size: 12px; color: var(--ink2); line-height: 1.5; }
+.info-card ul { margin: 6px 0 0 16px; }
+.info-card li { font-size: 12px; color: var(--ink2); line-height: 1.6; }
 
+/* Divider */
+.divider { height: 1px; background: var(--border); margin: 18px 0; }
+
+/* Animations */
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+.section { animation: fadeIn 0.4s ease both; }
+.section:nth-child(1) { animation-delay: 0.05s; }
+.section:nth-child(2) { animation-delay: 0.1s; }
+.section:nth-child(3) { animation-delay: 0.15s; }
+.section:nth-child(4) { animation-delay: 0.2s; }
+.section:nth-child(5) { animation-delay: 0.25s; }
+.section:nth-child(6) { animation-delay: 0.3s; }
+.section:nth-child(7) { animation-delay: 0.35s; }
+
+@media (max-width: 800px) {
+  .main-grid { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .header { flex-direction: column; align-items: flex-start; }
+  .header-score-widget { text-align: left; }
+}
 </style>
 </head>
-
 <body>
+<div class="page">
 
-<div class="container-box">
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div class="header-eyebrow">Capital Allocation · Quarterly Review</div>
+      <h1>Stock <em>Exit</em><br>Scorecard</h1>
+      <div class="header-meta">Enter financials below · Score updates live · Max score: 115</div>
+    </div>
+    <div class="header-score-widget">
+      <div class="live-score-label">Live Score</div>
+      <div>
+        <span class="live-score-num" id="headerScore">0</span>
+        <span class="live-score-max">&thinsp;/115</span>
+      </div>
+    </div>
+  </div>
 
-<h4>Stock Scorecard</h4>
+  <div class="main-grid">
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
 
-<div class="section-title">Quality</div>
+      <!-- SECTION 1: Growth & Efficiency -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-num">01</span>
+            <span class="section-title">Growth & Efficiency</span>
+          </div>
+          <span class="section-pts-badge" id="badge1">0 / 60 pts</span>
+        </div>
+        <div class="section-body">
+          <div class="improved-note"><strong>Includes:</strong> EPS growth band and FCF/Net Income check — catches earnings manipulation and margin erosion that revenue alone misses.</div>
+          <div class="input-grid">
 
-<div class="row">
-<div class="col-md-4">
-<label>
-ROCE %
-<span class="help" data-toggle="tooltip"
-title="Return on capital employed. Measures capital efficiency.">ⓘ</span>
-</label>
-<input id="roce" class="form-control">
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                Revenue Growth YoY %
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Year-over-year revenue growth. &lt;8% signals demand slowdown.</div></div>
+              </div>
+              <input type="number" id="revenue" placeholder="e.g. 14" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_revenue">&nbsp;</div>
+            </div>
 
-<div class="col-md-4">
-<label>
-Operating Margin %
-<span class="help" data-toggle="tooltip"
-title="Operating profit margin from latest results.">ⓘ</span>
-</label>
-<input id="margin" class="form-control">
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                EPS Growth YoY % <span class="new-badge">NEW</span>
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Earnings per share growth vs last year. Declining EPS while revenue grows = margin erosion.</div></div>
+              </div>
+              <input type="number" id="eps" placeholder="e.g. 18" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_eps">&nbsp;</div>
+            </div>
 
-<div class="col-md-4">
-<label>
-Margin YoY Decline %
-<span class="help" data-toggle="tooltip"
-title="Operating margin drop compared to last year.">ⓘ</span>
-</label>
-<input id="marginDecline" class="form-control">
-</div>
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                ROCE %
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Return on Capital Employed. Measures capital efficiency. Below 15% signals a problem.</div></div>
+              </div>
+              <input type="number" id="roce" placeholder="e.g. 22" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_roce">&nbsp;</div>
+            </div>
 
+            <div class="input-group">
+              <div class="input-label">
+                Operating Margin %
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Current operating profit margin from latest results.</div></div>
+              </div>
+              <input type="number" id="margin" placeholder="e.g. 20" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_margin">&nbsp;</div>
+            </div>
 
-<div class="section-title">Growth</div>
+            <div class="input-group">
+              <div class="input-label">
+                Margin YoY Decline %
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">How many percentage points has operating margin dropped vs last year? Enter positive number.</div></div>
+              </div>
+              <input type="number" id="marginDecline" placeholder="e.g. 2" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_marginDecline">&nbsp;</div>
+            </div>
 
-<div class="row">
-<div class="col-md-4">
-<label>
-Revenue Growth YoY %
-<span class="help" data-toggle="tooltip"
-title="Revenue growth compared to same quarter last year.">ⓘ</span>
-</label>
-<input id="revenue" class="form-control">
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                FCF / Net Income % <span class="new-badge">NEW</span>
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Free Cash Flow ÷ Net Income × 100. Below 50% for 2+ quarters = earnings quality risk / possible manipulation.</div></div>
+              </div>
+              <input type="number" id="fcf" placeholder="e.g. 75" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_fcf">&nbsp;</div>
+            </div>
 
-<div class="col-md-4">
-<label>
-EPS Growth YoY %
-<span class="help" data-toggle="tooltip"
-title="Earnings per share growth vs last year.">ⓘ</span>
-</label>
-<input id="eps" class="form-control">
-</div>
+          </div>
+        </div>
+      </div>
 
-<div class="col-md-4">
-<label>
-PE Ratio
-<span class="help" data-toggle="tooltip"
-title="Current price to earnings ratio.">ⓘ</span>
-</label>
-<input id="pe" class="form-control">
-</div>
-</div>
+      <!-- SECTION 2: Valuation -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-num">02</span>
+            <span class="section-title">Valuation Discipline</span>
+          </div>
+          <span class="section-pts-badge" id="badge2">0 / 25 pts</span>
+        </div>
+        <div class="section-body">
+          <div class="sector-wrap">
+            <label>Select Business Type for correct valuation metric</label>
+            <div class="sector-tabs">
+              <div class="sector-tab" data-sector="tech" onclick="setSector('tech')">IT / Tech / SaaS</div>
+              <div class="sector-tab" data-sector="bank" onclick="setSector('bank')">Banks / Financials</div>
+              <div class="sector-tab" data-sector="cyclical" onclick="setSector('cyclical')">Defense / Cyclical</div>
+              <div class="sector-tab" data-sector="consumer" onclick="setSector('consumer')">Consumer / Retail</div>
+            </div>
+          </div>
 
+          <div id="val-fields">
+            <div style="font-size:12px;color:var(--muted);font-style:italic;">← Select a business type above to see relevant valuation fields.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="section-title">Valuation</div>
+      <!-- SECTION 3: Balance Sheet & Governance -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-num">03</span>
+            <span class="section-title">Balance Sheet & Governance</span>
+          </div>
+          <span class="section-pts-badge" id="badge3">0 / 30 pts</span>
+        </div>
+        <div class="section-body">
+          <div class="improved-note"><strong>Improved:</strong> Auditor resignation / qualified opinion added at +15 pts — historically the strongest early warning of fraud (Satyam, Enron, etc.).</div>
+          <div class="input-grid">
 
-<div class="row">
-<div class="col-md-4">
-<label>
-PEG Ratio
-<span class="help" data-toggle="tooltip"
-title="PE divided by earnings growth.">ⓘ</span>
-</label>
-<input id="peg" class="form-control">
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                Debt / Equity Ratio
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Total debt divided by shareholders' equity. For non-financial companies, above 0.5 is a risk flag.</div></div>
+              </div>
+              <input type="number" id="debt" placeholder="e.g. 0.3" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_debt">&nbsp;</div>
+            </div>
 
-<div class="col-md-4">
-<label>
-Debt / Equity
-<span class="help" data-toggle="tooltip"
-title="Financial leverage ratio.">ⓘ</span>
-</label>
-<input id="debt" class="form-control">
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                Promoter Pledge %
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">% of promoter shares pledged. Above 20% is a serious governance risk.</div></div>
+              </div>
+              <input type="number" id="pledge" placeholder="e.g. 5" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_pledge">&nbsp;</div>
+            </div>
 
-<div class="col-md-4">
-<label>
-Drop from High %
-<span class="help" data-toggle="tooltip"
-title="Decline from the 52-week high.">ⓘ</span>
-</label>
-<input id="priceDrop" class="form-control">
-</div>
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                Promoter Stake Δ (1Y) %
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Change in promoter holding over last year. Negative = promoters reduced stake. Enter negative value if reduced.</div></div>
+              </div>
+              <input type="number" id="promoter" placeholder="e.g. -1.5" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_promoter">&nbsp;</div>
+            </div>
 
+            <div class="input-group">
+              <div class="input-label">
+                Auditor / Accounting Flags <span class="new-badge">NEW</span>
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Has the auditor resigned, issued a qualified opinion, or have there been restatements of financials?</div></div>
+              </div>
+              <select id="auditor" onchange="liveScore()">
+                <option value="0">No issues — clean</option>
+                <option value="15">Qualified opinion / Auditor resigned / Restatement</option>
+              </select>
+              <div class="input-score-chip chip-zero" id="chip_auditor">&nbsp;</div>
+            </div>
 
-<div class="section-title">Risk Signals</div>
+          </div>
+        </div>
+      </div>
 
-<div class="row">
-<div class="col-md-4">
-<label>
-Promoter Δ (1Y)
-<span class="help" data-toggle="tooltip"
-title="Δ = Change in promoter holding over the last 1 year. Negative value means promoters reduced stake.">ⓘ</span>
-</label>
-<input id="promoter" class="form-control">
-</div>
+      <!-- SECTION 4: Market Warning Signals -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-num">04</span>
+            <span class="section-title">Market Warning Signals</span>
+          </div>
+          <span class="section-pts-badge" id="badge4">0 / 10 pts</span>
+        </div>
+        <div class="section-body">
+          <div class="input-grid">
 
-<div class="col-md-4">
-<label>
-Moat Weakening?
-<span class="help" data-toggle="tooltip"
-title="Signs the company's competitive advantage is deteriorating.">ⓘ</span>
-</label>
-<select id="moat" class="form-control">
-<option value="0">No</option>
-<option value="1">Yes</option>
-</select>
-</div>
-</div>
+            <div class="input-group">
+              <div class="input-label">
+                Drop from 52-Week High %
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">How far is the stock below its 52-week high? Enter positive number.</div></div>
+              </div>
+              <input type="number" id="priceDrop" placeholder="e.g. 30" oninput="liveScore()">
+              <div class="input-score-chip chip-zero" id="chip_priceDrop">&nbsp;</div>
+            </div>
 
+            <div class="input-group">
+              <div class="input-label">
+                Revenue Trend (for price signal)
+                <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Is revenue growth slowing? Required for price signal to trigger.</div></div>
+              </div>
+              <select id="revTrend" onchange="liveScore()">
+                <option value="0">Revenue stable or growing</option>
+                <option value="1">Revenue slowing / declining</option>
+              </select>
+            </div>
 
-<button class="btn btn-primary btn-sm mt-2" onclick="computeScore()">Compute Score</button>
+          </div>
+        </div>
+      </div>
 
-<div class="result">
+      <!-- SECTION 5: Moat Integrity -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-num">05</span>
+            <span class="section-title">Moat Integrity Check <span class="new-badge">CORE</span></span>
+          </div>
+          <span class="section-pts-badge" id="badge5">0 / 15 pts</span>
+        </div>
+        <div class="section-body">
+          <div class="improved-note"><strong>Upgraded:</strong> Moved from optional to core scoring. Structural advantage loss is often the real reason to exit — and it shows before earnings do.</div>
+          <div class="input-group" style="max-width:400px">
+            <div class="input-label">Competitive Position Assessment</div>
+            <select id="moat" onchange="liveScore()">
+              <option value="0">Moat intact — competitive position strong</option>
+              <option value="7">Moat under pressure, but holding (monitor)</option>
+              <option value="15">Moat clearly weakening (AI disruption / pricing wars / market share loss &gt;3%)</option>
+            </select>
+            <div class="input-score-chip chip-zero" id="chip_moat">&nbsp;</div>
+          </div>
+        </div>
+      </div>
 
-<div class="score">
-Score: <span id="score">0</span>
-</div>
+      <!-- SECTION 6: Value Cushion (deductions) -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-num">06</span>
+            <span class="section-title">Value Cushion Adjustments</span>
+          </div>
+          <span class="section-pts-badge" id="badge6">0 pts</span>
+        </div>
+        <div class="section-body">
+          <p style="font-size:12px;color:var(--muted);margin-bottom:14px">These reduce the exit signal — they provide downside protection. Check all that apply.</p>
+          <div class="checkbox-list">
+            <label class="checkbox-item deduct" id="chk_valcushion_wrap">
+              <input type="checkbox" id="chk_valcushion" onchange="toggleCheck('chk_valcushion_wrap');liveScore()">
+              <div class="custom-check"></div>
+              <div class="check-text">P/E &lt; 15 <em>or</em> P/B &lt; 2 <em>or</em> PEG &lt; 1 — market is already pessimistic on this stock</div>
+              <div class="check-pts" style="color:var(--green)">–5</div>
+            </label>
+            <label class="checkbox-item deduct" id="chk_dividend_wrap">
+              <input type="checkbox" id="chk_dividend" onchange="toggleCheck('chk_dividend_wrap');liveScore()">
+              <div class="custom-check"></div>
+              <div class="check-text">Dividend Yield &gt; 3% — yield provides a price floor and income during weakness</div>
+              <div class="check-pts" style="color:var(--green)">–5</div>
+            </label>
+            <label class="checkbox-item deduct" id="chk_cash_wrap">
+              <input type="checkbox" id="chk_cash" onchange="toggleCheck('chk_cash_wrap');liveScore()">
+              <div class="custom-check"></div>
+              <div class="check-text">Cash &gt; 30% of Market Cap — large cash buffer provides safety margin</div>
+              <div class="check-pts" style="color:var(--green)">–5</div>
+            </label>
+            <label class="checkbox-item deduct" id="chk_momentum_wrap">
+              <input type="checkbox" id="chk_momentum" onchange="toggleCheck('chk_momentum_wrap');liveScore()">
+              <div class="custom-check"></div>
+              <div class="check-text">Price up &gt;25% in last 12 months — winners tend to keep winning</div>
+              <div class="check-pts" style="color:var(--green)">–5</div>
+            </label>
+          </div>
+        </div>
+      </div>
 
-<div class="verdict">
-Verdict: <span id="verdict">-</span>
-</div>
+      <!-- SECTION 7: Confirmation Rule -->
+      <div class="info-card">
+        <div class="info-card-title">⏱ 2-Quarter Confirmation Rule</div>
+        <p>A signal must persist for <strong>2 consecutive quarters</strong> before taking action. This avoids panic exits on noise.</p>
+        <ul>
+          <li><strong>Exceptions requiring immediate action:</strong> Fraud, governance collapse, or massive sudden debt spike</li>
+          <li>One good quarter resets the confirmation clock</li>
+        </ul>
+      </div>
 
-</div>
+    </div><!-- end left col -->
 
-</div>
+    <!-- RIGHT SIDEBAR -->
+    <div class="sidebar">
+      <div class="verdict-card">
+        <div class="verdict-top">
+          <div class="verdict-score-label">Total Score</div>
+          <div class="verdict-score-big" id="sideScore">0</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)">&thinsp;out of 115</div>
+          <div class="verdict-action" id="verdictAction" style="background:var(--surface2);color:var(--muted)">— Awaiting inputs</div>
+        </div>
+        <div class="verdict-desc" id="verdictDesc">Enter the financial data on the left to compute your exit signal.</div>
 
+        <div class="progress-wrap">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="matrix-title">Decision Matrix</div>
+        <div class="matrix-rows">
+          <div class="matrix-row" id="mc0" style="color:#2a7a4f">
+            <span class="matrix-emoji">💎</span>
+            <span class="matrix-range">0–25</span>
+            <span class="matrix-label">Diamond Hands</span>
+            <div class="matrix-dot" style="background:#2a7a4f"></div>
+          </div>
+          <div class="matrix-row" id="mc1" style="color:#1e4d8c">
+            <span class="matrix-emoji">👀</span>
+            <span class="matrix-range">26–45</span>
+            <span class="matrix-label">Watch Carefully</span>
+            <div class="matrix-dot" style="background:#1e4d8c"></div>
+          </div>
+          <div class="matrix-row" id="mc2" style="color:#d97706">
+            <span class="matrix-emoji">⚠️</span>
+            <span class="matrix-range">46–70</span>
+            <span class="matrix-label">Trim 50%</span>
+            <div class="matrix-dot" style="background:#d97706"></div>
+          </div>
+          <div class="matrix-row" id="mc3" style="color:#b91c1c">
+            <span class="matrix-emoji">❌</span>
+            <span class="matrix-range">71+</span>
+            <span class="matrix-label">Hard Exit</span>
+            <div class="matrix-dot" style="background:#b91c1c"></div>
+          </div>
+        </div>
+
+        <div class="breakdown-title">Score Breakdown</div>
+        <div class="breakdown-rows" id="breakdownRows">
+          <div class="breakdown-row"><span class="breakdown-name">Fill in the form to see breakdown</span></div>
+        </div>
+
+        <div class="compute-bar">
+          <button class="btn-compute" onclick="liveScore()">↻ Recalculate</button>
+          <button class="btn-reset" onclick="resetAll()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end main grid -->
+</div><!-- end page -->
 
 <script>
+let currentSector = null;
 
-$(function () {
-$('[data-toggle="tooltip"]').tooltip({
-trigger:'hover',
-placement:'top',
-delay:{show:200,hide:100}
-})
-})
+const sectorFields = {
+  tech: [
+    { id:'peg', label:'PEG Ratio', placeholder:'e.g. 1.2', tip:'PE ÷ Earnings Growth. Primary metric for tech. PEG >1.5 = overvalued.', primary:true },
+    { id:'ps_ratio', label:'P/S vs Sector Avg (×)', placeholder:'e.g. 2.4', tip:'Price/Sales divided by sector avg P/S. Above 2× = stretched valuation.', primary:false }
+  ],
+  bank: [
+    { id:'pb', label:'Price to Book (P/B)', placeholder:'e.g. 2.5', tip:'Primary metric for banks. P/B >4 = significantly overvalued.', primary:true },
+    { id:'pe_vs_hist', label:'PE vs 5yr Median (×)', placeholder:'e.g. 1.6', tip:'Current PE divided by 5-year median PE. Above 1.5× is expensive.', primary:false }
+  ],
+  cyclical: [
+    { id:'pe', label:'P/E Ratio', placeholder:'e.g. 22', tip:'Primary metric for cyclicals. PE >30 = overbought for a cyclical.', primary:true },
+    { id:'pb', label:'Price to Book (P/B)', placeholder:'e.g. 2.8', tip:'Secondary check. P/B >3 adds to overvaluation signal.', primary:false }
+  ],
+  consumer: [
+    { id:'pe', label:'P/E Ratio', placeholder:'e.g. 38', tip:'Primary metric. Consumer stocks can sustain high PE, but >50 is stretched.', primary:true },
+    { id:'peg', label:'PEG Ratio (Secondary)', placeholder:'e.g. 1.8', tip:'PEG >1.5 adds to valuation concern.', primary:false }
+  ]
+};
 
-function val(id){
-return parseFloat(document.getElementById(id).value)||0
+function setSector(s) {
+  currentSector = s;
+  document.querySelectorAll('.sector-tab').forEach(t => t.classList.toggle('active', t.dataset.sector === s));
+  const container = document.getElementById('val-fields');
+  container.innerHTML = sectorFields[s].map(f => `
+    <div class="input-group" style="margin-bottom:14px;max-width:280px">
+      <div class="input-label">
+        ${f.label} ${f.primary ? '<span style="font-family:IBM Plex Mono,monospace;font-size:9px;background:#f5ede8;color:var(--accent);border:1px solid #f5d0be;border-radius:3px;padding:2px 5px;letter-spacing:1px">PRIMARY</span>' : ''}
+        <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">${f.tip}</div></div>
+      </div>
+      <input type="number" id="${f.id}" placeholder="${f.placeholder}" oninput="liveScore()">
+      <div class="input-score-chip chip-zero" id="chip_${f.id}">&nbsp;</div>
+    </div>`).join('');
+  liveScore();
 }
 
-function computeScore(){
-
-let score = 0
-
-
-// ================= QUALITY =================
-
-let roce = val("roce")
-if(roce > 20) score += 3
-else if(roce > 15) score += 2
-else if(roce > 10) score += 1
-
-let margin = val("margin")
-if(margin > 25) score += 2
-else if(margin > 15) score += 1
-
-let marginDecline = val("marginDecline")
-if(marginDecline > 5) score -= 2
-else if(marginDecline > 2) score -= 1
-
-
-
-// ================= GROWTH =================
-
-let revenue = val("revenue")
-if(revenue > 20) score += 3
-else if(revenue > 10) score += 2
-else if(revenue > 5) score += 1
-
-let eps = val("eps")
-if(eps > 20) score += 3
-else if(eps > 10) score += 2
-else if(eps > 5) score += 1
-
-
-
-// ================= VALUATION =================
-
-let pe = val("pe")
-if(pe < 20) score += 2
-else if(pe < 30) score += 1
-
-let peg = val("peg")
-if(peg < 1) score += 2
-else if(peg < 1.5) score += 1
-
-
-
-// ================= RISK =================
-
-let promoter = val("promoter")
-if(promoter < 0) score -= 2
-
-let moat = parseFloat(document.getElementById("moat").value)
-if(moat === 1) score -= 2
-
-let debt = val("debt")
-if(debt > 1) score -= 2
-else if(debt > 0.5) score -= 1
-
-let drop = val("priceDrop")
-if(drop > 40) score += 2
-else if(drop > 20) score += 1
-
-
-
-// ================= FINAL VERDICT =================
-
-document.getElementById("score").innerText = score
-
-let verdict = "Avoid"
-
-if(score >= 14) verdict = "Strong Buy"
-else if(score >= 10) verdict = "Buy"
-else if(score >= 6) verdict = "Hold"
-else if(score >= 3) verdict = "Weak Hold"
-
-document.getElementById("verdict").innerText = verdict
-
+function v(id) {
+  const el = document.getElementById(id);
+  if (!el) return null;
+  const val = parseFloat(el.value);
+  return isNaN(val) ? null : val;
+}
+function sv(id) {
+  const el = document.getElementById(id);
+  return el ? parseInt(el.value) : 0;
 }
 
+function setChip(id, pts, label) {
+  const el = document.getElementById('chip_' + id);
+  if (!el) return;
+  if (pts === 0) { el.className = 'input-score-chip chip-zero'; el.textContent = label || '0 pts'; }
+  else if (pts < 0) { el.className = 'input-score-chip chip-neg'; el.textContent = `${pts} pts`; }
+  else { el.className = 'input-score-chip chip-pos'; el.textContent = `+${pts} pts`; }
+}
+
+function toggleCheck(wrapId) {
+  const wrap = document.getElementById(wrapId);
+  const cb = wrap.querySelector('input[type=checkbox]');
+  wrap.classList.toggle('checked', cb.checked);
+}
+
+function liveScore() {
+  let s = {};
+
+  // --- PART 1: Growth & Efficiency (max 60) ---
+  let p1 = 0;
+
+  const rev = v('revenue');
+  let rev_pts = 0;
+  if (rev !== null) { if (rev < 8) rev_pts = 25; else if (rev < 12) rev_pts = 10; }
+  p1 += rev_pts; setChip('revenue', rev_pts, rev === null ? '—' : '0 pts');
+
+  const eps = v('eps');
+  let eps_pts = 0;
+  if (eps !== null) {
+    const revVal = v('revenue');
+    if (eps <= 0) eps_pts = 10;
+    else if (revVal !== null && eps < revVal) eps_pts = 5;
+  }
+  p1 += eps_pts; setChip('eps', eps_pts, eps === null ? '—' : '0 pts');
+
+  const roce = v('roce');
+  let roce_pts = 0;
+  if (roce !== null && roce < 15) roce_pts = 10;
+  p1 += roce_pts; setChip('roce', roce_pts, roce === null ? '—' : '0 pts');
+
+  const md = v('marginDecline');
+  let md_pts = 0;
+  if (md !== null && md > 3) md_pts = 5;
+  p1 += md_pts; setChip('marginDecline', md_pts, md === null ? '—' : '0 pts');
+
+  const margin = v('margin'); setChip('margin', 0, margin === null ? '—' : '—');
+
+  const fcf = v('fcf');
+  let fcf_pts = 0;
+  if (fcf !== null && fcf < 50) fcf_pts = 10;
+  p1 += fcf_pts; setChip('fcf', fcf_pts, fcf === null ? '—' : '0 pts');
+
+  s['Growth & Efficiency'] = p1;
+  setBadge('badge1', p1, 60);
+
+  // --- PART 2: Valuation (max 25) ---
+  let p2 = 0;
+  if (currentSector === 'tech') {
+    const peg = v('peg');
+    let peg_pts = 0;
+    if (peg !== null) { if (peg > 1.5) peg_pts = 20; else if (peg >= 1.0) peg_pts = 10; }
+    p2 += peg_pts; setChip('peg', peg_pts, peg === null ? '—' : '0 pts');
+    const ps = v('ps_ratio');
+    let ps_pts = 0;
+    if (ps !== null && ps > 2) ps_pts = 5;
+    p2 += ps_pts; setChip('ps_ratio', ps_pts, ps === null ? '—' : '0 pts');
+  } else if (currentSector === 'bank') {
+    const pb = v('pb');
+    let pb_pts = 0;
+    if (pb !== null) { if (pb > 4) pb_pts = 20; else if (pb >= 2) pb_pts = 10; }
+    p2 += pb_pts; setChip('pb', pb_pts, pb === null ? '—' : '0 pts');
+    const peh = v('pe_vs_hist');
+    let peh_pts = 0;
+    if (peh !== null && peh > 1.5) peh_pts = 5;
+    p2 += peh_pts; setChip('pe_vs_hist', peh_pts, peh === null ? '—' : '0 pts');
+  } else if (currentSector === 'cyclical') {
+    const pe = v('pe');
+    let pe_pts = 0;
+    if (pe !== null) { if (pe > 30) pe_pts = 20; else if (pe >= 15) pe_pts = 10; }
+    p2 += pe_pts; setChip('pe', pe_pts, pe === null ? '—' : '0 pts');
+    const pb = v('pb');
+    let pb_pts = 0;
+    if (pb !== null && pb > 3) pb_pts = 5;
+    p2 += pb_pts; setChip('pb', pb_pts, pb === null ? '—' : '0 pts');
+  } else if (currentSector === 'consumer') {
+    const pe = v('pe');
+    let pe_pts = 0;
+    if (pe !== null) { if (pe > 50) pe_pts = 20; else if (pe >= 25) pe_pts = 10; }
+    p2 += pe_pts; setChip('pe', pe_pts, pe === null ? '—' : '0 pts');
+    const peg = v('peg');
+    let peg_pts = 0;
+    if (peg !== null && peg > 1.5) peg_pts = 5;
+    p2 += peg_pts; setChip('peg', peg_pts, peg === null ? '—' : '0 pts');
+  }
+  s['Valuation'] = p2;
+  setBadge('badge2', p2, 25);
+
+  // --- PART 3: Governance (max 30) ---
+  let p3 = 0;
+  const debt = v('debt');
+  let debt_pts = 0;
+  if (debt !== null && debt > 0.5) debt_pts = 10;
+  p3 += debt_pts; setChip('debt', debt_pts, debt === null ? '—' : '0 pts');
+
+  const pledge = v('pledge');
+  let pledge_pts = 0;
+  if (pledge !== null && pledge > 20) pledge_pts = 10;
+  p3 += pledge_pts; setChip('pledge', pledge_pts, pledge === null ? '—' : '0 pts');
+
+  const promoter = v('promoter');
+  let promoter_pts = 0;
+  if (promoter !== null && promoter < -2) promoter_pts = 5;
+  p3 += promoter_pts; setChip('promoter', promoter_pts, promoter === null ? '—' : '0 pts');
+
+  const auditor = sv('auditor');
+  p3 += auditor; setChip('auditor', auditor, '0 pts');
+
+  s['Governance'] = p3;
+  setBadge('badge3', p3, 30);
+
+  // --- PART 4: Market Signals (max 10) ---
+  let p4 = 0;
+  const drop = v('priceDrop');
+  const revTrend = sv('revTrend');
+  let drop_pts = 0;
+  if (drop !== null && revTrend === 1) {
+    if (drop >= 40) drop_pts = 10;
+    else if (drop >= 25) drop_pts = 5;
+  }
+  p4 += drop_pts; setChip('priceDrop', drop_pts, drop === null ? '—' : '0 pts');
+  s['Market Signals'] = p4;
+  setBadge('badge4', p4, 10);
+
+  // --- PART 5: Moat (max 15) ---
+  const moat = sv('moat');
+  s['Moat Check'] = moat;
+  setChip('moat', moat, '0 pts');
+  setBadge('badge5', moat, 15);
+
+  // --- PART 6: Deductions ---
+  let deductions = 0;
+  if (document.getElementById('chk_valcushion')?.checked) deductions -= 5;
+  if (document.getElementById('chk_dividend')?.checked) deductions -= 5;
+  if (document.getElementById('chk_cash')?.checked) deductions -= 5;
+  if (document.getElementById('chk_momentum')?.checked) deductions -= 5;
+  s['Cushion / Bonus'] = deductions;
+  const badge6 = document.getElementById('badge6');
+  if (badge6) {
+    badge6.textContent = deductions === 0 ? '0 pts' : `${deductions} pts`;
+    badge6.classList.toggle('active', deductions !== 0);
+  }
+
+  // TOTAL
+  const raw = Object.values(s).reduce((a, b) => a + b, 0);
+  const total = Math.max(0, raw);
+
+  // Update header score
+  document.getElementById('headerScore').textContent = total;
+  document.getElementById('sideScore').textContent = total;
+
+  // Progress
+  const pct = Math.min(100, (total / 115) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+
+  // Color & verdict
+  let color, verdict, desc, activeCell;
+  if (total <= 25) {
+    color = '#2a7a4f'; verdict = '💎 Diamond Hands'; activeCell = 0;
+    desc = 'Strong compounder. Hold with conviction. Revisit next quarter.';
+  } else if (total <= 45) {
+    color = '#1e4d8c'; verdict = '👀 Watch Carefully'; activeCell = 1;
+    desc = 'Early weakness detected. Monitor closely. Do not act until confirmed for 2 quarters.';
+  } else if (total <= 70) {
+    color = '#d97706'; verdict = '⚠️ Trim 50%'; activeCell = 2;
+    desc = 'Growth engine weakening. Reduce position, redeploy into stronger compounders.';
+  } else {
+    color = '#b91c1c'; verdict = '❌ Hard Exit'; activeCell = 3;
+    desc = 'Capital destroyer risk. Exit unless a governance collapse warrants immediate action.';
+  }
+
+  document.getElementById('headerScore').style.color = color;
+  document.getElementById('sideScore').style.color = color;
+  document.getElementById('progressFill').style.background = color;
+
+  const va = document.getElementById('verdictAction');
+  va.textContent = verdict;
+  va.style.background = color + '18';
+  va.style.color = color;
+
+  document.getElementById('verdictDesc').textContent = desc;
+
+  for (let i = 0; i < 4; i++) {
+    const mc = document.getElementById('mc' + i);
+    mc.classList.toggle('active', i === activeCell);
+    mc.style.background = i === activeCell ? (mc.style.color + '12') : 'transparent';
+  }
+
+  // Breakdown
+  const rows = document.getElementById('breakdownRows');
+  rows.innerHTML = Object.entries(s).map(([k, v]) => `
+    <div class="breakdown-row">
+      <span class="breakdown-name">${k}</span>
+      <span class="breakdown-pts" style="color:${v < 0 ? '#2a7a4f' : v > 0 ? '#b5460f' : '#8a8480'}">${v > 0 ? '+' : ''}${v}</span>
+    </div>`).join('') + `
+    <div class="breakdown-row" style="border-top:2px solid var(--border2);margin-top:4px;padding-top:8px">
+      <span class="breakdown-name" style="font-weight:600">Total</span>
+      <span class="breakdown-pts" style="font-size:14px;color:${color};font-weight:600">${total}</span>
+    </div>`;
+}
+
+function setBadge(id, pts, max) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = max ? `${pts} / ${max} pts` : `${pts > 0 ? '+' : ''}${pts} pts`;
+  el.classList.toggle('active', pts > 0);
+}
+
+function resetAll() {
+  document.querySelectorAll('input[type=number]').forEach(i => i.value = '');
+  document.querySelectorAll('select').forEach(s => s.selectedIndex = 0);
+  document.querySelectorAll('input[type=checkbox]').forEach(c => {
+    c.checked = false;
+    c.closest('.checkbox-item')?.classList.remove('checked');
+  });
+  currentSector = null;
+  document.querySelectorAll('.sector-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('val-fields').innerHTML = '<div style="font-size:12px;color:var(--muted);font-style:italic;">← Select a business type above to see relevant valuation fields.</div>';
+  document.getElementById('headerScore').textContent = '0';
+  document.getElementById('headerScore').style.color = 'var(--ink)';
+  document.getElementById('sideScore').textContent = '0';
+  document.getElementById('sideScore').style.color = 'var(--ink)';
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('verdictAction').textContent = '— Awaiting inputs';
+  document.getElementById('verdictAction').style.cssText = 'background:var(--surface2);color:var(--muted)';
+  document.getElementById('verdictDesc').textContent = 'Enter the financial data on the left to compute your exit signal.';
+  document.getElementById('breakdownRows').innerHTML = '<div class="breakdown-row"><span class="breakdown-name">Fill in the form to see breakdown</span></div>';
+  for (let i = 0; i < 4; i++) { document.getElementById('mc'+i).classList.remove('active'); document.getElementById('mc'+i).style.background='transparent'; }
+  ['badge1','badge2','badge3','badge4','badge5','badge6'].forEach(b => {
+    const el = document.getElementById(b);
+    if (el) { el.classList.remove('active'); el.textContent = el.textContent.replace(/^\d+/, '0'); }
+  });
+  document.querySelectorAll('.input-score-chip').forEach(c => { c.className = 'input-score-chip chip-zero'; c.innerHTML = '&nbsp;'; });
+}
+
+// Init
+liveScore();
 </script>
-
 </body>
 </html>
