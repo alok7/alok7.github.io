@@ -1,147 +1,1034 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Exit Scorecard</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f2ed;
+  --surface: #ffffff;
+  --surface2: #faf9f7;
+  --border: #e2ddd6;
+  --border2: #ccc8c0;
+  --ink: #1a1714;
+  --ink2: #4a4540;
+  --muted: #8a8480;
+  --accent: #b5460f;
+  --accent-light: #f5ede8;
+  --gold: #c49a2a;
+  --gold-light: #fdf6e3;
+  --green: #2a7a4f;
+  --green-light: #e8f5ee;
+  --blue: #1e4d8c;
+  --blue-light: #e8eef7;
+  --warn: #d97706;
+  --danger: #b91c1c;
+  --r0: 6px; --r1: 10px; --r2: 14px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'IBM Plex Sans', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; font-size: 14px; line-height: 1.5; }
 
-    <title>Alok | Home</title>
+.page { max-width: 1120px; margin: 0 auto; padding: 0 20px 80px; }
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+/* HEADER */
+.header { padding: 40px 0 28px; border-bottom: 2px solid var(--ink); margin-bottom: 28px; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.header-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.header h1 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 5vw, 50px); font-weight: 700; line-height: 1; }
+.header h1 em { font-style: italic; color: var(--accent); }
+.header-meta { font-size: 12px; color: var(--muted); margin-top: 7px; }
+.live-score-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; text-align: right; }
+.live-score-num { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 700; line-height: 1; transition: color 0.4s; }
+.live-score-max { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
 
+/* GRID */
+.main-grid { display: grid; grid-template-columns: 1fr 330px; gap: 22px; align-items: start; }
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
+/* SECTION CARD */
+.section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r2); margin-bottom: 14px; overflow: visible; }
+.section-header { display: flex; align-items: center; gap: 12px; padding: 15px 20px; border-bottom: 1px solid var(--border); background: var(--surface2); border-radius: var(--r2) var(--r2) 0 0; }
+.section-num { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; flex-shrink: 0; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 500; }
+.section-body { padding: 18px 20px; }
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-    <script src="assets/js/hover.zoom.js"></script>
-    <script src="assets/js/hover.zoom.conf.js"></script>
+.new-badge { font-family: 'IBM Plex Mono', monospace; font-size: 9px; background: var(--blue-light); color: var(--blue); border: 1px solid #b3c8e8; border-radius: 3px; padding: 2px 5px; letter-spacing: 1px; text-transform: uppercase; vertical-align: middle; margin-left: 5px; }
+.core-badge { font-family: 'IBM Plex Mono', monospace; font-size: 9px; background: #f5ede8; color: var(--accent); border: 1px solid #f5d0be; border-radius: 3px; padding: 2px 5px; letter-spacing: 1px; text-transform: uppercase; vertical-align: middle; margin-left: 5px; }
+.improved-note { background: var(--blue-light); border-left: 3px solid var(--blue); padding: 8px 12px; border-radius: 0 var(--r0) var(--r0) 0; font-size: 12px; color: var(--blue); margin-bottom: 16px; line-height: 1.5; }
+.improved-note strong { font-weight: 600; }
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
+/* INPUTS */
+.input-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+.input-group { display: flex; flex-direction: column; gap: 4px; }
+.input-label { font-size: 12px; font-weight: 500; color: var(--ink2); display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
 
-  <body>
+.tooltip-wrap { position: relative; display: inline-flex; }
+.tip-icon { width: 15px; height: 15px; background: var(--border2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--muted); cursor: default; font-family: 'IBM Plex Mono', monospace; flex-shrink: 0; }
+.tip-icon:hover + .tip-popup { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(-4px); }
+.tip-popup { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(0); background: var(--ink); color: #fff; font-size: 11px; padding: 7px 10px; border-radius: var(--r0); width: 200px; line-height: 1.45; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; z-index: 100; font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; }
+.tip-popup::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: var(--ink); }
 
-    <!-- Static navbar -->
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Alok</a>
+input[type=number], select {
+  height: 36px; padding: 0 12px; border: 1px solid var(--border2); border-radius: var(--r0);
+  font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink);
+  background: var(--surface); outline: none; transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; }
+input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(181,70,15,0.1); }
+input.has-val { border-color: var(--border2); background: #fdfcfa; }
+select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8480' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+
+/* Signal chip under input */
+.signal-chip { height: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; border-radius: 3px; padding: 0 6px; display: inline-flex; align-items: center; transition: all 0.2s; opacity: 0; }
+.signal-chip.show { opacity: 1; }
+.sig-warn { background: #fef3e2; color: #92570a; border: 1px solid #f5d9a0; }
+.sig-ok   { background: var(--green-light); color: var(--green); border: 1px solid #b3dcc4; }
+.sig-info { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+
+/* SECTOR TABS */
+.sector-label { font-size: 12px; font-weight: 500; color: var(--ink2); margin-bottom: 10px; }
+.sector-groups { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+.sector-group-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.sector-tabs { display: flex; gap: 7px; flex-wrap: wrap; }
+.sector-tab { padding: 5px 13px; border: 1px solid var(--border2); border-radius: 20px; font-size: 12px; cursor: pointer; transition: all 0.15s; color: var(--ink2); background: var(--surface); user-select: none; white-space: nowrap; }
+.sector-tab:hover { border-color: var(--ink2); background: var(--surface2); }
+.sector-tab.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* Valuation context box */
+.val-context { background: var(--gold-light); border: 1px solid #e8d99a; border-radius: var(--r1); padding: 12px 16px; margin-bottom: 16px; }
+.val-context-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.val-context-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
+.val-context-item { font-size: 12px; color: var(--ink2); line-height: 1.4; }
+.val-context-item strong { font-weight: 600; color: var(--ink); }
+
+/* CHECKBOXES */
+.checkbox-list { display: flex; flex-direction: column; gap: 9px; }
+.checkbox-item { display: flex; align-items: flex-start; gap: 10px; padding: 11px 13px; border: 1px solid var(--border); border-radius: var(--r0); cursor: pointer; transition: all 0.15s; user-select: none; }
+.checkbox-item:hover { border-color: var(--border2); background: var(--surface2); }
+.checkbox-item.checked { border-color: var(--green); background: var(--green-light); }
+.checkbox-item input { display: none; }
+.custom-check { width: 17px; height: 17px; border: 2px solid var(--border2); border-radius: 4px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; font-size: 10px; color: transparent; }
+.checkbox-item.checked .custom-check { background: var(--green); border-color: var(--green); color: #fff; }
+.check-text { flex: 1; font-size: 13px; line-height: 1.4; }
+.check-pts { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; color: var(--green); white-space: nowrap; margin-top: 1px; }
+
+/* INFO CARD */
+.info-card { background: var(--gold-light); border: 1px solid #e8d99a; border-radius: var(--r1); padding: 14px 16px; margin-bottom: 14px; }
+.info-card-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 7px; }
+.info-card p, .info-card li { font-size: 12px; color: var(--ink2); line-height: 1.55; }
+.info-card ul { margin: 5px 0 0 15px; }
+
+/* SIDEBAR */
+.sidebar { position: sticky; top: 16px; }
+.verdict-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r2); overflow: hidden; }
+.verdict-top { padding: 20px 20px 14px; text-align: center; border-bottom: 1px solid var(--border); }
+.verdict-score-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 2px; }
+.verdict-score-big { font-family: 'Playfair Display', serif; font-size: 70px; font-weight: 700; line-height: 1; transition: color 0.4s; }
+.verdict-score-sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+.verdict-action { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-top: 12px; padding: 10px 12px; border-radius: var(--r0); transition: all 0.4s; }
+.verdict-desc { font-size: 12px; color: var(--ink2); padding: 10px 20px 14px; line-height: 1.5; text-align: center; }
+
+.progress-wrap { padding: 0 20px 14px; }
+.progress-track { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease, background 0.4s; width: 0%; }
+
+.matrix-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 12px 20px 7px; border-top: 1px solid var(--border); }
+.matrix-rows { padding: 0 20px 14px; display: flex; flex-direction: column; gap: 5px; }
+.matrix-row { display: flex; align-items: center; gap: 9px; padding: 7px 9px; border-radius: var(--r0); border: 1px solid transparent; transition: all 0.3s; cursor: default; }
+.matrix-row.active { border-color: currentColor; }
+.matrix-emoji { font-size: 15px; width: 20px; text-align: center; }
+.matrix-range { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); width: 38px; flex-shrink: 0; }
+.matrix-label { font-size: 12px; font-weight: 500; flex: 1; }
+.matrix-dot { width: 5px; height: 5px; border-radius: 50%; opacity: 0; transition: opacity 0.3s; }
+.matrix-row.active .matrix-dot { opacity: 1; }
+
+.breakdown-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 12px 20px 7px; border-top: 1px solid var(--border); }
+.breakdown-rows { padding: 0 20px 6px; display: flex; flex-direction: column; }
+.breakdown-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 5px 0; border-bottom: 1px solid var(--border); }
+.breakdown-row:last-child { border-bottom: none; }
+.breakdown-name { color: var(--ink2); }
+.breakdown-pts { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; }
+
+.action-bar { display: flex; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--border); background: var(--surface2); }
+.btn-primary { flex: 1; height: 38px; background: var(--ink); color: #fff; border: none; border-radius: var(--r0); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: background 0.15s; }
+.btn-primary:hover { background: var(--accent); }
+.btn-secondary { height: 38px; padding: 0 14px; background: transparent; border: 1px solid var(--border2); border-radius: var(--r0); color: var(--muted); font-size: 12px; cursor: pointer; transition: all 0.15s; }
+.btn-secondary:hover { border-color: var(--ink2); color: var(--ink); }
+
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+.section { animation: fadeUp 0.35s ease both; }
+.section:nth-child(1){animation-delay:.04s} .section:nth-child(2){animation-delay:.08s}
+.section:nth-child(3){animation-delay:.12s} .section:nth-child(4){animation-delay:.16s}
+.section:nth-child(5){animation-delay:.20s} .section:nth-child(6){animation-delay:.24s}
+
+@media(max-width:780px){
+  .main-grid{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .header{flex-direction:column;align-items:flex-start}
+  .val-context-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="header-eyebrow">Capital Allocation · Quarterly Review</div>
+    <h1>Stock <em>Exit</em> Scorecard</h1>
+    <div class="header-meta">Enter financials below · Score updates live · Higher score = consider redeploying capital</div>
+  </div>
+  <div style="text-align:right;flex-shrink:0">
+    <div class="live-score-label">Live Score</div>
+    <div><span class="live-score-num" id="headerScore">0</span><span class="live-score-max"> /115</span></div>
+  </div>
+</div>
+
+<div class="main-grid">
+<div class="left-col">
+
+<!-- S1: Growth & Efficiency -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">Growth & Efficiency</span>
+  </div>
+  <div class="section-body">
+    <div class="improved-note"><strong>Tip:</strong> EPS growth vs revenue growth reveals margin compression early. FCF/Net Income below 50% for two consecutive quarters is a red flag for earnings quality.</div>
+    <div class="input-grid">
+
+      <div class="input-group">
+        <div class="input-label">Revenue Growth YoY %
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Year-over-year revenue growth. Below 8% signals slowing demand momentum.</div></div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="my_resume.html">CV</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="stuff.html">Stuff</a></li>
-		    <li><a href="stock_scorecard.html">Stock Scorecard</a></li>	  
-          </ul>
-        </div><!--/.nav-collapse -->
+        <input type="number" id="revenue" placeholder="e.g. 14" oninput="liveScore()">
+        <span class="signal-chip" id="sig_revenue"></span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-label">EPS Growth YoY % <span class="new-badge">NEW</span>
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Earnings per share growth. If EPS grows slower than revenue, margins are eroding. Negative EPS growth is a strong exit signal.</div></div>
+        </div>
+        <input type="number" id="eps" placeholder="e.g. 18" oninput="liveScore()">
+        <span class="signal-chip" id="sig_eps"></span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-label">ROCE %
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Return on Capital Employed. Below 15% means the business is destroying value relative to cost of capital.</div></div>
+        </div>
+        <input type="number" id="roce" placeholder="e.g. 22" oninput="liveScore()">
+        <span class="signal-chip" id="sig_roce"></span>
+      </div>
+
+      <!-- ✏️ ONLY CHANGE: label, placeholder, and tooltip updated for margin field -->
+      <div class="input-group">
+        <div class="input-label">Op. Margin Change YoY (pp)
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Change in operating margin vs last year in percentage points. Enter negative if it fell (e.g. –4), positive if it improved (e.g. +2). Only a decline beyond –3pp adds to the exit score.</div></div>
+        </div>
+        <input type="number" id="marginDecline" placeholder="e.g. –4 or +2" oninput="liveScore()">
+        <span class="signal-chip" id="sig_marginDecline"></span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-label">FCF / Net Income % <span class="new-badge">NEW</span>
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Free Cash Flow ÷ Net Income × 100. Below 50% for 2+ quarters suggests earnings may not be backed by real cash — a manipulation risk flag.</div></div>
+        </div>
+        <input type="number" id="fcf" placeholder="e.g. 75" oninput="liveScore()">
+        <span class="signal-chip" id="sig_fcf"></span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- S2: Valuation -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">Valuation Discipline</span>
+  </div>
+  <div class="section-body">
+
+    <div class="sector-label">Select the company's sector to load the correct valuation metrics and benchmarks</div>
+
+    <div class="sector-groups">
+      <div>
+        <div class="sector-group-label">Technology & Growth</div>
+        <div class="sector-tabs">
+          <div class="sector-tab" data-sector="saas"     onclick="setSector('saas')">SaaS / Software</div>
+          <div class="sector-tab" data-sector="internet" onclick="setSector('internet')">Internet / Platform</div>
+          <div class="sector-tab" data-sector="hardware" onclick="setSector('hardware')">Hardware / Semis</div>
+          <div class="sector-tab" data-sector="it_serv"  onclick="setSector('it_serv')">IT Services / Consulting</div>
+        </div>
+      </div>
+      <div>
+        <div class="sector-group-label">Financials</div>
+        <div class="sector-tabs">
+          <div class="sector-tab" data-sector="bank"     onclick="setSector('bank')">Banks / PSU Banks</div>
+          <div class="sector-tab" data-sector="nbfc"     onclick="setSector('nbfc')">NBFC / Insurance</div>
+          <div class="sector-tab" data-sector="amc"      onclick="setSector('amc')">AMC / Broking</div>
+        </div>
+      </div>
+      <div>
+        <div class="sector-group-label">Consumer & Retail</div>
+        <div class="sector-tabs">
+          <div class="sector-tab" data-sector="fmcg"    onclick="setSector('fmcg')">FMCG / Staples</div>
+          <div class="sector-tab" data-sector="retail"  onclick="setSector('retail')">Retail / QSR</div>
+          <div class="sector-tab" data-sector="durables" onclick="setSector('durables')">Consumer Durables</div>
+        </div>
+      </div>
+      <div>
+        <div class="sector-group-label">Industrial & Cyclical</div>
+        <div class="sector-tabs">
+          <div class="sector-tab" data-sector="capital_goods" onclick="setSector('capital_goods')">Capital Goods / Defence</div>
+          <div class="sector-tab" data-sector="auto"    onclick="setSector('auto')">Auto / Auto Ancillary</div>
+          <div class="sector-tab" data-sector="infra"   onclick="setSector('infra')">Infrastructure / EPC</div>
+          <div class="sector-tab" data-sector="metal"   onclick="setSector('metal')">Metals / Mining</div>
+        </div>
+      </div>
+      <div>
+        <div class="sector-group-label">Other</div>
+        <div class="sector-tabs">
+          <div class="sector-tab" data-sector="pharma"  onclick="setSector('pharma')">Pharma / Healthcare</div>
+          <div class="sector-tab" data-sector="realty"  onclick="setSector('realty')">Real Estate / REITs</div>
+          <div class="sector-tab" data-sector="energy"  onclick="setSector('energy')">Oil & Gas / Energy</div>
+          <div class="sector-tab" data-sector="general" onclick="setSector('general')">General / Other</div>
+        </div>
       </div>
     </div>
 
-	<!-- +++++ Welcome Section +++++ -->
-	<div id="ww">
-	    <div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 centered">
-					<img src="assets/img/user.png" alt="Stanley">
-					<h1>Hi, I am Alok <span style="font-size: 45px;color: green;font-weight: bold">!</span></h1>
-					<p>Hello world. I'm Alok. I'm 24 old - IIT Bombay graduate, 2016. I work as Technology Research Analyst at Citigroup. I usuallly write about maths, probability, machine learning and algortihms</p>
-					<p>Look around to know more :)</p>
-				
-				</div><!-- /col-lg-8 -->
-			</div><!-- /row -->
-	    </div> <!-- /container -->
-	</div><!-- /ww -->
-	
-	
-	<!-- +++++ Projects Section +++++ -->
-	
-	<!-- <div class="container pt">
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port01.jpg" alt="" /></a>
-				<p>APE</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port02.jpg" alt="" /></a>
-				<p>RAIDERS</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt="" /></a>
-				<p>VIKINGS</p>
-			</div>
-		</div>
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
-				<p>YODA</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt="" /></a>
-				<p>EMPERORS</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt="" /></a>
-				<p>CHIEFS</p>
-			</div>
-		</div>
-	</div> -->
-	<!-- /container -->
-	
-	
-	<!-- +++++ Footer Section +++++ -->
-	
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4">
-					<h4>My Bunker</h4>
-					<p>
-						alokkumardiwakar1993@gmail.com,<br/>
-						+91 7738987019, <br/>
-						Mumbai, India.
-					</p>
-				</div><!-- /col-lg-4 -->
-				
-				<div class="col-lg-4">
-					<h4>My Links</h4>
-					<p>
-						<a href="https://www.linkedin.com/in/alok-kumar-diwakar-37bb8454/" target="_blank">Linkedin</a><br/>
-						<a href="#" target="_blank">Twitter</a><br/>
-						<a href="#" target="_blank">Facebook</a>
-					</p>
-				</div><!-- /col-lg-4 -->
-				
-				<div class="col-lg-4">
-					<h4>About Site</h4>
-					<p>This work is licensed under a Creative Commons. Free to remix, transform, and build upon the material</p>
-				</div><!-- /col-lg-4 -->
-			
-			</div>
-		
-		</div>
-	</div>
-	
+    <div id="val-context-box" style="display:none" class="val-context">
+      <div class="val-context-title" id="val-ctx-title">Valuation Benchmarks</div>
+      <div class="val-context-grid" id="val-ctx-body"></div>
+    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.min.js"></script>
-  </body>
+    <div id="val-fields">
+      <div style="font-size:12px;color:var(--muted);font-style:italic;padding:4px 0">Select a sector above to load the correct valuation inputs.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- S3: Balance Sheet & Governance -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">Balance Sheet & Governance</span>
+  </div>
+  <div class="section-body">
+    <div class="improved-note"><strong>Key addition:</strong> Auditor resignations and qualified opinions are historically the strongest early fraud indicators — weighted highest in this section.</div>
+    <div class="input-grid">
+
+      <div class="input-group">
+        <div class="input-label">Debt / Equity Ratio
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Total debt ÷ shareholders' equity. For non-financial companies, above 0.5 is a risk flag. Above 1.0 is dangerous.</div></div>
+        </div>
+        <input type="number" id="debt" placeholder="e.g. 0.3" oninput="liveScore()">
+        <span class="signal-chip" id="sig_debt"></span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-label">Promoter Pledge %
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Percentage of promoter shares pledged as collateral. Above 20% is a serious governance concern — forced selling risk.</div></div>
+        </div>
+        <input type="number" id="pledge" placeholder="e.g. 5" oninput="liveScore()">
+        <span class="signal-chip" id="sig_pledge"></span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-label">Promoter Stake Δ 1Y %
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Change in promoter holding over the last year. Enter negative value if they reduced stake (e.g. -2.5). Drop above 2% is a warning.</div></div>
+        </div>
+        <input type="number" id="promoter" placeholder="e.g. -1.5" oninput="liveScore()">
+        <span class="signal-chip" id="sig_promoter"></span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-label">Auditor / Accounting Flags <span class="new-badge">NEW</span>
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Has the auditor resigned, issued a qualified/adverse opinion, or have there been financial restatements? Historically the strongest early warning of fraud.</div></div>
+        </div>
+        <select id="auditor" onchange="liveScore()">
+          <option value="0">No issues — audit clean</option>
+          <option value="15">Qualified opinion / Auditor resigned / Restatement</option>
+        </select>
+        <span class="signal-chip" id="sig_auditor"></span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- S4: Market Warning Signals -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">Market Warning Signals</span>
+  </div>
+  <div class="section-body">
+    <div class="input-grid">
+
+      <div class="input-group">
+        <div class="input-label">Drop from 52-Week High %
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">How far below the 52-week high is the stock trading? Enter positive number. Significant drops alongside slowing revenue = market detecting trouble early.</div></div>
+        </div>
+        <input type="number" id="priceDrop" placeholder="e.g. 30" oninput="liveScore()">
+        <span class="signal-chip" id="sig_priceDrop"></span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-label">Revenue Trend
+          <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">Price signals only score if revenue is also slowing. A price drop with strong revenue growth may be an opportunity, not a warning.</div></div>
+        </div>
+        <select id="revTrend" onchange="liveScore()">
+          <option value="0">Revenue stable or growing</option>
+          <option value="1">Revenue slowing / declining</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- S5: Moat -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title">Moat Integrity <span class="core-badge">CORE</span></span>
+  </div>
+  <div class="section-body">
+    <div class="improved-note"><strong>Now mandatory:</strong> Structural advantage loss often shows up here 2–4 quarters before it appears in earnings. Examples: AI disruption, new regulation, pricing wars, or market share loss above 3%.</div>
+    <div class="input-group" style="max-width:420px">
+      <div class="input-label">Competitive Position Assessment</div>
+      <select id="moat" onchange="liveScore()">
+        <option value="0">Moat intact — competitive position strong</option>
+        <option value="7">Moat under pressure but holding (monitor closely)</option>
+        <option value="15">Moat clearly weakening — pricing pressure / share loss / disruption</option>
+      </select>
+      <span class="signal-chip" id="sig_moat"></span>
+    </div>
+  </div>
+</div>
+
+<!-- S6: Cushion -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title">Value Cushion & Momentum</span>
+  </div>
+  <div class="section-body">
+    <p style="font-size:12px;color:var(--muted);margin-bottom:14px">These factors reduce the exit signal — they provide downside protection or positive momentum. Check all that apply.</p>
+    <div class="checkbox-list">
+      <label class="checkbox-item" id="wrap_valcushion">
+        <input type="checkbox" id="chk_valcushion" onchange="toggleCheck('wrap_valcushion');liveScore()">
+        <div class="custom-check">✓</div>
+        <div class="check-text">P/E &lt; 15 <em>or</em> P/B &lt; 2 <em>or</em> PEG &lt; 1 — market is already pessimistic; downside limited</div>
+      </label>
+      <label class="checkbox-item" id="wrap_dividend">
+        <input type="checkbox" id="chk_dividend" onchange="toggleCheck('wrap_dividend');liveScore()">
+        <div class="custom-check">✓</div>
+        <div class="check-text">Dividend yield &gt; 3% — yield provides a price floor and income buffer during weakness</div>
+      </label>
+      <label class="checkbox-item" id="wrap_cash">
+        <input type="checkbox" id="chk_cash" onchange="toggleCheck('wrap_cash');liveScore()">
+        <div class="custom-check">✓</div>
+        <div class="check-text">Cash &gt; 30% of market cap — large net cash position provides a meaningful safety margin</div>
+      </label>
+      <label class="checkbox-item" id="wrap_momentum">
+        <input type="checkbox" id="chk_momentum" onchange="toggleCheck('wrap_momentum');liveScore()">
+        <div class="custom-check">✓</div>
+        <div class="check-text">Price up &gt; 25% in last 12 months — winner momentum; tend to keep working until they don't</div>
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Confirmation Rule -->
+<div class="info-card">
+  <div class="info-card-title">⏱ 2-Quarter Confirmation Rule</div>
+  <p>A signal must persist for <strong>2 consecutive quarters</strong> before taking action. One recovery quarter resets the clock.</p>
+  <ul>
+    <li><strong>Bypass immediately for:</strong> Fraud, auditor resignation, governance collapse, or a sudden massive debt spike</li>
+  </ul>
+</div>
+
+</div><!-- end left col -->
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="verdict-card">
+    <div class="verdict-top">
+      <div class="verdict-score-label">Total Score</div>
+      <div class="verdict-score-big" id="sideScore">0</div>
+      <div class="verdict-score-sub">out of 115</div>
+      <div class="verdict-action" id="verdictAction" style="background:var(--surface2);color:var(--muted)">— Awaiting inputs</div>
+    </div>
+    <div class="verdict-desc" id="verdictDesc">Enter financials on the left to generate your exit signal.</div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="matrix-title">Decision Matrix</div>
+    <div class="matrix-rows">
+      <div class="matrix-row" id="mc0" style="color:#2a7a4f">
+        <span class="matrix-emoji">💎</span><span class="matrix-range">0–25</span>
+        <span class="matrix-label">Diamond Hands</span><div class="matrix-dot" style="background:#2a7a4f"></div>
+      </div>
+      <div class="matrix-row" id="mc1" style="color:#1e4d8c">
+        <span class="matrix-emoji">👀</span><span class="matrix-range">26–45</span>
+        <span class="matrix-label">Watch Carefully</span><div class="matrix-dot" style="background:#1e4d8c"></div>
+      </div>
+      <div class="matrix-row" id="mc2" style="color:#d97706">
+        <span class="matrix-emoji">⚠️</span><span class="matrix-range">46–70</span>
+        <span class="matrix-label">Trim 50%</span><div class="matrix-dot" style="background:#d97706"></div>
+      </div>
+      <div class="matrix-row" id="mc3" style="color:#b91c1c">
+        <span class="matrix-emoji">❌</span><span class="matrix-range">71+</span>
+        <span class="matrix-label">Hard Exit</span><div class="matrix-dot" style="background:#b91c1c"></div>
+      </div>
+    </div>
+
+    <div class="breakdown-title">Score Breakdown</div>
+    <div class="breakdown-rows" id="breakdownRows">
+      <div class="breakdown-row"><span class="breakdown-name" style="color:var(--muted);font-style:italic">Fill in the form above</span></div>
+    </div>
+
+    <div class="action-bar">
+      <button class="btn-primary" onclick="liveScore()">↻ Recalculate</button>
+      <button class="btn-secondary" onclick="resetAll()">Reset</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- end main grid -->
+</div><!-- end page -->
+
+<script>
+const SECTORS = {
+  saas: {
+    name: 'SaaS / Software',
+    context: [
+      { k: 'Typical P/E', v: '40–80× (growth premium)' },
+      { k: 'PEG fair value', v: '< 1.5 acceptable' },
+      { k: 'P/S fair value', v: '< 10× revenue' },
+      { k: 'Rule of 40', v: 'Revenue growth + FCF margin ≥ 40%' },
+      { k: 'Why PEG?', v: 'High P/E justified only if growth is proportionate' },
+      { k: 'Red flag', v: 'PEG > 2 + slowing ARR growth = expensive + fading' },
+    ],
+    primary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 1.4', tip:'PE ÷ EPS growth rate. Ideal < 1. Above 1.5 is stretched for SaaS. Above 2.0 = expensive regardless of narrative.',
+      scorer: v => v > 2.0 ? 20 : v > 1.5 ? 10 : 0 },
+    secondary: { id:'ps_ratio', label:'P/S Ratio', placeholder:'e.g. 8', tip:'Price ÷ Revenue. For SaaS, above 15× is very stretched. Even quality names rarely sustain > 20×.',
+      scorer: v => v > 15 ? 5 : 0 },
+  },
+  internet: {
+    name: 'Internet / Platform',
+    context: [
+      { k: 'Primary metric', v: 'PEG (growth-dependent)' },
+      { k: 'P/S benchmark', v: '< 8× for mature platforms' },
+      { k: 'User growth', v: 'Declining MAU = moat erosion' },
+      { k: 'Network effect', v: 'Core moat — watch for competition' },
+      { k: 'Red flag', v: 'PEG > 1.5 + user stagnation' },
+    ],
+    primary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 1.2', tip:'Platforms trade on growth. PEG > 1.5 with slowing user growth is a strong exit signal.',
+      scorer: v => v > 1.5 ? 20 : v >= 1.0 ? 10 : 0 },
+    secondary: { id:'ps_ratio', label:'P/S Ratio', placeholder:'e.g. 6', tip:'Above 8× for a mature internet platform with slowing growth is stretched.',
+      scorer: v => v > 8 ? 5 : 0 },
+  },
+  hardware: {
+    name: 'Hardware / Semiconductors',
+    context: [
+      { k: 'Primary metric', v: 'P/E (earnings-driven)' },
+      { k: 'P/E fair range', v: '20–35× for quality semis' },
+      { k: 'Cyclicality', v: 'High — earnings volatile with cycle' },
+      { k: 'P/B check', v: '> 5× signals premium pricing' },
+      { k: 'Red flag', v: 'P/E > 40 at cycle peak = dangerous' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 28', tip:'Semis are cyclical. P/E > 40 near cycle peak is a classic exit signal. P/E > 30 warrants caution.',
+      scorer: v => v > 40 ? 20 : v > 30 ? 10 : 0 },
+    secondary: { id:'pb', label:'P/B Ratio', placeholder:'e.g. 4', tip:'Price to Book. Above 5× for hardware = significant premium. Check if justified by returns.',
+      scorer: v => v > 5 ? 5 : 0 },
+  },
+  it_serv: {
+    name: 'IT Services / Consulting',
+    context: [
+      { k: 'Primary metric', v: 'P/E (stable earnings)' },
+      { k: 'P/E fair range', v: '22–35× for large IT services' },
+      { k: 'Attrition', v: 'Rising attrition = cost & delivery risk' },
+      { k: 'Deal wins', v: 'TCV of new deals = leading indicator' },
+      { k: 'Red flag', v: 'P/E > 35 + decelerating revenue' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 26', tip:'IT services trade at more modest multiples than product tech. P/E > 35 with slowing growth = exit signal.',
+      scorer: v => v > 35 ? 20 : v > 25 ? 10 : 0 },
+    secondary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 1.6', tip:'PEG > 1.5 for a services business (which rarely grows above 15%) is expensive.',
+      scorer: v => v > 1.5 ? 5 : 0 },
+  },
+  bank: {
+    name: 'Banks / PSU Banks',
+    context: [
+      { k: 'Primary metric', v: 'P/B (asset quality based)' },
+      { k: 'P/B fair range', v: '1–3× for good private banks' },
+      { k: 'P/B PSU banks', v: '< 1.5× is still reasonable' },
+      { k: 'NIM check', v: 'Declining NIM = pricing pressure' },
+      { k: 'Red flag', v: 'P/B > 4 + rising NPA + NIM compression' },
+    ],
+    primary: { id:'pb', label:'Price to Book (P/B)', placeholder:'e.g. 2.8', tip:'Core metric for banks. Private banks: > 4× is expensive. PSU banks: > 1.5× needs justification from ROE.',
+      scorer: v => v > 4 ? 20 : v > 2.5 ? 10 : 0 },
+    secondary: { id:'pe_vs_hist', label:'P/E vs 5yr Median (×)', placeholder:'e.g. 1.4', tip:'Current P/E divided by 5-year median. Above 1.5× means the stock is pricing in perfection.',
+      scorer: v => v > 1.5 ? 5 : 0 },
+  },
+  nbfc: {
+    name: 'NBFC / Insurance',
+    context: [
+      { k: 'Primary metric', v: 'P/B for NBFC, EV/EVOP for insurance' },
+      { k: 'P/B NBFC range', v: '1.5–4× depending on quality' },
+      { k: 'AUM growth', v: '< 15% YoY signals slowdown' },
+      { k: 'Leverage', v: 'Debt/Equity > 6× is high risk for NBFC' },
+      { k: 'Red flag', v: 'P/B > 5 + rising credit costs + NPA' },
+    ],
+    primary: { id:'pb', label:'Price to Book (P/B)', placeholder:'e.g. 3.2', tip:'For NBFCs, P/B > 5× is expensive. Watch credit cost trends alongside valuation.',
+      scorer: v => v > 5 ? 20 : v > 3 ? 10 : 0 },
+    secondary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 28', tip:'P/E > 35 for a NBFC with rising stress assets is a strong exit signal.',
+      scorer: v => v > 35 ? 5 : 0 },
+  },
+  amc: {
+    name: 'AMC / Broking / Exchanges',
+    context: [
+      { k: 'Primary metric', v: 'P/E (light-asset model)' },
+      { k: 'P/E fair range', v: '25–50× for quality AMCs' },
+      { k: 'AUM growth', v: 'Correlated with market cycles' },
+      { k: 'Market share', v: 'Declining market share = moat erosion' },
+      { k: 'Red flag', v: 'P/E > 60 + AUM growth decelerating' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 42', tip:'AMCs are high-margin, asset-light. P/E > 60 is stretched. Monitor AUM growth alongside.',
+      scorer: v => v > 60 ? 20 : v > 45 ? 10 : 0 },
+    secondary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 1.8', tip:'PEG > 2 for an AMC signals the growth story is priced out.',
+      scorer: v => v > 2 ? 5 : 0 },
+  },
+  fmcg: {
+    name: 'FMCG / Consumer Staples',
+    context: [
+      { k: 'Primary metric', v: 'P/E (stable earnings)' },
+      { k: 'P/E fair range', v: '40–65× for premium FMCG' },
+      { k: 'Volume growth', v: 'Volume > price = healthy growth' },
+      { k: 'Distribution moat', v: 'Watch for rural volume slowdown' },
+      { k: 'Red flag', v: 'P/E > 70 + volume growth < 3% = priced for perfection' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 52', tip:'Premium FMCG commands high P/E but > 70 is hard to justify without strong volume growth.',
+      scorer: v => v > 70 ? 20 : v > 50 ? 10 : 0 },
+    secondary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 2.1', tip:'PEG > 2.5 for FMCG with mid-single-digit growth is very stretched.',
+      scorer: v => v > 2.5 ? 5 : 0 },
+  },
+  retail: {
+    name: 'Retail / QSR',
+    context: [
+      { k: 'Primary metric', v: 'P/E or EV/EBITDA' },
+      { k: 'P/E fair range', v: '45–70× for high-growth QSR/retail' },
+      { k: 'SSSG', v: 'Same-store-sales growth < 5% = concern' },
+      { k: 'Store economics', v: 'Payback period lengthening = unit economics weaker' },
+      { k: 'Red flag', v: 'P/E > 80 + SSSG stalling' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 58', tip:'QSR/retail stocks trade at high multiples on expansion thesis. > 80× with slowing SSSG is an exit signal.',
+      scorer: v => v > 80 ? 20 : v > 55 ? 10 : 0 },
+    secondary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 2.0', tip:'PEG > 2 for retail with decelerating store additions warrants caution.',
+      scorer: v => v > 2 ? 5 : 0 },
+  },
+  durables: {
+    name: 'Consumer Durables',
+    context: [
+      { k: 'Primary metric', v: 'P/E (discretionary cycles)' },
+      { k: 'P/E fair range', v: '35–55× for premium brands' },
+      { k: 'Cyclicality', v: 'Demand sensitive to interest rates & urban income' },
+      { k: 'Red flag', v: 'P/E > 60 + volume growth negative' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 44', tip:'Consumer durables are semi-cyclical. P/E > 60 with flat volumes is a clear exit signal.',
+      scorer: v => v > 60 ? 20 : v > 40 ? 10 : 0 },
+    secondary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 1.9', tip:'PEG > 2 for durables suggests the cycle premium is fully priced.',
+      scorer: v => v > 2 ? 5 : 0 },
+  },
+  capital_goods: {
+    name: 'Capital Goods / Defence',
+    context: [
+      { k: 'Primary metric', v: 'P/E (order-book driven)' },
+      { k: 'P/E fair range', v: '30–55× during capex upcycle' },
+      { k: 'Order book', v: 'Order book / Revenue > 2× = good visibility' },
+      { k: 'Execution', v: 'Revenue recognition lag = watch working capital' },
+      { k: 'Red flag', v: 'P/E > 60 + order inflow slowing' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 42', tip:'Capital goods trade on order book premium. P/E > 60 with slowing orders = cycle peak pricing.',
+      scorer: v => v > 60 ? 20 : v > 40 ? 10 : 0 },
+    secondary: { id:'pb', label:'P/B Ratio', placeholder:'e.g. 5', tip:'P/B > 8 for capital goods is hard to sustain unless ROCE is exceptional.',
+      scorer: v => v > 8 ? 5 : 0 },
+  },
+  auto: {
+    name: 'Auto / Auto Ancillary',
+    context: [
+      { k: 'Primary metric', v: 'P/E (volume-cycle driven)' },
+      { k: 'P/E OEM range', v: '15–30× mid-cycle' },
+      { k: 'P/E ancillary', v: '25–45× for quality suppliers' },
+      { k: 'EV disruption', v: 'ICE exposure = structural risk to model' },
+      { k: 'Red flag', v: 'P/E > 35 (OEM) / 50 (ancillary) + volume decline' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 22', tip:'Autos are cyclical. OEMs at > 35× at cycle peak, ancillaries > 50× are expensive and vulnerable.',
+      scorer: v => v > 40 ? 20 : v > 28 ? 10 : 0 },
+    secondary: { id:'pb', label:'P/B Ratio', placeholder:'e.g. 3', tip:'Auto OEM P/B > 4× with declining volumes is a risk. Ancillaries can sustain higher.',
+      scorer: v => v > 5 ? 5 : 0 },
+  },
+  infra: {
+    name: 'Infrastructure / EPC',
+    context: [
+      { k: 'Primary metric', v: 'P/B + EV/EBITDA' },
+      { k: 'P/B range', v: '1.5–4× depending on asset quality' },
+      { k: 'Debt warning', v: 'D/E > 2× in EPC = watch carefully' },
+      { k: 'Working capital', v: 'High debtor days = cash flow risk' },
+      { k: 'Red flag', v: 'P/B > 5 + D/E rising + order book flat' },
+    ],
+    primary: { id:'pb', label:'P/B Ratio', placeholder:'e.g. 3.2', tip:'Infrastructure is asset-heavy. P/B > 5× with high leverage is dangerous — real assets should anchor valuation.',
+      scorer: v => v > 5 ? 20 : v > 3.5 ? 10 : 0 },
+    secondary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 28', tip:'P/E > 35 for an infra/EPC company with lumpy revenue recognition should raise flags.',
+      scorer: v => v > 35 ? 5 : 0 },
+  },
+  metal: {
+    name: 'Metals / Mining',
+    context: [
+      { k: 'Primary metric', v: 'P/B (asset-based commodity)' },
+      { k: 'P/B range', v: '0.8–2.5× depending on cycle' },
+      { k: 'EV/EBITDA', v: '< 6× is attractive; > 10× is cycle-top' },
+      { k: 'Cycle timing', v: 'Avoid high P/E in upcycles — use P/B instead' },
+      { k: 'Red flag', v: 'P/B > 3 at commodity cycle peak' },
+    ],
+    primary: { id:'pb', label:'P/B Ratio', placeholder:'e.g. 1.8', tip:'Metals are commodity cyclicals. P/B > 3× near cycle peaks historically = exit point. Use cycle-adjusted view.',
+      scorer: v => v > 3 ? 20 : v > 2 ? 10 : 0 },
+    secondary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 12', tip:'Do not use P/E for metals — earnings are cyclically distorted. P/B is more reliable.',
+      scorer: v => v > 15 ? 5 : 0 },
+  },
+  pharma: {
+    name: 'Pharma / Healthcare',
+    context: [
+      { k: 'Primary metric', v: 'P/E (R&D pipeline premium)' },
+      { k: 'P/E fair range', v: '25–45× for diversified pharma' },
+      { k: 'US generics', v: 'Price erosion risk; watch ANDA approvals' },
+      { k: 'USFDA risk', v: 'Warning letter = immediate re-rating risk' },
+      { k: 'Red flag', v: 'P/E > 50 + US revenue declining + API pressure' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 34', tip:'Pharma P/E > 50 is hard to justify unless driven by a strong US/specialty pipeline with near-term launches.',
+      scorer: v => v > 50 ? 20 : v > 35 ? 10 : 0 },
+    secondary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 2.0', tip:'PEG > 2 for pharma suggests the pipeline premium is priced out.',
+      scorer: v => v > 2 ? 5 : 0 },
+  },
+  realty: {
+    name: 'Real Estate / REITs',
+    context: [
+      { k: 'Primary metric', v: 'P/B for developers; dividend yield for REITs' },
+      { k: 'Developer P/B', v: '1–3× depending on NAV discount/premium' },
+      { k: 'REIT yield', v: '< 5% distribution yield = expensive for REIT' },
+      { k: 'Pre-sales', v: 'Declining pre-sales = inventory risk ahead' },
+      { k: 'Red flag', v: 'P/B > 4 + pre-sales growth stalling + high debt' },
+    ],
+    primary: { id:'pb', label:'P/B Ratio', placeholder:'e.g. 2.5', tip:'Real estate developers: P/B > 4× vs NAV signals overvaluation. REITs: use distribution yield instead.',
+      scorer: v => v > 4 ? 20 : v > 2.5 ? 10 : 0 },
+    secondary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 22', tip:'Traditional P/E is less reliable for real estate — use P/B or EV/GDV instead.',
+      scorer: v => v > 40 ? 5 : 0 },
+  },
+  energy: {
+    name: 'Oil & Gas / Energy',
+    context: [
+      { k: 'Primary metric', v: 'EV/EBITDA or P/B (asset heavy)' },
+      { k: 'P/B range', v: '1–3× is typical mid-cycle range' },
+      { k: 'Commodity risk', v: 'Earnings driven by oil price, not just operations' },
+      { k: 'Capex cycle', v: 'High capex + falling price = cash flow risk' },
+      { k: 'Red flag', v: 'P/B > 3 + commodity cycle turning + high debt' },
+    ],
+    primary: { id:'pb', label:'P/B Ratio', placeholder:'e.g. 2.1', tip:'Energy companies: P/B > 3× near commodity cycle peak is a classic exit point. Adjust for oil price cycle.',
+      scorer: v => v > 3 ? 20 : v > 2 ? 10 : 0 },
+    secondary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 14', tip:'P/E unreliable for cyclical energy — use alongside P/B for a fuller picture.',
+      scorer: v => v > 20 ? 5 : 0 },
+  },
+  general: {
+    name: 'General / Other',
+    context: [
+      { k: 'Approach', v: 'Use sector P/E relative comparison' },
+      { k: 'P/E benchmark', v: 'Compare to 5-year stock median' },
+      { k: 'PEG check', v: '< 1 = cheap relative to growth' },
+      { k: 'Tip', v: 'If a specific sector fits better, select it instead for more precise benchmarks' },
+    ],
+    primary: { id:'pe', label:'P/E Ratio', placeholder:'e.g. 28', tip:'Use the company\'s own 5-year P/E median as the benchmark. P/E > 2× its own historical median = stretched.',
+      scorer: v => v > 50 ? 20 : v > 30 ? 10 : 0 },
+    secondary: { id:'peg', label:'PEG Ratio', placeholder:'e.g. 1.6', tip:'PEG > 1.5 = growth is priced in. PEG < 1 = potential undervaluation.',
+      scorer: v => v > 1.5 ? 5 : 0 },
+  },
+};
+
+let currentSector = null;
+
+function setSector(key) {
+  currentSector = key;
+  const cfg = SECTORS[key];
+  document.querySelectorAll('.sector-tab').forEach(t => t.classList.toggle('active', t.dataset.sector === key));
+  const ctxBox = document.getElementById('val-context-box');
+  document.getElementById('val-ctx-title').textContent = cfg.name + ' — Valuation Benchmarks';
+  document.getElementById('val-ctx-body').innerHTML = cfg.context.map(c =>
+    `<div class="val-context-item"><strong>${c.k}:</strong> ${c.v}</div>`
+  ).join('');
+  ctxBox.style.display = 'block';
+  const fields = document.getElementById('val-fields');
+  let html = `<div class="input-grid">`;
+  html += renderValField(cfg.primary, true);
+  if (cfg.secondary) html += renderValField(cfg.secondary, false);
+  html += `</div>`;
+  fields.innerHTML = html;
+  liveScore();
+}
+
+function renderValField(f, isPrimary) {
+  const badge = isPrimary
+    ? `<span style="font-family:'IBM Plex Mono',monospace;font-size:9px;background:#f5ede8;color:var(--accent);border:1px solid #f5d0be;border-radius:3px;padding:2px 5px;letter-spacing:1px;margin-left:4px">PRIMARY</span>`
+    : `<span style="font-family:'IBM Plex Mono',monospace;font-size:9px;background:var(--surface2);color:var(--muted);border:1px solid var(--border2);border-radius:3px;padding:2px 5px;letter-spacing:1px;margin-left:4px">CHECK</span>`;
+  return `
+    <div class="input-group">
+      <div class="input-label">${f.label}${badge}
+        <div class="tooltip-wrap"><span class="tip-icon">i</span><div class="tip-popup">${f.tip}</div></div>
+      </div>
+      <input type="number" id="${f.id}" placeholder="${f.placeholder}" oninput="liveScore()">
+      <span class="signal-chip" id="sig_${f.id}"></span>
+    </div>`;
+}
+
+function v(id) { const e = document.getElementById(id); if (!e) return null; const n = parseFloat(e.value); return isNaN(n) ? null : n; }
+function sv(id) { const e = document.getElementById(id); return e ? parseInt(e.value) : 0; }
+
+function sig(id, pts, text, type) {
+  const el = document.getElementById('sig_' + id);
+  if (!el) return;
+  if (text) { el.className = 'signal-chip show ' + (type||'sig-info'); el.textContent = text; }
+  else { el.className = 'signal-chip'; el.textContent = ''; }
+}
+
+function toggleCheck(id) {
+  const wrap = document.getElementById(id);
+  const cb = wrap.querySelector('input[type=checkbox]');
+  wrap.classList.toggle('checked', cb.checked);
+}
+
+function liveScore() {
+  let s = {};
+
+  // P1 — Growth & Efficiency
+  let p1 = 0;
+  const rev = v('revenue');
+  let rev_pts = 0;
+  if (rev !== null) {
+    if (rev < 8) { rev_pts = 25; sig('revenue', rev_pts, '< 8% — weak demand', 'sig-warn'); }
+    else if (rev < 12) { rev_pts = 10; sig('revenue', rev_pts, '8–12% — slowing', 'sig-warn'); }
+    else sig('revenue', 0, '> 12% — healthy', 'sig-ok');
+  } else sig('revenue', 0, null);
+  p1 += rev_pts;
+
+  const eps = v('eps'), revVal = v('revenue');
+  let eps_pts = 0;
+  if (eps !== null) {
+    if (eps <= 0) { eps_pts = 10; sig('eps', eps_pts, 'EPS declining', 'sig-warn'); }
+    else if (revVal !== null && eps < revVal) { eps_pts = 5; sig('eps', eps_pts, 'EPS < rev growth', 'sig-warn'); }
+    else sig('eps', 0, 'EPS healthy', 'sig-ok');
+  } else sig('eps', 0, null);
+  p1 += eps_pts;
+
+  const roce = v('roce');
+  let roce_pts = 0;
+  if (roce !== null) {
+    if (roce < 15) { roce_pts = 10; sig('roce', roce_pts, '< 15% — low ROCE', 'sig-warn'); }
+    else sig('roce', 0, '≥ 15% — good', 'sig-ok');
+  } else sig('roce', 0, null);
+  p1 += roce_pts;
+
+  // ✏️ ONLY CHANGE: reads negative values; penalises only when < –3
+  const md = v('marginDecline');
+  let md_pts = 0;
+  if (md !== null) {
+    if (md < -3)     { md_pts = 5; sig('marginDecline', md_pts, `${md}pp — significant drop`, 'sig-warn'); }
+    else if (md < 0) {             sig('marginDecline', 0,      `${md}pp — minor dip`,         'sig-info'); }
+    else             {             sig('marginDecline', 0,      `+${md}pp — improving`,         'sig-ok');  }
+  } else sig('marginDecline', 0, null);
+  p1 += md_pts;
+
+  const fcf = v('fcf');
+  let fcf_pts = 0;
+  if (fcf !== null) {
+    if (fcf < 50) { fcf_pts = 10; sig('fcf', fcf_pts, '< 50% — quality risk', 'sig-warn'); }
+    else sig('fcf', 0, '≥ 50% — healthy', 'sig-ok');
+  } else sig('fcf', 0, null);
+  p1 += fcf_pts;
+  s['Growth & Efficiency'] = p1;
+
+  // P2 — Valuation
+  let p2 = 0;
+  if (currentSector) {
+    const cfg = SECTORS[currentSector];
+    const pv = v(cfg.primary.id);
+    let pp = pv !== null ? cfg.primary.scorer(pv) : 0;
+    if (pv !== null) { sig(cfg.primary.id, pp, pp > 0 ? 'Stretched valuation' : 'Within range', pp > 0 ? 'sig-warn' : 'sig-ok'); }
+    else sig(cfg.primary.id, 0, null);
+    p2 += pp;
+    if (cfg.secondary) {
+      const sv2 = v(cfg.secondary.id);
+      let sp = sv2 !== null ? cfg.secondary.scorer(sv2) : 0;
+      if (sv2 !== null) { sig(cfg.secondary.id, sp, sp > 0 ? 'Additional stretch' : 'OK', sp > 0 ? 'sig-warn' : 'sig-ok'); }
+      else sig(cfg.secondary.id, 0, null);
+      p2 += sp;
+    }
+  }
+  s['Valuation'] = p2;
+
+  // P3 — Governance
+  let p3 = 0;
+  const debt = v('debt');
+  let debt_pts = 0;
+  if (debt !== null) {
+    if (debt > 1.0) { debt_pts = 10; sig('debt', debt_pts, '> 1.0 — dangerous', 'sig-warn'); }
+    else if (debt > 0.5) { debt_pts = 10; sig('debt', debt_pts, '> 0.5 — watch', 'sig-warn'); }
+    else sig('debt', 0, 'Low debt', 'sig-ok');
+  } else sig('debt', 0, null);
+  p3 += debt_pts;
+
+  const pledge = v('pledge');
+  let pledge_pts = 0;
+  if (pledge !== null) {
+    if (pledge > 20) { pledge_pts = 10; sig('pledge', pledge_pts, '> 20% — risk', 'sig-warn'); }
+    else sig('pledge', 0, 'Pledge low', 'sig-ok');
+  } else sig('pledge', 0, null);
+  p3 += pledge_pts;
+
+  const promo = v('promoter');
+  let promo_pts = 0;
+  if (promo !== null) {
+    if (promo < -2) { promo_pts = 5; sig('promoter', promo_pts, `${promo}% — significant drop`, 'sig-warn'); }
+    else if (promo < 0) sig('promoter', 0, 'Minor reduction', 'sig-info');
+    else sig('promoter', 0, 'Stable / increasing', 'sig-ok');
+  } else sig('promoter', 0, null);
+  p3 += promo_pts;
+
+  const auditor = sv('auditor');
+  if (auditor > 0) sig('auditor', auditor, 'High risk flag', 'sig-warn');
+  else sig('auditor', 0, 'Audit clean', 'sig-ok');
+  p3 += auditor;
+  s['Governance'] = p3;
+
+  // P4 — Market Signals
+  let p4 = 0;
+  const drop = v('priceDrop'), revT = sv('revTrend');
+  let drop_pts = 0;
+  if (drop !== null) {
+    const revSlow = revT === 1;
+    if (drop >= 40)      { drop_pts = revSlow ? 10 : 7; sig('priceDrop', drop_pts, revSlow ? '> 40% + rev slow' : '> 40% drop', 'sig-warn'); }
+    else if (drop >= 25) { drop_pts = revSlow ? 7  : 5; sig('priceDrop', drop_pts, revSlow ? '> 25% + rev slow' : '> 25% drop', 'sig-warn'); }
+    else if (drop >= 15) { drop_pts = revSlow ? 5  : 3; sig('priceDrop', drop_pts, revSlow ? '> 15% + rev slow' : '> 15% drop', 'sig-warn'); }
+    else                 {                               sig('priceDrop', 0, 'Price near highs', 'sig-ok'); }
+  } else sig('priceDrop', 0, null);
+  p4 += drop_pts;
+  s['Market Signals'] = p4;
+
+  // P5 — Moat
+  const moat = sv('moat');
+  if (moat === 15) sig('moat', moat, 'Moat weakening', 'sig-warn');
+  else if (moat === 7) sig('moat', moat, 'Under pressure', 'sig-info');
+  else sig('moat', 0, 'Moat intact', 'sig-ok');
+  s['Moat Check'] = moat;
+
+  // P6 — Cushion
+  let deduct = 0;
+  if (document.getElementById('chk_valcushion')?.checked) deduct -= 5;
+  if (document.getElementById('chk_dividend')?.checked) deduct -= 5;
+  if (document.getElementById('chk_cash')?.checked) deduct -= 5;
+  if (document.getElementById('chk_momentum')?.checked) deduct -= 5;
+  s['Value Cushion'] = deduct;
+
+  // TOTAL
+  const raw = Object.values(s).reduce((a, b) => a + b, 0);
+  const total = Math.max(0, raw);
+
+  // Check if any input has been touched
+  const anyNumber = Array.from(document.querySelectorAll('input[type=number]')).some(i => i.value.trim() !== '');
+  const anySelect = (['auditor','revTrend','moat']).some(id => { const e = document.getElementById(id); return e && parseInt(e.value) !== 0; });
+  const anyCheck = (['chk_valcushion','chk_dividend','chk_cash','chk_momentum']).some(id => document.getElementById(id)?.checked);
+  const hasSector = currentSector !== null;
+  const hasInput = anyNumber || anySelect || anyCheck || hasSector;
+
+  if (!hasInput) {
+    // Blank state — no inputs yet
+    document.getElementById('headerScore').textContent = '—';
+    document.getElementById('headerScore').style.color = 'var(--muted)';
+    document.getElementById('sideScore').textContent = '—';
+    document.getElementById('sideScore').style.color = 'var(--muted)';
+    document.getElementById('progressFill').style.width = '0%';
+    const va = document.getElementById('verdictAction');
+    va.textContent = '— Awaiting inputs';
+    va.style.background = 'var(--surface2)'; va.style.color = 'var(--muted)';
+    document.getElementById('verdictDesc').textContent = 'Enter financials on the left to generate your exit signal.';
+    for (let i = 0; i < 4; i++) { const mc = document.getElementById('mc'+i); mc.classList.remove('active'); mc.style.background = 'transparent'; }
+    document.getElementById('breakdownRows').innerHTML = '<div class="breakdown-row"><span class="breakdown-name" style="color:var(--muted);font-style:italic">Fill in the form above</span></div>';
+    return;
+  }
+
+  document.getElementById('headerScore').textContent = total;
+  document.getElementById('sideScore').textContent = total;
+  document.getElementById('progressFill').style.width = Math.min(100, (total / 115) * 100) + '%';
+
+  let color, verdict, desc, cell;
+  if (total <= 25)      { color='#2a7a4f'; verdict='💎 Diamond Hands'; cell=0; desc='Strong compounder. Hold with conviction. Revisit next quarter.'; }
+  else if (total <= 45) { color='#1e4d8c'; verdict='👀 Watch Carefully'; cell=1; desc='Early weakness detected. Do not act until signal persists for 2 quarters.'; }
+  else if (total <= 70) { color='#d97706'; verdict='⚠️ Trim 50%'; cell=2; desc='Growth engine weakening. Reduce position and redeploy into stronger compounders.'; }
+  else                   { color='#b91c1c'; verdict='❌ Hard Exit'; cell=3; desc='Capital destroyer risk. Exit position. Bypass confirmation rule if governance is involved.'; }
+
+  document.getElementById('headerScore').style.color = color;
+  document.getElementById('sideScore').style.color = color;
+  document.getElementById('progressFill').style.background = color;
+  const va = document.getElementById('verdictAction');
+  va.textContent = verdict; va.style.background = color + '18'; va.style.color = color;
+  document.getElementById('verdictDesc').textContent = desc;
+
+  for (let i = 0; i < 4; i++) {
+    const mc = document.getElementById('mc' + i);
+    mc.classList.toggle('active', i === cell);
+    mc.style.background = i === cell ? mc.style.color + '14' : 'transparent';
+  }
+
+  document.getElementById('breakdownRows').innerHTML =
+    Object.entries(s).map(([k, val]) =>
+      `<div class="breakdown-row">
+        <span class="breakdown-name">${k}</span>
+        <span class="breakdown-pts" style="color:${val < 0 ? '#2a7a4f' : val > 0 ? '#b5460f' : '#8a8480'}">${val > 0 ? '+' : ''}${val}</span>
+      </div>`
+    ).join('') +
+    `<div class="breakdown-row" style="border-top:2px solid var(--border2);margin-top:3px;padding-top:7px">
+      <span class="breakdown-name" style="font-weight:600">Total</span>
+      <span class="breakdown-pts" style="font-size:14px;font-weight:700;color:${color}">${total}</span>
+    </div>`;
+}
+
+function resetAll() {
+  document.querySelectorAll('input[type=number]').forEach(i => i.value = '');
+  document.querySelectorAll('select').forEach(s => s.selectedIndex = 0);
+  document.querySelectorAll('input[type=checkbox]').forEach(c => { c.checked = false; c.closest('.checkbox-item')?.classList.remove('checked'); });
+  document.querySelectorAll('.signal-chip').forEach(c => { c.className = 'signal-chip'; c.textContent = ''; });
+  currentSector = null;
+  document.querySelectorAll('.sector-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('val-context-box').style.display = 'none';
+  document.getElementById('val-fields').innerHTML = '<div style="font-size:12px;color:var(--muted);font-style:italic;padding:4px 0">Select a sector above to load the correct valuation inputs.</div>';
+  ['headerScore','sideScore'].forEach(id => { document.getElementById(id).textContent = '0'; document.getElementById(id).style.color = 'var(--ink)'; });
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('verdictAction').textContent = '— Awaiting inputs';
+  document.getElementById('verdictAction').style.cssText = 'background:var(--surface2);color:var(--muted)';
+  document.getElementById('verdictDesc').textContent = 'Enter financials on the left to generate your exit signal.';
+  for (let i = 0; i < 4; i++) { const mc = document.getElementById('mc'+i); mc.classList.remove('active'); mc.style.background = 'transparent'; }
+  document.getElementById('breakdownRows').innerHTML = '<div class="breakdown-row"><span class="breakdown-name" style="color:var(--muted);font-style:italic">Fill in the form above</span></div>';
+}
+
+liveScore();
+</script>
+</body>
 </html>
