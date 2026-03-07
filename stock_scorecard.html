@@ -923,10 +923,11 @@ function liveScore() {
   const drop = v('priceDrop'), revT = sv('revTrend');
   let drop_pts = 0;
   if (drop !== null) {
-    if (revT === 1 && drop >= 40) { drop_pts = 10; sig('priceDrop', drop_pts, '> 40% + rev slow', 'sig-warn'); }
-    else if (revT === 1 && drop >= 25) { drop_pts = 5; sig('priceDrop', drop_pts, '> 25% + rev slow', 'sig-warn'); }
-    else if (revT === 0 && drop >= 25) sig('priceDrop', 0, 'Drop w/o rev slow', 'sig-info');
-    else sig('priceDrop', 0, 'Price near highs', 'sig-ok');
+    const revSlow = revT === 1;
+    if (drop >= 40)      { drop_pts = revSlow ? 10 : 7; sig('priceDrop', drop_pts, revSlow ? '> 40% + rev slow' : '> 40% drop', 'sig-warn'); }
+    else if (drop >= 25) { drop_pts = revSlow ? 7  : 5; sig('priceDrop', drop_pts, revSlow ? '> 25% + rev slow' : '> 25% drop', 'sig-warn'); }
+    else if (drop >= 15) { drop_pts = revSlow ? 5  : 3; sig('priceDrop', drop_pts, revSlow ? '> 15% + rev slow' : '> 15% drop', 'sig-warn'); }
+    else                 {                               sig('priceDrop', 0, 'Price near highs', 'sig-ok'); }
   } else sig('priceDrop', 0, null);
   p4 += drop_pts;
   s['Market Signals'] = p4;
