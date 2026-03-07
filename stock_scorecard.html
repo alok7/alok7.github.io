@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Stock Exit Scorecard</title>
@@ -10,219 +11,215 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <style>
 
 body{
-background:#f5f5f5;
 font-family:Arial;
+background:#f7f7f7;
 }
 
-.container-box{
-max-width:900px;
-margin:auto;
-margin-top:40px;
+.container{
+max-width:850px;
+margin-top:30px;
 background:white;
-padding:25px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
-}
-
-.section{
-margin-bottom:25px;
-padding:15px;
-border:1px solid #eee;
+padding:20px;
 border-radius:6px;
-background:#fafafa;
 }
 
-.section h4{
-margin-bottom:10px;
-font-size:16px;
+h2{
+font-size:20px;
+margin-bottom:2px;
+}
+
+.subtitle{
+color:#777;
+font-size:12px;
+margin-bottom:15px;
+}
+
+.section-title{
+font-size:13px;
+font-weight:bold;
+margin-top:12px;
+margin-bottom:6px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px 20px;
+grid-template-columns:1fr 1fr 1fr;
+gap:6px 12px;
 }
 
-input, select{
-height:32px !important;
-font-size:13px !important;
+.field{
+display:flex;
+flex-direction:column;
 }
 
 label{
-font-size:13px;
-margin-bottom:2px;
+font-size:11px;
+margin-bottom:1px;
+color:#555;
+}
+
+input,select{
+height:26px !important;
+font-size:12px !important;
+padding:2px 6px !important;
+}
+
+button{
+margin-top:15px;
 }
 
 .result{
-margin-top:25px;
-padding:20px;
-border:1px solid #ddd;
-background:#fff;
-border-radius:6px;
+margin-top:15px;
+padding:12px;
+border:1px solid #eee;
 }
 
 .score{
-font-size:32px;
+font-size:26px;
 font-weight:bold;
 }
 
 .verdict{
-font-size:20px;
+font-size:16px;
 font-weight:bold;
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
-<div class="container container-box">
+<div class="container">
 
 <h2>Stock Exit Scorecard</h2>
-<p style="color:#777">Run every quarter after earnings</p>
+<div class="subtitle">Run after quarterly earnings</div>
 
 
-<!-- Growth -->
-
-<div class="section">
-<h4>Growth & Efficiency</h4>
+<div class="section-title">Growth & Efficiency</div>
 
 <div class="grid">
 
-<div>
-<label>Revenue Growth (%)</label>
+<div class="field">
+<label>Revenue %</label>
 <input id="revenue" class="form-control">
 </div>
 
-<div>
-<label>ROCE (%)</label>
+<div class="field">
+<label>ROCE %</label>
 <input id="roce" class="form-control">
 </div>
 
-<div>
-<label>Operating Margin Change YoY (%)</label>
+<div class="field">
+<label>Margin YoY %</label>
 <input id="margin" class="form-control">
 </div>
 
 </div>
-</div>
 
 
-<!-- Valuation -->
 
-<div class="section">
-<h4>Valuation</h4>
+<div class="section-title">Valuation</div>
 
 <div class="grid">
 
-<div>
-<label>Overvalued vs Sector / History</label>
+<div class="field">
+<label>Overvalued</label>
 <select id="valuation" class="form-control">
 <option value="0">No</option>
 <option value="25">Yes</option>
 </select>
 </div>
 
-<div>
-<label>PEG Ratio</label>
+<div class="field">
+<label>PEG</label>
 <input id="peg" class="form-control">
 </div>
 
+<div></div>
+
 </div>
-</div>
 
 
-<!-- Balance Sheet -->
 
-<div class="section">
-<h4>Balance Sheet & Governance</h4>
+<div class="section-title">Balance Sheet</div>
 
 <div class="grid">
 
-<div>
-<label>Debt / Equity</label>
+<div class="field">
+<label>Debt / Eq</label>
 <input id="debt" class="form-control">
 </div>
 
-<div>
-<label>Promoter Pledge (%)</label>
+<div class="field">
+<label>Pledge %</label>
 <input id="pledge" class="form-control">
 </div>
 
-<div>
-<label>Promoter Stake Change (%)</label>
+<div class="field">
+<label>Stake Δ %</label>
 <input id="stake" class="form-control">
 </div>
 
 </div>
-</div>
 
 
-<!-- Market -->
 
-<div class="section">
-<h4>Market Signals</h4>
+<div class="section-title">Market</div>
 
 <div class="grid">
 
-<div>
-<label>Price Drop from 52W High (%)</label>
+<div class="field">
+<label>Drop from High %</label>
 <input id="priceDrop" class="form-control">
 </div>
 
-<div>
-<label>1 Year Price Return (%)</label>
+<div class="field">
+<label>1Y Return %</label>
 <input id="price1yr" class="form-control">
 </div>
 
+<div class="field">
+<label>Moat Weak</label>
+<select id="moat" class="form-control">
+<option value="0">No</option>
+<option value="15">Yes</option>
+</select>
 </div>
+
 </div>
 
 
-<!-- Value -->
 
-<div class="section">
-<h4>Value Cushion</h4>
+<div class="section-title">Value Cushion</div>
 
 <div class="grid">
 
-<div>
+<div class="field">
 <label>P/E</label>
 <input id="pe" class="form-control">
 </div>
 
-<div>
+<div class="field">
 <label>P/B</label>
 <input id="pb" class="form-control">
 </div>
 
-<div>
-<label>Dividend Yield (%)</label>
+<div class="field">
+<label>Dividend %</label>
 <input id="dividend" class="form-control">
 </div>
 
-<div>
-<label>Cash / Market Cap (%)</label>
+<div class="field">
+<label>Cash %</label>
 <input id="cash" class="form-control">
 </div>
 
 </div>
-</div>
 
 
-<!-- Moat -->
-
-<div class="section">
-<label>
-<input type="checkbox" id="moat">
-Moat clearly weakening
-</label>
-</div>
-
-
-<button onclick="calculateScore()" class="btn btn-primary">
-Calculate Score
+<button onclick="calculateScore()" class="btn btn-primary btn-sm">
+Calculate
 </button>
 
 
@@ -238,25 +235,25 @@ function calculateScore(){
 
 let score = 0
 
-let revenue = parseFloat(document.getElementById("revenue").value) || 0
-let roce = parseFloat(document.getElementById("roce").value) || 0
-let margin = parseFloat(document.getElementById("margin").value) || 0
+let revenue = parseFloat(revenue.value) || 0
+let roce = parseFloat(roce.value) || 0
+let margin = parseFloat(margin.value) || 0
 
-let valuation = parseFloat(document.getElementById("valuation").value)
+let valuation = parseFloat(valuation.value)
 
-let debt = parseFloat(document.getElementById("debt").value) || 0
-let pledge = parseFloat(document.getElementById("pledge").value) || 0
-let stake = parseFloat(document.getElementById("stake").value) || 0
+let debt = parseFloat(debt.value) || 0
+let pledge = parseFloat(pledge.value) || 0
+let stake = parseFloat(stake.value) || 0
 
-let priceDrop = parseFloat(document.getElementById("priceDrop").value) || 0
-let price1yr = parseFloat(document.getElementById("price1yr").value) || 0
+let priceDrop = parseFloat(priceDrop.value) || 0
+let price1yr = parseFloat(price1yr.value) || 0
 
-let pe = parseFloat(document.getElementById("pe").value) || 0
-let pb = parseFloat(document.getElementById("pb").value) || 0
-let dividend = parseFloat(document.getElementById("dividend").value) || 0
-let cash = parseFloat(document.getElementById("cash").value) || 0
+let pe = parseFloat(pe.value) || 0
+let pb = parseFloat(pb.value) || 0
+let dividend = parseFloat(dividend.value) || 0
+let cash = parseFloat(cash.value) || 0
 
-let moat = document.getElementById("moat").checked
+let moatScore = parseFloat(moat.value)
 
 
 
@@ -275,14 +272,14 @@ if(margin < -3) score += 5
 score += valuation
 
 
-/* Balance Sheet */
+/* Balance */
 
 if(debt > 0.5) score += 10
 if(pledge > 20) score += 10
 if(stake < -2) score += 5
 
 
-/* Market signals */
+/* Market */
 
 if(priceDrop > 40 && revenue < 12) score += 10
 else if(priceDrop > 25 && revenue < 12) score += 5
@@ -291,9 +288,7 @@ else if(priceDrop > 25 && revenue < 12) score += 5
 /* Value Cushion */
 
 if(pe < 15 || pb < 2) score -= 5
-
 if(dividend > 3) score -= 5
-
 if(cash > 30) score -= 5
 
 
@@ -304,7 +299,7 @@ if(price1yr > 25) score -= 5
 
 /* Moat */
 
-if(moat) score += 15
+score += moatScore
 
 
 
@@ -312,33 +307,22 @@ if(moat) score += 15
 
 let verdict = ""
 
-if(score <= 25)
-verdict = "💎 Diamond Hands"
-
-else if(score <= 45)
-verdict = "👀 Watch Carefully"
-
-else if(score <= 65)
-verdict = "⚠️ Trim 50%"
-
-else
-verdict = "❌ Hard Exit"
+if(score <= 25) verdict = "💎 Diamond Hands"
+else if(score <= 45) verdict = "👀 Watch"
+else if(score <= 65) verdict = "⚠️ Trim 50%"
+else verdict = "❌ Exit"
 
 
 
-document.getElementById("result").innerHTML = `
-
-<div class="score">Score: ${score} / 100</div>
-
-<br>
-
+result.innerHTML = `
+<div class="score">${score}/100</div>
 <div class="verdict">${verdict}</div>
-
 `
 
 }
 
 </script>
+
 
 </body>
 </html>
