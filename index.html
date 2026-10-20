@@ -58,13 +58,14 @@
  .site-footer>a:last-child{font-size:12px;min-height:44px;display:inline-flex;align-items:center}
 }
 </style>
+<style id="sme-navigation">@media(max-width:800px){.masthead-inner{flex-wrap:wrap;padding-top:12px;padding-bottom:12px;gap:8px}.topnav{width:100%;justify-content:space-between;margin-left:0}.topnav a{padding:8px 0}.quick-jump{display:none}}</style>
 </head>
 <body>
 <a class="skip-link" href="#rankings">Skip to company research</a>
 <header class="masthead">
  <div class="masthead-inner">
   <a class="brand" href="#rankings" aria-label="Wallstrat home"><svg width="34" height="34" viewBox="0 0 40 40" role="img" aria-labelledby="logo-title"><title id="logo-title">Wallstrat logo</title><rect width="40" height="40" rx="11" fill="currentColor"/><path d="M8 13l6 15 6-11 6 11 6-15" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>wallstrat<span class="brand-dot">.</span></span></a>
-  <nav class="topnav" aria-label="Main navigation"><a href="#rankings" aria-current="page">Research</a><a href="#methodology">How to read</a></nav>
+  <nav class="topnav" aria-label="Main navigation"><a href="#rankings" aria-current="page">Existing research</a><a href="sme.html">SME research</a><a href="#methodology">How to read</a></nav>
   <form id="quickJump" class="quick-jump" role="search"><label class="sr-only" for="quickCompany">Open a company by name or ticker</label><input id="quickCompany" type="search" list="companyChoices" placeholder="Jump to a company" autocomplete="off"><datalist id="companyChoices"></datalist><button type="submit" aria-label="Open company"><span aria-hidden="true">↵</span></button></form>
  </div>
 </header>
