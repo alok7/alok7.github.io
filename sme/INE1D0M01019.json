@@ -1,0 +1,3050 @@
+{
+  "id": "INE1D0M01019",
+  "isin": "INE1D0M01019",
+  "name": "FX Multitech Limited",
+  "symbol": "FXML",
+  "exchange": "BSE SME",
+  "sector": "HVAC and refrigeration distribution; 51%-owned industrial-chiller manufacturing",
+  "research_status": "deep",
+  "as_of": "2026-10-20",
+  "summary": "Hold — unresolved. Established distributor with an emerging manufacturing subsidiary, but persistent poor cash realization, supplier concentration and unverified post-IPO liquidity prevent a supported investment return. BQS/GQS/IAS remain NS with explicit bounds; conditional base 9.21%, bull 26.39%, ordinary bear unfunded and null IRR. No evidenced governance/funding failure.",
+  "priority": "medium",
+  "identity_status": "verified",
+  "identity_note": "Exact issuer and current lot/share count independently matched by ISIN in official interoperable master. BSE 544941 / FXML, listed 28 September 2026. Master listing epoch is not used as IPO date.",
+  "quote": {
+    "price": 137.9,
+    "date": "2026-10-19",
+    "exchange": "BSE",
+    "kind": "Secondary historical close, S&P/StockAnalysis; not live executable price",
+    "source_ids": [
+      "S7"
+    ]
+  },
+  "scores": {
+    "BQS": null,
+    "GQS": null,
+    "IAS": null
+  },
+  "score_note": "GQS means Growth Quality Score. Exact Decimal weights and half-up displays. Missing factors remain NS; no midpoint. CAP requires meaningful incremental or cohort evidence. R is not scored on materially unverified financing. G3 Hold alone does not exclude quality ranking.",
+  "sections": [
+    {
+      "id": "1",
+      "title": "Executive Verdict",
+      "text": "Hold — unresolved. FX Multitech is an established refrigeration/HVAC distributor undergoing a small manufacturing transition, not a demonstrated compounder. It was incorporated in 2008 and listed on BSE SME on 28 September 2026. The 19 October close is ₹137.90, giving approximately ₹198.02 crore market capitalization on 14,359,600 current shares. This is a dated secondary-market observation, not an executable offer. [E1, E12]\n\nThe attraction is a real distribution network, engineering support, profitable recent operations and a sizeable fresh IPO that can reduce leverage and finance inventory. The counterweight is severe supplier concentration, structurally demanding credit terms and persistently weak conversion of profit into cash. FY26 group revenue was ₹126.1393 crore and owner PAT ₹11.8025 crore, but consolidated CFO was negative ₹0.9923 crore. Parent three-year CFO/PAT is only 0.126. Growth quality must therefore not be inferred from reported PAT or current ROCE alone. [E3–E7]\n\nBQS, GQS (Growth Quality Score) and IAS are all NS, with exact bounds and individually supported factors retained. CAP is NS because meaningful incremental returns or cohort economics are absent; REV is NS because disposal, acquisition and gross/net changes prevent a clean long-period underlying-growth basis. BAL, R and P remain NS pending the actual post-IPO cash/debt and operating bridge. G3 is Hold, not Fail. This is insufficient evidence for a favorable purchase classification, not an accusation of insolvency or misconduct.\n\nA fully linked conditional model produces a 9.21% base five-year return and 26.39% bull return before personal tax and execution costs. Neither is a supported return estimate. The ordinary bear path is unfunded and its IRR is null; a separately labeled hypothetical rescue produces severe loss. The decision-changing evidence is current bank-confirmed liquidity, proceeds deployment, sustained cash conversion and measured new-project returns, rather than another narrative about the cold-chain opportunity.",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S5",
+        "S7"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Research Header, Gates and Data Confidence",
+      "text": "As of 20 October 2026; pricing anchor 19 October 2026; five-year valuation horizon to 19 October 2031; nominal INR, pretax equity hurdle 15%. Research retrieval occurred 21 October, but no later company financial period or subsequent share-price outcome is used. FX Multitech Limited, formerly FX Multitech Private Limited, CIN U52100GJ2008PLC053391, is BSE code 544941 / FXML / ISIN INE1D0M01019. The official interoperable master independently supplies 14,359,600 shares and a 1,200-share lot. It is not an NSE-listed security merely because it appears in an interoperable NSE-hosted master. [E1]\n\nScope: restated parent FY24–FY26 and group FY25–FY26 are the principal analytical series. Original FY21–FY24 audited parent numbers provide longer context, not a falsely continuous growth series. Everestt Chillers enters consolidated results only after the 10 January 2025 acquisition. No comparable post-March 2026 interim results or TTM cash flows were located; they remain ND, not annualized estimates.\n\nGate register: G1 Conditional for stewardship/regularization questions without substantiated severe minority harm; G2 Conditional because current restated statements reconcile while older scope and restatement limitations remain; G3 Hold — unresolved for current liquidity and facility rollover; G4 Conditional for whole-lot tradability with only 15 sessions. No gate is marked Fail. The G3 hold alone does not prohibit quality comparison. Here quality-ranking eligibility is false specifically because REV, CAP and BAL are NS, not because financing risk is automatically equated with poor business quality.\n\nIdentity and restated financial extraction confidence are High; governance, business architecture and dated liquidity are Medium; comparable growth, incremental capital returns and current funding are Low. Overall confidence for an investment conclusion is Low, reflecting the weakest material issue. Missing evidence is not coded 5/10. GQS remains NS even though its cash-conversion cap is known.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S5",
+        "S6",
+        "S7",
+        "S9"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Scorecard and Calculation Audit",
+      "text": "Canonical scores, assigned once and reused: GOV 4, MOAT 4, REV NS, DUR 6, CAP NS, CASH 3, BAL NS, EXEC 5, EARN 5, R NS, D 4, P NS and L NS. Each factor's two material facts, contrary evidence, source/evidence identifiers, confidence and missing-data consequence appear in factor_audit. Confidence ceilings are respected; no score exceeds 8.\n\nBQS = 20% GOV + 20% MOAT + 12% REV + 10% DUR + 12% CAP + 10% CASH + 8% BAL + 8% EXEC. Known contribution is exactly 2.900, coverage 68%, with raw/final mathematical bounds 3.220–6.100. GQS = 40% REV + 20% DUR + 15% EARN + 15% CAP + 10% CASH. Known contribution 2.250, coverage 45%, raw bounds 2.800–7.750. Persistent poor realization makes CASH 3 and activates the framework cap of 5; GQS is still NS, with final bounds 2.800–5.000. IAS = 25% final BQS + 35% R + 20% D + 10% P + 10% L. Known contribution 0.800, coverage 20%. Propagating final BQS bounds into Q gives IAS bounds 2.155–7.825; it remains NS. The looser independent 1–10 missing-component bound is 1.600–8.800 and is retained separately for audit.\n\nThere is no renormalization of observed weights, midpoint, made-up neutral value or extra undisclosed haircut. Displayed one-decimal bounds use exact Decimal arithmetic and ROUND_HALF_UP: BQS 3.2–6.1, GQS 2.8–5.0, IAS 2.2–7.8. Bounds describe all admissible missing integer factors, not probability intervals or likely outcomes. Quality Q is exactly final BQS, not a separate rescore. No governance or failed-funding cap applies; the only numeric override is the GQS cash cap.\n\nControlled overlap: supplier dependence informs MOAT, while available demand channels inform DUR; new-capital returns remain CAP NS. CASH measures realization, EARN measures the composition and durability of operating profit growth. D measures the downside mechanism, R would measure a supported return spread, and P would measure robust priced-in requirements. No factor is penalized again simply because the same warning appears in another paragraph. L is NS because the canonical 60-session traded-value window is unavailable. The separate short-history 9-to-7 illustration is not a canonical score, is not used in IAS, and cannot substitute for the missing window.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S7"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Business Overview",
+      "text": "The parent buys, stocks and distributes refrigeration and air-conditioning compressors, controls, refrigerants and related engineering products. Five warehouses in Ahmedabad, Kolkata, Thane, Bangalore and Hyderabad provide reach and availability; technical assistance helps customers select and integrate equipment. The parent is not itself a scaled branded manufacturer. Its 51%-owned Everestt Chillers subsidiary manufactures industrial cooling products in Coimbatore. Revenue is earned from products and projects, not an identified contracted subscription annuity. [E6, E7]\n\nFY26 group product sales included compressors ₹45.8292 crore (36.35%), controls ₹23.9382 crore (18.99%), industrial chillers ₹20.1272 crore (15.96%) and refrigerants ₹19.3804 crore (15.37%). These product categories are not separately disclosed profit segments. The business is overwhelmingly domestic: domestic sales ₹125.0447 crore, exports ₹1.0447 crore, against FY25 exports ₹5.4549 crore. Market expansion is plausible, but the actual export trend contradicts a simplistic international-growth narrative.\n\nThe top supplier accounts for 74.11% of FY26 purchases and the top ten 86.58%. Danfoss is a named major distribution relationship; the prospectus concentration table does not identify its largest supplier, so the exact 74.11% is not attributed to a named counterparty. The top-customer table reports 10.16% and top ten 42.58%; their sales amounts are ₹12.7105 and ₹53.2382 crore. These percentages reconcile against domestic revenue, whereas shares of total revenue are about 10.08% and 42.21%. Treating the quoted percentages as total-group percentages would overstate concentration slightly. [E6]\n\nIndustry risk comes from principal termination, technological/refrigerant transition, competing distributors, price competition, customer project delays and long credit periods. Standard customer credit up to 180 days and stocked inventory mean growing sales consume bank funding. This is not an asset-light business merely because fixed assets are small. Public segment contribution, unit selling-price/volume and recurring service-income splits are ND.",
+      "source_ids": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Moat / Industry Position",
+      "text": "The credible advantages are engineering familiarity, stocked availability, supplier relationships and a multi-location customer-service footprint. These can reduce customer search and procurement friction. However, public evidence does not establish an exclusive territory, a hard-to-replace patent, proprietary ecosystem, superior cohort retention or persistent pricing power. Customer demand is generally purchase-order driven, and the company's dependence on a dominant principal weakens its bargaining position. MOAT 4 recognizes useful capabilities but little demonstrated structural protection. [E6]\n\nThree qualitative comparisons clarify what would constitute stronger evidence. Beijer Ref is a refrigeration-distribution and acquisition-integration comparator, with a broader international distribution history; it also acquired the Chennai business from FX. Blue Star combines HVAC/refrigeration products, projects and service, so brand, installed-base servicing and manufacturing matter more than pure product resale. Amber's Sidwal operates engineered HVAC and railway subsystems, where qualification and systems integration create a different barrier. These are architecture comparisons, not claims that FX should trade at their multiples. Their current financial ratios and market capitalization are not substituted into a peer valuation. [E15]\n\nThe prospectus identifies no exact listed Indian comparable. A blanket HVAC sector premium would therefore mix manufacturers, branded consumer franchises, EPC contractors and distributors. Own value-added and cash economics are more informative. Group sales less materials, purchases, inventory change and direct costs rose from ₹22.1429 crore to ₹29.5313 crore. This is an analytical value-added proxy, not a reported segment gross margin, and includes the acquisition-scope effect. Supplier retention through a downturn, measured win/loss rates, service attachment and stable realized gross margins would strengthen the moat case; none is yet evidenced sufficiently for a 7–8 score.",
+      "source_ids": [
+        "S1",
+        "S10",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Revenue Growth & Scale",
+      "text": "Original parent revenue was ₹55.556 crore in FY21, ₹79.603 crore in FY22, ₹109.5486 crore in FY23 and ₹74.9526 crore in FY24. The final prospectus recasts FY24 to ₹68.5174 crore, followed by ₹101.7686 crore FY25 and ₹111.5701 crore FY26. The original-to-restated FY24 sales bridge is ₹74.9526 − ₹2.9134 branch transfers − ₹3.2101 turnover discount − ₹0.3117 discount income = ₹68.5174 crore; it is not evidence of invented sales. The March 2023 Chennai/Tamil Nadu business sale for ₹2.20 crore also changes the economic perimeter. No complete comparable continuing-business historical revenue series was provided. [E2]\n\nThe restated two-year parent CAGR is approximately 27.61%, but FY26 parent growth slows to 9.63%. Group revenue rises 23.66% from ₹102.0060 crore to ₹126.1393 crore. This is not all organic: FY25 group includes only post-acquisition Everestt results, while FY26 includes a full year. The subsidiary's own full-year revenue of ₹17.7626 crore in FY25 and ₹20.7603 crore in FY26 cannot simply be added to parent revenue because consolidation and intercompany eliminations differ. FY26 group less parent revenue is ₹14.5692 crore, not the subsidiary's standalone revenue.\n\nA five-year CAGR mechanically splicing FY21 originals and FY26 restated parent numbers would be roughly 14.96%, but scoring that figure would falsely assume constant scope and measurement. A three-year or five-year organic scoring basis is therefore NS. The v3 numeric schedule is retained, not replaced with management's latest growth or a shorter favorable interval. Revenue decomposition into volume, price/mix, acquisition and currency is not available sufficiently to allocate growth quantitatively; exports actually fell substantially.\n\nBottom-up discipline: the five current warehouses imply a crude parent sales average of ₹22.314 crore each. This is a scale check, not a disclosed same-warehouse productivity KPI. The conditional base five-year group growth of 11% requires approximately ₹212.55 crore sales; if existing parent sales grow 8% annually with no new warehouse, the residual group contribution must reach ₹48.6190 crore, equivalent to 27.25% annual growth from the current ₹14.5692 crore residual. At the bull group trajectory and 15% parent growth, the residual must reach ₹89.4676 crore, or 43.76% annual growth. The model's separate bottom-up requirements file quantifies this gap. No capacity multiplication is presented as an order book, and the 20% bull growth is explicitly speculative.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Growth Quality & Reinvestment Runway",
+      "text": "Demand access exists through industrial chillers, cold storage, food processing, commercial refrigeration and existing component customers. The subsidiary's proposed expansion takes industrial-chiller capacity from 9,000 to 15,000 TR and adds 20,000 TR of air-handling-unit capacity, alongside heat pumps and fan/coil backward integration. The prospectus describes a 2,800-square-foot shed expansion as completed. Machinery purchase, commissioning, customer qualification, utilization and cash contribution should be tracked separately; an IPO object is not evidence of commissioned profitable capacity. [E7]\n\n₹6.2578 crore is intended to be advanced to the 51%-owned subsidiary at 6%, with a six-year moratorium and bullet repayment. At group level this intercompany loan eliminates; the model counts external machinery cash capex once, not both the parent loan and the subsidiary asset purchase. Minority shareholders own 49% of the subsidiary, so future group operating profit is not all attributable to FX shareholders. The terminal model explicitly deducts a separately estimated NCI equity claim.\n\nCurrent capital efficiency looks respectable: normalized FY26 group EBIT ₹18.4472 crore and assumed 25%-tax NOPAT ₹13.8354 crore against average capital proxy ₹57.79945 crore imply approximately 31.92% ROCE and 23.94% ROIC. The one-year delta NOPAT/delta capital is approximately 22.72%. These are not sufficient CAP evidence. The acquisition changed scope, remuneration affected margins, capital expanded sharply and there is only one group interval. Against an analytical 12–16% nominal INR cost-of-capital range, current returns are encouraging, but meaningful incremental deployment returns and sustainable unit/cohort economics remain ND. CAP is NS, not 5 and not 8. The equity hurdle remains a separate 15%.\n\nWorking capital is the limiting reinvestment channel. Management's parent FY27 requirement is ₹70.78 crore versus ₹49.0469 crore FY26, an increase of ₹21.7331 crore; the IPO working-capital allocation is only ₹14.83 crore. That comparison alone is not a proven funding deficit because retained earnings, cash and other IPO uses can interact, but it proves the allocation is not a complete cash plan. Growth-quality bounds are capped at 5 because weak realization is persistent, not because expansion itself is undesirable. The growth ≈ reinvestment × incremental-return identity cannot be reliably applied until incremental returns are measured.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Management, Governance & Execution",
+      "text": "The four promoters are Subhash Agarwal, Selvaraj Rangaswamy, Anita Agarwal and Kanagalakshmi Selvaraj. Post-offer promoter ownership is 72.84%. The OFS is ₹4.0368 crore and belongs to selling holders, not the company. The fresh issue adds 3,552,000 shares and increases the historical adjusted share count by about 32.87%; the March 2025 40-for-1 bonus is not an economic capital inflow or dilution event. Current price/EPS comparisons must use the enlarged issued count. [E8]\n\nGovernance concerns are concrete but bounded: delayed statutory forms, belated beneficial-owner reporting and historical allotment regularization, including a small 2011 cash consideration of ₹32,125. The prospectus identifies these shortcomings; the reviewed record does not establish material diversion or abusive minority treatment. The old auditor's July 2025 resignation is described in the risk disclosure alongside delayed ADT-3 filing; the full resignation letter and independently corroborated rationale were not located. An auditor change alone is not misconduct. Restated auditors state there were no qualifications requiring adjustment. [E9]\n\nFrascold related-party FY26 sales were ₹5.7433 crore, purchases ₹3.3555 crore and year-end receivables ₹0.2457 crore versus ₹1.7702 crore previously. This is disclosed commercial activity; arm's-length pricing is not independently proven, but falling receivables contradict a simple accumulation/diversion narrative. Top-two executive remuneration fell from ₹1.1638 crore to ₹0.7156 crore; two other promoter remuneration lines totaling ₹1.5019 crore in FY25 were zero in FY26. The resulting cost benefit should not be extrapolated forever. [E10]\n\nObservable promises-versus-delivery: Chennai sale, March 2023, completed and scope reduced; subsidiary acquisition, January 2025, completed through loan conversion; shed enlargement, completed as described in the prospectus; machinery/AHU expansion, proposed and funded in the IPO budget, commissioning ND; ₹10 crore debt reduction and ₹14.83 crore working-capital use, planned, actual deployment ND at cutoff. EXEC 5 reflects this mixed record. Historical ICRA B+/A4 issuer-not-cooperating ratings were withdrawn in July 2024 at the company's request after bank no-dues/closure confirmation; neither a current rating nor a default is inferred. [E11]",
+      "source_ids": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Financial Forensics",
+      "text": "Financial history contains six annual observations, with originals, restated parent and restated group kept distinct. Restated group FY25/FY26 revenue is ₹102.0060/₹126.1393 crore, PAT before minority interest ₹9.5399/₹12.1039 crore and owner PAT ₹9.5500/₹11.8025 crore. Owner PAT exceeds total PAT in FY25 because the minority share is a loss. CFO/PAT uses total PAT before NCI to match consolidated cash flow; EPS uses owner PAT. Original parent FY24 PAT ₹4.3024 crore becomes ₹4.1778 crore after restatement; FY25 ₹9.1574 becomes ₹9.6395 and FY26 ₹11.7242 becomes ₹11.5384. Gratuity, depreciation, foreign exchange, tax and prior-period adjustments explain the disclosed bridges. They are not automatically added back to normalized profit. [E2–E4, E9]\n\nOperating EBITDA is calculated consistently as PBT + full finance cost + D&A − other income. This yields ₹13.8522 crore FY25 and ₹19.2746 crore FY26, versus issuer-labeled EBITDA ₹14.1657/₹19.3657 crore. A minor MD&A inconsistency reports FY25 total income ₹102.3199 crore, while the audited restated P&L RF5 correctly totals ₹102.4531 crore from revenue ₹102.0060 plus other income ₹0.4471; the audited schedule controls this analysis. The EBITDA difference is methodological: the issuer includes other income and adds a narrower interest figure, whereas this report adds all finance costs and removes other income. Operating EBIT is ₹13.6221/₹18.4472 crore. Parent FY26 employee costs fall ₹0.7701 crore; that is about 22.5% of parent incremental EBIT and may not recur. No wholesale heroic earnings normalization is made.\n\nCash bridge FY26: ₹19.6719 crore pre-working-capital operating cash less ₹16.5828 crore working-capital absorption less ₹4.0814 crore cash taxes gives CFO −₹0.9923 crore. Cash capex ₹0.6313 produces reported-CFO FCF −₹1.6236 crore. Interest paid ₹2.1538 is classified in financing, so after-interest FCF is worse, −₹3.7774 crore. The full cash bridge is opening ₹0.0646 + CFO −₹0.9923 + investing −₹0.6737 + financing ₹2.0634 = closing available cash ₹0.4620 crore. Financing includes ₹12.4551 crore borrowings, ₹8.2379 crore repayments and that same ₹2.1538 crore interest, counted once. Investing includes capex, ₹0.0508 interest received and ₹0.0932 additional bank deposit. [E3, E4]\n\nThree-year parent CFO totals ₹3.1936 crore against PAT ₹25.3557, or 0.126; after financing-classified interest, realization is slightly negative. Group two-year CFO is −₹2.9222 crore against PAT before NCI ₹21.6438 crore, or −0.135. Inventory rises from ₹25.2097 to ₹38.2593 crore; receivables remain near ₹34.6 crore but balances over six months grow from ₹1.4389 to ₹2.4819 crore, including over-three-year balances ₹0.3201 crore. All are classified good, with no identified doubtful allowance. Flat aggregate receivables are therefore not the same as clean collection quality. [E5]\n\nMarch gross debt ₹26.1147 crore includes ₹24.7219 crore short-term borrowings, within which current maturities ₹1.2736 crore are already included. They are not added again. Demand facilities and bill discounting create rollover exposure despite normalized net debt/EBITDA near 1.33× and EBIT/full-finance-cost coverage near 7.55×. Cash/bank total ₹0.5552 crore includes ₹0.0932 restricted deposits; an additional ₹1.0424 noncurrent deposit is also excluded from available cash. Restricted amounts are not added back at terminal. Operating rent remains an expense; an invented lease debt is not introduced.\n\nThe January 2025 acquisition converted an existing loan into equity; the ₹1.8735 crore investment is not repeated as new acquisition cash in the October model. Intercompany balances eliminate on consolidation. The prospectus's historic acquisition cash-flow line relates to cash acquired, not a second purchase payment. Opening net tax payable ₹0.1513 crore is paid once in year one; short-term gratuity is included in ONWC, and long-term gratuity ₹0.1349 crore is a terminal claim. Contingencies and collection haircuts are tested separately rather than disguised as operating forecasts.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Valuation & Market Expectations",
+      "text": "At ₹137.90 and 1.43596 crore current shares, market capitalization is ₹198.0189 crore (approximately ₹198.02 crore). FY26 owner EPS on the current denominator is about ₹8.22, giving 16.78× P/E. Using historical reported EPS ₹10.92 without IPO dilution understates the current valuation. A current EV cannot be verified: adding March debt to October market capitalization and subtracting March cash is a dated hybrid, while subtracting net IPO proceeds produces only a pro-forma EV. Both are labeled in the calculation file, not described as live balance-sheet values. [E3, E8, E12]\n\nThe linked model runs five exact anniversary years from 19 October 2026 to 19 October 2031. It deliberately uses the last audited run-rate, not an invented FY27 interim. Its conditional initialization is March available cash ₹0.4620 + net primary IPO proceeds ₹37.0867 − intended immediate debt reduction ₹10 = ₹27.5487 crore cash, and debt ₹26.1147 − ₹10 = ₹16.1147 crore. The ₹0.4993 crore prepaid-expense line includes an undisclosed IPO portion. The base retains it in opening ONWC of ₹60.2655 crore; paired sensitivities for an IPO-paid portion from zero to ₹0.4993 add that portion to initial cash and remove it from ONWC. Thus past issue expenses are not paid twice and no prepaid asset is claimed twice. The paired reclassification leaves terminal cash and IRR unchanged. Actual April–October cash movement and use of proceeds are ND. This favorable initialization is a scenario, not verified October liquidity. Existing facilities are assumed rolled; no undrawn facility is invented. R and P remain NS.\n\nBear/base/bull use annual sales growth (−15%, 0%, 3%, 5%, 5%)/(11% each year)/(20% each year), operating EBITDA margins (8%, 8.5%, 9%, 9%, 9%)/13%/16%, ONWC/sales 70%/47%/44%, interest 15%/12%/10%, and terminal EV/EBITDA 6×/10×/12×. Maintenance capex is 1%/1%/1.2% of sales, with ₹6.2578 crore expansion capex in year two/year one/year one. D&A is 10% of opening PPE plus 5% of current capex, a half-year convention; tax is 25% of positive PBT. These assumptions are not management guidance or primary-evidence project economics. Every year computes revenue, margins, interest, tax, working capital, capex, debt repayment and closing cash.\n\nThe base produces terminal common value ₹214.22 per share and conditional IRR 9.21%; bull ₹444.76 and 26.39%. Base hurdle-entry values are ₹121.55 at 12%, ₹106.50 at 15% and ₹93.64 at 18%. These are sensitivity outputs, not actionable targets pending financing verification. At 1% costs on both purchase and exit, base IRR falls to 8.77%; at 2% to 8.34% and 5% to 7.04%, excluding personal tax. No dividends are assumed and accumulated cash is added only once at terminal. NCI is deducted using separately projected attributable subsidiary profit and scenario multiples rather than adding book NCI to cash.\n\nA fully rerun 3×3 margin/multiple grid, opening cash sensitivities of ₹0/5/10/20/27.5487 crore and reverse-growth search are included. With zero opening cash even the base has a ₹2.2235 crore funding gap and no ordinary IRR. With the favorable initialization, roughly 18.9% annual growth is the minimum 0.1-percentage-point grid point meeting 15%, at base margin, working capital and multiple. The required five-year terminal share price is ₹277.37. Changing only a terminal multiple while ignoring the funding required for growth would be misleading; the search reruns the annual cash model. No probability-weighted expected return is reported from unsupported scenarios.",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7"
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Bear Case & Permanent-Loss Path",
+      "text": "Permanent-loss risk is High. A credible mechanism is supplier/customer disruption or price pressure reducing revenue and margin while inventory and credit collection worsen; banks then curtail demand funding just as the subsidiary expansion consumes cash. The stress is linked rather than independent pessimistic ratios: first-year revenue falls 15%, EBITDA margin 8%, ONWC rises to 70% of sales, interest rises to 15%, and ₹6 crore additional debt is called. Opening receivable and inventory collectability each suffer a 15% haircut, reducing usable opening ONWC by ₹10.9344 crore. This loss is not charged a second time as a separate cash expense. A ₹0.0423 crore contingency payment is also included. Machinery capex is delayed to year two, not silently canceled. [E5, E13]\n\nEven with favorable pro-forma IPO opening cash, the ordinary bear path reaches a peak cash deficit of ₹3.9538 crore. It has no committed incremental financing and therefore its terminal common equity, price and ordinary IRR are all null. The fact that a spreadsheet later returns to positive cash does not finance the earlier shortfall. It would be wrong to present its computed terminal enterprise value as a realizable ordinary shareholder recovery. Existing demand facilities could also require more repayment than the scenario assumes; intra-year timing could be worse than annual closing balances.\n\nA separate, explicitly hypothetical rescue borrows enough to maintain ₹1 crore minimum annual cash, including rescue interest. Total uncommitted rescue funding is ₹5.6249 crore, with its own debt and interest schedule. On those assumptions only, terminal common price is ₹39.94, a roughly 71.0% price loss versus entry and −21.95% annualized return over five years. This is neither available funding nor a supported recovery estimate; it is not blended into the ordinary scenario. Dilutive equity rescue, tighter collateral terms or forced inventory liquidation could leave less recovery.\n\nCounter-evidence matters: the IPO provides real primary capital, current reported interest coverage is healthy, and the conditional base requires no new annual borrowing. Those facts prevent a G3 Fail or insolvency allegation. They do not remove the need to verify whether the cash remains available, bank lines are committed and customers pay. G3 remains Hold. D 4 captures a material loss mechanism with some recapitalization support; it is not a back-door R score.",
+      "source_ids": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "5× / 10× Feasibility",
+      "text": "The multibagger exercise is a reverse requirement, not a price forecast. At unchanged current share count, a 5× share price is ₹689.50 and 10× is ₹1,379. Using a deliberately explicit 12× terminal P/E and current FY26 owner PAT/revenue margin of 9.3567%, 5× requires approximately ₹881.80 crore revenue and 10× ₹1,763.61 crore. These are about seven and fourteen times the FY26 group scale, respectively. Any future dilution raises the required business outcome proportionately. [E3, E8, E13]\n\nThe five-year revenue CAGRs are 47.54% and 69.48%. Over ten years, they are still 21.47% and 30.18%. At 47% ONWC/sales, the additional ONWC requirements versus the model's opening base are roughly ₹354.18 crore and ₹768.63 crore, before the corresponding fixed assets, acquisitions or financing costs. Profit margins and capital turns cannot simply be held constant without operating evidence. These calculations deliberately do not label the outcomes funded.\n\nA 15,000-TR chiller line and 20,000-TR AHU plan do not independently justify those group revenue levels: selling price per TR, utilization ramp, product contribution, customer qualification and incremental capital return are ND. Nor is a global cooling-market growth rate evidence that FX can gain share profitably. The existing warehouse footprint is much smaller than the channel scale implied by those outcomes. An acquisition strategy could add revenue, but acquisition prices, new equity, debt and minority claims would have to be modeled rather than assumed free.\n\nBoth five-year outcomes are classified Speculative / unsupported, and ten-year feasibility remains unproven rather than impossible. Evidence that could improve the assessment is profitable repeatable factory capacity, strong cash conversion at larger distribution scale, independently supported unit returns and a funding path that preserves per-share participation. No 5×/10× designation contributes a bonus to BQS, GQS or IAS.",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7"
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Monitoring Plan",
+      "text": "First priority, next available exchange filing: reconcile all ₹37.0867 crore net primary proceeds to bank balances and actual deployment; verify the ₹10 crore debt reduction and distinguish restricted from unrestricted cash. Obtain facility limits, utilized and genuinely available amounts, demand/term maturities, collateral and covenants. A new equity or loan announcement is not cash until completed. This resolves BAL/G3/R before an investment classification can improve.\n\nAt each comparable half-year/full-year result, reconcile owner PAT, total PAT, CFO, taxes, financing-classified interest and cash capex. A useful upgrade trigger is cumulative after-interest operating cash becoming positive and CFO/PAT moving materially toward at least 0.8 over a meaningful period without stretched suppliers. Watch inventory growth relative to sales and the over-six-month and over-three-year receivable buckets. Deterioration beyond current ₹2.4819 crore aged receivables, repeated write-offs or increasing supplier-financed inventory would weaken the thesis. These are research triggers, not automatic mechanical trades.\n\nFor the subsidiary, collect dated machine orders, installation/commissioning certificates, actual chiller/AHU output and utilization, revenue per unit, gross contribution, warranty cost, customer advances and full incremental capital. Track group versus subsidiary debt and the 49% NCI claim. A completed shed is not a completed capacity ramp. Original project budget ₹6.2578 crore, timing and any overruns must remain visible in the delivery table.\n\nFor governance, confirm closure of allotment/filing regularization, current promoter pledge or encumbrance disclosures, related-party pricing and movements in Frascold balances. No current pledge conclusion is made from an old or incomplete search. Obtain the full auditor resignation documentation and test whether profit improvement persists after remuneration normalization.\n\nFor implementation, build 20 and then 60 listed-session windows, reconcile official BSE actual traded value, include genuine zero-trade days, and check lot, group, surveillance, circuits and order-book spread/depth immediately before use. The ₹5 lakh reference is analytical only; the user's actual capital and position size are unknown. No purchase/sale or personalized allocation is authorized by this research.",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Final Classification & Conditional Action",
+      "text": "Classification: post-IPO distribution/manufacturing-transition research watchlist; Hold — unresolved; not an established compounder and not a favorable purchase classification. Business economics have genuine strengths but are incompletely scoreable. BQS, GQS and IAS remain NS; exclusion from their numerical rankings is due to missing material factors, not merely G3 Hold. No Avoid — governance label, G1 Fail or funding-default finding is warranted on the evidence reviewed.\n\nThe base conditional return is below the 15% hurdle even under a favorable IPO-cash initialization, but it is not used to assign a spurious R 3. Material funding inputs are unverified, so R stays NS rather than scoring an unsupported forecast and then adding a vague safety haircut. A lower share price alone does not resolve missing incremental-return or cash-balance evidence. The conditional ₹106.50 base 15%-hurdle price is a model sensitivity, not a recommendation to place an order.\n\nA constructive change requires three independent improvements: current liquidity and rollover become verifiable; profitable growth converts into cash across a meaningful period; and reinvestment yields measured returns above a reasoned cost-of-capital range. A deterioration in principal relationships, aged debtors, project execution or bank access would justify more conservative assumptions and possibly an evidenced gate failure if facts support it. Updated evidence must change the affected factor once, preserve the v3 weights and retain exact auditability.\n\nNo portfolio size, risk tolerance, holding capacity or other assets have been supplied. The analysis therefore does not infer personal suitability, prescribe an allocation or execute any financial transaction. A three-lot position of ₹496,440 is simply the largest whole-lot illustration below the framework's ₹5 lakh reference at this dated quote.",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7"
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Sources, Assumptions & Open Questions",
+      "text": "The final issuer prospectus is the principal source and contains audited restated parent and consolidated financial statements, the acquisition and IPO terms, risks, related parties and business disclosures. Original FY22 and FY24 annual reports preserve older observations and are not overwritten by later restatements. The FY22 P&L was visually inspected because text extraction omitted amounts. ICRA is used narrowly for its dated rating action, not current creditworthiness. Official exchange master rows independently establish current identity, share count and lot; BSE notice mirrors provide listing/group context and are labeled secondary. The group mirror has an inconsistent earlier footer date and refers to a different listing-notice number; its group claim is not treated as sole verification of current restrictions. S&P historical data supplies the dated OHLC/volume sample because official BSE archive retrieval returned AccessDenied. NSE bhavcopies establish market dates only and contain no FX row, as expected for a BSE-only company.\n\nEvidence types are V (verified from a cited primary/identified record), C (calculated), A (analyst assumption) and I (inference). Each ledger entry specifies document section or page, source IDs, confidence and consequence of a gap. Current peer websites are used only for long-standing business architecture, not post-cutoff financial news or numeric market share. Sources, raw files, archive hashes, reproducible scripts and output CSVs are packaged together. Retrieval date after cutoff is disclosed; no later price path is used.\n\nOpen questions: exact April–October cash/debt bridge; IPO utilization and restricted balances; committed rollover headroom; continuing-business growth restatement; supplier contractual durability; collection/obsolescence evidence; capacity commissioning and cohort returns; current promoter encumbrances; detailed resignation/regularization records. No verified interim results, investor call or executed order-book reconciliation was located. Promises are not treated as confirmed orders.\n\nFailed or unused retrievals are recorded in source_retrieval_log.json: the official BSE daily file was denied, a large material-contract ZIP download was incomplete and therefore not treated as evidence, and certain older annual reports were image-only or incompletely extracted. Failure is not evidence that documents do not exist. No unreviewed ZIP content supports any score. The full original v3 framework accompanies the backup, while the standard 15-section layout, 13 canonical audits and four gates match the existing SME schema. Exact scores and cash-model identities are validated before delivery. This research does not execute a financial transaction.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "FX Multitech final prospectus",
+      "url": "https://www.fxmultitech.com/wp-content/uploads/2026/09/Prospectus_FX_24092026.pdf",
+      "document_date": "2026-09-24",
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "Printed pp 28–44 risks, 60–66 financial summary, 91–116 IPO objects/capital, 143–181 business/history, 187–202 management, RF 1–83 restated financial statements. Physical PDF pages are separately stated in evidence.",
+      "read_status": "relevant sections read",
+      "sha256": "3f0d3ca882024729ea9a6bee4523d55dab8dc456ace319d0feb2a28646c6e4e6"
+    },
+    {
+      "id": "S2",
+      "title": "FX Multitech annual report FY2022",
+      "url": "https://www.fxmultitech.com/wp-content/uploads/2025/07/Annual-Report_2022.pdf",
+      "document_date": "2022-09-03",
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "Physical PDF pp 18–20: FY2022/FY2021 balance sheet, P&L and cash flow; P&L visually verified. INR million converted to crore by /10.",
+      "read_status": "relevant sections read",
+      "sha256": "2b634ee3c57582c5fc1d99dce94ced692d830343509018d99736da3bee2273b5"
+    },
+    {
+      "id": "S3",
+      "title": "FX Multitech annual report FY2024",
+      "url": "https://www.fxmultitech.com/wp-content/uploads/2025/07/Annual-Report_2024.pdf",
+      "document_date": "2024-09-04",
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "Balance sheet, P&L and cash-flow statement FY2024 with FY2023 comparatives; INR lakh /100.",
+      "read_status": "relevant sections read",
+      "sha256": "b33b5a433b88dd70dc4ac4af85d069a35da563ee57217ad994109ef004724bca"
+    },
+    {
+      "id": "S4",
+      "title": "ICRA ratings withdrawal rationale",
+      "url": "https://www.icra.in/Rating/GetRationalReportFilePdf?id=128586",
+      "document_date": "2024-07-03",
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "PDF pp 1–3: rating action, withdrawal rationale, history and financial indicators.",
+      "read_status": "relevant sections read",
+      "sha256": "39e96e37f1cffdecf8f537c9719650e3240d917da80be9a79d7f8e4322b2906e"
+    },
+    {
+      "id": "S5",
+      "title": "Official interoperable exchange security master",
+      "url": "https://nsearchives.nseindia.com/content/cm/interop/NSE_CM_security_19102026.csv.gz",
+      "document_date": "2026-10-19",
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "Exact ISIN INE1D0M01019 rows, tokens 766262 and 766267; issued capital, lot, eligibility and price bands.",
+      "read_status": "relevant sections read",
+      "sha256": "d3665d120c8b0379df3483321ad45f8230535c7124b9759de5c29961df326898"
+    },
+    {
+      "id": "S6",
+      "title": "BSE listing notice 20260925-45, mirror",
+      "url": "https://noticeblue.com/circulars/57b1e120-a2b5-4790-9d02-526f9befefcd",
+      "document_date": "2026-09-25",
+      "accessed": "2026-10-21",
+      "kind": "secondary",
+      "locator": "Admission, securities, stock code, listing date and market lot; official notice link could not be retrieved.",
+      "read_status": "Mirror read; underlying exchange notice not independently downloaded",
+      "sha256": "51a13a013b2851b685b314acd114a359d67627befc5d5c686914fb01be072946"
+    },
+    {
+      "id": "S7",
+      "title": "FX Multitech historical OHLC and volume, S&P data",
+      "url": "https://stockanalysis.com/quote/bom/544941/history/",
+      "document_date": "2026-10-19",
+      "accessed": "2026-10-21",
+      "kind": "secondary",
+      "locator": "HTML daily table, 28 September–19 October 2026; excludes 25 September IPO-price row.",
+      "read_status": "relevant sections read",
+      "sha256": "5bda4c3efbee66dfc0865487de198f9e85e64e03fa18f1fa85b4d4ac439d1b4c"
+    },
+    {
+      "id": "S8",
+      "title": "BSE rolling-settlement notice 20260928-3, mirror",
+      "url": "https://noticeblue.com/circulars/9cec9829-38fc-4323-bce8-077a953022a2",
+      "document_date": "2026-09-28",
+      "accessed": "2026-10-21",
+      "kind": "secondary",
+      "locator": "Mirror states M group effective 13 October 2026. Its internal reference is 20260925-22 rather than the retrieved listing notice 20260925-45, and its footer date is inconsistent; not sole proof of current restrictions. Official master normal eligibility is separately verified.",
+      "read_status": "relevant sections read",
+      "sha256": "e16b5bcf4d229c535f4e43457f85ed2d2e9db369e523103dc6ec106d5c9c8eb8"
+    },
+    {
+      "id": "S9",
+      "title": "Official NSE UDiFF bhavcopies, calendar only",
+      "url": "https://nsearchives.nseindia.com/content/cm/",
+      "document_date": "2026-10-19",
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "Fifteen dated archives 28 September–19 October. Used to establish market dates and independently check ISIN absence, not BSE turnover.",
+      "read_status": "relevant sections read",
+      "sha256": null
+    },
+    {
+      "id": "S10",
+      "title": "Beijer Ref corporate history",
+      "url": "https://www.beijerref.com/about/history",
+      "document_date": null,
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "Historical distribution business and India expansion; qualitative economic comparator only.",
+      "read_status": "Historical capability context; no post-cutoff financial data used",
+      "sha256": "7aab1ba0fb5ad4e0acbcfe0d4b6bc0d0d1e65b928c73ea85ef88f51aa64d6e85"
+    },
+    {
+      "id": "S11",
+      "title": "Amber Group mobility business",
+      "url": "https://www.ambergroupindia.com/mobility/",
+      "document_date": null,
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "Sidwal HVAC and railway-subsystem capabilities; qualitative manufacturing comparator only.",
+      "read_status": "Capability context only; not a valuation peer",
+      "sha256": "7039505e25fe140dae3409d330aaeac3292436d5815d6f8047bb7a668cd5fdc7"
+    },
+    {
+      "id": "S12",
+      "title": "Blue Star business overview",
+      "url": "https://www.bluestarindia.com/about-us",
+      "document_date": null,
+      "accessed": "2026-10-21",
+      "kind": "primary",
+      "locator": "HVAC, refrigeration, projects and service business mix; qualitative comparator only.",
+      "read_status": "Capability context only; no current market-share or financial figures used",
+      "sha256": "1a33a4930af96c45d25bdefb6f83fd7908d66f749075aae9c462b10093fa2bf6"
+    }
+  ],
+  "metrics": [
+    {
+      "label": "parent_3y_CFO_PAT",
+      "value": 0.12595195557606376
+    },
+    {
+      "label": "parent_3y_after_interest_CFO_PAT",
+      "value": -0.021707150660403775
+    },
+    {
+      "label": "group_2y_CFO_PAT",
+      "value": -0.13501326014840279
+    },
+    {
+      "label": "group_FY26_CFO_PAT",
+      "value": -0.08198184056378523
+    },
+    {
+      "label": "group_FY26_revenue_growth",
+      "value": 0.23658706350606826
+    },
+    {
+      "label": "parent_FY26_revenue_growth",
+      "value": 0.09631163246816798
+    },
+    {
+      "label": "group_owner_PAT_growth",
+      "value": 0.23586387434554973
+    },
+    {
+      "label": "parent_2y_reported_CAGR_not_REV",
+      "value": 0.27606698885374614
+    },
+    {
+      "label": "original2021_to_restated2026_spliced_CAGR_not_scoreable",
+      "value": 0.1496439829131125
+    },
+    {
+      "label": "group_FY26_normalized_EBITDA_margin",
+      "value": 0.1528040824707288
+    },
+    {
+      "label": "group_FY26_gross_debt_EBITDA",
+      "value": 1.3548763657870981
+    },
+    {
+      "label": "group_FY26_net_debt_EBITDA",
+      "value": 1.330906996772955
+    },
+    {
+      "label": "group_FY26_EBIT_interest_coverage",
+      "value": 7.550425671250818
+    },
+    {
+      "label": "group_FY26_NOPAT_ROIC_average",
+      "value": 0.23936905974018785
+    },
+    {
+      "label": "group_FY26_ROCE_average",
+      "value": 0.31915874632025043
+    },
+    {
+      "label": "group_one_interval_delta_NOPAT_delta_IC",
+      "value": 0.22725460151594123
+    },
+    {
+      "label": "group_FY26_DSO_average",
+      "value": 100.08532630195347
+    },
+    {
+      "label": "group_FY26_inventory_days_average",
+      "value": 122.03956587428856
+    },
+    {
+      "label": "group_FY26_payable_days_average",
+      "value": 52.96040738954693
+    },
+    {
+      "label": "market_cap_at_quote",
+      "value": 198.018884
+    },
+    {
+      "label": "current_share_FY26_owner_EPS",
+      "value": 8.21924009025321
+    },
+    {
+      "label": "PE_current_shares_FY26_owner_PAT",
+      "value": 16.777706757043
+    },
+    {
+      "label": "post_ipo_share_increase_pct",
+      "value": 32.865761131055926
+    },
+    {
+      "label": "current_market_cap_plus_March_net_debt_hybrid_EV_not_current",
+      "value": 223.671584
+    },
+    {
+      "label": "proforma_EV_with_net_IPO_cash_not_current",
+      "value": 186.584884
+    },
+    {
+      "label": "customer_table_top1_total_sales_pct",
+      "value": 10.076558217779867
+    },
+    {
+      "label": "customer_table_top10_total_sales_pct",
+      "value": 42.205878738822875
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "claim": "Legal identity and current security",
+      "value": {
+        "name": "FX Multitech Limited",
+        "former": "FX Multitech Private Limited",
+        "CIN": "U52100GJ2008PLC053391",
+        "BSE_code": "544941",
+        "BSE_symbol": "FXML",
+        "ISIN": "INE1D0M01019",
+        "listing_date": "2026-09-28",
+        "shares": 14359600,
+        "lot": 1200
+      },
+      "type": "V",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S6"
+      ],
+      "locator": "Prospectus cover and history; master exact ISIN rows; BSE notice 20260925-45",
+      "confidence": "high",
+      "limitation": ""
+    },
+    {
+      "id": "E2",
+      "claim": "Long parent history is not a constant-scope organic growth series",
+      "value": {
+        "FY2021_original_revenue": 55.556,
+        "FY2022_original_revenue": 79.603,
+        "FY2023_original_revenue": 109.5486,
+        "FY2024_original_revenue": 74.9526,
+        "FY2024_restated_revenue": 68.5174,
+        "FY2025_restated_revenue": 101.7686,
+        "FY2026_restated_revenue": 111.5701,
+        "Chennai_sale_crore": 2.2
+      },
+      "type": "V",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "locator": "S2 PDF p19; S3 P&L; S1 physical pp179 and304 history/MD&A; S3 Note16 revenue detail and S1 physical p266 / RF58 revenue detail",
+      "confidence": "medium",
+      "limitation": "Chennai disposal, branch transfers and discount netting prevent a comparable five-year organic CAGR."
+    },
+    {
+      "id": "E3",
+      "claim": "FY2025/FY2026 consolidated financial core",
+      "value": {
+        "revenue": [
+          102.006,
+          126.1393
+        ],
+        "PAT_before_NCI": [
+          9.5399,
+          12.1039
+        ],
+        "PAT_owners": [
+          9.55,
+          11.8025
+        ],
+        "CFO": [
+          -1.9299,
+          -0.9923
+        ],
+        "capex": [
+          1.5564,
+          0.6313
+        ],
+        "gross_debt": [
+          21.8974,
+          26.1147
+        ],
+        "unrestricted_cash": [
+          0.0646,
+          0.462
+        ]
+      },
+      "type": "V",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 RF4–7, physical PDF pp212–215, consolidated summary balance sheet, P&L and cash flow",
+      "confidence": "high",
+      "limitation": ""
+    },
+    {
+      "id": "E4",
+      "claim": "Recurring weak realization, not simply a single expansion year",
+      "value": {
+        "parent_FY24_26_CFO": 3.1936,
+        "parent_FY24_26_PAT": 25.3557,
+        "group_FY25_26_CFO": -2.9222,
+        "group_FY25_26_PAT_before_NCI": 21.6438,
+        "group_FY26_interest_paid_financing": 2.1538,
+        "group_FY26_cash_capex": 0.6313
+      },
+      "type": "C",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 standalone RF43–47 and consolidated RF3–7; financial calculations in financial_history",
+      "confidence": "medium",
+      "limitation": "Old original annual cash-flow classifications differ. Core conversion ratios use only matched restated scopes."
+    },
+    {
+      "id": "E5",
+      "claim": "Inventory, credit terms and ageing dominate funding",
+      "value": {
+        "inventory_FY25_26": [
+          25.2097,
+          38.2593
+        ],
+        "receivables_FY25_26": [
+          34.5397,
+          34.6367
+        ],
+        "payables_FY25_26": [
+          15.7714,
+          15.5809
+        ],
+        "receivables_over6months_FY25_26": [
+          1.4389,
+          2.4819
+        ],
+        "over3years_FY25_26": [
+          0.0431,
+          0.3201
+        ],
+        "standard_credit_days": 180,
+        "parent_WC_requirement_FY27": 70.78,
+        "parent_WC_requirement_FY26": 49.0469
+      },
+      "type": "V",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 physical pp112–114 IPO working-capital computation; RF18 Note22 and RF26 ageing; business credit-policy description",
+      "confidence": "medium",
+      "limitation": "All receivables classified good; collectability and inventory obsolescence independently unverified."
+    },
+    {
+      "id": "E6",
+      "claim": "Distribution relationships are useful but concentrated and contestable",
+      "value": {
+        "top_supplier_purchase_pct_FY24_25_26": [
+          73.96,
+          71.39,
+          74.11
+        ],
+        "top10_supplier_pct_FY26": 86.58,
+        "top_customer_reported_pct": 10.16,
+        "top10_customer_reported_pct": 42.58,
+        "top_customer_amount": 12.7105,
+        "top10_customer_amount": 53.2382,
+        "domestic_sales_FY26": 125.0447,
+        "export_sales_FY26": 1.0447,
+        "warehouses": 5
+      },
+      "type": "V",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 printed p154, physical PDF p157, customer/supplier tables; physical pp145–159 business and product mix",
+      "confidence": "medium",
+      "limitation": "Customer percentages use domestic sales denominator; no disclosed exclusive defensible moat or binding long-term customer volume commitment."
+    },
+    {
+      "id": "E7",
+      "claim": "Acquisition and announced expansion are not proven incremental returns",
+      "value": {
+        "acquisition_date": "2025-01-10",
+        "ECPL_stake_pct": 51,
+        "investment": 1.8735,
+        "ECPL_FY26_revenue": 20.7603,
+        "ECPL_FY26_PAT": 0.6158,
+        "existing_chiller_TR": 9000,
+        "proposed_chiller_TR": 15000,
+        "proposed_AHU_TR": 20000,
+        "proposed_group_capex": 6.2578
+      },
+      "type": "V",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 physical pp108–111 object detail; pp178–181 history and subsidiary; RF55 investment and RF56 intercompany loan",
+      "confidence": "medium",
+      "limitation": "Acquisition settled by converting existing loan. Expansion commissioning, utilization and unit contribution economics are ND."
+    },
+    {
+      "id": "E8",
+      "claim": "IPO capitalization and uses",
+      "value": {
+        "fresh_shares": 3552000,
+        "OFS_shares": 348000,
+        "issue_price": 116,
+        "gross_fresh": 41.2032,
+        "issuer_expenses": 4.1165,
+        "net_fresh": 37.0867,
+        "debt_object": 10,
+        "machinery_object": 6.2578,
+        "WC_object": 14.83,
+        "GCP": 5.9989,
+        "promoter_pct_after": 72.84
+      },
+      "type": "V",
+      "source_ids": [
+        "S1",
+        "S5"
+      ],
+      "locator": "S1 physical pp91–116 capital structure and objects; offer cover; current issued shares from S5",
+      "confidence": "high",
+      "limitation": "Intended uses are not verified actual October balances or disbursements."
+    },
+    {
+      "id": "E9",
+      "claim": "Restatement and regulatory housekeeping require scrutiny, without proof of diversion",
+      "value": {
+        "FY24_original_PAT": 4.3024,
+        "FY24_restated_PAT": 4.1778,
+        "FY25_parent_original_PAT": 9.1574,
+        "FY25_parent_restated_PAT": 9.6395,
+        "FY26_parent_original_PAT": 11.7242,
+        "FY26_parent_restated_PAT": 11.5384,
+        "past_cash_allotment_INR": 32125
+      },
+      "type": "V",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 physical pp33–37 risk factors; RF11–13 consolidated adjustments and RF50–52 standalone adjustments; standalone and consolidated restatement schedules RF11–13 and RF50–52",
+      "confidence": "medium",
+      "limitation": "Delayed BEN-2, DPT-3 and corporate forms; historical allotment regularization pending. No evidenced material misappropriation found in reviewed records."
+    },
+    {
+      "id": "E10",
+      "claim": "Related-party transactions and remuneration",
+      "value": {
+        "Frascold_sales_FY26": 5.7433,
+        "Frascold_purchases_FY26": 3.3555,
+        "Frascold_receivable_FY26": 0.2457,
+        "Frascold_receivable_FY25": 1.7702,
+        "top2_executive_pay_FY26": 0.7156,
+        "top2_executive_pay_FY25": 1.1638,
+        "two_promoter_women_pay_FY25": 1.5019,
+        "same_pay_FY26": 0
+      },
+      "type": "V",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 RF29–33 related parties and printed management remuneration section",
+      "confidence": "medium",
+      "limitation": "Commercial purpose disclosed; independent price benchmarking ND. Receivable decline is contrary evidence to a blanket diversion allegation."
+    },
+    {
+      "id": "E11",
+      "claim": "Historical rating withdrawal is not a default finding",
+      "value": {
+        "withdrawn_facility_amount": 12.15,
+        "prior_long_rating": "B+ Stable, issuer not cooperating",
+        "prior_short_rating": "A4, issuer not cooperating"
+      },
+      "type": "V",
+      "source_ids": [
+        "S4"
+      ],
+      "locator": "S4 PDF p1 rationale and pp2–3 rating history",
+      "confidence": "high",
+      "limitation": "Withdrawn at issuer request after bank no-dues/closure confirmation; no current rating inferred."
+    },
+    {
+      "id": "E12",
+      "claim": "Current quote and short whole-lot history",
+      "value": {
+        "close": 137.9,
+        "date": "2026-10-19",
+        "volume": 75600,
+        "sessions_since_listing": 15,
+        "zero_volume_observed": 0,
+        "one_lot_INR": 165480,
+        "three_lots_INR": 496440,
+        "four_lots_INR": 661920
+      },
+      "type": "C",
+      "source_ids": [
+        "S5",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "locator": "S7 dated rows and own sessions.csv; S5 lot fields; own liquidity/reconstruct.py",
+      "confidence": "medium",
+      "limitation": "BSE official bhavcopy retrieval failed; secondary history is identity-matched. No actual traded value or live spread/depth, and no 20/60-day listed history yet."
+    },
+    {
+      "id": "E13",
+      "claim": "Linked valuation and cash test",
+      "value": {
+        "base_conditional_IRR": 0.09208862093654885,
+        "bull_conditional_IRR": 0.26390065523194783,
+        "bear_ordinary_IRR": null,
+        "bear_cash_shortfall": 3.9538427588125,
+        "rescue_loan": 5.624876285562475
+      },
+      "type": "A",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7"
+      ],
+      "locator": "model/calculate.py, valuation.json and five annual rows per scenario",
+      "confidence": "low",
+      "limitation": "Pro-forma cash, existing-facility rollover, valuation multiples and future operating metrics are assumptions. No supported IRR; R remains NS."
+    },
+    {
+      "id": "E14",
+      "claim": "Capital-return cross-check does not meet CAP evidence threshold",
+      "value": {
+        "capital_FY25": 49.8374,
+        "capital_FY26": 65.7615,
+        "NOPAT_FY25": 10.216575,
+        "NOPAT_FY26": 13.8354,
+        "one_interval_delta_NOPAT_over_delta_IC": 0.22725460151594123
+      },
+      "type": "C",
+      "source_ids": [
+        "S1"
+      ],
+      "locator": "S1 RF3–7; capital = owner equity + NCI + debt − available cash; NOPAT = normalized EBIT × 75%",
+      "confidence": "medium",
+      "limitation": "Only one acquisition-confounded group interval. No meaningful mature-vintage or unit-economic return history, so CAP is NS, not neutral 5."
+    },
+    {
+      "id": "E15",
+      "claim": "Qualitative peer architecture",
+      "value": {
+        "Beijer_Ref": "Refrigeration distribution and acquisition integration comparator",
+        "Blue_Star": "Branded HVAC, refrigeration, projects and service comparator",
+        "Amber_Sidwal": "Engineered HVAC and qualification-intensive manufacturing comparator"
+      },
+      "type": "I",
+      "source_ids": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "locator": "Official corporate history and business descriptions",
+      "confidence": "medium",
+      "limitation": "Not like-for-like valuation peers; no contemporaneous peer multiple ranking or market-share claim is manufactured."
+    }
+  ],
+  "limitations": [
+    "Chennai disposal, branch transfers and discount netting prevent a comparable five-year organic CAGR.",
+    "Old original annual cash-flow classifications differ. Core conversion ratios use only matched restated scopes.",
+    "All receivables classified good; collectability and inventory obsolescence independently unverified.",
+    "Customer percentages use domestic sales denominator; no disclosed exclusive defensible moat or binding long-term customer volume commitment.",
+    "Acquisition settled by converting existing loan. Expansion commissioning, utilization and unit contribution economics are ND.",
+    "Intended uses are not verified actual October balances or disbursements.",
+    "Delayed BEN-2, DPT-3 and corporate forms; historical allotment regularization pending. No evidenced material misappropriation found in reviewed records.",
+    "Commercial purpose disclosed; independent price benchmarking ND. Receivable decline is contrary evidence to a blanket diversion allegation.",
+    "Withdrawn at issuer request after bank no-dues/closure confirmation; no current rating inferred.",
+    "BSE official bhavcopy retrieval failed; secondary history is identity-matched. No actual traded value or live spread/depth, and no 20/60-day listed history yet.",
+    "Pro-forma cash, existing-facility rollover, valuation multiples and future operating metrics are assumptions. No supported IRR; R remains NS.",
+    "Only one acquisition-confounded group interval. No meaningful mature-vintage or unit-economic return history, so CAP is NS, not neutral 5.",
+    "Not like-for-like valuation peers; no contemporaneous peer multiple ranking or market-share claim is manufactured."
+  ],
+  "next_steps": [
+    "Verify actual post-IPO cash/debt and use of proceeds.",
+    "Obtain comparable organic history and meaningful incremental-capital economics.",
+    "Track after-interest cash realization and aged balances.",
+    "Extend lot-discrete liquidity to 20 and 60 listed sessions."
+  ],
+  "ranking_eligibility": {
+    "quality": false,
+    "growth_quality": false,
+    "investment": false,
+    "reason": "NS material factors; G3 Hold alone is not a prohibition on business-quality comparison."
+  },
+  "existing_research": null,
+  "factor_audit": {
+    "GOV": {
+      "code": "GOV",
+      "score": 4,
+      "status": "scored",
+      "confidence": "medium",
+      "material_facts": [
+        "Repeated late statutory and beneficial-owner filings require controls remediation.",
+        "Historical cash allotment and filing regularization remained unresolved in the prospectus."
+      ],
+      "contrary_fact": "Restated auditors report no qualifications requiring adjustment; disclosed RPT receivables fell; no substantiated diversion found.",
+      "reason": "Lower weak-stewardship band is warranted by repeated compliance shortcomings, not an allegation of fraud. No governance override.",
+      "evidence_ids": [
+        "E9",
+        "E10",
+        "E11"
+      ],
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "missing_evidence": null
+    },
+    "MOAT": {
+      "code": "MOAT",
+      "score": 4,
+      "status": "scored",
+      "confidence": "medium",
+      "material_facts": [
+        "Largest supplier represents 74.11% of purchases; relationships do not establish pricing control.",
+        "Customer purchase orders and supplier arrangements do not prove durable exclusive volume commitments."
+      ],
+      "contrary_fact": "Five warehouses, technical support and a long operating history add genuine convenience and local reach.",
+      "reason": "A useful distribution franchise is not yet an evidenced structural barrier; concentration and contestability dominate.",
+      "evidence_ids": [
+        "E6",
+        "E15"
+      ],
+      "source_ids": [
+        "S1",
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "missing_evidence": null
+    },
+    "REV": {
+      "code": "REV",
+      "score": null,
+      "status": "NS",
+      "confidence": "low",
+      "material_facts": [
+        "Parent restated FY26 sales grew 9.63%; group sales grew 23.66%.",
+        "Chennai disposal and acquisition alter the long series, and original FY24 sales required gross/net reconciliation."
+      ],
+      "contrary_fact": "Legacy annual reports provide six observations and recent parent growth is positive.",
+      "reason": "A numerical long-period organic scoring basis cannot be established; no short-term growth shortcut or midpoint.",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E7"
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "missing_evidence": "Comparable continuing-business 5-year revenue/volume and pricing bridge, plus full-year acquired/organic decomposition."
+    },
+    "DUR": {
+      "code": "DUR",
+      "score": 6,
+      "status": "scored",
+      "confidence": "medium",
+      "material_facts": [
+        "Cold chain, commercial refrigeration and industrial cooling provide several existing end-market channels.",
+        "Chiller expansion and AHU entry have specified capacity and machinery objects."
+      ],
+      "contrary_fact": "Supplier dependence, sharply lower exports and unproven commissioning constrain access to the opportunity.",
+      "reason": "Accessible but execution-constrained runway fits the upper mixed/adequate band; no global-TAM extrapolation.",
+      "evidence_ids": [
+        "E6",
+        "E7"
+      ],
+      "source_ids": [
+        "S1"
+      ],
+      "missing_evidence": null
+    },
+    "CAP": {
+      "code": "CAP",
+      "score": null,
+      "status": "NS",
+      "confidence": "low",
+      "material_facts": [
+        "One-year group delta NOPAT/delta capital is approximately 22.72%, confounded by acquisition.",
+        "The new machinery programme has no disclosed mature cohort contribution, utilization or incremental return record."
+      ],
+      "contrary_fact": "Existing normalized group ROIC is above an analytical 12–16% nominal INR cost-of-capital range.",
+      "reason": "Current ROIC and an unsupported model cannot replace meaningful incremental returns; CAP remains NS.",
+      "evidence_ids": [
+        "E7",
+        "E14"
+      ],
+      "source_ids": [
+        "S1"
+      ],
+      "missing_evidence": "Capital-deployment cohorts, full project cost, capacity utilization, contribution margins and after-tax incremental cash returns."
+    },
+    "CASH": {
+      "code": "CASH",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "material_facts": [
+        "Matched parent FY24–26 CFO/PAT is only 0.126.",
+        "Matched consolidated FY25–26 CFO/PAT is negative 0.135; inventory and aged receivables increased."
+      ],
+      "contrary_fact": "Parent FY26 CFO became positive and group FY26 receivables were broadly flat.",
+      "reason": "Recurring profitable-period non-realization across the parent and acquired group warrants 3; it is not just one temporary expansion build. GQS is capped at 5 but remains NS.",
+      "evidence_ids": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "source_ids": [
+        "S1"
+      ],
+      "missing_evidence": null
+    },
+    "BAL": {
+      "code": "BAL",
+      "score": null,
+      "status": "NS",
+      "confidence": "low",
+      "material_facts": [
+        "March group gross debt was 26.1147 crore, largely short-term or demand facilities.",
+        "The IPO raises primary cash, but October proceeds utilization and current liquidity are unverified."
+      ],
+      "contrary_fact": "The net primary issue is materially larger than pre-IPO net debt and the conditional base case has no annual gap.",
+      "reason": "Do not pretend a planned recapitalization is a verified balance sheet. G3 Hold, not an evidenced default.",
+      "evidence_ids": [
+        "E3",
+        "E8",
+        "E13"
+      ],
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7"
+      ],
+      "missing_evidence": "October cash/debt bridge, drawdown availability, maturities, covenants and executed use-of-proceeds reconciliation."
+    },
+    "EXEC": {
+      "code": "EXEC",
+      "score": 5,
+      "status": "scored",
+      "confidence": "medium",
+      "material_facts": [
+        "Chennai business sale and 51% acquisition were executed and disclosed.",
+        "The subsidiary shed enlargement is described as completed; machine commissioning and ramp-up are not evidenced."
+      ],
+      "contrary_fact": "Parent FY26 revenue increased despite branch disposal history, but group cash conversion remains weak.",
+      "reason": "Mixed observable delivery; no order-book bonus and no penalty merely for absence of promotional guidance.",
+      "evidence_ids": [
+        "E2",
+        "E7",
+        "E8"
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S5"
+      ],
+      "missing_evidence": null
+    },
+    "EARN": {
+      "code": "EARN",
+      "score": 5,
+      "status": "scored",
+      "confidence": "medium",
+      "material_facts": [
+        "Group operating EBITDA rose from 13.8522 to 19.2746 crore on consistent exclusion of other income.",
+        "Parent employee costs declined 0.7701 crore, contributing about 22.5% of incremental parent EBIT."
+      ],
+      "contrary_fact": "Owner PAT growth is positive with low other income, but consolidation timing and remuneration changes weaken recurring-growth inference.",
+      "reason": "Real operating improvement is present but an all-organic, fully recurring profit-growth story is not demonstrated. Cash realization is scored separately.",
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E9",
+        "E10"
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "missing_evidence": null
+    },
+    "R": {
+      "code": "R",
+      "score": null,
+      "status": "NS",
+      "confidence": "low",
+      "material_facts": [
+        "Conditional base annualized return is 9.21%, below the 15% hurdle.",
+        "The model assumes retained IPO cash and rollover of existing facilities without current verification."
+      ],
+      "contrary_fact": "A funded-on-assumptions bull case can exceed the hurdle; this does not validate base financing.",
+      "reason": "No R score is assigned from a materially unverified funding initialization.",
+      "evidence_ids": [
+        "E8",
+        "E13"
+      ],
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7"
+      ],
+      "missing_evidence": "Verified current cash, debt and available facility bridge sufficient for a supported return model."
+    },
+    "D": {
+      "code": "D",
+      "score": 4,
+      "status": "scored",
+      "confidence": "medium",
+      "material_facts": [
+        "Linked bear stress has a 3.9538 crore ordinary cash gap; ordinary IRR and recovery are null.",
+        "Separate uncommitted rescue requires 5.6249 crore and implies only 39.39 per share at year five."
+      ],
+      "contrary_fact": "IPO primary proceeds can substantially improve resilience if retained and applied as intended.",
+      "reason": "Material impairment and recapitalization risk at the quoted price fits 3–4; upper point recognizes a real funded IPO rather than insolvency evidence. This is a risk assessment, not a supported expected return.",
+      "evidence_ids": [
+        "E5",
+        "E8",
+        "E13"
+      ],
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7"
+      ],
+      "missing_evidence": null
+    },
+    "P": {
+      "code": "P",
+      "score": null,
+      "status": "NS",
+      "confidence": "low",
+      "material_facts": [
+        "At base operating assumptions a roughly 18.9% five-year CAGR is required to clear the hurdle on the 0.1-point search grid.",
+        "Opening cash and margin/multiple sensitivity materially change terminal value and funding."
+      ],
+      "contrary_fact": "Reported owner earnings produce an apparently moderate current P/E, but the old pre-IPO EPS denominator is misleading.",
+      "reason": "A dependable priced-in-expectations score requires resolved financing and comparable growth economics; conditional reverse expectations are not a score.",
+      "evidence_ids": [
+        "E2",
+        "E8",
+        "E13"
+      ],
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S5",
+        "S7"
+      ],
+      "missing_evidence": "Reliable current capitalization bridge and continuing-business growth/return evidence."
+    },
+    "L": {
+      "code": "L",
+      "score": null,
+      "status": "NS",
+      "confidence": "low",
+      "material_facts": [
+        "Only 15 listed sessions exist; the canonical conservative 60-session traded-value mean/median cannot be calculated.",
+        "One lot costs 165480 rupees; the short-sample whole-lot test has only 14 of 15 sessions with capacity at 2% participation."
+      ],
+      "contrary_fact": "All observed listed sessions have positive volume, and the 15-session theoretical capacity is favorable.",
+      "reason": "Missing canonical-window evidence remains NS. The 9-to-7 short-history illustration is explicitly noncanonical and contributes nothing to IAS. A haircut cannot replace the missing required window.",
+      "evidence_ids": [
+        "E12"
+      ],
+      "source_ids": [
+        "S5",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "missing_evidence": "A complete required listed trading window, official traded-value reconciliation and current spread/depth/restriction evidence."
+    }
+  },
+  "score_audit": {
+    "BQS": {
+      "weights": {
+        "GOV": ".20",
+        "MOAT": ".20",
+        "REV": ".12",
+        "DUR": ".10",
+        "CAP": ".12",
+        "CASH": ".10",
+        "BAL": ".08",
+        "EXEC": ".08"
+      },
+      "contributions": {
+        "GOV": "0.80",
+        "MOAT": "0.80",
+        "REV": null,
+        "DUR": "0.60",
+        "CAP": null,
+        "CASH": "0.30",
+        "BAL": null,
+        "EXEC": "0.40"
+      },
+      "known_contribution": "2.90",
+      "coverage": "0.68",
+      "raw": null,
+      "raw_bounds": [
+        "3.22",
+        "6.10"
+      ],
+      "final": null,
+      "final_bounds": [
+        "3.22",
+        "6.10"
+      ],
+      "display_bounds": [
+        "3.2",
+        "6.1"
+      ],
+      "display_rule": "Decimal exact arithmetic, ROUND_HALF_UP; bounds are not probability intervals or point estimates.",
+      "NS_factors": [
+        "REV",
+        "CAP",
+        "BAL"
+      ]
+    },
+    "GQS": {
+      "weights": {
+        "REV": ".40",
+        "DUR": ".20",
+        "EARN": ".15",
+        "CAP": ".15",
+        "CASH": ".10"
+      },
+      "contributions": {
+        "REV": null,
+        "DUR": "1.20",
+        "EARN": "0.75",
+        "CAP": null,
+        "CASH": "0.30"
+      },
+      "known_contribution": "2.25",
+      "coverage": "0.45",
+      "raw": null,
+      "raw_bounds": [
+        "2.80",
+        "7.75"
+      ],
+      "final": null,
+      "final_bounds": [
+        "2.80",
+        "5"
+      ],
+      "display_bounds": [
+        "2.8",
+        "5.0"
+      ],
+      "display_rule": "Decimal exact arithmetic, ROUND_HALF_UP; bounds are not probability intervals or point estimates.",
+      "NS_factors": [
+        "REV",
+        "CAP"
+      ]
+    },
+    "IAS": {
+      "weights": {
+        "Q": ".25",
+        "R": ".35",
+        "D": ".20",
+        "P": ".10",
+        "L": ".10"
+      },
+      "contributions": {
+        "Q": null,
+        "R": null,
+        "D": "0.80",
+        "P": null,
+        "L": null
+      },
+      "known_contribution": "0.80",
+      "coverage": "0.20",
+      "raw": null,
+      "raw_bounds": [
+        "2.1550",
+        "7.8250"
+      ],
+      "final": null,
+      "final_bounds": [
+        "2.1550",
+        "7.8250"
+      ],
+      "display_bounds": [
+        "2.2",
+        "7.8"
+      ],
+      "display_rule": "Decimal exact arithmetic, ROUND_HALF_UP; bounds are not probability intervals or point estimates.",
+      "NS_factors": [
+        "Q",
+        "R",
+        "P",
+        "L"
+      ],
+      "generic_missing_component_bounds": [
+        "1.60",
+        "8.80"
+      ],
+      "bound_note": "Q is NS but inherits final BQS bounds 3.22–6.10. R, P and L span 1–10. No midpoint is substituted."
+    }
+  },
+  "financial_history": {
+    "unit": "INR crore except EPS and ratios; FY is year ending 31 March",
+    "original_standalone_context": [
+      {
+        "year": 2021,
+        "revenue": 55.556,
+        "other_income": 0.518,
+        "pbt": 1.06,
+        "pat": 0.782,
+        "finance_cost": 1.122,
+        "DA": 0.143,
+        "CFO_reported": 1.653,
+        "gross_debt": 12.262,
+        "owner_equity": 5.92,
+        "inventory": 11.377,
+        "receivables": 15.458,
+        "payables": 10.672,
+        "cash_available": 0.787,
+        "source_ids": [
+          "S2"
+        ],
+        "scope": "Original standalone, NOT constant scope with prospectus",
+        "status": "Audited original annual report, not prospectus-restated",
+        "period": "12 months ended 31 March 2021",
+        "operating_EBITDA": 1.807,
+        "cash_capex": null,
+        "cash_capex_note": "Original net fixed-asset investing line is not verified gross cash capex; no FCF manufactured."
+      },
+      {
+        "year": 2022,
+        "revenue": 79.603,
+        "other_income": 0.082,
+        "pbt": 2.864,
+        "pat": 2.069,
+        "finance_cost": 0.914,
+        "DA": 0.145,
+        "CFO_reported": 0.905,
+        "gross_debt": 13.414,
+        "owner_equity": 7.989,
+        "inventory": 11.842,
+        "receivables": 15.33,
+        "payables": 6.788,
+        "cash_available": 0.274,
+        "source_ids": [
+          "S2"
+        ],
+        "scope": "Original standalone, NOT constant scope with prospectus",
+        "status": "Audited original annual report, not prospectus-restated",
+        "period": "12 months ended 31 March 2022",
+        "operating_EBITDA": 3.841,
+        "cash_capex": null,
+        "cash_capex_note": "Original net fixed-asset investing line is not verified gross cash capex; no FCF manufactured."
+      },
+      {
+        "year": 2023,
+        "revenue": 109.5486,
+        "other_income": 0.1484,
+        "pbt": 6.3691,
+        "pat": 4.6609,
+        "finance_cost": 1.1665,
+        "DA": 0.1217,
+        "CFO_reported": 2.3424,
+        "gross_debt": 12.2452,
+        "owner_equity": 12.6493,
+        "inventory": 15.493,
+        "receivables": 15.067,
+        "payables": 7.3724,
+        "cash_available": 0.4064,
+        "source_ids": [
+          "S3"
+        ],
+        "scope": "Original standalone, NOT constant scope with prospectus",
+        "status": "Audited original annual report, not prospectus-restated",
+        "period": "12 months ended 31 March 2023",
+        "operating_EBITDA": 7.5089,
+        "cash_capex": null,
+        "cash_capex_note": "Original net fixed-asset investing line is not verified gross cash capex; no FCF manufactured."
+      },
+      {
+        "year": 2024,
+        "revenue": 74.9526,
+        "other_income": 0.1899,
+        "pbt": 5.8236,
+        "pat": 4.3024,
+        "finance_cost": 1.1992,
+        "DA": 0.0926,
+        "CFO_reported": 1.9325,
+        "gross_debt": 11.2432,
+        "owner_equity": 16.9517,
+        "inventory": 14.4597,
+        "receivables": 12.8123,
+        "payables": 0.4334,
+        "cash_available": 0.0971,
+        "source_ids": [
+          "S3"
+        ],
+        "scope": "Original standalone, NOT constant scope with prospectus",
+        "status": "Audited original annual report, not prospectus-restated",
+        "period": "12 months ended 31 March 2024",
+        "operating_EBITDA": 6.9255,
+        "cash_capex": null,
+        "cash_capex_note": "Original net fixed-asset investing line is not verified gross cash capex; no FCF manufactured."
+      }
+    ],
+    "restated_standalone": [
+      {
+        "year": 2024,
+        "revenue": 68.5174,
+        "other_income": 0.2199,
+        "pbt": 5.6197,
+        "pat": 4.1778,
+        "finance_cost": 1.3343,
+        "DA": 0.0973,
+        "CFO": 1.5106,
+        "cash_capex": 0.0746,
+        "interest_paid": 1.1372,
+        "gross_debt": 11.2432,
+        "owner_equity": 16.7098,
+        "inventory": 14.4597,
+        "receivables": 13.3405,
+        "payables": 2.7868,
+        "cash_available": 0.0988,
+        "scope": "Standalone, restated",
+        "period": "12 months ended 31 March 2024",
+        "status": "Audited restated prospectus",
+        "source_ids": [
+          "S1"
+        ],
+        "operating_EBITDA": 6.8314,
+        "operating_EBIT": 6.7341,
+        "FCF_reported_CFO_less_capex": 1.436,
+        "FCF_after_interest": 0.2988
+      },
+      {
+        "year": 2025,
+        "revenue": 101.7686,
+        "other_income": 0.5756,
+        "pbt": 12.9198,
+        "pat": 9.6395,
+        "finance_cost": 1.2131,
+        "DA": 0.0925,
+        "CFO": -1.9756,
+        "cash_capex": 0.1465,
+        "interest_paid": 1.0415,
+        "gross_debt": 17.3158,
+        "owner_equity": 26.3493,
+        "inventory": 18.2457,
+        "receivables": 36.0239,
+        "payables": 15.5947,
+        "cash_available": 0.0124,
+        "scope": "Standalone, restated",
+        "period": "12 months ended 31 March 2025",
+        "status": "Audited restated prospectus",
+        "source_ids": [
+          "S1"
+        ],
+        "operating_EBITDA": 13.6498,
+        "operating_EBIT": 13.5573,
+        "FCF_reported_CFO_less_capex": -2.1221,
+        "FCF_after_interest": -3.1636
+      },
+      {
+        "year": 2026,
+        "revenue": 111.5701,
+        "other_income": 0.3304,
+        "pbt": 15.4868,
+        "pat": 11.5384,
+        "finance_cost": 1.8282,
+        "DA": 0.1075,
+        "CFO": 3.6586,
+        "cash_capex": 0.1658,
+        "interest_paid": 1.5653,
+        "gross_debt": 18.4223,
+        "owner_equity": 37.8877,
+        "inventory": 30.4043,
+        "receivables": 31.2758,
+        "payables": 14.343,
+        "cash_available": 0.0168,
+        "scope": "Standalone, restated",
+        "period": "12 months ended 31 March 2026",
+        "status": "Audited restated prospectus",
+        "source_ids": [
+          "S1"
+        ],
+        "operating_EBITDA": 17.0921,
+        "operating_EBIT": 16.9846,
+        "FCF_reported_CFO_less_capex": 3.4928,
+        "FCF_after_interest": 1.9275
+      }
+    ],
+    "restated_consolidated": [
+      {
+        "year": 2025,
+        "revenue": 102.006,
+        "other_income": 0.4471,
+        "pbt": 12.8136,
+        "PAT_before_NCI": 9.5399,
+        "PAT_owners": 9.55,
+        "NCI_profit": -0.0101,
+        "finance_cost": 1.2556,
+        "DA": 0.2301,
+        "CFO": -1.9299,
+        "cash_capex": 1.5564,
+        "interest_paid": 1.083,
+        "gross_debt": 21.8974,
+        "owner_equity": 26.2603,
+        "NCI_equity": 1.7443,
+        "inventory": 25.2097,
+        "receivables": 34.5397,
+        "payables": 15.7714,
+        "cash_available": 0.0646,
+        "scope": "Consolidated restated; ECPL from 10 January 2025",
+        "period": "12 months ended 31 March 2025",
+        "status": "Audited restated prospectus",
+        "source_ids": [
+          "S1"
+        ],
+        "operating_EBITDA": 13.8522,
+        "operating_EBIT": 13.6221,
+        "FCF_reported_CFO_less_capex": -3.4863,
+        "FCF_after_interest": -4.5693,
+        "funding_capital_proxy": 49.8374,
+        "historical_adjusted_shares_crore": 1.08076,
+        "historical_owner_EPS": 8.83637440319775
+      },
+      {
+        "year": 2026,
+        "revenue": 126.1393,
+        "other_income": 0.2673,
+        "pbt": 16.2713,
+        "PAT_before_NCI": 12.1039,
+        "PAT_owners": 11.8025,
+        "NCI_profit": 0.3014,
+        "finance_cost": 2.4432,
+        "DA": 0.8274,
+        "CFO": -0.9923,
+        "cash_capex": 0.6313,
+        "interest_paid": 2.1538,
+        "gross_debt": 26.1147,
+        "owner_equity": 38.063,
+        "NCI_equity": 2.0458,
+        "inventory": 38.2593,
+        "receivables": 34.6367,
+        "payables": 15.5809,
+        "cash_available": 0.462,
+        "scope": "Consolidated restated; ECPL from 10 January 2025",
+        "period": "12 months ended 31 March 2026",
+        "status": "Audited restated prospectus",
+        "source_ids": [
+          "S1"
+        ],
+        "operating_EBITDA": 19.2746,
+        "operating_EBIT": 18.4472,
+        "FCF_reported_CFO_less_capex": -1.6236,
+        "FCF_after_interest": -3.7774,
+        "funding_capital_proxy": 65.7615,
+        "historical_adjusted_shares_crore": 1.08076,
+        "historical_owner_EPS": 10.920555905103816
+      }
+    ],
+    "scope_warning": "Do not splice originals and restated scopes into an organic CAGR. FY25 group includes only the post-10 January 2025 acquisition period. Full subsidiary standalone sales are not group incremental sales.",
+    "missing_fields": {
+      "interim_TTM": "No comparable post-March 2026 results or cash-flow statement located by cutoff; TTM ND.",
+      "historical_diluted_shares": "Historical bonus-adjusted 1.08076 crore for current restated EPS; current post-IPO 1.43596 crore for valuation. Older EPS on pre-bonus shares is not compared.",
+      "contract_assets": "No separately disclosed material contract assets located; ND, not assumed zero.",
+      "leases": "Operating rent remains in expenses under presented AS accounts; undisclosed lease liability not invented.",
+      "old_gross_capex": "ND; original net fixed-asset investing lines include disposals.",
+      "normalized_PAT": "No verified nonrecurring cash expense to add back wholesale. Restated reported PAT retained; employee-pay reduction highlighted as sustainability risk."
+    },
+    "calculations": {
+      "parent_3y_CFO_PAT": 0.12595195557606376,
+      "parent_3y_after_interest_CFO_PAT": -0.021707150660403775,
+      "group_2y_CFO_PAT": -0.13501326014840279,
+      "group_FY26_CFO_PAT": -0.08198184056378523,
+      "group_FY26_revenue_growth": 0.23658706350606826,
+      "parent_FY26_revenue_growth": 0.09631163246816798,
+      "group_owner_PAT_growth": 0.23586387434554973,
+      "parent_2y_reported_CAGR_not_REV": 0.27606698885374614,
+      "original2021_to_restated2026_spliced_CAGR_not_scoreable": 0.1496439829131125,
+      "group_FY26_normalized_EBITDA_margin": 0.1528040824707288,
+      "group_FY26_gross_debt_EBITDA": 1.3548763657870981,
+      "group_FY26_net_debt_EBITDA": 1.330906996772955,
+      "group_FY26_EBIT_interest_coverage": 7.550425671250818,
+      "group_FY26_NOPAT_ROIC_average": 0.23936905974018785,
+      "group_FY26_ROCE_average": 0.31915874632025043,
+      "group_one_interval_delta_NOPAT_delta_IC": 0.22725460151594123,
+      "group_FY26_DSO_average": 100.08532630195347,
+      "group_FY26_inventory_days_average": 122.03956587428856,
+      "group_FY26_payable_days_average": 52.96040738954693,
+      "market_cap_at_quote": 198.018884,
+      "current_share_FY26_owner_EPS": 8.21924009025321,
+      "PE_current_shares_FY26_owner_PAT": 16.777706757043,
+      "post_ipo_share_increase_pct": 32.865761131055926,
+      "current_market_cap_plus_March_net_debt_hybrid_EV_not_current": 223.671584,
+      "proforma_EV_with_net_IPO_cash_not_current": 186.584884,
+      "customer_table_top1_total_sales_pct": 10.076558217779867,
+      "customer_table_top10_total_sales_pct": 42.205878738822875
+    },
+    "calculation_display": {
+      "parent_3y_CFO_PAT": "0.1260",
+      "parent_3y_after_interest_CFO_PAT": "-0.0217",
+      "group_2y_CFO_PAT": "-0.1350",
+      "group_FY26_CFO_PAT": "-0.0820",
+      "group_FY26_revenue_growth": "0.2366",
+      "parent_FY26_revenue_growth": "0.0963",
+      "group_owner_PAT_growth": "0.2359",
+      "parent_2y_reported_CAGR_not_REV": "0.2761",
+      "original2021_to_restated2026_spliced_CAGR_not_scoreable": "0.1496",
+      "group_FY26_normalized_EBITDA_margin": "0.1528",
+      "group_FY26_gross_debt_EBITDA": "1.3549",
+      "group_FY26_net_debt_EBITDA": "1.3309",
+      "group_FY26_EBIT_interest_coverage": "7.5504",
+      "group_FY26_NOPAT_ROIC_average": "0.2394",
+      "group_FY26_ROCE_average": "0.3192",
+      "group_one_interval_delta_NOPAT_delta_IC": "0.2273",
+      "group_FY26_DSO_average": "100.0853",
+      "group_FY26_inventory_days_average": "122.0396",
+      "group_FY26_payable_days_average": "52.9604",
+      "market_cap_at_quote": "198.0189",
+      "current_share_FY26_owner_EPS": "8.2192",
+      "PE_current_shares_FY26_owner_PAT": "16.7777",
+      "post_ipo_share_increase_pct": "32.8658",
+      "current_market_cap_plus_March_net_debt_hybrid_EV_not_current": "223.6716",
+      "proforma_EV_with_net_IPO_cash_not_current": "186.5849",
+      "customer_table_top1_total_sales_pct": "10.0766",
+      "customer_table_top10_total_sales_pct": "42.2059"
+    },
+    "formula_dictionary": {
+      "operating_EBITDA": "PBT + full finance costs + D&A − other income",
+      "operating_EBIT": "operating EBITDA − D&A",
+      "NOPAT": "normalized operating EBIT × (1 − assumed 25% tax)",
+      "capital_proxy": "owner equity + NCI equity + gross borrowings − unrestricted cash; restricted deposits remain invested capital",
+      "ROIC": "NOPAT / mean opening and closing capital; not a cohort return",
+      "CFO_PAT": "Matched consolidated CFO / PAT before NCI; matched standalone CFO / standalone PAT",
+      "FCF": "Reported CFO − cash capex; after-interest FCF additionally subtracts interest classified in financing",
+      "DSO": "Mean opening/closing trade receivables / annual sales × 365",
+      "inventory_days": "Mean inventory / (materials + purchases + inventory change) × 365",
+      "DPO": "Mean trade payables / (materials + purchases) × 365; approximation, excludes cash-credit borrowing",
+      "per_share_value": "Common equity value after separate NCI claim / 1.43596 crore issued shares"
+    }
+  },
+  "gates": [
+    {
+      "code": "G1",
+      "name": "Integrity and minority protection",
+      "status": "Conditional",
+      "reason": "Repeated control/compliance issues and commercial RPT require follow-through, but no substantiated material diversion or severe minority harm was found.",
+      "resolution": "Close pending allotment/form regularization and independently test material RPT pricing.",
+      "source_ids": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "code": "G2",
+      "name": "Financial reliability",
+      "status": "Conditional",
+      "reason": "Core restated P&L, balance sheet and cash flows reconcile. Original-versus-restated differences are identifiable. Old scopes and nonfinancial table denominator discrepancies limit growth inference, not proof that the current restated core is fabricated.",
+      "resolution": "Obtain post-IPO audited/interim results, detailed adjustment reconciliation and collection evidence.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "code": "G3",
+      "name": "Funding and survival",
+      "status": "Hold — unresolved",
+      "reason": "No verified October liquidity/utilization bridge or current undrawn/rollover facilities. Linked stress produces a shortfall even with favorable pro-forma IPO initialization. This is not an evidenced default or a failed-funding finding.",
+      "resolution": "Bank-confirmed current unrestricted cash, IPO deployment, debt repayment, maturity/covenant and available-facility schedule.",
+      "source_ids": [
+        "S1",
+        "S4"
+      ]
+    },
+    {
+      "code": "G4",
+      "name": "Tradability",
+      "status": "Conditional",
+      "reason": "Fifteen observed trading sessions support conditional whole-lot execution, but cannot establish 20/60-day depth, spread or orderly stress exit.",
+      "resolution": "At least 20 then 60 listed sessions, official BSE turnover reconciliation and live lot/depth/restriction checks.",
+      "source_ids": [
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ]
+    }
+  ],
+  "override_flags": {
+    "governance": false,
+    "funding_failure": false,
+    "growth_quality_cash_cap": true,
+    "GQS_cap": 5,
+    "missing_evidence_NS": true,
+    "extra_discretionary_haircuts": false
+  },
+  "confidence": {
+    "identity": "high",
+    "restated_financial_extraction": "high",
+    "historical_comparability": "low",
+    "governance": "medium",
+    "growth_decomposition": "low",
+    "incremental_returns": "low",
+    "current_funding": "low",
+    "liquidity": "medium",
+    "valuation": "low",
+    "overall_investment_conclusion": "low"
+  },
+  "liquidity": {
+    "source": "https://stockanalysis.com/quote/bom/544941/history/",
+    "window": [
+      "2026-09-28",
+      "2026-10-19"
+    ],
+    "sessions": 15,
+    "20_day": null,
+    "60_day": null,
+    "short_history_reason": "Only 15 trading sessions since listing; pre-listing days are not zero-trading observations.",
+    "missing_since_listing": [],
+    "zero_volume_sessions": 0,
+    "single_price_OHLC": 0,
+    "quote": {
+      "date": "2026-10-19",
+      "open": 141.5,
+      "high": 141.5,
+      "low": 130.0,
+      "close": 137.9,
+      "adjusted_close": 137.9,
+      "volume": 75600,
+      "turnover_lower": 9828000.0,
+      "turnover_upper": 10697400.0
+    },
+    "lot": 1200,
+    "lot_value": 165480.0,
+    "nonpromoter_shares_postIPO": 3900000,
+    "nonpromoter_pct": 0.27159530906153373,
+    "free_float_note": "Nonpromoter issuance is not verified free float. Anchor and market-maker holdings and applicable lock-ins constrain freely tradable stock.",
+    "reference_position_inr": 500000,
+    "three_lot_value_inr": 496440.0,
+    "four_lot_value_inr": 661920.0,
+    "turnover_mean_lower": 31869844.0,
+    "turnover_mean_upper": 34984244.0,
+    "turnover_median_lower": 16639920.0,
+    "turnover_median_upper": 17511120.0,
+    "NSE_archive_rows_for_security": 0,
+    "official_calendar_dates": [
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-19"
+    ],
+    "conservative_daily_lower": 16639920.0,
+    "conservative_daily_upper": 17511120.0,
+    "participation": {
+      "0.02": {
+        "continuous_days_lower_bound": 1.4276642499166243,
+        "continuous_days_upper_bound": 1.502411069283987,
+        "minimum_volume_for_one_lot": 60000,
+        "eligible_sessions": 14,
+        "total_lots_capacity": 58,
+        "median_lot_capacity": 2,
+        "days_for_three_lots_at_median_capacity": 2,
+        "sessions_with_capacity_at_least_three_lots": 5,
+        "daily_whole_lot_capacity": [
+          {
+            "date": "2026-09-28",
+            "lots": 27
+          },
+          {
+            "date": "2026-09-29",
+            "lots": 6
+          },
+          {
+            "date": "2026-09-30",
+            "lots": 4
+          },
+          {
+            "date": "2026-10-01",
+            "lots": 2
+          },
+          {
+            "date": "2026-10-05",
+            "lots": 2
+          },
+          {
+            "date": "2026-10-06",
+            "lots": 0
+          },
+          {
+            "date": "2026-10-07",
+            "lots": 1
+          },
+          {
+            "date": "2026-10-08",
+            "lots": 3
+          },
+          {
+            "date": "2026-10-09",
+            "lots": 2
+          },
+          {
+            "date": "2026-10-12",
+            "lots": 1
+          },
+          {
+            "date": "2026-10-13",
+            "lots": 1
+          },
+          {
+            "date": "2026-10-14",
+            "lots": 1
+          },
+          {
+            "date": "2026-10-15",
+            "lots": 6
+          },
+          {
+            "date": "2026-10-16",
+            "lots": 1
+          },
+          {
+            "date": "2026-10-19",
+            "lots": 1
+          }
+        ]
+      },
+      "0.05": {
+        "continuous_days_lower_bound": 0.5710656999666498,
+        "continuous_days_upper_bound": 0.6009644277135948,
+        "minimum_volume_for_one_lot": 24000,
+        "eligible_sessions": 15,
+        "total_lots_capacity": 159,
+        "median_lot_capacity": 6,
+        "days_for_three_lots_at_median_capacity": 1,
+        "sessions_with_capacity_at_least_three_lots": 13,
+        "daily_whole_lot_capacity": [
+          {
+            "date": "2026-09-28",
+            "lots": 69
+          },
+          {
+            "date": "2026-09-29",
+            "lots": 15
+          },
+          {
+            "date": "2026-09-30",
+            "lots": 12
+          },
+          {
+            "date": "2026-10-01",
+            "lots": 6
+          },
+          {
+            "date": "2026-10-05",
+            "lots": 6
+          },
+          {
+            "date": "2026-10-06",
+            "lots": 2
+          },
+          {
+            "date": "2026-10-07",
+            "lots": 3
+          },
+          {
+            "date": "2026-10-08",
+            "lots": 9
+          },
+          {
+            "date": "2026-10-09",
+            "lots": 6
+          },
+          {
+            "date": "2026-10-12",
+            "lots": 3
+          },
+          {
+            "date": "2026-10-13",
+            "lots": 2
+          },
+          {
+            "date": "2026-10-14",
+            "lots": 4
+          },
+          {
+            "date": "2026-10-15",
+            "lots": 15
+          },
+          {
+            "date": "2026-10-16",
+            "lots": 4
+          },
+          {
+            "date": "2026-10-19",
+            "lots": 3
+          }
+        ]
+      },
+      "0.1": {
+        "continuous_days_lower_bound": 0.2855328499833249,
+        "continuous_days_upper_bound": 0.3004822138567974,
+        "minimum_volume_for_one_lot": 12000,
+        "eligible_sessions": 15,
+        "total_lots_capacity": 323,
+        "median_lot_capacity": 12,
+        "days_for_three_lots_at_median_capacity": 1,
+        "sessions_with_capacity_at_least_three_lots": 15,
+        "daily_whole_lot_capacity": [
+          {
+            "date": "2026-09-28",
+            "lots": 138
+          },
+          {
+            "date": "2026-09-29",
+            "lots": 30
+          },
+          {
+            "date": "2026-09-30",
+            "lots": 24
+          },
+          {
+            "date": "2026-10-01",
+            "lots": 13
+          },
+          {
+            "date": "2026-10-05",
+            "lots": 12
+          },
+          {
+            "date": "2026-10-06",
+            "lots": 4
+          },
+          {
+            "date": "2026-10-07",
+            "lots": 7
+          },
+          {
+            "date": "2026-10-08",
+            "lots": 18
+          },
+          {
+            "date": "2026-10-09",
+            "lots": 12
+          },
+          {
+            "date": "2026-10-12",
+            "lots": 7
+          },
+          {
+            "date": "2026-10-13",
+            "lots": 5
+          },
+          {
+            "date": "2026-10-14",
+            "lots": 8
+          },
+          {
+            "date": "2026-10-15",
+            "lots": 31
+          },
+          {
+            "date": "2026-10-16",
+            "lots": 8
+          },
+          {
+            "date": "2026-10-19",
+            "lots": 6
+          }
+        ]
+      }
+    },
+    "L_score": null,
+    "L_score_reason": "NS: the canonical 60-session conservative traded-value mean/median window is unavailable. A 15-session secondary OHLCV sample cannot substitute for it.",
+    "short_history_noncanonical_diagnostic": {
+      "starting_band": 9,
+      "illustrative_adjusted_score": 7,
+      "canonical": false,
+      "reason": "A 15-session turnover-range illustration falls below two days; a notional two-point reduction recognizes IPO history, large lots, prior circuit-adjacent closes and unverified spread/depth. This is not the canonical L factor and is not used in IAS."
+    }
+  },
+  "valuation": {
+    "isin": "INE1D0M01019",
+    "cutoff": "2026-10-20",
+    "valuation_date": "2026-10-19",
+    "terminal_date": "2031-10-19",
+    "horizon_years": 5,
+    "hurdle": 0.15,
+    "unit": "INR crore except per-share price",
+    "opening": {
+      "revenue": 126.1393,
+      "cash_available_March26": 0.462,
+      "debt_March26": 26.1147,
+      "net_ipo_proceeds": 37.0867,
+      "repayment_at_initialization": 10.0,
+      "initial_cash": 27.5487,
+      "initial_debt": 16.1147,
+      "ONWC": 60.2655,
+      "PPE": 4.1551,
+      "restricted_deposits_not_cash": 1.1356,
+      "opening_tax_payable": 0.1513,
+      "long_term_gratuity_claim": 0.1349,
+      "issued_shares_crore": 1.43596,
+      "NCI_profit_FY26": 0.3014,
+      "quote": 137.9,
+      "prepaid_expenses_including_IPO": 0.4993,
+      "assumed_already_paid_IPO_expenses": 0.0
+    },
+    "model_status": "Conditional pro-forma initialization; March balances plus known IPO terms are not a verified October balance sheet. R is NS. Existing facilities are assumed rolled; no undrawn facility is invented.",
+    "opening_bridge": "0.4620 cash + 37.0867 net primary IPO proceeds - 10.0000 intended debt reduction = 27.5487 initial cash; debt 26.1147 - 10 = 16.1147. Actual deployment and April–October operating bridge are ND. OFS 4.0368 is excluded. The 0.4993 prepaid-expense line includes an undisclosed IPO portion: base assumes zero IPO portion and retains the full prepaid line in ONWC; paired 0–0.4993 sensitivities add that portion to available IPO cash and remove it from opening ONWC, preventing duplicate expense treatment. Working-capital object 14.83 is not separately spent; actual delta ONWC consumes cash once. The 6.2578 subsidiary loan eliminates within the group; external capex occurs once.",
+    "ordinary_scenarios": {
+      "bear": {
+        "case": "bear",
+        "mode": "ordinary_no_incremental_financing",
+        "assumptions": {
+          "growth": [
+            "-.15",
+            "0",
+            ".03",
+            ".05",
+            ".05"
+          ],
+          "margin": [
+            ".08",
+            ".085",
+            ".09",
+            ".09",
+            ".09"
+          ],
+          "wc_ratio": [
+            ".70",
+            ".70",
+            ".70",
+            ".70",
+            ".70"
+          ],
+          "capex_ratio": ".01",
+          "project_capex": "6.2578",
+          "project_year": 2,
+          "interest_rate": ".15",
+          "exit_multiple": "6",
+          "nci_growth": "0",
+          "nci_pe": "6",
+          "receivable_haircut": ".15",
+          "inventory_haircut": ".15",
+          "additional_debt_call": "6",
+          "contingency_payment": ".0423"
+        },
+        "opening_collectible_ONWC_haircut": 10.9344,
+        "years": [
+          {
+            "year": 1,
+            "end_date": "2027-10-19",
+            "revenue": 107.218405,
+            "revenue_addition": -18.920895,
+            "EBITDA": 8.5774724,
+            "D_and_A": 0.4691192025,
+            "EBIT": 8.1083531975,
+            "interest": 2.417205,
+            "tax": 1.422787049375,
+            "ONWC_open_collectible": 49.3311,
+            "ONWC_close": 75.0528835,
+            "delta_ONWC": 25.7217835,
+            "CFO_after_interest": -20.984303149375,
+            "cash_capex": 1.07218405,
+            "PPE_open": 4.1551,
+            "PPE_close": 4.7581648475,
+            "opening_tax_paid_once": 0.1513,
+            "contingency_payment": 0.0423,
+            "opening_cash": 27.5487,
+            "debt_open": 16.1147,
+            "debt_repayment": 7.2736,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 8.8411,
+            "cash_before_rescue": -1.974987199375,
+            "closing_cash": -1.974987199375,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 2,
+            "end_date": "2028-10-19",
+            "revenue": 107.218405,
+            "revenue_addition": 0.0,
+            "EBITDA": 9.113564425,
+            "D_and_A": 0.84231568725,
+            "EBIT": 8.27124873775,
+            "interest": 1.326165,
+            "tax": 1.7362709344375,
+            "ONWC_open_collectible": 75.0528835,
+            "ONWC_close": 75.0528835,
+            "delta_ONWC": 0.0,
+            "CFO_after_interest": 6.0511284905625,
+            "cash_capex": 7.32998405,
+            "PPE_open": 4.7581648475,
+            "PPE_close": 11.24583321025,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": -1.974987199375,
+            "debt_open": 8.8411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 8.1411,
+            "cash_before_rescue": -3.9538427588125,
+            "closing_cash": -3.9538427588125,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 3,
+            "end_date": "2029-10-19",
+            "revenue": 110.43495715,
+            "revenue_addition": 3.21655215,
+            "EBITDA": 9.9391461435,
+            "D_and_A": 1.1798007996,
+            "EBIT": 8.7593453439,
+            "interest": 1.221165,
+            "tax": 1.884545085975,
+            "ONWC_open_collectible": 75.0528835,
+            "ONWC_close": 77.304470005,
+            "delta_ONWC": 2.251586505,
+            "CFO_after_interest": 4.581849552525,
+            "cash_capex": 1.1043495715,
+            "PPE_open": 11.24583321025,
+            "PPE_close": 11.17038198215,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": -3.9538427588125,
+            "debt_open": 8.1411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 7.4411,
+            "cash_before_rescue": -1.1763427777875,
+            "closing_cash": -1.1763427777875,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 4,
+            "end_date": "2030-10-19",
+            "revenue": 115.9567050075,
+            "revenue_addition": 5.5217478575,
+            "EBITDA": 10.436103450675,
+            "D_and_A": 1.17501655071875,
+            "EBIT": 9.26108689995625,
+            "interest": 1.116165,
+            "tax": 2.0362304749890625,
+            "ONWC_open_collectible": 77.304470005,
+            "ONWC_close": 81.16969350525,
+            "delta_ONWC": 3.86522350025,
+            "CFO_after_interest": 3.4184844754359376,
+            "cash_capex": 1.159567050075,
+            "PPE_open": 11.17038198215,
+            "PPE_close": 11.15493248150625,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": -1.1763427777875,
+            "debt_open": 7.4411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 6.7411,
+            "cash_before_rescue": 0.3825746475734375,
+            "closing_cash": 0.3825746475734375,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 5,
+            "end_date": "2031-10-19",
+            "revenue": 121.754540257875,
+            "revenue_addition": 5.797835250375,
+            "EBITDA": 10.95790862320875,
+            "D_and_A": 1.1763705182795625,
+            "EBIT": 9.781538104929188,
+            "interest": 1.011165,
+            "tax": 2.192593276232297,
+            "ONWC_open_collectible": 81.16969350525,
+            "ONWC_close": 85.2281781805125,
+            "delta_ONWC": 4.0584846752625,
+            "CFO_after_interest": 3.6956656717139533,
+            "cash_capex": 1.21754540257875,
+            "PPE_open": 11.15493248150625,
+            "PPE_close": 11.196107365805437,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 0.3825746475734375,
+            "debt_open": 6.7411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 6.0411,
+            "cash_before_rescue": 2.1606949167086404,
+            "closing_cash": 2.1606949167086404,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          }
+        ],
+        "funded_in_annual_model": false,
+        "minimum_closing_cash": -3.9538427588125,
+        "peak_cash_shortfall": 3.9538427588125,
+        "total_uncommitted_rescue_loan": 0.0,
+        "terminal_enterprise_value": 65.7474517392525,
+        "terminal_NCI_equity_claim": 1.8084,
+        "terminal_debt": 6.0411,
+        "terminal_cash": 2.1606949167086404,
+        "terminal_common_equity": null,
+        "terminal_price": null,
+        "ordinary_IRR": null,
+        "rescue_conditional_IRR": null,
+        "supported_IRR": null,
+        "hurdle_entry_prices": {
+          ".12": null,
+          ".15": null,
+          ".18": null
+        },
+        "friction_IRR": {
+          "0": null,
+          ".01": null,
+          ".02": null,
+          ".05": null
+        }
+      },
+      "base": {
+        "case": "base",
+        "mode": "ordinary_no_incremental_financing",
+        "assumptions": {
+          "growth": [
+            ".11",
+            ".11",
+            ".11",
+            ".11",
+            ".11"
+          ],
+          "margin": [
+            ".13",
+            ".13",
+            ".13",
+            ".13",
+            ".13"
+          ],
+          "wc_ratio": [
+            ".47",
+            ".47",
+            ".47",
+            ".47",
+            ".47"
+          ],
+          "capex_ratio": ".01",
+          "project_capex": "6.2578",
+          "project_year": 1,
+          "interest_rate": ".12",
+          "exit_multiple": "10",
+          "nci_growth": ".12",
+          "nci_pe": "10",
+          "receivable_haircut": "0",
+          "inventory_haircut": "0",
+          "additional_debt_call": "0",
+          "contingency_payment": "0"
+        },
+        "opening_collectible_ONWC_haircut": 0.0,
+        "years": [
+          {
+            "year": 1,
+            "end_date": "2027-10-19",
+            "revenue": 140.014623,
+            "revenue_addition": 13.875323,
+            "EBITDA": 18.20190099,
+            "D_and_A": 0.7984073115,
+            "EBIT": 17.4034936785,
+            "interest": 1.933764,
+            "tax": 3.867432419625,
+            "ONWC_open_collectible": 60.2655,
+            "ONWC_close": 65.80687281,
+            "delta_ONWC": 5.54137281,
+            "CFO_after_interest": 6.859331760375,
+            "cash_capex": 7.65794623,
+            "PPE_open": 4.1551,
+            "PPE_close": 11.0146389185,
+            "opening_tax_paid_once": 0.1513,
+            "contingency_payment": 0.0,
+            "opening_cash": 27.5487,
+            "debt_open": 16.1147,
+            "debt_repayment": 1.2736,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 14.8411,
+            "cash_before_rescue": 25.325185530375,
+            "closing_cash": 25.325185530375,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 2,
+            "end_date": "2028-10-19",
+            "revenue": 155.41623153,
+            "revenue_addition": 15.40160853,
+            "EBITDA": 20.2041100989,
+            "D_and_A": 1.179172007615,
+            "EBIT": 19.024938091285,
+            "interest": 1.780932,
+            "tax": 4.31100152282125,
+            "ONWC_open_collectible": 65.80687281,
+            "ONWC_close": 73.0456288191,
+            "delta_ONWC": 7.2387560091,
+            "CFO_after_interest": 6.87342056697875,
+            "cash_capex": 1.5541623153,
+            "PPE_open": 11.0146389185,
+            "PPE_close": 11.389629226185,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 25.325185530375,
+            "debt_open": 14.8411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 14.1411,
+            "cash_before_rescue": 29.94444378205375,
+            "closing_cash": 29.94444378205375,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 3,
+            "end_date": "2029-10-19",
+            "revenue": 172.5120169983,
+            "revenue_addition": 17.0957854683,
+            "EBITDA": 22.426562209779,
+            "D_and_A": 1.22521893111765,
+            "EBIT": 21.20134327866135,
+            "interest": 1.696932,
+            "tax": 4.876102819665338,
+            "ONWC_open_collectible": 73.0456288191,
+            "ONWC_close": 81.080647989201,
+            "delta_ONWC": 8.035019170101,
+            "CFO_after_interest": 7.818508220012663,
+            "cash_capex": 1.725120169983,
+            "PPE_open": 11.389629226185,
+            "PPE_close": 11.88953046505035,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 29.94444378205375,
+            "debt_open": 14.1411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 13.4411,
+            "cash_before_rescue": 35.33783183208341,
+            "closing_cash": 35.33783183208341,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 4,
+            "end_date": "2030-10-19",
+            "revenue": 191.488338868113,
+            "revenue_addition": 18.976321869813,
+            "EBITDA": 24.89348405285469,
+            "D_and_A": 1.2846972159390915,
+            "EBIT": 23.6087868369156,
+            "interest": 1.612932,
+            "tax": 5.498963709228899,
+            "ONWC_open_collectible": 81.080647989201,
+            "ONWC_close": 89.99951926801312,
+            "delta_ONWC": 8.91887127881211,
+            "CFO_after_interest": 8.86271706481368,
+            "cash_capex": 1.91488338868113,
+            "PPE_open": 11.88953046505035,
+            "PPE_close": 12.519716637792389,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 35.33783183208341,
+            "debt_open": 13.4411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 12.7411,
+            "cash_before_rescue": 41.58566550821596,
+            "closing_cash": 41.58566550821596,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 5,
+            "end_date": "2031-10-19",
+            "revenue": 212.55205614360543,
+            "revenue_addition": 21.06371727549243,
+            "EBITDA": 27.631767298668706,
+            "D_and_A": 1.3582476918510415,
+            "EBIT": 26.273519606817665,
+            "interest": 1.528932,
+            "tax": 6.186146901704416,
+            "ONWC_open_collectible": 89.99951926801312,
+            "ONWC_close": 99.89946638749456,
+            "delta_ONWC": 9.899947119481443,
+            "CFO_after_interest": 10.016741277482847,
+            "cash_capex": 2.1255205614360544,
+            "PPE_open": 12.519716637792389,
+            "PPE_close": 13.2869895073774,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 41.58566550821596,
+            "debt_open": 12.7411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 12.0411,
+            "cash_before_rescue": 48.77688622426275,
+            "closing_cash": 48.77688622426275,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          }
+        ],
+        "funded_in_annual_model": true,
+        "minimum_closing_cash": 25.325185530375,
+        "peak_cash_shortfall": 0.0,
+        "total_uncommitted_rescue_loan": 0.0,
+        "terminal_enterprise_value": 276.31767298668706,
+        "terminal_NCI_equity_claim": 5.3116978331648,
+        "terminal_debt": 12.0411,
+        "terminal_cash": 48.77688622426275,
+        "terminal_common_equity": 307.60686137778504,
+        "terminal_price": 214.21687329576383,
+        "ordinary_IRR": 0.09208862093654885,
+        "rescue_conditional_IRR": null,
+        "supported_IRR": null,
+        "hurdle_entry_prices": {
+          ".12": 121.55240685608486,
+          ".15": 106.50364571099524,
+          ".18": 93.63616958965076
+        },
+        "friction_IRR": {
+          "0": 0.09208862093654885,
+          ".01": 0.0877288464852395,
+          ".02": 0.08338560991008957,
+          ".05": 0.070445949651431
+        }
+      },
+      "bull": {
+        "case": "bull",
+        "mode": "ordinary_no_incremental_financing",
+        "assumptions": {
+          "growth": [
+            ".20",
+            ".20",
+            ".20",
+            ".20",
+            ".20"
+          ],
+          "margin": [
+            ".16",
+            ".16",
+            ".16",
+            ".16",
+            ".16"
+          ],
+          "wc_ratio": [
+            ".44",
+            ".44",
+            ".44",
+            ".44",
+            ".44"
+          ],
+          "capex_ratio": ".012",
+          "project_capex": "6.2578",
+          "project_year": 1,
+          "interest_rate": ".10",
+          "exit_multiple": "12",
+          "nci_growth": ".20",
+          "nci_pe": "12",
+          "receivable_haircut": "0",
+          "inventory_haircut": "0",
+          "additional_debt_call": "0",
+          "contingency_payment": "0"
+        },
+        "opening_collectible_ONWC_haircut": 0.0,
+        "years": [
+          {
+            "year": 1,
+            "end_date": "2027-10-19",
+            "revenue": 151.36716,
+            "revenue_addition": 25.22786,
+            "EBITDA": 24.2187456,
+            "D_and_A": 0.819220296,
+            "EBIT": 23.399525304,
+            "interest": 1.61147,
+            "tax": 5.447013826,
+            "ONWC_open_collectible": 60.2655,
+            "ONWC_close": 66.6015504,
+            "delta_ONWC": 6.3360504,
+            "CFO_after_interest": 10.824211374,
+            "cash_capex": 8.07420592,
+            "PPE_open": 4.1551,
+            "PPE_close": 11.410085624,
+            "opening_tax_paid_once": 0.1513,
+            "contingency_payment": 0.0,
+            "opening_cash": 27.5487,
+            "debt_open": 16.1147,
+            "debt_repayment": 1.2736,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 14.8411,
+            "cash_before_rescue": 28.873805454,
+            "closing_cash": 28.873805454,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 2,
+            "end_date": "2028-10-19",
+            "revenue": 181.640592,
+            "revenue_addition": 30.273432,
+            "EBITDA": 29.06249472,
+            "D_and_A": 1.2499929176,
+            "EBIT": 27.8125018024,
+            "interest": 1.48411,
+            "tax": 6.5820979506,
+            "ONWC_open_collectible": 66.6015504,
+            "ONWC_close": 79.92186048,
+            "delta_ONWC": 13.32031008,
+            "CFO_after_interest": 7.6759766894,
+            "cash_capex": 2.179687104,
+            "PPE_open": 11.410085624,
+            "PPE_close": 12.3397798104,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 28.873805454,
+            "debt_open": 14.8411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 14.1411,
+            "cash_before_rescue": 33.6700950394,
+            "closing_cash": 33.6700950394,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 3,
+            "end_date": "2029-10-19",
+            "revenue": 217.9687104,
+            "revenue_addition": 36.3281184,
+            "EBITDA": 34.874993664,
+            "D_and_A": 1.36475920728,
+            "EBIT": 33.51023445672,
+            "interest": 1.41411,
+            "tax": 8.02403111418,
+            "ONWC_open_collectible": 79.92186048,
+            "ONWC_close": 95.906232576,
+            "delta_ONWC": 15.984372096,
+            "CFO_after_interest": 9.45248045382,
+            "cash_capex": 2.6156245248,
+            "PPE_open": 12.3397798104,
+            "PPE_close": 13.59064512792,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 33.6700950394,
+            "debt_open": 14.1411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 13.4411,
+            "cash_before_rescue": 39.80695096842,
+            "closing_cash": 39.80695096842,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 4,
+            "end_date": "2030-10-19",
+            "revenue": 261.56245248,
+            "revenue_addition": 43.59374208,
+            "EBITDA": 41.8499923968,
+            "D_and_A": 1.51600198428,
+            "EBIT": 40.33399041252,
+            "interest": 1.34411,
+            "tax": 9.74747010313,
+            "ONWC_open_collectible": 95.906232576,
+            "ONWC_close": 115.0874790912,
+            "delta_ONWC": 19.1812465152,
+            "CFO_after_interest": 11.57716577847,
+            "cash_capex": 3.13874942976,
+            "PPE_open": 13.59064512792,
+            "PPE_close": 15.2133925734,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 39.80695096842,
+            "debt_open": 13.4411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 12.7411,
+            "cash_before_rescue": 47.54536731713,
+            "closing_cash": 47.54536731713,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 5,
+            "end_date": "2031-10-19",
+            "revenue": 313.874942976,
+            "revenue_addition": 52.312490496,
+            "EBITDA": 50.21999087616,
+            "D_and_A": 1.7096642231256,
+            "EBIT": 48.5103266530344,
+            "interest": 1.27411,
+            "tax": 11.8090541632586,
+            "ONWC_open_collectible": 115.0874790912,
+            "ONWC_close": 138.10497490944,
+            "delta_ONWC": 23.01749581824,
+            "CFO_after_interest": 14.1193308946614,
+            "cash_capex": 3.766499315712,
+            "PPE_open": 15.2133925734,
+            "PPE_close": 17.2702276659864,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 47.54536731713,
+            "debt_open": 12.7411,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 12.0411,
+            "cash_before_rescue": 57.1981988960794,
+            "closing_cash": 57.1981988960794,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          }
+        ],
+        "funded_in_annual_model": true,
+        "minimum_closing_cash": 28.873805454,
+        "peak_cash_shortfall": 0.0,
+        "total_uncommitted_rescue_loan": 0.0,
+        "terminal_enterprise_value": 602.63989051392,
+        "terminal_NCI_equity_claim": 8.999755776,
+        "terminal_debt": 12.0411,
+        "terminal_cash": 57.1981988960794,
+        "terminal_common_equity": 638.6623336339994,
+        "terminal_price": 444.763317664837,
+        "ordinary_IRR": 0.26390065523194783,
+        "rescue_conditional_IRR": null,
+        "supported_IRR": null,
+        "hurdle_entry_prices": {
+          ".12": 252.37065088153108,
+          ".15": 221.12597425703984,
+          ".18": 194.41014519253537
+        },
+        "friction_IRR": {
+          "0": 0.26390065523194783,
+          ".01": 0.258854982490712,
+          ".02": 0.2538284494347666,
+          ".05": 0.23885306669946058
+        }
+      }
+    },
+    "rescue_scenarios": {
+      "bear": {
+        "case": "bear",
+        "mode": "uncommitted_rescue_diagnostic",
+        "assumptions": {
+          "growth": [
+            "-.15",
+            "0",
+            ".03",
+            ".05",
+            ".05"
+          ],
+          "margin": [
+            ".08",
+            ".085",
+            ".09",
+            ".09",
+            ".09"
+          ],
+          "wc_ratio": [
+            ".70",
+            ".70",
+            ".70",
+            ".70",
+            ".70"
+          ],
+          "capex_ratio": ".01",
+          "project_capex": "6.2578",
+          "project_year": 2,
+          "interest_rate": ".15",
+          "exit_multiple": "6",
+          "nci_growth": "0",
+          "nci_pe": "6",
+          "receivable_haircut": ".15",
+          "inventory_haircut": ".15",
+          "additional_debt_call": "6",
+          "contingency_payment": ".0423"
+        },
+        "opening_collectible_ONWC_haircut": 10.9344,
+        "years": [
+          {
+            "year": 1,
+            "end_date": "2027-10-19",
+            "revenue": 107.218405,
+            "revenue_addition": -18.920895,
+            "EBITDA": 8.5774724,
+            "D_and_A": 0.4691192025,
+            "EBIT": 8.1083531975,
+            "interest": 2.653627823791391,
+            "tax": 1.3636813434271524,
+            "ONWC_open_collectible": 49.3311,
+            "ONWC_close": 75.0528835,
+            "delta_ONWC": 25.7217835,
+            "CFO_after_interest": -21.16162026721854,
+            "cash_capex": 1.07218405,
+            "PPE_open": 4.1551,
+            "PPE_close": 4.7581648475,
+            "opening_tax_paid_once": 0.1513,
+            "contingency_payment": 0.0423,
+            "opening_cash": 27.5487,
+            "debt_open": 16.1147,
+            "debt_repayment": 7.2736,
+            "new_uncommitted_rescue_loan": 3.152304317218543,
+            "debt_close": 11.993404317218543,
+            "cash_before_rescue": -2.152304317218543,
+            "closing_cash": 1.0,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 2,
+            "end_date": "2028-10-19",
+            "revenue": 107.218405,
+            "revenue_addition": 0.0,
+            "EBITDA": 9.113564425,
+            "D_and_A": 0.84231568725,
+            "EBIT": 8.27124873775,
+            "interest": 1.9844535452085763,
+            "tax": 1.5716987981353558,
+            "ONWC_open_collectible": 75.0528835,
+            "ONWC_close": 75.0528835,
+            "delta_ONWC": 0.0,
+            "CFO_after_interest": 5.557412081656068,
+            "cash_capex": 7.32998405,
+            "PPE_open": 4.7581648475,
+            "PPE_close": 11.24583321025,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 1.0,
+            "debt_open": 11.993404317218543,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 2.4725719683439324,
+            "debt_close": 13.765976285562475,
+            "cash_before_rescue": -1.4725719683439322,
+            "closing_cash": 1.0,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 3,
+            "end_date": "2029-10-19",
+            "revenue": 110.43495715,
+            "revenue_addition": 3.21655215,
+            "EBITDA": 9.9391461435,
+            "D_and_A": 1.1798007996,
+            "EBIT": 8.7593453439,
+            "interest": 2.0648964428343715,
+            "tax": 1.6736122252664072,
+            "ONWC_open_collectible": 75.0528835,
+            "ONWC_close": 77.304470005,
+            "delta_ONWC": 2.251586505,
+            "CFO_after_interest": 3.9490509703992216,
+            "cash_capex": 1.1043495715,
+            "PPE_open": 11.24583321025,
+            "PPE_close": 11.17038198215,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 1.0,
+            "debt_open": 13.765976285562475,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 13.065976285562476,
+            "cash_before_rescue": 3.1447013988992216,
+            "closing_cash": 3.1447013988992216,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 4,
+            "end_date": "2030-10-19",
+            "revenue": 115.9567050075,
+            "revenue_addition": 5.5217478575,
+            "EBITDA": 10.436103450675,
+            "D_and_A": 1.17501655071875,
+            "EBIT": 9.26108689995625,
+            "interest": 1.9598964428343713,
+            "tax": 1.8252976142804698,
+            "ONWC_open_collectible": 77.304470005,
+            "ONWC_close": 81.16969350525,
+            "delta_ONWC": 3.86522350025,
+            "CFO_after_interest": 2.785685893310159,
+            "cash_capex": 1.159567050075,
+            "PPE_open": 11.17038198215,
+            "PPE_close": 11.15493248150625,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 3.1447013988992216,
+            "debt_open": 13.065976285562476,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 12.365976285562475,
+            "cash_before_rescue": 4.07082024213438,
+            "closing_cash": 4.07082024213438,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          },
+          {
+            "year": 5,
+            "end_date": "2031-10-19",
+            "revenue": 121.754540257875,
+            "revenue_addition": 5.797835250375,
+            "EBITDA": 10.95790862320875,
+            "D_and_A": 1.1763705182795625,
+            "EBIT": 9.781538104929188,
+            "interest": 1.8548964428343713,
+            "tax": 1.981660415523704,
+            "ONWC_open_collectible": 81.16969350525,
+            "ONWC_close": 85.2281781805125,
+            "delta_ONWC": 4.0584846752625,
+            "CFO_after_interest": 3.0628670895881744,
+            "cash_capex": 1.21754540257875,
+            "PPE_open": 11.15493248150625,
+            "PPE_close": 11.196107365805437,
+            "opening_tax_paid_once": 0.0,
+            "contingency_payment": 0.0,
+            "opening_cash": 4.07082024213438,
+            "debt_open": 12.365976285562475,
+            "debt_repayment": 0.7,
+            "new_uncommitted_rescue_loan": 0.0,
+            "debt_close": 11.665976285562476,
+            "cash_before_rescue": 5.216141929143805,
+            "closing_cash": 5.216141929143805,
+            "cash_identity_residual": 0.0,
+            "debt_identity_residual": 0.0
+          }
+        ],
+        "funded_in_annual_model": true,
+        "minimum_closing_cash": 1.0,
+        "peak_cash_shortfall": 0.0,
+        "total_uncommitted_rescue_loan": 5.624876285562475,
+        "terminal_enterprise_value": 65.7474517392525,
+        "terminal_NCI_equity_claim": 1.8084,
+        "terminal_debt": 11.665976285562476,
+        "terminal_cash": 5.216141929143805,
+        "terminal_common_equity": 57.35431738283383,
+        "terminal_price": 39.941445014369364,
+        "ordinary_IRR": null,
+        "rescue_conditional_IRR": -0.21950180805801975,
+        "supported_IRR": null,
+        "hurdle_entry_prices": {
+          ".12": 22.663848557360936,
+          ".15": 19.85795723534031,
+          ".18": 17.458773725342947
+        },
+        "friction_IRR": {
+          "0": -0.21950180805801975,
+          ".01": -0.22261766881445144,
+          ".02": -0.22572171021648868,
+          ".05": -0.23496947751541494
+        }
+      }
+    },
+    "margin_multiple_sensitivity": [
+      {
+        "margin": 0.11,
+        "multiple": 8.0,
+        "price": 142.9393916260693,
+        "IRR": 0.007204210526730831,
+        "hurdle_entry15": 71.06614007417282,
+        "funded": true
+      },
+      {
+        "margin": 0.11,
+        "multiple": 10.0,
+        "price": 175.5039841993953,
+        "IRR": 0.049408415904295136,
+        "hurdle_entry15": 87.25649789609797,
+        "funded": true
+      },
+      {
+        "margin": 0.11,
+        "multiple": 12.0,
+        "price": 208.0685767727213,
+        "IRR": 0.08574652005153097,
+        "hurdle_entry15": 103.44685571802312,
+        "funded": true
+      },
+      {
+        "margin": 0.13,
+        "multiple": 8.0,
+        "price": 175.73144570910583,
+        "IRR": 0.049680291637694864,
+        "hurdle_entry15": 87.36958646690188,
+        "funded": true
+      },
+      {
+        "margin": 0.13,
+        "multiple": 10.0,
+        "price": 214.21687329576383,
+        "IRR": 0.09208862093654885,
+        "hurdle_entry15": 106.50364571099524,
+        "funded": true
+      },
+      {
+        "margin": 0.13,
+        "multiple": 12.0,
+        "price": 252.7023008824218,
+        "IRR": 0.1287791686317688,
+        "hurdle_entry15": 125.6377049550886,
+        "funded": true
+      },
+      {
+        "margin": 0.15,
+        "multiple": 8.0,
+        "price": 208.52349979214236,
+        "IRR": 0.08622088257617709,
+        "hurdle_entry15": 103.67303285963094,
+        "funded": true
+      },
+      {
+        "margin": 0.15,
+        "multiple": 10.0,
+        "price": 252.92976239213235,
+        "IRR": 0.12898230205753314,
+        "hurdle_entry15": 125.7507935258925,
+        "funded": true
+      },
+      {
+        "margin": 0.15,
+        "multiple": 12.0,
+        "price": 297.33602499212236,
+        "IRR": 0.16610230282005362,
+        "hurdle_entry15": 147.82855419215406,
+        "funded": true
+      }
+    ],
+    "opening_cash_sensitivity": [
+      {
+        "opening_cash": 0.0,
+        "funded": false,
+        "peak_cash_shortfall": 2.223514469625,
+        "IRR": null
+      },
+      {
+        "opening_cash": 5.0,
+        "funded": true,
+        "peak_cash_shortfall": 0.0,
+        "IRR": 0.0755865782115007
+      },
+      {
+        "opening_cash": 10.0,
+        "funded": true,
+        "peak_cash_shortfall": 0.0,
+        "IRR": 0.07933359809946389
+      },
+      {
+        "opening_cash": 20.0,
+        "funded": true,
+        "peak_cash_shortfall": 0.0,
+        "IRR": 0.08667522826196798
+      },
+      {
+        "opening_cash": 27.5487,
+        "funded": true,
+        "peak_cash_shortfall": 0.0,
+        "IRR": 0.09208862093654885
+      }
+    ],
+    "prepaid_IPO_split_sensitivity": [
+      {
+        "IPO_prepaid_assumption": "0",
+        "initial_cash": 27.5487,
+        "initial_ONWC": 60.2655,
+        "IRR": 0.09208862093654885,
+        "note": "Paired reclassification: cash receives reimbursement of previously paid issue costs; the same prepaid asset is removed from opening operating capital. No expense is charged twice."
+      },
+      {
+        "IPO_prepaid_assumption": ".25",
+        "initial_cash": 27.7987,
+        "initial_ONWC": 60.0155,
+        "IRR": 0.09208862093654885,
+        "note": "Paired reclassification: cash receives reimbursement of previously paid issue costs; the same prepaid asset is removed from opening operating capital. No expense is charged twice."
+      },
+      {
+        "IPO_prepaid_assumption": ".4993",
+        "initial_cash": 28.048,
+        "initial_ONWC": 59.7662,
+        "IRR": 0.09208862093654885,
+        "note": "Paired reclassification: cash receives reimbursement of previously paid issue costs; the same prepaid asset is removed from opening operating capital. No expense is charged twice."
+      }
+    ],
+    "reverse_expectations": {
+      "grid_step_CAGR": 0.001,
+      "minimum_funded_CAGR_meeting_hurdle_in_grid": 0.189,
+      "IRR_at_that_CAGR": 0.15060299225653556,
+      "required_terminal_price15": 277.36615615625
+    },
+    "multibagger": {
+      "5": {
+        "target_price": 689.5,
+        "terminal_PE": 12.0,
+        "attributable_margin": 0.09356719119259421,
+        "required_revenue": 881.8034108077809,
+        "five_year_revenue_CAGR": 0.4753812896127,
+        "ten_year_revenue_CAGR": 0.214652744455262,
+        "incremental_ONWC_at47pct": 354.182103079657,
+        "status": "Speculative / unsupported; static decomposition, not funded forecast"
+      },
+      "10": {
+        "target_price": 1379.0,
+        "terminal_PE": 12.0,
+        "attributable_margin": 0.09356719119259421,
+        "required_revenue": 1763.6068216155618,
+        "five_year_revenue_CAGR": 0.6947680603715126,
+        "ten_year_revenue_CAGR": 0.30183257770402744,
+        "incremental_ONWC_at47pct": 768.629706159314,
+        "status": "Speculative / unsupported; static decomposition, not funded forecast"
+      }
+    },
+    "cash_claims_policy": "Restricted deposits excluded throughout and not released at terminal. Existing short-term gratuity is in ONWC; long-term gratuity 0.1349 is a terminal claim. Opening net current tax 0.1513 paid once. Rent remains operating expense; no AS operating-lease capitalization. NCI is a separate projected equity claim, not book NCI cash. No dividends, share issuance or acquisition cash double counts. Ordinary insolvent cash paths have null terminal common equity, price and IRR. Rescue proceeds and loan interest are modeled separately.",
+    "limitations": [
+      "Annual cash solvency does not establish intra-year solvency.",
+      "Existing debt rollover and current cash availability are unverified; modeled self-funding is conditional.",
+      "NCI equity multiple is an analytical assumption, not an observed minority valuation.",
+      "D&A, capex, margins and working-capital ratios are explicit assumptions; CAP is not scored from them."
+    ],
+    "bottom_up_operating_requirements": [
+      {
+        "scenario": "bear",
+        "warehouses": 5,
+        "baseline_parent_revenue": 111.5701,
+        "baseline_revenue_per_warehouse_proxy": 22.31402,
+        "parent_growth_assumption": 0.0,
+        "parent_year5_revenue": 111.5701,
+        "group_year5_revenue": 121.754540257875,
+        "group_less_parent_year5": 10.184440257875,
+        "residual_CAGR_required": -0.06910586956432958,
+        "status": "Reverse operating requirements, not evidenced capacity output or funded project guidance; group residual is net of eliminations, not subsidiary standalone sales."
+      },
+      {
+        "scenario": "base",
+        "warehouses": 5,
+        "baseline_parent_revenue": 111.5701,
+        "baseline_revenue_per_warehouse_proxy": 22.31402,
+        "parent_growth_assumption": 0.08,
+        "parent_year5_revenue": 163.93308046138367,
+        "group_year5_revenue": 212.55205614360543,
+        "group_less_parent_year5": 48.61897568222175,
+        "residual_CAGR_required": 0.27254755224617216,
+        "status": "Reverse operating requirements, not evidenced capacity output or funded project guidance; group residual is net of eliminations, not subsidiary standalone sales."
+      },
+      {
+        "scenario": "bull",
+        "warehouses": 5,
+        "baseline_parent_revenue": 111.5701,
+        "baseline_revenue_per_warehouse_proxy": 22.31402,
+        "parent_growth_assumption": 0.15,
+        "parent_year5_revenue": 224.40732254509376,
+        "group_year5_revenue": 313.874942976,
+        "group_less_parent_year5": 89.46762043090625,
+        "residual_CAGR_required": 0.43762638972913975,
+        "status": "Reverse operating requirements, not evidenced capacity output or funded project guidance; group residual is net of eliminations, not subsidiary standalone sales."
+      }
+    ],
+    "ONWC_definition": "Inventory 38.2593 + receivables 34.6367 + short advances 6.7320 - trade payables 15.5809 - other current liabilities 3.3958 - short gratuity 0.3858 = 60.2655. Net current tax excluded and paid once separately. The undisclosed prepaid IPO component is paired with initial cash reimbursement in sensitivity, not counted twice."
+  },
+  "monitoring_plan": [
+    {
+      "trigger": "Next utilization/current balance filing",
+      "action": "Reconcile IPO cash, debt, restricted deposits and bank headroom.",
+      "factors": [
+        "BAL",
+        "R",
+        "P"
+      ]
+    },
+    {
+      "trigger": "Next comparable results",
+      "action": "Recompute matched cash conversion, ageing and organic growth.",
+      "factors": [
+        "CASH",
+        "REV",
+        "EARN"
+      ]
+    },
+    {
+      "trigger": "Expansion commissioning and operating cohorts",
+      "action": "Measure actual utilization, contribution and full incremental returns.",
+      "factors": [
+        "CAP",
+        "DUR",
+        "EXEC"
+      ]
+    },
+    {
+      "trigger": "20 and 60 trading sessions",
+      "action": "Recompute official turnover, whole-lot capacities and live restrictions.",
+      "factors": [
+        "L"
+      ]
+    }
+  ]
+}
