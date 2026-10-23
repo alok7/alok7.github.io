@@ -1,13 +1,13 @@
 {
   "metadata": {
     "total_universe": 457,
-    "reviewed_companies": 300,
+    "reviewed_companies": 308,
     "research_cutoff": "2026-10-20",
-    "publication_batch": 9,
-    "pending_companies": 157,
-    "full_structured_reviews": 290,
+    "publication_batch": 10,
+    "pending_companies": 149,
+    "full_structured_reviews": 298,
     "recovered_narrative_editions": 10,
-    "currently_published_reviews": 300,
+    "currently_published_reviews": 308,
     "completed_unpublished_reviews": 0
   },
   "companies": [
@@ -6866,32 +6866,34 @@
     {
       "id": "INE288301026",
       "isin": "INE288301026",
-      "name": "Poojaa Precision Engg.",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Poojaa Precision Engg. Limited",
+      "symbol": "PPEL",
+      "exchange": "BSE",
       "sector": "Auto Components & Equipments",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 5.14,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE288301026.json",
+      "dossier_version": "977b004f3b8221a1"
     },
     {
       "id": "INE0O7A01017",
       "isin": "INE0O7A01017",
-      "name": "Pramara Promotio",
+      "name": "Pramara Promotions Limited",
       "symbol": "PRAMARA",
       "exchange": "Listing verification pending",
       "sector": "Advertising & Media Agencies",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -6901,97 +6903,107 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE0O7A01017.json",
+      "dossier_version": "90f5a9dd65febb99"
     },
     {
       "id": "INE2JG601017",
       "isin": "INE2JG601017",
-      "name": "Pramodini Medicare",
+      "name": "Pramodini Medicare Limited",
       "symbol": "PRAMODINI",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Healthcare Service Provider",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 5.56,
+        "GQS": 6.8,
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE2JG601017.json",
+      "dossier_version": "5d1e3a4462cc330f"
     },
     {
       "id": "INE0TI501017",
       "isin": "INE0TI501017",
-      "name": "Praruh Tech",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Praruh Technologies Limited",
+      "symbol": "PRARUH",
+      "exchange": "BSE SME",
       "sector": "IT Enabled Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 5.58,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE0TI501017.json",
+      "dossier_version": "0e4ab81fe9ca73e1"
     },
     {
       "id": "INE0M1F01011",
       "isin": "INE0M1F01011",
-      "name": "Premium Plast",
+      "name": "Premium Plast Limited",
       "symbol": "PREMIUM",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE SME",
       "sector": "Auto Components & Equipments",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 4.76,
+        "GQS": 5.9,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE0M1F01011.json",
+      "dossier_version": "a765b2e0de634995"
     },
     {
       "id": "INE0GAO01018",
       "isin": "INE0GAO01018",
-      "name": "Prevest Denpro",
-      "symbol": null,
+      "name": "Prevest Denpro Limited",
+      "symbol": "PREVEST",
       "exchange": "Listing verification pending",
       "sector": "Medical Equipment & Supplies",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 6.42,
+        "GQS": 7.15,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE0GAO01018.json",
+      "dossier_version": "996bf32f6e503f36"
     },
     {
       "id": "INE0CQA01020",
       "isin": "INE0CQA01020",
-      "name": "Prime Cable Ind.",
+      "name": "Prime Cable Industries Limited",
       "symbol": "PRIMECAB",
       "exchange": "Listing verification pending",
       "sector": "Cables - Electricals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -7001,27 +7013,31 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE0CQA01020.json",
+      "dossier_version": "7614112b539cf03b"
     },
     {
       "id": "INE0MJQ01020",
       "isin": "INE0MJQ01020",
-      "name": "Pritika Engineer",
+      "name": "Pritika Engineering Components Limited",
       "symbol": "PRITIKA",
       "exchange": "Listing verification pending",
       "sector": "Auto Components & Equipments",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 4.94,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
-      }
+      },
+      "dossier": "sme/INE0MJQ01020.json",
+      "dossier_version": "f125567d1578e6b1"
     },
     {
       "id": "INE0V9N01017",
