@@ -1,0 +1,41 @@
+{
+  "codec": "JSON-syntax-dictionary-v4-utf8-fragments",
+  "wallstrat_transport": {
+    "scope": "completed-unpublished-321-340",
+    "id": "INE0KYI01012",
+    "isin": "INE0KYI01012",
+    "source_canonical_sha256": "d71c0d716c8aaa69f9ff5c9188bfed32eb4ca2fb5f137526d5712be769ca89bf",
+    "projection_ledger_sha256": "25c12d5ec456f1acf72cde37c4204344be4c4e05e754296692dbb21b60cdeea0",
+    "dictionary_sha256": "040b5ea5edeaeefef7ca9c336f79f3fdd99555787b4aee0377ae2418371bd4f1",
+    "dictionary_bytes": 10923806,
+    "payload_sha256": "eac3f7532fa961989e947fa89e54ac32b63843a6e58e0067bfbd9c1666f45172",
+    "payload_bytes": 82637655,
+    "atoms": 54588,
+    "schemas": 127,
+    "nodes": 11026,
+    "root": -11026
+  },
+  "parts": [
+    {
+      "path": "sme/INE0KYI01012/dictionary-001.jsonpart",
+      "ordinal": 1,
+      "offset": 0,
+      "bytes": 4000000,
+      "sha256": "374f86b37e92b6908a6b4e44ad1b04b37a64647539c5f9d1695e7a9f953b560b"
+    },
+    {
+      "path": "sme/INE0KYI01012/dictionary-002.jsonpart",
+      "ordinal": 2,
+      "offset": 4000000,
+      "bytes": 4000000,
+      "sha256": "fb7a65809a82396813bd2ac08203977da829618a254fae168ff1a1f58e7860b0"
+    },
+    {
+      "path": "sme/INE0KYI01012/dictionary-003.jsonpart",
+      "ordinal": 3,
+      "offset": 8000000,
+      "bytes": 2923806,
+      "sha256": "9ff4b9c8b089232270fe2c2fd04863bebcf214b4947fe7be28eb90cc3bc4ef0b"
+    }
+  ]
+}

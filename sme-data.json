@@ -1,13 +1,13 @@
 {
   "metadata": {
     "total_universe": 457,
-    "reviewed_companies": 308,
+    "reviewed_companies": 340,
     "research_cutoff": "2026-10-20",
-    "publication_batch": 10,
-    "pending_companies": 149,
-    "full_structured_reviews": 298,
+    "publication_batch": 12,
+    "pending_companies": 117,
+    "full_structured_reviews": 330,
     "recovered_narrative_editions": 10,
-    "currently_published_reviews": 308,
+    "currently_published_reviews": 340,
     "completed_unpublished_reviews": 0
   },
   "companies": [
@@ -7042,52 +7042,92 @@
     {
       "id": "INE0V9N01017",
       "isin": "INE0V9N01017",
-      "name": "Prizor Viztech",
+      "name": "Prizor Viztech Limited",
       "symbol": "PRIZOR",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "4.88",
+        "GQS": "5",
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE0V9N01017.json",
+      "dossier_version": "b32d08158b90d514",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE0V9N01017",
+        "isin": "INE0V9N01017",
+        "source_projection_sha256": "92843c5678aaf31f5dbf63f012a56e67764452b1b48a561f9d0ee83889dd3206",
+        "payload_sha256": "df25df5d559bee2bf40fdbdf13654c81f130ef7a47fc343b3012eb6a9cd86e30",
+        "payload_bytes": 4928053,
+        "atoms": 24497,
+        "schemas": 61,
+        "nodes": 2726,
+        "root": -2726
+      },
+      "transport_file": {
+        "bytes": 1859894,
+        "sha256": "b32d08158b90d51438a9442fe55574c5ef27f04725de476f1cdb115b60e7fa59"
       }
     },
     {
       "id": "INE0VJT01017",
       "isin": "INE0VJT01017",
-      "name": "Pro FX",
+      "name": "PRO FX Tech Limited",
       "symbol": "PROFX",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge (SME)",
       "sector": "Consumer Electronics",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "4.96",
+        "GQS": "5",
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "business_quality": true,
+        "growth_quality": true,
+        "investment": false,
+        "condition": "Diagnostic Medium-confidence quality ranking only; no live IAS or favorable investment matrix cell. Reliability gate remains conditional, not failed.",
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "dossier": "sme/INE0VJT01017.json",
+      "dossier_version": "75963e5112dbde18",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE0VJT01017",
+        "isin": "INE0VJT01017",
+        "source_projection_sha256": "abfa8ffd26c62ddb140e3f81867962f4fc6abed293be05489fc3138607e8257c",
+        "payload_sha256": "b147b4c33a5d4547601444cbb6540c4739011993a63abc6007e22a199db3d922",
+        "payload_bytes": 439204,
+        "atoms": 3355,
+        "schemas": 58,
+        "nodes": 693,
+        "root": -693
+      },
+      "transport_file": {
+        "bytes": 213632,
+        "sha256": "75963e5112dbde18b7e23fa02bb5f07942c0c9f27c4118a3e2131874df945c26"
       }
     },
     {
       "id": "INE10XK01019",
       "isin": "INE10XK01019",
-      "name": "Prodocs Solution",
-      "symbol": null,
-      "exchange": "Listing verification pending",
-      "sector": "IT Enabled Services",
-      "research_status": "pending",
-      "as_of": null,
+      "name": "Prodocs Solutions Limited",
+      "symbol": "PRODOCS",
+      "exchange": "BSE SME",
+      "sector": "IT-enabled business process services",
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -7097,37 +7137,75 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE10XK01019.json",
+      "dossier_version": "f2e7e8d420be55c4",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE10XK01019",
+        "isin": "INE10XK01019",
+        "source_projection_sha256": "8033e258c51774082f63524d10ba2c16c81518d4648b93818fac1becc2837290",
+        "payload_sha256": "b0bd29d7511569b0da1ccbe08392a2ce1788c8c585849defd553690134d22518",
+        "payload_bytes": 1268282,
+        "atoms": 3388,
+        "schemas": 56,
+        "nodes": 1038,
+        "root": -1038
+      },
+      "transport_file": {
+        "bytes": 251549,
+        "sha256": "f2e7e8d420be55c4bebc85119690252c8c2dd91cd3aca973848ae275c5e38a48"
       }
     },
     {
       "id": "INE1FFX01018",
       "isin": "INE1FFX01018",
-      "name": "Propshop Events",
+      "name": "Propshop Events and Exhibitions Limited",
       "symbol": "PROPSHOP",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge (SME)",
       "sector": "Diversified Commercial Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
-        "IAS": null
+        "BQS": "5.06",
+        "GQS": "5",
+        "IAS": "NS"
       },
       "ranking_eligibility": {
+        "business_quality": false,
+        "investment_attractiveness": false,
+        "reason": "G2 unresolved accounting/cash-reliability questions; IAS critical inputs R/P/L are NS.",
         "BQS": false,
-        "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE1FFX01018.json",
+      "dossier_version": "7d5fcae5212cb1d7",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE1FFX01018",
+        "isin": "INE1FFX01018",
+        "source_projection_sha256": "045a553ce5ef02a692eba6857c36b29435abef02a47b994ebd8a54211c8023d7",
+        "payload_sha256": "6f65de7b1bd93012646dbb5f8d884d265fbc9eda960a324f22f18d28c1f3ce22",
+        "payload_bytes": 3488361,
+        "atoms": 10183,
+        "schemas": 76,
+        "nodes": 2172,
+        "root": -2172
+      },
+      "transport_file": {
+        "bytes": 723524,
+        "sha256": "7d5fcae5212cb1d798bafaa9ce8d92a043000022b658134bf9fd8613f9966d00"
       }
     },
     {
       "id": "INE510U01018",
       "isin": "INE510U01018",
-      "name": "Pune e-Stock Broking",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Pune E-Stock Broking Limited",
+      "symbol": "PESB / BSE544141",
+      "exchange": "BSE SME",
       "sector": "Stockbroking & Allied",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -7137,17 +7215,35 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE510U01018.json",
+      "dossier_version": "918ce97448903528",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE510U01018",
+        "isin": "INE510U01018",
+        "source_projection_sha256": "59c489f74aa96e76968ca91972f5244f4d9d35ea6b5635af19ad03f5700ee9f0",
+        "payload_sha256": "95afd32f6ef123393f773f0b07d761b40b2564fedb2be43287070d9ea671d217",
+        "payload_bytes": 318274,
+        "atoms": 2974,
+        "schemas": 77,
+        "nodes": 639,
+        "root": -639
+      },
+      "transport_file": {
+        "bytes": 168578,
+        "sha256": "918ce97448903528e57ff48b19da487a6de05f0b54f1a5f31f286fc609649b00"
       }
     },
     {
       "id": "INE0P5R01014",
       "isin": "INE0P5R01014",
-      "name": "Purple United",
+      "name": "Purple United Sales Limited",
       "symbol": "PURPLEUTED",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Garments & Apparels",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -7157,77 +7253,147 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE0P5R01014.json",
+      "dossier_version": "93ca6bd6ad93a204",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE0P5R01014",
+        "isin": "INE0P5R01014",
+        "source_projection_sha256": "cd1d3fcacecb342d84a8e2d447e7be5e18fca825627eed0027e135fcff9601da",
+        "payload_sha256": "4453f5367d68c93cf670f07fa32cbdb0a9bfdd1d3a6f48f3fcf621ba5c407e01",
+        "payload_bytes": 2372674,
+        "atoms": 10827,
+        "schemas": 67,
+        "nodes": 1744,
+        "root": -1744
+      },
+      "transport_file": {
+        "bytes": 728127,
+        "sha256": "93ca6bd6ad93a204751784346fcafc9e3f927e28021d6aed806c4a1c7534a9aa"
       }
     },
     {
       "id": "INE0VDK01019",
       "isin": "INE0VDK01019",
-      "name": "Purple Wave Info",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Purple Wave Infocom Limited",
+      "symbol": "PURPLEWAVE",
+      "exchange": "BSE SME",
       "sector": "Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "4.68",
+        "GQS": "5",
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE0VDK01019.json",
+      "dossier_version": "5120e85a18e42efb",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE0VDK01019",
+        "isin": "INE0VDK01019",
+        "source_projection_sha256": "2116e2e35470ab10463d762b2e1f5c25fbcc2bd93b71001e458719cba688df06",
+        "payload_sha256": "950fc7c25d0d06096c98a6e5b358e4c51dc00bfb70a8d64f006878653b399c63",
+        "payload_bytes": 1195094,
+        "atoms": 7073,
+        "schemas": 68,
+        "nodes": 1472,
+        "root": -1472
+      },
+      "transport_file": {
+        "bytes": 466911,
+        "sha256": "5120e85a18e42efbed4ed2ae9c9ad63b9bf3077c9d9b2d3668a0b1178a7f5eec"
       }
     },
     {
       "id": "INE1G2W01011",
       "isin": "INE1G2W01011",
-      "name": "Q-Line Biotech",
+      "name": "Q-Line Biotech Limited",
       "symbol": "QLINE",
       "exchange": "Listing verification pending",
       "sector": "Medical Equipment & Supplies",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "4.90",
+        "GQS": "5",
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE1G2W01011.json",
+      "dossier_version": "c35e9c543d4dfd54",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE1G2W01011",
+        "isin": "INE1G2W01011",
+        "source_projection_sha256": "d3f0602bbcfe7dd0475e96aa187a19668e9e07b6c288faa069805f8a33af8e03",
+        "payload_sha256": "7481bfda650f6116e8def221a4184d5a3c4fbb8ee5c15f7d3ac84f40ef1e8762",
+        "payload_bytes": 573031,
+        "atoms": 3736,
+        "schemas": 50,
+        "nodes": 805,
+        "root": -805
+      },
+      "transport_file": {
+        "bytes": 374663,
+        "sha256": "c35e9c543d4dfd54261185fa3834309c45c8603de069e68b91d8352aaaaae8fe"
       }
     },
     {
       "id": "INE1XJ401012",
       "isin": "INE1XJ401012",
-      "name": "Qualiance International",
+      "name": "Qualiance International Limited",
       "symbol": "QUALIANCE",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge (SME)",
       "sector": "Unknown",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "4.68",
+        "GQS": "5",
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE1XJ401012.json",
+      "dossier_version": "62495c386b76a21a",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE1XJ401012",
+        "isin": "INE1XJ401012",
+        "source_projection_sha256": "aaecaf214b99029ba37c10b5104faa62d4bb9c6e5999374ba17a06c1deb7cde4",
+        "payload_sha256": "a8a70d93245fe585f2003cabd8652cf580af74206dd71ded2cf459defb331657",
+        "payload_bytes": 19476536,
+        "atoms": 50259,
+        "schemas": 61,
+        "nodes": 5086,
+        "root": -5086
+      },
+      "transport_file": {
+        "bytes": 4026910,
+        "sha256": "62495c386b76a21ae347696319db6bc1a8e58b519a3c6cc0842033063c25f602"
       }
     },
     {
       "id": "INE0Q1R01012",
       "isin": "INE0Q1R01012",
-      "name": "Qualitek Labs",
-      "symbol": null,
+      "name": "Qualitek Labs Limited",
+      "symbol": "QLL",
       "exchange": "Listing verification pending",
       "sector": "Consulting Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -7237,17 +7403,35 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE0Q1R01012.json",
+      "dossier_version": "68925e61817160b9",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE0Q1R01012",
+        "isin": "INE0Q1R01012",
+        "source_projection_sha256": "ad1787a58e8aa94f9352f8c5c9fcb5720956f9d42ebba33b503b0507956790c6",
+        "payload_sha256": "6d0063a62ac3aae98abee197a3a4267987512e14bf86fff62bdaa50df5c4e18c",
+        "payload_bytes": 25177412,
+        "atoms": 48988,
+        "schemas": 79,
+        "nodes": 32193,
+        "root": -32193
+      },
+      "transport_file": {
+        "bytes": 4832892,
+        "sha256": "68925e61817160b9c947bc4e6a45946f40dac43a19ed3b2b2644553eab06fb09"
       }
     },
     {
       "id": "INE0OAB01019",
       "isin": "INE0OAB01019",
-      "name": "Quanto Agroworld",
+      "name": "Quanto Agroworld Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Wellness",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -7257,17 +7441,35 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE0OAB01019.json",
+      "dossier_version": "e68915501b2dc188",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE0OAB01019",
+        "isin": "INE0OAB01019",
+        "source_projection_sha256": "58e2b8b035f40900fbe144474d0f9ad22e074e43286dc1a4a906d01aef064d17",
+        "payload_sha256": "b9d27cd0f57259db615f5823cfd29814742a9bb0abc31e0cdd99a34c581e3ec1",
+        "payload_bytes": 49131773,
+        "atoms": 25907,
+        "schemas": 58,
+        "nodes": 23590,
+        "root": -23590
+      },
+      "transport_file": {
+        "bytes": 3248540,
+        "sha256": "e68915501b2dc188065f5f31f5c5347d9503699a599fc8d0ccfc2e339492dfbe"
       }
     },
     {
       "id": "INE0OYE01013",
       "isin": "INE0OYE01013",
-      "name": "Quest Flow",
-      "symbol": null,
+      "name": "Quest Flow Controls Limited",
+      "symbol": "QUESTFLOW",
       "exchange": "Listing verification pending",
       "sector": "Other Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -7277,406 +7479,864 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "dossier": "sme/INE0OYE01013.json",
+      "dossier_version": "333c583b5d020d42",
+      "lossless_transport": {
+        "scope": "completed-unpublished-309-320",
+        "id": "INE0OYE01013",
+        "isin": "INE0OYE01013",
+        "source_projection_sha256": "f1a2df1784c45e54598a6ef57398527baa7605810540529569ca0067ce7f6e02",
+        "payload_sha256": "f6f31e82c50489c0dd5674de32c88d74f24ece5fc5356459292680a98a39090c",
+        "payload_bytes": 169332180,
+        "atoms": 420900,
+        "schemas": 65,
+        "nodes": 239516,
+        "root": -239516
+      },
+      "transport_file": {
+        "bytes": 3294,
+        "sha256": "333c583b5d020d42472536efe2aa234cd91fafd2860c35af36e6fe2c533bcaf1"
       }
     },
     {
       "id": "INE0TNW01017",
       "isin": "INE0TNW01017",
-      "name": "Quest Laborato.",
+      "name": "Quest Laboratories Limited",
       "symbol": "QUESTLAB",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Pharmaceuticals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0TNW01017.json",
+      "dossier_version": "4771a776827a40e2",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0TNW01017",
+        "isin": "INE0TNW01017",
+        "source_canonical_sha256": "06a2891d2ccd58416a04e6e1094aaf0df4c446bd920a3cc3528ae2da6601cd41",
+        "projection_ledger_sha256": "4dd54bf8fbb51dd5725e1f56b944e6b9984fd0778e269fb0a53c2de042d85fd3",
+        "dictionary_sha256": "a7ff552b7b8f6b180f77e094645bd1f902bd7356a2601cd37007e4eb7a816d4c",
+        "dictionary_bytes": 2576465,
+        "payload_sha256": "d1be3d7e2cf0811c465d6af75f990e9aadc2bd0e8953ca2863b0ed0153b121d8",
+        "payload_bytes": 92896285,
+        "atoms": 24391,
+        "schemas": 89,
+        "nodes": 14098,
+        "root": -14098
+      },
+      "transport_file": {
+        "bytes": 948,
+        "sha256": "4771a776827a40e257beb3041685c201cd1d33e16b82bba6f63774570b1b6b1b"
       }
     },
     {
       "id": "INE2O2Y01016",
       "isin": "INE2O2Y01016",
-      "name": "R.K. Fashion Accessories",
+      "name": "R.K. Fashion Accessories Limited",
       "symbol": "RKFAL",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge SME",
       "sector": "Gems, Jewellery And Watches",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE2O2Y01016.json",
+      "dossier_version": "4520793fd4cae84e",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE2O2Y01016",
+        "isin": "INE2O2Y01016",
+        "source_canonical_sha256": "00723e7c3be8e9d1b2b403f264ea1069bb7578c673c24d9fe9644a02d84309a2",
+        "projection_ledger_sha256": "29dd51b9cf09c1926abc8a587d1b3aefc4a22b13b7f1cce5d68f2f6e6f4bcb38",
+        "dictionary_sha256": "ee2e61ec7fd283204c71dc2b475a1539642f1aca392bcb4f2bad98576cf037f5",
+        "dictionary_bytes": 12118171,
+        "payload_sha256": "52e2e4f594916eccb4f1fe358b0eb03fe534ef2dc9783e25db16453ff64c9b08",
+        "payload_bytes": 128595066,
+        "atoms": 154616,
+        "schemas": 79,
+        "nodes": 45856,
+        "root": -45856
+      },
+      "transport_file": {
+        "bytes": 1620,
+        "sha256": "4520793fd4cae84ec7af55e8d44f885fc323ba819894d62f79071890e37c392d"
       }
     },
     {
       "id": "INE0ZN101029",
       "isin": "INE0ZN101029",
-      "name": "Rachit Prints",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Rachit Prints Limited",
+      "symbol": "RACHIT",
+      "exchange": "BSE SME",
       "sector": "Other Textile Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0ZN101029.json",
+      "dossier_version": "330a3a38556f3f73",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0ZN101029",
+        "isin": "INE0ZN101029",
+        "source_canonical_sha256": "fb792e98364b278b820d4123e454d45994d1db70643505160b592a317d2c4b25",
+        "projection_ledger_sha256": "15b3794917c3a9c6fc1c9250a063c92bf090411bfbb939f2df49737b66200f4b",
+        "dictionary_sha256": "34e74efa0241bdcd6eb6538b5d8d46cceedfd706048cd20d849cb6634a69592a",
+        "dictionary_bytes": 15154350,
+        "payload_sha256": "2238abd2b8e3b40c47612bcbbe773fcda70ea4093badb6d5fb1ad7482d65b142",
+        "payload_bytes": 76266713,
+        "atoms": 32019,
+        "schemas": 115,
+        "nodes": 26900,
+        "root": -26900
+      },
+      "transport_file": {
+        "bytes": 1620,
+        "sha256": "330a3a38556f3f7317a706337b1f0efa90a4114cfcdf6747aed093b73420b09e"
       }
     },
     {
       "id": "INE0VN801010",
       "isin": "INE0VN801010",
-      "name": "Rajesh Power",
-      "symbol": null,
+      "name": "Rajesh Power Services Limited",
+      "symbol": "RAJESH",
       "exchange": "Listing verification pending",
       "sector": "Multi Utilities",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "5.88",
+        "GQS": "5",
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": "5.88",
+        "GQS": "5",
+        "IAS": null
+      },
+      "dossier": "sme/INE0VN801010.json",
+      "dossier_version": "408e6e9780d9abd1",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0VN801010",
+        "isin": "INE0VN801010",
+        "source_canonical_sha256": "53632a9bfa00b88b6808452cbd9ae68acf9ad2e60d9ecd5d14915f56ac657985",
+        "projection_ledger_sha256": "c35da4603e8309f42c033cf6fbb8e2a2987f24cae085a1476c0bdb0eab9efb9f",
+        "dictionary_sha256": "a067493e3631e5c7e9993165996e1e62611b298c36f6562ad564917e32e820a2",
+        "dictionary_bytes": 21215528,
+        "payload_sha256": "00f89ea1d53523407ff8a8d69fcd034e8e138146f58c97a12d6e483d7a9e7833",
+        "payload_bytes": 169233399,
+        "atoms": 148680,
+        "schemas": 108,
+        "nodes": 80571,
+        "root": -80571
+      },
+      "transport_file": {
+        "bytes": 2070,
+        "sha256": "408e6e9780d9abd121731934f4c371ab11422dfbef054811c9685dd24b495a03"
       }
     },
     {
       "id": "INE0VHU01019",
       "isin": "INE0VHU01019",
-      "name": "Rajputana Bio.",
+      "name": "Rajputana Biodiesel Limited",
       "symbol": "RAJPUTANA",
       "exchange": "Listing verification pending",
       "sector": "Petrochemicals",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0VHU01019.json",
+      "dossier_version": "44fb443e968f307a",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0VHU01019",
+        "isin": "INE0VHU01019",
+        "source_canonical_sha256": "ecbe145c854b810f75bf8cfab773078711401ee1bc06a607b05ac8dc9b2d5193",
+        "projection_ledger_sha256": "38820e5830f5ee24c5b6c4bfb8f581c027a59ffdb6b4971f1086cd72a0d431ca",
+        "dictionary_sha256": "ad3ef922d2c767aeb1ea661507a7bfb71da5c349571e976c375edb9200f9102c",
+        "dictionary_bytes": 4290854,
+        "payload_sha256": "123193d9e27e715b55b69aecbbb7c201da662d6b3c70438790afaf3c650ff035",
+        "payload_bytes": 29164670,
+        "atoms": 11395,
+        "schemas": 116,
+        "nodes": 3660,
+        "root": -3660
+      },
+      "transport_file": {
+        "bytes": 1169,
+        "sha256": "44fb443e968f307ab6a8c7baceeb622556e778268e83c146d298fb8ad04522e5"
       }
     },
     {
       "id": "INE0PCU01012",
       "isin": "INE0PCU01012",
-      "name": "Rajputana Indu.",
+      "name": "Rajputana Industries Limited",
       "symbol": "RAJINDLTD",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Aluminium, Copper & Zinc Products",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0PCU01012.json",
+      "dossier_version": "89c1a99e0bd45d49",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0PCU01012",
+        "isin": "INE0PCU01012",
+        "source_canonical_sha256": "405a4ffa5ae944f005082ef5057adb2a7c4599ad99b5fed27dbaffbb66fb9f83",
+        "projection_ledger_sha256": "aa5286ee1ded0b89fc067054b06e63a37be6ef3d8057b9e5fa1f01136b80038c",
+        "dictionary_sha256": "1d69b97af05927c9c6feac108fa2b18f46add66871c45dbdd1a94e3de679776d",
+        "dictionary_bytes": 9586132,
+        "payload_sha256": "8115559eba95ebf860520d1bb3c6b818a4c5499018ee09954e65eb0a7f26f944",
+        "payload_bytes": 45378280,
+        "atoms": 94021,
+        "schemas": 112,
+        "nodes": 78237,
+        "root": -78237
+      },
+      "transport_file": {
+        "bytes": 1395,
+        "sha256": "89c1a99e0bd45d491532da53c633fca69106725194bb539931d7f3d5947e8236"
       }
     },
     {
       "id": "INE1S7M01017",
       "isin": "INE1S7M01017",
-      "name": "Raksan Transformers",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Raksan Transformers Limited",
+      "symbol": "RAKSAN",
+      "exchange": "BSE SME",
       "sector": "Heavy Electrical Equipment",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "5.18",
+        "GQS": "5",
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": "5.18",
+        "GQS": "5",
+        "IAS": null
+      },
+      "dossier": "sme/INE1S7M01017.json",
+      "dossier_version": "c844c55c901a3795",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE1S7M01017",
+        "isin": "INE1S7M01017",
+        "source_canonical_sha256": "ce4e80e311578c8244335c8025a12e73cd9352bca1324470d5e3891e2dc251d8",
+        "projection_ledger_sha256": "31d8ac1fe7228996b0e3209b15b8a50dde94d39961a89e1099f3525076ce5712",
+        "dictionary_sha256": "9a2b0614a479c0792dcddf83a35b2f2ad1d00a397b7cc8713fb8187f7237b2af",
+        "dictionary_bytes": 14006785,
+        "payload_sha256": "f534cc21434d00359d65e0d5729fe3fdd579705558c0478db7b7e03a009d5c72",
+        "payload_bytes": 73682033,
+        "atoms": 137578,
+        "schemas": 258,
+        "nodes": 115398,
+        "root": -115398
+      },
+      "transport_file": {
+        "bytes": 1623,
+        "sha256": "c844c55c901a3795e8ddd014522313ebe205a6d10c775ef1edfb49dfa1b397ee"
       }
     },
     {
       "id": "INE0QX901013",
       "isin": "INE0QX901013",
-      "name": "Rapid Fleet",
+      "name": "Rapid Fleet Management Services Limited",
       "symbol": "RAPIDFLEET",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Logistics Solution Provider",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0QX901013.json",
+      "dossier_version": "eaedae45dc88935c",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0QX901013",
+        "isin": "INE0QX901013",
+        "source_canonical_sha256": "49d792313523dd631d9b34baa9d5b0c076df96be5fca57fb6deb0cce60619f2a",
+        "projection_ledger_sha256": "a561ead88f6ad61bfee8df70f4611ae53c10726ae4fb3fa59a149f3c63e71ba0",
+        "dictionary_sha256": "6340e86f09c93eb78581b930450eff51a923417ccc647461d9bfc9284a621fc0",
+        "dictionary_bytes": 31693702,
+        "payload_sha256": "31650cff49ba4ec91e55fe474a839b07fbd9b4134f1eea08e5b0dc711449bb35",
+        "payload_bytes": 116185851,
+        "atoms": 296412,
+        "schemas": 100,
+        "nodes": 273856,
+        "root": -273856
+      },
+      "transport_file": {
+        "bytes": 2520,
+        "sha256": "eaedae45dc88935c1fd29c778c4b584c1f831bcef487cce21f08611abe4cabaa"
       }
     },
     {
       "id": "INE0MVO01012",
       "isin": "INE0MVO01012",
-      "name": "Rappid Valves",
+      "name": "Rappid Valves (India) Limited",
       "symbol": "RAPPID",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE SME / SM",
       "sector": "Other Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "4.50",
+        "GQS": "5",
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": "4.50",
+        "GQS": "5",
+        "IAS": null
+      },
+      "dossier": "sme/INE0MVO01012.json",
+      "dossier_version": "c88f06a1a71eb211",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0MVO01012",
+        "isin": "INE0MVO01012",
+        "source_canonical_sha256": "4a9533373a5798cda0a231252567f826f3a5392f122be71164938fa8e7364f91",
+        "projection_ledger_sha256": "fd99f8aa5ec0e8d67e78f6d135c76afeb93a5205a7caf9d5e9d9ce2e04e18579",
+        "dictionary_sha256": "452838098cf0974b32d920637d9f9838c1cb1a9191a5d3a56544bf6b9191fc28",
+        "dictionary_bytes": 9824290,
+        "payload_sha256": "65236511592dc987bfa72935f5a5f33bf410e76cd64e528b7eec1be585de6581",
+        "payload_bytes": 52958321,
+        "atoms": 107069,
+        "schemas": 110,
+        "nodes": 74265,
+        "root": -74265
+      },
+      "transport_file": {
+        "bytes": 1396,
+        "sha256": "c88f06a1a71eb211c12ceb15e4c7d8f489ff6dc07928f4fe975d4ff1337bb855"
       }
     },
     {
       "id": "INE0NA301016",
       "isin": "INE0NA301016",
-      "name": "RBM Infracon",
+      "name": "RBM Infracon Limited",
       "symbol": "RBMINFRA",
       "exchange": "Listing verification pending",
       "sector": "Diversified Commercial Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0NA301016.json",
+      "dossier_version": "733e5317194d6eb7",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0NA301016",
+        "isin": "INE0NA301016",
+        "source_canonical_sha256": "f24a8e5f9c108141c7c46051d8ac3336a32c9cc292eabd30b787308254f051f6",
+        "projection_ledger_sha256": "64edb98e9104642dfc3429168b15be5b0ecce9bd092803359520d0c38db57d4b",
+        "dictionary_sha256": "c45948241a9ff409ceaa1b89135d6c6b8ab655ca3775b63dbc1224d121e44820",
+        "dictionary_bytes": 32318213,
+        "payload_sha256": "24154b5e87caedc7fc8cbf91bb849052d87a6966426e84625c21bd2bc4c9cc70",
+        "payload_bytes": 153884364,
+        "atoms": 244892,
+        "schemas": 70,
+        "nodes": 228467,
+        "root": -228467
+      },
+      "transport_file": {
+        "bytes": 2742,
+        "sha256": "733e5317194d6eb7c6b83c2bdeabb7fa6e4985c4dca62d08a2fd68ccca684ca1"
       }
     },
     {
       "id": "INE2B6701015",
       "isin": "INE2B6701015",
-      "name": "Recode Studios",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Recode Studios Limited",
+      "symbol": "RECODE",
+      "exchange": "BSE SME",
       "sector": "Personal Care",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE2B6701015.json",
+      "dossier_version": "090a8e9e4d652774",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE2B6701015",
+        "isin": "INE2B6701015",
+        "source_canonical_sha256": "2da98b1282f6ce59a8b5d0efff59137fbd1e8fb9c59f7482fef436ecdaaec26e",
+        "projection_ledger_sha256": "1ee3a570124ff35580a0b0d39a38e798af6cee8f263ca565dc49d5d0d241dcf0",
+        "dictionary_sha256": "31f4007da344b2f50c136603ce40fae677b867ed1525da2ff4c945f336b60b94",
+        "dictionary_bytes": 25825562,
+        "payload_sha256": "b8e7db0cca135162ad7135969f4aac9a33392e0014558a89854b4e8f2288040d",
+        "payload_bytes": 76796436,
+        "atoms": 182733,
+        "schemas": 94,
+        "nodes": 24507,
+        "root": -24507
+      },
+      "transport_file": {
+        "bytes": 2292,
+        "sha256": "090a8e9e4d6527744cdd30c736b3e7bb479f06883bf098bb40d4a979b2efbf63"
       }
     },
     {
       "id": "INE0O5T01011",
       "isin": "INE0O5T01011",
-      "name": "Remus Pharma.",
+      "name": "Remus Pharmaceuticals Limited",
       "symbol": "REMUS",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE EMERGE SM",
       "sector": "Pharmaceuticals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0O5T01011.json",
+      "dossier_version": "0e98b24f7b590da3",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0O5T01011",
+        "isin": "INE0O5T01011",
+        "source_canonical_sha256": "87110e1af78cb77903e7a8319f2f4cf3b02f053ed328a7ce97a9e77d432866ce",
+        "projection_ledger_sha256": "d43b092ac7532f5c6b9fd6acfe1714dbc4b8a176695daf808ee382d6ae5b63c2",
+        "dictionary_sha256": "1ccb5d2648237dec02b773f7ec83b365eca34feea09ec75d62a73f542e8198c2",
+        "dictionary_bytes": 11812027,
+        "payload_sha256": "2e876d5a32f12e642301a898cba2b77b3f65f12e9b6ea0d229393649b427ace6",
+        "payload_bytes": 82346130,
+        "atoms": 129907,
+        "schemas": 120,
+        "nodes": 66702,
+        "root": -66702
+      },
+      "transport_file": {
+        "bytes": 1397,
+        "sha256": "0e98b24f7b590da34ade1d8750d00c6881605756b2159b62c92ceb0b907471d5"
       }
     },
     {
       "id": "INE15WN01014",
       "isin": "INE15WN01014",
-      "name": "Repono",
+      "name": "Repono Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Oil Storage & Transportation",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20 Asia/Kolkata",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE15WN01014.json",
+      "dossier_version": "6ec645166062deaf",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE15WN01014",
+        "isin": "INE15WN01014",
+        "source_canonical_sha256": "7d5e3e70df3d8adf33cb74be4ccd4ed94c8680f85fc89590f785be5dfd1ca96d",
+        "projection_ledger_sha256": "eb7aaec7d7fdd96055b24e3d7b73d948c105809b5d3696bb0c93dc36451875aa",
+        "dictionary_sha256": "7bdd9c8b7fcdb2e7f7a03b9554787f76c30b9058343e855e2f00c026e8a03eac",
+        "dictionary_bytes": 53471306,
+        "payload_sha256": "8a0973448c0719822d376b4c20804bbd731f11bd169a3e97463df35eef3f9d35",
+        "payload_bytes": 357176459,
+        "atoms": 330718,
+        "schemas": 135,
+        "nodes": 410413,
+        "root": -410413
+      },
+      "transport_file": {
+        "bytes": 3869,
+        "sha256": "6ec645166062deaf549a3d3153a369f1a2056efcbd87c2bfb13b330cf0a2c15f"
       }
     },
     {
       "id": "INE0KWJ01014",
       "isin": "INE0KWJ01014",
-      "name": "Retaggio Indust.",
+      "name": "Retaggio Industries Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Gems, Jewellery And Watches",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0KWJ01014.json",
+      "dossier_version": "5bc0e654b96cb53c",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0KWJ01014",
+        "isin": "INE0KWJ01014",
+        "source_canonical_sha256": "4dc2a053a92fa2b67c763d6703cf3f7c0c447b670e9f4e10498ad4d31d6503ed",
+        "projection_ledger_sha256": "8ca6b96d199656cce5f203d877400cff2941da07f8bd0aad0c5e4a52dbe51421",
+        "dictionary_sha256": "3ba55be031101226a26a9a3ee2ac12eac00e71e1d921e7e4d1ace637bbe33d2f",
+        "dictionary_bytes": 50517917,
+        "payload_sha256": "dea148d54082c3fe5727f97315b9572d9cb26deef22cb403e7ba3b461a0c623d",
+        "payload_bytes": 178885231,
+        "atoms": 168182,
+        "schemas": 114,
+        "nodes": 101048,
+        "root": -101048
+      },
+      "transport_file": {
+        "bytes": 3644,
+        "sha256": "5bc0e654b96cb53cc38927b1ed98c053ec90e52e10a575dd5bb546f9c6f8a404"
       }
     },
     {
       "id": "INE0KYI01012",
       "isin": "INE0KYI01012",
-      "name": "Riyaasat Life",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Riyaasat Lifestyle Limited",
+      "symbol": "RIYAASAT",
+      "exchange": "BSE SME",
       "sector": "Garments & Apparels",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0KYI01012.json",
+      "dossier_version": "5f8664a96430acdd",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0KYI01012",
+        "isin": "INE0KYI01012",
+        "source_canonical_sha256": "d71c0d716c8aaa69f9ff5c9188bfed32eb4ca2fb5f137526d5712be769ca89bf",
+        "projection_ledger_sha256": "25c12d5ec456f1acf72cde37c4204344be4c4e05e754296692dbb21b60cdeea0",
+        "dictionary_sha256": "040b5ea5edeaeefef7ca9c336f79f3fdd99555787b4aee0377ae2418371bd4f1",
+        "dictionary_bytes": 10923806,
+        "payload_sha256": "eac3f7532fa961989e947fa89e54ac32b63843a6e58e0067bfbd9c1666f45172",
+        "payload_bytes": 82637655,
+        "atoms": 54588,
+        "schemas": 127,
+        "nodes": 11026,
+        "root": -11026
+      },
+      "transport_file": {
+        "bytes": 1396,
+        "sha256": "5f8664a96430acdd613cc59320d2fc3d96253616b6838c3aa2f8295eece58829"
       }
     },
     {
       "id": "INE1W8R01018",
       "isin": "INE1W8R01018",
-      "name": "Robokidz Eduventures",
+      "name": "Robokidz Eduventures Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "E-Learning",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE1W8R01018.json",
+      "dossier_version": "3374d29e60b97583",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE1W8R01018",
+        "isin": "INE1W8R01018",
+        "source_canonical_sha256": "a42fcfbcfaae58539271c7692a3c7e65b5dbcfbd1f7db38bf9b1c5be57bda341",
+        "projection_ledger_sha256": "e5fa8c1faffa06d21bd4a0890a57606b5e30f44073bae9fd9cf36f737e9c38da",
+        "dictionary_sha256": "4d1a9b601364677e1253547f7a7dd777c6cf8dc10e8f2b56c003b7a7b66294a3",
+        "dictionary_bytes": 71357996,
+        "payload_sha256": "58872660071749002f08c6c3b38542b1fd0933110f11cd6b0a361fd763aa5d63",
+        "payload_bytes": 249251628,
+        "atoms": 666563,
+        "schemas": 102,
+        "nodes": 563175,
+        "root": -563175
+      },
+      "transport_file": {
+        "bytes": 4769,
+        "sha256": "3374d29e60b975831f3df62caf481ec08aef3f5d833e3a1b3402b0b23da4d80c"
       }
     },
     {
       "id": "INE0PTR01012",
       "isin": "INE0PTR01012",
-      "name": "Rockingdeals Cir",
+      "name": "Rockingdeals Circular Economy Limited",
       "symbol": "ROCKINGDCE",
       "exchange": "Listing verification pending",
       "sector": "Trading & Distributors",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0PTR01012.json",
+      "dossier_version": "b9983c216972491c",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0PTR01012",
+        "isin": "INE0PTR01012",
+        "source_canonical_sha256": "3b78c2c2c5f3984072f2cdbba1713885f5eeee1e8d8e38cd8523a4ca8dd61065",
+        "projection_ledger_sha256": "4f9d272e9e5ebd64f28317aa06ac73b2d3831edb51f4fe5ed46b3ef2813929ae",
+        "dictionary_sha256": "ad623106e2e9fb9000510a1901a33aa4566aa9d2cc02c285964e320de18c05f8",
+        "dictionary_bytes": 86419226,
+        "payload_sha256": "58137995e971a9707e5545cd563976bd22a04137a430a780e40e195120786882",
+        "payload_bytes": 323225014,
+        "atoms": 758144,
+        "schemas": 139,
+        "nodes": 633349,
+        "root": -633349
+      },
+      "transport_file": {
+        "bytes": 5669,
+        "sha256": "b9983c216972491ca30adae94cdadb26ccde67f46bb09f66967c8f519312b0b5"
       }
     },
     {
       "id": "INE2BTZ01011",
       "isin": "INE2BTZ01011",
-      "name": "Roopa Screen",
+      "name": "Roopa Screen Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Industrial Products",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE2BTZ01011.json",
+      "dossier_version": "321dc17f60538461",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE2BTZ01011",
+        "isin": "INE2BTZ01011",
+        "source_canonical_sha256": "f59f51df3cdda171347ed24e776b0c61a4411384f508670fe01c95f8dc7b99bc",
+        "projection_ledger_sha256": "54e73ab4dd121eab3ff059c04fb24326e10fd0531b049e57c7275cd8dd29dc7a",
+        "dictionary_sha256": "08b3d89b156687b5fdf662abf90336d260d531ffbc96b972da809678c732022c",
+        "dictionary_bytes": 48519133,
+        "payload_sha256": "75b26e18fce1115d661ee2cd30d6c0d229a155a7cd380beca2cd5a133410a116",
+        "payload_bytes": 221027988,
+        "atoms": 81441,
+        "schemas": 110,
+        "nodes": 64747,
+        "root": -64747
+      },
+      "transport_file": {
+        "bytes": 3640,
+        "sha256": "321dc17f60538461ee95248b378da35a391899f5a5e61cea03d2b9f9236cc81c"
       }
     },
     {
       "id": "INE0PDJ01013",
       "isin": "INE0PDJ01013",
-      "name": "ROX Hi-Tech",
+      "name": "ROX Hi-Tech Limited",
       "symbol": "ROXHITECH",
       "exchange": "Listing verification pending",
       "sector": "IT Enabled Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0PDJ01013.json",
+      "dossier_version": "59cd32e2a7996d17",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0PDJ01013",
+        "isin": "INE0PDJ01013",
+        "source_canonical_sha256": "96e84f774303206d4a91efc894e5d2d19643ede01c5f1ebb04102422863c3ea8",
+        "projection_ledger_sha256": "0763f1b554056fd3d55cdcc8562dd300cc6e2f0befe46e5f10c58002e6ee3ae3",
+        "dictionary_sha256": "cb3c7553d1a93f322d1cf9feb1c8ba5cab5f834b399a850156b5e812aba85752",
+        "dictionary_bytes": 28650469,
+        "payload_sha256": "091dcd205fd337b6e2091a97ec7145ed65e3b60e715e8b09b19d06d19295abdd",
+        "payload_bytes": 134230552,
+        "atoms": 207117,
+        "schemas": 141,
+        "nodes": 273025,
+        "root": -273025
+      },
+      "transport_file": {
+        "bytes": 2519,
+        "sha256": "59cd32e2a7996d17c022a379927bef525b24dd7c795b77e69e43702f54a31d0f"
       }
     },
     {
       "id": "INE0EO401019",
       "isin": "INE0EO401019",
-      "name": "Royal Arc Ele.",
+      "name": "Royal Arc Electrodes Limited",
       "symbol": "ROYALARC",
       "exchange": "Listing verification pending",
       "sector": "Electrodes & Refractories",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+      "ranking_eligibility": {},
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme/INE0EO401019.json",
+      "dossier_version": "b66692879abe002d",
+      "lossless_transport": {
+        "scope": "completed-unpublished-321-340",
+        "id": "INE0EO401019",
+        "isin": "INE0EO401019",
+        "source_canonical_sha256": "363caf598806a5c8439883ede485c1097e25915bda9dee1799ebed69d7589e52",
+        "projection_ledger_sha256": "39d515ea93e4044a8f63d1b190bc28d2a2ab222452b55394ebba7d5a53c7d83c",
+        "dictionary_sha256": "062480d1ec54ed62271463925fa8fef4c35e059390ca0da799a71850ff7601c1",
+        "dictionary_bytes": 36277429,
+        "payload_sha256": "22967fc904b3edc367969cb9ca89fb940c650665d12b449acc6ac114515f6bcc",
+        "payload_bytes": 151789705,
+        "atoms": 374558,
+        "schemas": 101,
+        "nodes": 311312,
+        "root": -311312
+      },
+      "transport_file": {
+        "bytes": 2968,
+        "sha256": "b66692879abe002d21da2524f7d747fcf03bb610bcd3f027ce52113a42652cd7"
       }
     },
     {

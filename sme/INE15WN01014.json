@@ -1,0 +1,118 @@
+{
+  "codec": "JSON-syntax-dictionary-v4-utf8-fragments",
+  "wallstrat_transport": {
+    "scope": "completed-unpublished-321-340",
+    "id": "INE15WN01014",
+    "isin": "INE15WN01014",
+    "source_canonical_sha256": "7d5e3e70df3d8adf33cb74be4ccd4ed94c8680f85fc89590f785be5dfd1ca96d",
+    "projection_ledger_sha256": "eb7aaec7d7fdd96055b24e3d7b73d948c105809b5d3696bb0c93dc36451875aa",
+    "dictionary_sha256": "7bdd9c8b7fcdb2e7f7a03b9554787f76c30b9058343e855e2f00c026e8a03eac",
+    "dictionary_bytes": 53471306,
+    "payload_sha256": "8a0973448c0719822d376b4c20804bbd731f11bd169a3e97463df35eef3f9d35",
+    "payload_bytes": 357176459,
+    "atoms": 330718,
+    "schemas": 135,
+    "nodes": 410413,
+    "root": -410413
+  },
+  "parts": [
+    {
+      "path": "sme/INE15WN01014/dictionary-001.jsonpart",
+      "ordinal": 1,
+      "offset": 0,
+      "bytes": 4000000,
+      "sha256": "9c72ede066b85a894002f452e8746bc472b3131ef9278ae74500a0444284db88"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-002.jsonpart",
+      "ordinal": 2,
+      "offset": 4000000,
+      "bytes": 4000000,
+      "sha256": "f1022c9a44aef0c9c50e52f4e3a06211efe491f5d505348d6a1812e954b1c7b8"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-003.jsonpart",
+      "ordinal": 3,
+      "offset": 8000000,
+      "bytes": 4000000,
+      "sha256": "28883b0704864b4098aba17716d044231271af6e991914ba63efd3932344aa7b"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-004.jsonpart",
+      "ordinal": 4,
+      "offset": 12000000,
+      "bytes": 4000000,
+      "sha256": "bc6c606f6582b069c87201ca30d948f98020ada7d620de899f0aa8d317fa055e"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-005.jsonpart",
+      "ordinal": 5,
+      "offset": 16000000,
+      "bytes": 4000000,
+      "sha256": "93ff1f713b5a69f3c7f2053c931167650b55834bae4cf902f74f5ca23a0fb9be"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-006.jsonpart",
+      "ordinal": 6,
+      "offset": 20000000,
+      "bytes": 4000000,
+      "sha256": "8038fa75ac00664767841041596801210a0eb7bcfdbf84d9ef4bdfda5234b75b"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-007.jsonpart",
+      "ordinal": 7,
+      "offset": 24000000,
+      "bytes": 4000000,
+      "sha256": "f42a912ab1f9fe6636ea2dd558f79ab0575aed5f7881315e3ad5817357314d48"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-008.jsonpart",
+      "ordinal": 8,
+      "offset": 28000000,
+      "bytes": 4000000,
+      "sha256": "6680ae7bbd65e177500e97d84c1542a4dfa3c43ee948bba45093964a6e94d798"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-009.jsonpart",
+      "ordinal": 9,
+      "offset": 32000000,
+      "bytes": 4000000,
+      "sha256": "28a7787575e5bc8ebf38c9b5157150c205c5bd2aca0628b19a32e160fbdad497"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-010.jsonpart",
+      "ordinal": 10,
+      "offset": 36000000,
+      "bytes": 4000000,
+      "sha256": "460d8776af5ad0af799ef465fcf7c28e7318b850c9d9f38edb3ca7b1fb468cc0"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-011.jsonpart",
+      "ordinal": 11,
+      "offset": 40000000,
+      "bytes": 4000000,
+      "sha256": "3b7d70a7f6b5ca4aabe1b8ad3eb8ee6f75bdb4af7cf0c7b084ad9f1a0e9f1092"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-012.jsonpart",
+      "ordinal": 12,
+      "offset": 44000000,
+      "bytes": 4000000,
+      "sha256": "08f029539cf6e6026e3edbabedb0575a7f335ee9d582c3d4ad160716e638888d"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-013.jsonpart",
+      "ordinal": 13,
+      "offset": 48000000,
+      "bytes": 4000000,
+      "sha256": "d9c38a37e9ec3ad915d501eb03cce5890c8b73b1c0470bee6f39c0217551402e"
+    },
+    {
+      "path": "sme/INE15WN01014/dictionary-014.jsonpart",
+      "ordinal": 14,
+      "offset": 52000000,
+      "bytes": 1471306,
+      "sha256": "edc06b6a21ad5119bbaf4c42461481754e4f2a18e6534c95f78f0c03d621737c"
+    }
+  ]
+}
