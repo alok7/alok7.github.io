@@ -1,14 +1,17 @@
 {
   "metadata": {
     "total_universe": 457,
-    "reviewed_companies": 340,
+    "reviewed_companies": 373,
     "research_cutoff": "2026-10-20",
     "publication_batch": 12,
-    "pending_companies": 117,
-    "full_structured_reviews": 330,
+    "pending_companies": 84,
+    "full_structured_reviews": 363,
     "recovered_narrative_editions": 10,
-    "currently_published_reviews": 340,
-    "completed_unpublished_reviews": 0
+    "currently_published_reviews": 373,
+    "completed_unpublished_reviews": 0,
+    "narrative_editions": 10,
+    "scope_status": "Completed research directory following the proposed 19-review release.",
+    "candidate_status": "Publication release through review 373; review 374 is excluded."
   },
   "companies": [
     {
@@ -8342,392 +8345,505 @@
     {
       "id": "INE0F3301020",
       "isin": "INE0F3301020",
-      "name": "S J Logistics (I",
+      "name": "S J Logistics (India) Limited",
       "symbol": "SJLOGISTIC",
       "exchange": "Listing verification pending",
       "sector": "Logistics Solution Provider",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0F3301020/core.json",
+      "accepted_canonical_sha256": "a8dcf26fa8057febdf4df59f02a37f33c055e002f1d881aceafc9140a0f22133",
+      "reader_ranking_qualification": null
     },
     {
       "id": "INE0JZS01010",
       "isin": "INE0JZS01010",
-      "name": "S. V. J. Enterp.",
+      "name": "S. V. J. Enterprises Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Paper & Paper Products",
-      "research_status": "pending",
+      "research_status": "deep",
       "as_of": null,
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0JZS01010/core.json",
+      "accepted_canonical_sha256": "1ac77d262fb24379d20a7d9a6bdc0773e56e524b2f3d0b7c91f58923d0c80444",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE0PSK01027",
       "isin": "INE0PSK01027",
-      "name": "Saakshi Medtech",
+      "name": "Saakshi Medtech and Panels Limited",
       "symbol": "SAAKSHI",
       "exchange": "Listing verification pending",
       "sector": "Other Electrical Equipment",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0PSK01027/core.json",
+      "accepted_canonical_sha256": "d25e09abd83e4049e8b5c9122440239784135c31354a25e023a93c87daad92ae",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE1ARD01016",
       "isin": "INE1ARD01016",
-      "name": "Sacheerome",
+      "name": "Sacheerome Limited",
       "symbol": "SACHEEROME",
       "exchange": "Listing verification pending",
       "sector": "Specialty Chemicals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
-        "GQS": null,
+        "GQS": "7.05",
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": "7.05",
+        "IAS": null
+      },
+      "dossier": "sme359/INE1ARD01016/core.json",
+      "accepted_canonical_sha256": "2f3d1268f5e3a86d981c61239d1edfc3bd1ec66f9dd19400dcc01c93cdf8a2cb",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE0K5H01010",
       "isin": "INE0K5H01010",
-      "name": "Sadhav Shipping",
+      "name": "Sadhav Shipping Limited",
       "symbol": "SADHAV",
       "exchange": "Listing verification pending",
       "sector": "Shipping",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0K5H01010/core.json",
+      "accepted_canonical_sha256": "546d6e8fc91901a95065b38d20a55487fdef5d96e7e2dad9ae3454fe4449f2c0",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE17D601016",
       "isin": "INE17D601016",
-      "name": "Safe Enterprises",
+      "name": "Safe Enterprises Retail Fixtures Limited",
       "symbol": "SAFEENTP",
       "exchange": "Listing verification pending",
       "sector": "Furniture, Home Furnishing",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
-        "IAS": null
+        "BQS": "5.82",
+        "GQS": "6.70",
+        "IAS": "3.5050"
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+        "BQS": true,
+        "GQS": true,
+        "IAS": true,
+        "condition": "Medium-confidence completed record, no failed gate; IAS conditional on₹5lakh reference, model assumptions and19October2026price. Independent research acceptance is recorded separately."
+      },
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": "5.82",
+        "GQS": "6.70",
+        "IAS": "3.5050"
+      },
+      "dossier": "sme359/INE17D601016/core.json",
+      "accepted_canonical_sha256": "9da1385e1595f1af2714a3e82f9ddc4e062c5e41321f92ecd6e3d46b1eb1fcfa",
+      "reader_ranking_qualification": {
+        "BQS": true,
+        "GQS": true,
+        "IAS": true,
+        "condition": "Medium-confidence completed record, no failed gate; IAS conditional on₹5lakh reference, model assumptions and19October2026price. Independent research acceptance is recorded separately."
       }
     },
     {
       "id": "INE0UMH01018",
       "isin": "INE0UMH01018",
-      "name": "Safety Controls",
+      "name": "Safety Controls & Devices Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Civil Construction",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0UMH01018/core.json",
+      "accepted_canonical_sha256": "5ef5dbb16658fa142540c9a59a2f9f5cb9008154bccb942a314d634fcb3172b8",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE0P4701011",
       "isin": "INE0P4701011",
-      "name": "Sahaj Solar",
+      "name": "Sahaj Solar Limited",
       "symbol": "SAHAJSOLAR",
       "exchange": "Listing verification pending",
       "sector": "Other Electrical Equipment",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0P4701011/core.json",
+      "accepted_canonical_sha256": "80bcc9cc6df36556ea59439b4bba92c5c1b9deb5a7ebd8c5f5f9edf95f6ac6fa",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE0LEX01011",
       "isin": "INE0LEX01011",
-      "name": "Sahana Systems",
+      "name": "Sahana System Limited",
       "symbol": "SAHANA",
       "exchange": "Listing verification pending",
       "sector": "IT Enabled Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0LEX01011/core.json",
+      "accepted_canonical_sha256": "b568bd5e5d386bc3cfe48006ad4f99171aa62431af4342b0de269938994b28dc",
+      "reader_ranking_qualification": "Pending evidence / gate hold, not numericrank"
     },
     {
       "id": "INE0RBQ01018",
       "isin": "INE0RBQ01018",
-      "name": "Sahasra Electro.",
+      "name": "Sahasra Electronic Solutions Limited",
       "symbol": "SAHASRA",
       "exchange": "Listing verification pending",
       "sector": "Other Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0RBQ01018/core.json",
+      "accepted_canonical_sha256": "235e628019f4b33c78cb3c2cce11cf54c3295999e9d6f2581ad72c870a7b6840",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE1LLG01019",
       "isin": "INE1LLG01019",
-      "name": "Sai Urja Indo",
+      "name": "Sai Urja Indo Ventures Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Civil Construction",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE1LLG01019/core.json",
+      "accepted_canonical_sha256": "3f6e3d329e3b7b5aa3177e7fb79603b9c2cc4f1c1657a0c9f3ea3f0af08ac05f",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE124101010",
       "isin": "INE124101010",
-      "name": "Samay Project",
+      "name": "Samay Project Services Limited",
       "symbol": "SAMAY",
       "exchange": "Listing verification pending",
       "sector": "Civil Construction",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE124101010/core.json",
+      "accepted_canonical_sha256": "c3ed8c5e0dc90fa4d415321191e5c6098f1b36c3960e0fee8eb6b576baffa482",
+      "reader_ranking_qualification": "Pending evidence"
     },
     {
       "id": "INE147701010",
       "isin": "INE147701010",
-      "name": "Sampark India",
+      "name": "Sampark India Logistics Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Logistics Solution Provider",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "4.92",
+        "GQS": "5",
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": "4.92",
+        "GQS": "5",
+        "IAS": null
+      },
+      "dossier": "sme359/INE147701010/core.json",
+      "accepted_canonical_sha256": "b0a13ce648a82e3d117cccb5757d00375fae92ee9b3d70350707a5b342f6ec32",
+      "reader_ranking_qualification": "BQS/GQS qualified historicalcomparison; IAS pendingevidence"
     },
     {
       "id": "INE0PUC01020",
       "isin": "INE0PUC01020",
-      "name": "Sar Televenture",
+      "name": "SAR Televenture Limited",
       "symbol": "SARTELE",
       "exchange": "Listing verification pending",
       "sector": "Telecom - Infrastructure",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0PUC01020/core.json",
+      "accepted_canonical_sha256": "6e4f342420258d74de3ef1deef2d0bde25874ed44895f334aa86349ae0406c8f",
+      "reader_ranking_qualification": "Pending evidence and excluded from favorable/investable numerical rankings by G2 hold; retain incompletebounds separately."
     },
     {
       "id": "INE0NB801022",
       "isin": "INE0NB801022",
-      "name": "Sat Kartar Life",
+      "name": "Sat Kartar Life Limited",
       "symbol": "SATKARTAR",
       "exchange": "Listing verification pending",
       "sector": "Pharmaceuticals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
-        "GQS": null,
+        "GQS": "5",
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": "5",
+        "IAS": null
+      },
+      "dossier": "sme359/INE0NB801022/core.json",
+      "accepted_canonical_sha256": "a0017276c7f0d3d77633dbd25261b305515c59a78808f4b1b7a250a3d1e1bdb4",
+      "reader_ranking_qualification": "BQS andIAS pending evidence; GQS5.0 is complete after explicitcash-qualitycap, not an investment recommendation"
     },
     {
       "id": "INE0RFP01011",
       "isin": "INE0RFP01011",
-      "name": "Sathlokhar Sys.",
+      "name": "Sathlokhar Synergys E&C Global Limited",
       "symbol": "SSEGL",
       "exchange": "Listing verification pending",
       "sector": "Civil Construction",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0RFP01011/core.json",
+      "accepted_canonical_sha256": "52deb1c77d1e6c18ad58caba90a1778c3eb1985be7ee552740caab9d995aadcb",
+      "reader_ranking_qualification": null
     },
     {
       "id": "INE0QUV01010",
       "isin": "INE0QUV01010",
-      "name": "Sattrix Infor.",
+      "name": "Sattrix Information Security Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "IT Enabled Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE0QUV01010/core.json",
+      "accepted_canonical_sha256": "e23ba073bef115a7d5874262fd77bd3c4a7a041548113f9bc0ba057de1f7c00c",
+      "reader_ranking_qualification": null
     },
     {
       "id": "INE10VS01016",
       "isin": "INE10VS01016",
-      "name": "Sawaliya Food",
+      "name": "Sawaliya Food Products Limited",
       "symbol": "SAWALIYA",
       "exchange": "Listing verification pending",
       "sector": "Other Agricultural Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
         "IAS": null
       },
-      "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
-      }
+      "ranking_eligibility": {},
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": null,
+        "GQS": null,
+        "IAS": null
+      },
+      "dossier": "sme359/INE10VS01016/core.json",
+      "accepted_canonical_sha256": "491a34efc94dd9d174748b309913e5e1a680ee11484e9039fbbc270f04e74d2c",
+      "reader_ranking_qualification": false
     },
     {
       "id": "INE0O4601016",
       "isin": "INE0O4601016",
-      "name": "Sealmatic India",
+      "name": "Sealmatic India Limited",
       "symbol": null,
       "exchange": "Listing verification pending",
       "sector": "Other Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": "5.20",
+        "GQS": "5",
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
+        "IAS": false
+      },
+      "research_batch": "341-359",
+      "reader_score_points": {
+        "BQS": "5.20",
+        "GQS": "5",
+        "IAS": null
+      },
+      "dossier": "sme359/INE0O4601016/core.json",
+      "accepted_canonical_sha256": "0554c5f8ca4d0965da2bf6d9fdb0225a111523307258e104b3764bd65379a3ed",
+      "reader_ranking_qualification": {
+        "BQS": true,
+        "GQS": true,
         "IAS": false
       }
     },
     {
       "id": "INE0Z9N01013",
       "isin": "INE0Z9N01013",
-      "name": "Sham Foam",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Sham Foam Limited",
+      "symbol": "SHAMFOAM",
+      "exchange": "BSE SME",
       "sector": "Furniture, Home Furnishing",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8737,17 +8853,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0Z9N01013.html",
+      "source_package": "sme/reports/INE0Z9N01013.zip",
+      "source_position": 360,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE1ZEE01019",
       "isin": "INE1ZEE01019",
-      "name": "Shanti Inorgan.",
+      "name": "Shanti Inorganics Limited",
       "symbol": "SHANTIINOR",
       "exchange": "Listing verification pending",
       "sector": "Commodity Chemicals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8757,17 +8881,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE1ZEE01019.html",
+      "source_package": "sme/download-package.html?company=INE1ZEE01019",
+      "source_position": 361,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE460Q01014",
       "isin": "INE460Q01014",
-      "name": "Sharp Chucks and",
+      "name": "Sharp Chucks and Machines Limited",
       "symbol": "SCML",
       "exchange": "Listing verification pending",
       "sector": "Castings & Forgings",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8777,17 +8909,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE460Q01014.html",
+      "source_package": "sme/reports/INE460Q01014.zip",
+      "source_position": 362,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0YJV01017",
       "isin": "INE0YJV01017",
-      "name": "Sheel Bio.",
+      "name": "Sheel Biotech Limited",
       "symbol": "SHEEL",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Diversified Commercial Services",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8797,17 +8937,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0YJV01017.html",
+      "source_package": "sme/download-package.html?company=INE0YJV01017",
+      "source_position": 363,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE04VX01019",
       "isin": "INE04VX01019",
-      "name": "Sheetal Univer.",
+      "name": "Sheetal Universal Limited",
       "symbol": "SHEETAL",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Agricultural Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8817,17 +8965,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE04VX01019.html",
+      "source_package": "sme/reports/INE04VX01019.zip",
+      "source_position": 364,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0D8001018",
       "isin": "INE0D8001018",
-      "name": "Shining Tools",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Shining Tools Limited",
+      "symbol": "SHTL",
+      "exchange": "BSE SME",
       "sector": "Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8837,17 +8993,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0D8001018.html",
+      "source_package": "sme/reports/INE0D8001018.zip",
+      "source_position": 365,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0YRO01015",
       "isin": "INE0YRO01015",
-      "name": "Shiv Texchem",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Shiv Texchem Limited",
+      "symbol": "SHIVTEXCHEM",
+      "exchange": "BSE SME",
       "sector": "Trading - Chemicals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8857,117 +9021,165 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0YRO01015.html",
+      "source_package": "sme/download-package.html?company=INE0YRO01015",
+      "source_position": 366,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0T7B01010",
       "isin": "INE0T7B01010",
-      "name": "Shivalic Power",
+      "name": "Shivalic Power Control Limited",
       "symbol": "SPCL",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Electrical Equipment",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
-        "GQS": null,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0T7B01010.html",
+      "source_package": "sme/reports/INE0T7B01010.zip",
+      "source_position": 367,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "5.0",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE1DLF01018",
       "isin": "INE1DLF01018",
-      "name": "Shivashrit Foods",
+      "name": "Shivashrit Foods Limited",
       "symbol": "SHIVASHRIT",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Food Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 5.26,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE1DLF01018.html",
+      "source_package": "sme/reports/INE1DLF01018.zip",
+      "source_position": 368,
+      "score_display": {
+        "BQS": "5.3",
+        "GQS": "5.0",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0S4Y01010",
       "isin": "INE0S4Y01010",
-      "name": "Shree Karni",
+      "name": "Shree Karni Fabcom Limited",
       "symbol": "SHREEKARNI",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Textile Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 4.64,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0S4Y01010.html",
+      "source_package": "sme/reports/INE0S4Y01010.zip",
+      "source_position": 369,
+      "score_display": {
+        "BQS": "4.6",
+        "GQS": "5.0",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0FMZ01045",
       "isin": "INE0FMZ01045",
-      "name": "Shree Refrigerat",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Shree Refrigerations Limited",
+      "symbol": "SHREEREF",
+      "exchange": "BSE SME",
       "sector": "Aerospace & Defense",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 5.62,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0FMZ01045.html",
+      "source_package": "sme/download-package.html?company=INE0FMZ01045",
+      "source_position": 370,
+      "score_display": {
+        "BQS": "5.6",
+        "GQS": "5.0",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0K3301012",
       "isin": "INE0K3301012",
-      "name": "Shreedhar Spinners",
+      "name": "Shreedhar Spinners Limited",
       "symbol": "SHREEDHAR",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Textile Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 4.36,
+        "GQS": 4.15,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0K3301012.html",
+      "source_package": "sme/download-package.html?company=INE0K3301012",
+      "source_position": 371,
+      "score_display": {
+        "BQS": "4.4",
+        "GQS": "4.2",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE1FL101016",
       "isin": "INE1FL101016",
-      "name": "Shreeji Global",
+      "name": "Shreeji Global FMCG Limited",
       "symbol": "SHETHJI",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Agricultural Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8977,17 +9189,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE1FL101016.html",
+      "source_package": "sme/download-package.html?company=INE1FL101016",
+      "source_position": 372,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0DM401012",
       "isin": "INE0DM401012",
-      "name": "Shri Ahimsa",
+      "name": "Shri Ahimsa Naturals Limited",
       "symbol": "SHRIAHIMSA",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Food Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -8997,6 +9217,14 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0DM401012.html",
+      "source_package": "sme/download-package.html?company=INE0DM401012",
+      "source_position": 373,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {

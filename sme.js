@@ -1,3 +1,169 @@
+/* Private transport-only prototype. No research values or existing decoders are modified. */
+(function (host) {
+  'use strict';
+  const FORMAT = 'wallstrat-gzip-transport-v1';
+  const LIMITS = Object.freeze({ manifest: 1048576, stored: 16000000, decoded: 16000000, records: 4096, timeout: 120000 });
+  const HASH = /^[a-f0-9]{64}$/;
+  let strictNativePromise;
+  function fail(message) { throw new Error(message); }
+  function positive(n, cap) { return Number.isSafeInteger(n) && n > 0 && n <= cap; }
+  function stopped(signal) { if (signal?.aborted) fail('Research loading was cancelled.'); }
+  function pathOK(path) {
+    return typeof path === 'string' && /^sme\/[A-Z0-9]{12}(?:\.json|\/(?:atoms|schemas|nodes)-[0-9]{3}\.json|\/dictionary-[0-9]{3}\.jsonpart)(?:\.wsgz)?$/.test(path) &&
+      path.split('/').every(part => part !== '' && part !== '.' && part !== '..');
+  }
+  function exactKeys(object, keys) {
+    return object && typeof object === 'object' && !Array.isArray(object) &&
+      Object.keys(object).length === keys.length && keys.every(key => Object.hasOwn(object, key));
+  }
+  async function sha(bytes) {
+    const digest = await host.crypto.subtle.digest('SHA-256', bytes);
+    return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+  }
+  async function readBounded(stream, expected, cap, signal) {
+    if (!positive(expected, cap) || !stream?.getReader) fail('This browser cannot safely read the research bytes.');
+    stopped(signal);
+    const reader = stream.getReader(), bytes = new Uint8Array(expected);
+    let received = 0;
+    const cancel = () => { void reader.cancel().catch(() => {}); };
+    signal?.addEventListener('abort', cancel, { once: true });
+    try {
+      for (;;) {
+        stopped(signal);
+        const part = await reader.read();
+        stopped(signal);
+        if (part.done) break;
+        if (!(part.value instanceof Uint8Array) || !Number.isSafeInteger(part.value.byteLength) || part.value.byteLength < 1 || part.value.byteLength > expected - received)
+          fail('Research bytes exceed their authenticated bound.');
+        bytes.set(part.value, received); received += part.value.byteLength;
+      }
+      if (received !== expected) fail('Research byte count does not match.');
+      return bytes;
+    } catch (error) { try { await reader.cancel(); } catch {} throw error; }
+    finally { signal?.removeEventListener('abort', cancel); reader.releaseLock(); }
+  }
+  function streamOf(bytes) { return new host.ReadableStream({ start(controller) { controller.enqueue(bytes); controller.close(); } }); }
+  async function inflate(bytes, expected, signal) {
+    const stream = streamOf(bytes).pipeThrough(new host.DecompressionStream('gzip'));
+    return readBounded(stream, expected, LIMITS.decoded, signal);
+  }
+  function unhex(text) { return Uint8Array.from(text.match(/../g), pair => parseInt(pair, 16)); }
+  function concat(a, b) { const out = new Uint8Array(a.length + b.length); out.set(a); out.set(b, a.length); return out; }
+  async function strictNativeCheck() {
+    if (!host.crypto?.subtle || !host.DecompressionStream || !host.ReadableStream || !host.AbortController || !host.TextDecoder || !host.Response)
+      fail('This browser cannot safely verify compressed research. Use a current browser on the secure website.');
+    if (!strictNativePromise) strictNativePromise = (async () => {
+      const controller = new host.AbortController(), timer = setTimeout(() => controller.abort(), 5000);
+      try {
+        const good = unhex('1f8b0800000000000203cbcf060047dddc7902000000');
+        const empty = unhex('1f8b080000000000020303000000000000000000');
+        const out = await inflate(good, 2, controller.signal);
+        if (out[0] !== 111 || out[1] !== 107) fail('Unsupported gzip implementation.');
+        const badCRC = good.slice(); badCRC[badCRC.length - 8] ^= 1;
+        for (const bad of [concat(good, new Uint8Array([0])), concat(good, empty), badCRC, good.slice(0, -1)]) {
+          let rejected = false;
+          try { await inflate(bad, 2, controller.signal); } catch { stopped(controller.signal); rejected = true; }
+          if (!rejected) fail('This browser does not enforce required gzip integrity rules.');
+        }
+      } finally { clearTimeout(timer); }
+    })();
+    return strictNativePromise;
+  }
+  function job(external, timeout) {
+    if (!positive(timeout, LIMITS.timeout)) fail('Invalid research timeout.');
+    const controller = new host.AbortController(), abort = () => controller.abort();
+    if (external?.aborted) abort();
+    external?.addEventListener('abort', abort, { once: true });
+    const timer = setTimeout(abort, timeout);
+    return { signal: controller.signal, abort, close() { clearTimeout(timer); external?.removeEventListener('abort', abort); } };
+  }
+  async function fetchExact(url, binding, cap, fetcher, signal) {
+    stopped(signal);
+    const response = await fetcher(url.href, { mode: 'same-origin', redirect: 'error', credentials: 'same-origin', signal });
+    try {
+      if (!response || response.status !== 200 || response.redirected || response.type === 'opaque') fail('Research resource could not load safely.');
+      if (response.url && new URL(response.url).href !== url.href) fail('Research response address changed.');
+      const encoding = response.headers?.get?.('content-encoding');
+      if (encoding !== null && encoding !== undefined && encoding.trim().toLowerCase() !== 'identity')
+        fail('The server transformed compressed research bytes; loading was stopped.');
+      const length = response.headers?.get?.('content-length');
+      if (length !== null && length !== undefined && (!/^(0|[1-9][0-9]*)$/.test(length) || !Number.isSafeInteger(Number(length)) || Number(length) !== binding.bytes))
+        fail('Research response declared a different byte count.');
+      const bytes = await readBounded(response.body, binding.bytes, cap, signal);
+      if (await sha(bytes) !== binding.sha256) fail('Research stored-byte integrity check failed.');
+      stopped(signal); return bytes;
+    } catch (error) { try { await response?.body?.cancel?.(); } catch {} throw error; }
+  }
+  async function fromPinnedManifest(bytes, pin, options) {
+    await strictNativeCheck();
+    if (!(bytes instanceof Uint8Array) || !pin || !positive(pin.bytes, LIMITS.manifest) || bytes.byteLength !== pin.bytes || !HASH.test(pin.sha256) ||
+        !/^[a-f0-9]{40}$/.test(pin.base_commit) || !positive(pin.records, LIMITS.records) || await sha(bytes) !== pin.sha256)
+      fail('Invalid authenticated research transport manifest.');
+    const value = JSON.parse(new host.TextDecoder('utf-8', { fatal: true }).decode(bytes));
+    if (!exactKeys(value, ['format', 'base_commit', 'records']) || value.format !== FORMAT || value.base_commit !== pin.base_commit ||
+        !Array.isArray(value.records) || value.records.length !== pin.records) fail('Research transport manifest scope does not match.');
+    const base = new URL(options.baseURL);
+    if (base.protocol !== 'https:' || base.username || base.password || base.search || base.hash || !base.pathname.endsWith('/'))
+      fail('Research transport requires an unchanged secure same-origin base.');
+    if (typeof options.expectedOrigin !== 'string' || base.origin !== options.expectedOrigin ||
+        (host.location?.origin && base.origin !== host.location.origin)) fail('Research origin does not match.');
+    const entries = new Map(), stored = new Set();
+    for (const item of value.records) {
+      if (!exactKeys(item, ['logical_path', 'storage_path', 'gzip_bytes', 'gzip_sha256', 'decoded_bytes', 'decoded_sha256']) ||
+          !pathOK(item.logical_path) || item.storage_path !== item.logical_path + '.wsgz' || !pathOK(item.storage_path) ||
+          !positive(item.gzip_bytes, LIMITS.stored) || !positive(item.decoded_bytes, LIMITS.decoded) ||
+          !HASH.test(item.gzip_sha256) || !HASH.test(item.decoded_sha256) || entries.has(item.logical_path) || stored.has(item.storage_path))
+        fail('Invalid research transport address, count or hash.');
+      const url = new URL(item.storage_path, base);
+      if (url.origin !== base.origin || !url.pathname.startsWith(base.pathname + 'sme/')) fail('Research address escaped its fixed origin.');
+      entries.set(item.logical_path, Object.freeze({ ...item })); stored.add(item.storage_path);
+    }
+    const fetcher = options.fetchImpl || host.fetch.bind(host), timeout = options.timeoutMs ?? 30000;
+    if (!positive(timeout, LIMITS.timeout)) fail('Invalid research timeout.');
+    return Object.freeze({
+      recordCount: entries.size,
+      async fetchResearch(logicalPath, request = {}) {
+        const entry = entries.get(logicalPath);
+        if (!entry || !pathOK(logicalPath)) fail('Research address is not in the authenticated manifest.');
+        const task = job(request.signal, timeout);
+        try {
+          stopped(task.signal);
+          const url = new URL(entry.storage_path, base); url.searchParams.set('v', entry.gzip_sha256.slice(0, 16));
+          const compressed = await fetchExact(url, { bytes: entry.gzip_bytes, sha256: entry.gzip_sha256 }, LIMITS.stored, fetcher, task.signal);
+          const decoded = await inflate(compressed, entry.decoded_bytes, task.signal);
+          if (await sha(decoded) !== entry.decoded_sha256) fail('Research decoded-byte integrity check failed.');
+          stopped(task.signal);
+          new host.TextDecoder('utf-8', { fatal: true }).decode(decoded);
+          return new host.Response(decoded, { status: 200, headers: { 'content-type': 'application/json; charset=utf-8', 'content-length': String(decoded.byteLength) } });
+        } catch (error) { task.abort(); throw error; }
+        finally { task.close(); }
+      }
+    });
+  }
+  async function loadPinnedManifest(path, pin, options) {
+    await strictNativeCheck();
+    if (path !== 'sme-gzip-manifest.json' || !pin || !positive(pin.bytes, LIMITS.manifest) || !HASH.test(pin.sha256)) fail('Invalid manifest address or bound.');
+    const base = new URL(options.baseURL);
+    if (base.protocol !== 'https:' || base.username || base.password || base.search || base.hash || !base.pathname.endsWith('/') ||
+        typeof options.expectedOrigin !== 'string' || base.origin !== options.expectedOrigin ||
+        (host.location?.origin && base.origin !== host.location.origin)) fail('Invalid research manifest origin.');
+    const task = job(options.signal, options.timeoutMs ?? 30000);
+    try {
+      const url = new URL(path, base); url.searchParams.set('v', pin.sha256.slice(0, 16));
+      const bytes = await fetchExact(url, pin, LIMITS.manifest, options.fetchImpl || host.fetch.bind(host), task.signal);
+      return await fromPinnedManifest(bytes, pin, options);
+    } catch (error) { task.abort(); throw error; }
+    finally { task.close(); }
+  }
+  const api = Object.freeze({ fromPinnedManifest, loadPinnedManifest, limits: LIMITS });
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else host.WallstratGzipTransport = api;
+})(globalThis);
+
+(async()=>{
+ const gzipPin={"bytes":183005,"sha256":"24aabe17a3833a2c122d262f5be615e94b77eb6e62d2ddcc9f3c4f3ed588c32a","base_commit":"cb411e56cd5e1a6485781464c2d7948893f45f7d","records":504};
+ const gzipAdapter=await WallstratGzipTransport.loadPinnedManifest("sme-gzip-manifest.json",gzipPin,{baseURL:new URL("./",location.href).href,expectedOrigin:location.origin});
+ const fetchResearchGzip=(path,options)=>gzipAdapter.fetchResearch(path,options);
 /* Exact syntax-dictionary view. Values are resolved only when selected; no row is dropped. */
 (()=>{'use strict';
  const schemaKeyOrder=new WeakMap();
@@ -40,6 +206,8 @@
 
 'use strict';
 (() => {
+ const new359=window.WallstratResearch359;
+ const isBatch359=c=>new359.is(c);
  const root=document.getElementById('app'), esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const safe=u=>{try {return ['https:','http:'].includes(new URL(u).protocol)?u:null;}catch{return null;}};
  const link=(u,t)=>safe(u)?`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(t)}</a>`:esc(t);
@@ -157,8 +325,8 @@
 
  const batch240Ids=new Set(["INE1MTV01019","INE163701019","INE1SFA01019","INE0TJ801010","INE0X9I01023","INE920P01019","INE0H4B01011","INE0RH001011","INE0SGC01015","INE0X6O01027","INE004Z01011","INE0OLH01013","INE1P5601010","INE0P6701019","INE0U9D01019","INE0SVD01012","INE632Q01018","INE0U4H01011","INE104Y01012","INE0RU901015","INE1ERK01013","INE0TD401015","INE0JSJ01014","INE0SH001010","INE132901013","INE0OJM01017","INE10A501018","INE0G1D01014","INE1KH601014","INE1K0V01011","INE0QZR01017","INE1RQS01010","INE1II801013","INE1SRC01010","INE1YNB01019","INE0V0L01028","INE0LCG01010","INE1DV401010","INE0N7S01028","INE0UH001016","INE0N6D01014","INE0D7801012","INE0RVQ01016","INE2B5L01011","INE1K8Y01018","INE08NZ01012","INE0YJA01011","INE156901014","INE21UM01018","INE0UZO01024","INE0DQN01013","INE1TFS01019","INE0VYX01018","INE346R01013","INE00ER01015","INE1IA801011","INE2D0Q01027","INE0YHV01011","INE0UR501013","INE1JZB01022","INE0MIO01019","INE15B101011","INE0KN801013","INE0RMF01018","INE0OUT01027","INE14LM01012","INE0SMW01011","INE0TBC01014","INE06ZX01015","INE1H7V01011","INE473T01011","INE161701011","INE484S01010","INE17GV01016","INE0VG601013","INE998U01015","INE0MLZ01019","INE0NT601018","INE517M01028","INE1C2Q01017"]);
  const isBatch240=c=>batch240Ids.has(c?.id);
- const researchDate=c=>isBatch340(c)?(typeof c.as_of==='string'?c.as_of:'see research header'):isBatch240(c)&&c.as_of!==null&&typeof c.as_of==='object'?c.as_of.information_cutoff:c.as_of;
- const scorePoint=(c,k)=>isBatch340(c)?point340(c,k):isBatch320(c)?batch320Point(c,k):isBatch300(c)?batch300Point(c,k):isBatch280(c)?batch280Point(c,k):isBatch260(c)?batch260Point(c,k):isBatch240(c)&&c.scores?.[k]!==null&&typeof c.scores?.[k]==='object'&&Object.prototype.hasOwnProperty.call(c.scores[k],'final')?c.scores[k].final:c.scores?.[k];
+ const researchDate=c=>isBatch359(c)?(typeof c.as_of==='string'?c.as_of:'see research header'):isBatch340(c)?(typeof c.as_of==='string'?c.as_of:'see research header'):isBatch240(c)&&c.as_of!==null&&typeof c.as_of==='object'?c.as_of.information_cutoff:c.as_of;
+ const scorePoint=(c,k)=>isBatch359(c)?new359.point(c,k):isBatch340(c)?point340(c,k):isBatch320(c)?batch320Point(c,k):isBatch300(c)?batch300Point(c,k):isBatch280(c)?batch280Point(c,k):isBatch260(c)?batch260Point(c,k):isBatch240(c)&&c.scores?.[k]!==null&&typeof c.scores?.[k]==='object'&&Object.prototype.hasOwnProperty.call(c.scores[k],'final')?c.scores[k].final:c.scores?.[k];
  const batch220Ids=new Set(["INE0MYZ01012","INE0NNZ01013","INE1YC401018","INE1JJF01019","INE0S1D01010","INE870Z01015","INE0W5Q01017","INE0XOW01017","INE1IE301018","INE0P3N01018","INE0N6U01018","INE0V8A01016","INE0L1C01019","INE0MGA01012","INE0KZ301010","INE0HOL01013","INE0Q7P01013","INE0QVH01025","INE1L0M01019","INE0NR701018","INE1MTV01019","INE163701019","INE1SFA01019","INE0TJ801010","INE0X9I01023","INE920P01019","INE0H4B01011","INE0RH001011","INE0SGC01015","INE0X6O01027","INE004Z01011","INE0OLH01013","INE1P5601010","INE0P6701019","INE0U9D01019","INE0SVD01012","INE632Q01018","INE0U4H01011","INE104Y01012","INE0RU901015","INE1ERK01013","INE0TD401015","INE0JSJ01014","INE0SH001010","INE132901013","INE0OJM01017","INE10A501018","INE0G1D01014","INE1KH601014","INE1K0V01011","INE0QZR01017","INE1RQS01010","INE1II801013","INE1SRC01010","INE1YNB01019","INE0V0L01028","INE0LCG01010","INE1DV401010","INE0N7S01028","INE0UH001016","INE0N6D01014","INE0D7801012","INE0RVQ01016","INE2B5L01011","INE1K8Y01018","INE08NZ01012","INE0YJA01011","INE156901014","INE21UM01018","INE0UZO01024","INE0DQN01013","INE1TFS01019","INE0VYX01018","INE346R01013","INE00ER01015","INE1IA801011","INE2D0Q01027","INE0YHV01011","INE0UR501013","INE1JZB01022","INE0MIO01019","INE15B101011","INE0KN801013","INE0RMF01018","INE0OUT01027","INE14LM01012","INE0SMW01011","INE0TBC01014","INE06ZX01015","INE1H7V01011","INE473T01011","INE161701011","INE484S01010","INE17GV01016","INE0VG601013","INE998U01015","INE0MLZ01019","INE0NT601018","INE517M01028","INE1C2Q01017"]);
  const isBatch220=c=>batch220Ids.has(c?.id);
  const batch200Ids=new Set(["INE0QFE01017","INE12E301017","INE17DP01015","INE0JVH01012","INE0PLX01017","INE1UYW01010","INE0OLZ01015","INE0GYI01028","INE0PIC01017","INE1KI801019","INE1OTR01013","INE0TO501019","INE111601014","INE0O7401018","INE0XE501015","INE0PA401012","INE0WKY01013","INE16XA01017","INE0MRE01011","INE464Z01017"]);
@@ -224,11 +392,11 @@
  function address(company=current?.id,section=active){const p=new URLSearchParams();for(const [k,v] of Object.entries(state))if(v!==defaults[k])p.set(k,v);if(company)p.set('company',company);if(section&&company)p.set('section',section);return '#'+p.toString();}
  function write(replace=false){history[replace?'replaceState':'pushState'](null,'',address());}
  const exactDecimalDisplay=v=>{const m=/^(-?)(\d+)(?:\.(\d+))?$/.exec(v);if(!m)return null;const f=(m[3]||'')+'00';let n=BigInt(m[2])*10n+BigInt(f[0]);if(f[1]>='5')n+=1n;return (m[1]&&n!==0n?'-':'')+(n/10n).toString()+'.'+(n%10n).toString();};
- const score=(c,k)=>isBatch340(c)?display340(c,k):isBatch320(c)?batch320Display(c,k):isBatch300(c)?batch300Display(c,k):isBatch280(c)?batch280Display(c,k):isBatch260(c)?batch260Display(c,k):isBatch220(c)&&typeof c.scores?.[k]==='string'&&/^-?\d+(?:\.\d+)?$/.test(c.scores[k])?exactDecimalDisplay(c.scores[k]):scorePoint(c,k)==null?'NS':typeof c.scores[k]==='number'?(Math.floor(c.scores[k]*10+0.5+1e-8)/10).toFixed(1):esc(c.scores[k].score??'NS');
+ const score=(c,k)=>isBatch359(c)?(new359.point(c,k)==null?'NS':exactDecimalDisplay(String(new359.point(c,k)))):isBatch340(c)?display340(c,k):isBatch320(c)?batch320Display(c,k):isBatch300(c)?batch300Display(c,k):isBatch280(c)?batch280Display(c,k):isBatch260(c)?batch260Display(c,k):isBatch220(c)&&typeof c.scores?.[k]==='string'&&/^-?\d+(?:\.\d+)?$/.test(c.scores[k])?exactDecimalDisplay(c.scores[k]):scorePoint(c,k)==null?'NS':typeof c.scores[k]==='number'?(Math.floor(c.scores[k]*10+0.5+1e-8)/10).toFixed(1):esc(c.scores[k].score??'NS');
  const count=s=>data.filter(c=>c.research_status===s).length;
  const option=(v,t,selected)=>`<option value="${esc(v)}"${selected===v?' selected':''}>${esc(t)}</option>`;
  const rounded=(c,k)=>isBatch340(c)?((c,k)=>display340(c,k)==='NS'?NaN:Number(display340(c,k)))(c,k):isBatch320(c)?batch320Rounded(c,k):isBatch300(c)?batch300Rounded(c,k):isBatch280(c)?batch280Rounded(c,k):isBatch260(c)?batch260Rounded(c,k):isBatch220(c)&&typeof c.scores?.[k]==='string'&&exactDecimalDisplay(c.scores[k])!==null?Number(exactDecimalDisplay(c.scores[k])):Math.floor(c.scores[k]*10+0.5+1e-8)/10;
- const eligible=(c,k)=>isBatch340(c)?eligible340(c,k):isBatch320(c)?batch320Eligible(c,k):isBatch300(c)?batch300Eligible(c,k):isBatch280(c)?batch280Eligible(c,k):isBatch260(c)?batch260Eligible(c,k):(isNewReview(c)||c.research_status==='deep')&&(c.ranking_eligibility?.[k]===true||(isBatch220(c)&&c.ranking_eligibility?.[k]===undefined&&c.ranking_eligibility?.[({BQS:'quality',GQS:'growth_quality',IAS:'investment'})[k]]===true))&&(Number.isFinite(c.scores?.[k])||(isBatch220(c)&&typeof c.scores?.[k]==='string'&&/^-?\d+(?:\.\d+)?$/.test(c.scores[k])&&Number.isFinite(Number(c.scores[k]))));
+ const eligible=(c,k)=>isBatch359(c)?new359.eligible(c,k):isBatch340(c)?eligible340(c,k):isBatch320(c)?batch320Eligible(c,k):isBatch300(c)?batch300Eligible(c,k):isBatch280(c)?batch280Eligible(c,k):isBatch260(c)?batch260Eligible(c,k):(isNewReview(c)||c.research_status==='deep')&&(c.ranking_eligibility?.[k]===true||(isBatch220(c)&&c.ranking_eligibility?.[k]===undefined&&c.ranking_eligibility?.[({BQS:'quality',GQS:'growth_quality',IAS:'investment'})[k]]===true))&&(Number.isFinite(c.scores?.[k])||(isBatch220(c)&&typeof c.scores?.[k]==='string'&&/^-?\d+(?:\.\d+)?$/.test(c.scores[k])&&Number.isFinite(Number(c.scores[k]))));
  const ordering=k=>(a,b)=>rounded(b,k)-rounded(a,k)||a.name.localeCompare(b.name);
  function ranking(c){if(state.sort==='name')return '—';const all=data.filter(x=>eligible(x,state.sort)).sort(ordering(state.sort));return String(all.findIndex(x=>rounded(x,state.sort)===rounded(c,state.sort))+1);}
  function filtered(){const words=state.q.toLowerCase().split(/\s+/).filter(Boolean);const list=data.filter(c=>(state.status==='all'||c.research_status===state.status)&&(state.sector==='all'||c.sector===state.sector)&&words.every(w=>[c.name,c.symbol,c.isin,c.sector,c.exchange].join(' ').toLowerCase().includes(w))&&(state.sort==='name'||eligible(c,state.sort))&&['BQS','GQS','IAS'].every(k=>!state['min'+k]||eligible(c,k)&&c.scores[k]>=Number(state['min'+k])));return list.sort((a,b)=>{if(state.order.startsWith('sector-')){const d=(a.sector||'').localeCompare(b.sector||'');return (state.order.endsWith('desc')?-d:d)||a.name.localeCompare(b.name);}if(state.sort==='name'||state.order.startsWith('name-')){const d=a.name.localeCompare(b.name);return state.order==='name-desc'?-d:d;}const d=rounded(b,state.sort)-rounded(a,state.sort);return (state.order==='asc'?-d:d)||a.name.localeCompare(b.name);});}
@@ -246,7 +414,15 @@
   <div class="pagination"><span class="count" role="status">${list.length?((state.page-1)*state.size+1)+'–'+Math.min(state.page*state.size,list.length)+' of '+list.length+' companies':'0 matches'}</span><span>Page ${state.page} of ${pages}</span><button data-page="${state.page-1}" aria-label="Previous page" ${state.page<=1?'disabled':''}>←</button><button data-page="${state.page+1}" aria-label="Next page" ${state.page>=pages?'disabled':''}>→</button></div></div>
   <div class="index-notes"><p>${list.length} matching companies · ${state.sort==='name'?'alphabetical view':state.sort+' ranking-eligible only · ties share a rank'} · ${count('deep')} completed research reviews · ${metadata.currently_published_reviews} currently public. <a href="#status=deep&amp;sort=name">View all reviewed companies ↗</a></p><p><strong>NS</strong> means insufficient evidence, not zero. Unranked scores retain their limitations. <a href="#methodology">About the scores ↗</a></p></div></section>`;
  }
- function sections(c){if(isBatch340(c))return sections340(c);const result=[{id:'overview',title:'Overview',html:()=>`<h2>At a glance</h2><p class="lead">${text(c.summary)}</p><p class="sme-meta">${esc(isRecovered(c)?'Recovered approved narrative; original structured model tables are unavailable.':c.research_status==='screen'?'Preliminary screen, not completed forensic research.':c.research_status==='pending'?'Research pending. No investment conclusion has been issued.':'Completed review; evidence gaps and conditional conclusions remain visible below.')}</p><div class="snapshot sme-snapshot">${['BQS','GQS','IAS'].map(k=>'<div><small>'+k+'</small><strong>'+score(c,k)+'</strong><span class="score-explain">'+ (scorePoint(c,k)==null?'Insufficient evidence':eligible(c,k)?'Ranking eligible':'Excluded from ranking')+'</span></div>').join('')}</div><p>${text(c.score_note||'')}</p>${c.identity_note?'<h3>Identity and listing</h3>'+reviewValue(c,c.identity_note):''}${c.quote?'<h3>Dated quote</h3>'+reviewValue(c,c.quote):''}${c.existing_research?'<h3>Earlier research</h3>'+reviewValue(c,c.existing_research):''}`}];
+ function sections359(c){
+  const result=[{id:'overview',title:'Overview',html:()=>'<h2>At a glance</h2><p>Completed qualified research. Read the full narrative, source limitations and exact analytical companions. NS means insufficient evidence, not zero. A conditional calculation does not authenticate an uncertain input.</p><div class="snapshot sme-snapshot">'+['BQS','GQS','IAS'].map(k=>'<div><small>'+k+'</small><strong>'+score(c,k)+'</strong><span class="score-explain">'+(new359.point(c,k)==null?'Insufficient evidence':new359.eligible(c,k)?'Explicitly ranking eligible':'Ranking not enabled')+'</span></div>').join('')+'</div>'}];
+  for(const [i,s] of c.sections.entries())result.push({id:'analysis-'+i,title:s.title,html:()=>'<h2>'+esc(s.number)+'. '+esc(s.title)+'</h2>'+exactText320(s.content_markdown)});
+  result.push({id:'sources',title:'Sources and source qualifications',html:()=>new359.markup(c,'reader_source_registers')});
+  result.push({id:'score-audit',title:'Complete score and factor audit',html:()=>new359.markup(c,'reader_score_audit')});
+  result.push({id:'full-record-and-companions',title:'Complete analytical record, sources and models',html:()=>new359.markup(c)});
+  return result;
+ }
+ function sections(c){if(isBatch359(c))return sections359(c);if(isBatch340(c))return sections340(c);const result=[{id:'overview',title:'Overview',html:()=>`<h2>At a glance</h2><p class="lead">${text(c.summary)}</p><p class="sme-meta">${esc(isRecovered(c)?'Recovered approved narrative; original structured model tables are unavailable.':c.research_status==='screen'?'Preliminary screen, not completed forensic research.':c.research_status==='pending'?'Research pending. No investment conclusion has been issued.':'Completed review; evidence gaps and conditional conclusions remain visible below.')}</p><div class="snapshot sme-snapshot">${['BQS','GQS','IAS'].map(k=>'<div><small>'+k+'</small><strong>'+score(c,k)+'</strong><span class="score-explain">'+ (scorePoint(c,k)==null?'Insufficient evidence':eligible(c,k)?'Ranking eligible':'Excluded from ranking')+'</span></div>').join('')}</div><p>${text(c.score_note||'')}</p>${c.identity_note?'<h3>Identity and listing</h3>'+reviewValue(c,c.identity_note):''}${c.quote?'<h3>Dated quote</h3>'+reviewValue(c,c.quote):''}${c.existing_research?'<h3>Earlier research</h3>'+reviewValue(c,c.existing_research):''}`}];
  if(isRecovered(c)&&c.approved_disclosure_summary)result.push({id:'approved-disclosure',title:'Approved publication qualifications',html:()=>'<h2>Approved publication qualifications</h2>'+text(c.approved_disclosure_summary)});
  for(const [i,s] of (c.sections||[]).entries()){if(isBatch320(c)){result.push({id:'analysis-'+(s.id||i),title:s.title||'Research finding',html:()=>{const body=batch320Body(s),omit=new Set(['id','number','title',body.key]);let citations='';if(Array.isArray(s.source_ids)&&s.source_ids.length){omit.add('source_ids');citations='<p class="sme-meta">Evidence: '+recoveredSources(c,s.source_ids)+'</p>';}return '<h2>'+esc(s.title||'Research finding')+'</h2>'+recoveredRecord(c,body.value)+citations+recoveredRecord(c,Object.fromEntries(Object.entries(s).filter(([k])=>!omit.has(k))));}});continue;}if(isBatch300(c)){result.push({id:'analysis-'+(s.id||i),title:s.title||'Research finding',html:()=>{const body=batch300Body(s),omit=new Set(['id','number','title',body.key]);let citations='';if(Array.isArray(s.source_ids)&&s.source_ids.length){omit.add('source_ids');citations='<p class="sme-meta">Evidence: '+recoveredSources(c,s.source_ids)+'</p>';}return '<h2>'+esc(s.title||'Research finding')+'</h2>'+recoveredRecord(c,body.value)+citations+recoveredRecord(c,Object.fromEntries(Object.entries(s).filter(([k])=>!omit.has(k))));}});continue;}{if(isBatch280(c)){result.push({id:'analysis-'+(s.id||i),title:s.title||'Research finding',html:()=>{const body=batch280Body(s),omit=new Set(['id','number','title',body.key]);let citations='';if(Array.isArray(s.source_ids)&&s.source_ids.length){omit.add('source_ids');citations='<p class="sme-meta">Evidence: '+recoveredSources(c,s.source_ids)+'</p>';}return '<h2>'+esc(s.title||'Research finding')+'</h2>'+recoveredRecord(c,body.value)+citations+recoveredRecord(c,Object.fromEntries(Object.entries(s).filter(([k])=>!omit.has(k))));}});continue;}{if(isBatch260(c)){result.push({id:'analysis-'+(s.id||i),title:s.title||'Research finding',html:()=>{const body=batch260Body(s),omit=new Set(['id','number','title',body.key]);let citations='';if(Array.isArray(s.source_ids)&&s.source_ids.length){omit.add('source_ids');citations='<p class="sme-meta">Evidence: '+recoveredSources(c,s.source_ids)+'</p>';}return '<h2>'+esc(s.title||'Research finding')+'</h2>'+recoveredRecord(c,body.value)+citations+recoveredRecord(c,Object.fromEntries(Object.entries(s).filter(([k])=>!omit.has(k))));}});continue;}result.push({id:'analysis-'+(s.id||i),title:s.title||'Research finding',html:()=>'<h2>'+esc(s.title||'Research finding')+'</h2>'+render(s.text??s.content??s.body??(isBatch240(c)?s.content_markdown:undefined))+(s.source_ids?.length?'<p class="sme-meta">Evidence: '+(isRecovered(c)?recoveredSources(c,s.source_ids):esc(s.source_ids.join(', ')))+'</p>':'')+(isNewReview(c)?recoveredRecord(c,Object.fromEntries(Object.entries(s).filter(([k])=>!['id','number','title','text','content','body','source_ids'].includes(k)&&!(isBatch240(c)&&k==='content_markdown'&&s.text===undefined&&s.content===undefined&&s.body===undefined)))):'')});}}}
  for(const [key,title] of [['metrics','Reported metrics'],['financial_history','Financial history'],['gates','Gates'],['factor_audit','Factor audit'],['score_audit','Score calculation audit'],['valuation','Valuation and scenarios'],['confidence','Evidence confidence'],['liquidity','Liquidity and implementation'],['monitoring_plan','Monitoring plan'],['evidence','Evidence ledger']])if(c[key]&&(Array.isArray(c[key])?c[key].length:true))result.push({id:key,title,html:()=>'<h2>'+title+'</h2>'+(isRecovered(c)?(key==='factor_audit'?'<p>Scores are transcribed from the approved scorecard. Some compact confidence and evidence-ID fields were not serialized in the approval packet. Read the exact scorecard and supplemental passages for the surviving qualifications; a missing reconstructed field is not a new analytical conclusion.</p>':'')+recoveredRecord(c,c[key],key):isExtendedReview(c)?recoveredRecord(c,c[key],key):render(c[key],key))});
@@ -269,7 +445,30 @@
  result.push({id:'sources',title:'Sources',html:()=>isBatch320(c)&&!Array.isArray(c.sources)?'<h2>Sources and source qualifications</h2>'+recoveredRecord(c,c.sources):'<h2>Sources</h2><p>Read status distinguishes reviewed evidence from inaccessible or discovery-only material. A link alone does not verify a claim.</p><ol>'+ (c.sources||[]).map(s=>isNewReview(c)?'<li>'+recoveredRecord(c,s)+'</li>':'<li><strong>'+esc(s.id)+' · '+link(s.url,s.title||s.url)+'</strong><p>'+esc([s.kind,s.document_date&&'Document '+s.document_date,s.accessed&&'Accessed '+s.accessed,s.read_status].filter(Boolean).join(' · '))+'</p>'+(isRecovered(c)?recoveredRecord(c,s.locator||''):render(s.locator||''))+recoveredSourceExtras(c,s)+'</li>').join('')+'</ol>'});return result;}
  const groupOf=s=>s.id==='overview'?'Overview':s.id==='sources'?'Sources':s.id.startsWith('analysis-')?'Analysis':'Data & models';
  function navCompanies(){const list=filtered();return (list.some(c=>c.id===current?.id)?list:data).slice().sort((a,b)=>a.name.localeCompare(b.name));}
+
+ function standaloneDossier(c){return `<section id="research" class="analysis-view"><div class="reader-topbar"><a href="${address(null,'')}" data-back>← Company index</a><div class="reader-actions"><button data-copy>Copy link</button></div></div><span id="linkStatus" role="status"></span><div id="copyFallback" hidden><input id="shareAddress" readonly></div><h1>${esc(c.name)}</h1><p>Full 15-section research report · Research ${esc(c.as_of)} · ${['BQS','GQS','IAS'].map(k=>k+' '+esc(c.score_display[k])).join(' · ')}</p><p><a href="${esc(c.standalone_report)}" target="_blank" rel="noopener">Open full report in a new tab</a> · <a href="${esc(c.source_package)}" ${c.source_package.endsWith('.zip')?'download':''}>Download complete research, models, inputs and retained vintages (ZIP)</a></p><p class="subtle">Scores and evidence limitations are preserved from the accepted research. A completed report does not imply investment eligibility. The ZIP retains every source-safe analytical member; its projection ledger documents local-path-only changes and original hashes.</p><div class="section-selector"><label for="sectionSelect">Research section</label><select id="sectionSelect" disabled><option>Loading sections…</option></select><span id="standaloneSectionStatus" role="status">Opening report…</span></div><iframe id="standaloneFrame" title="${esc(c.name)} — paginated research report" src="${esc(c.standalone_report)}" style="visibility:hidden;width:100%;height:80vh;min-height:600px;border:1px solid #ddd;background:white"></iframe><div class="section-pagination"><button id="standalonePrevious" data-section="" disabled>← Previous section</button><span id="standalonePageCount"></span><button id="standaloneNext" data-section="" disabled>Next section →</button></div></section>`;}
+ function mountStandalone(c,version){
+  const frame=document.getElementById('standaloneFrame');if(!frame)return;let pagedDocument=null;
+  const live=()=>version===requestVersion&&current?.id===c.id&&document.getElementById('standaloneFrame')===frame;
+  function mount(){
+   if(!live())return;const doc=frame.contentDocument;
+   if(!doc?.body||doc.URL==='about:blank')return;
+   if(doc===pagedDocument)return;frame.style.visibility='hidden';
+   const headings=Array.from(doc.body.querySelectorAll('h2'));
+   if(headings.length!==15||headings.some(h=>h.parentElement!==doc.body)){document.getElementById('standaloneSectionStatus').textContent='Pagination unavailable. Open the full report above; no report text has been removed.';return;}
+   const originalNodes=Array.from(doc.body.childNodes),pages=[];let page=doc.createElement('section');page.className='wallstrat-paged-section';pages.push(page);let headingIndex=0;
+   for(const n of originalNodes){if(n.nodeType===1&&n.tagName==='H2'){if(headingIndex++>0){page=doc.createElement('section');page.className='wallstrat-paged-section';pages.push(page);}}page.appendChild(n);}
+   for(const p of pages)doc.body.appendChild(p);
+   const style=doc.createElement('style');style.textContent='.wallstrat-paged-section[hidden]{display:none!important}';doc.head.appendChild(style);pagedDocument=doc;
+   const select=document.getElementById('sectionSelect');select.innerHTML=headings.map((h,i)=>'<option value="analysis-'+(i+1)+'">'+esc(h.textContent)+'</option>').join('');select.disabled=false;
+   function show(index,target){if(!live())return;index=Math.max(0,Math.min(14,index));active='analysis-'+(index+1);pages.forEach((p,i)=>{p.hidden=i!==index;});select.value=active;const previous=document.getElementById('standalonePrevious'),next=document.getElementById('standaloneNext');previous.disabled=index===0;previous.dataset.section='analysis-'+index;next.disabled=index===14;next.dataset.section='analysis-'+(index+2);document.getElementById('standalonePageCount').textContent='Section '+(index+1)+' of 15';document.getElementById('standaloneSectionStatus').textContent=headings[index].textContent;frame.contentWindow.scrollTo(0,0);if(target)target.scrollIntoView({block:'start'});}
+   const match=/^analysis-(\d+)$/.exec(active);show(match?Number(match[1])-1:0);frame.style.visibility='visible';
+   doc.addEventListener('click',e=>{const a=e.target.closest?.('a[href^="#"]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||!live())return;let id;try{id=decodeURIComponent(a.getAttribute('href').slice(1));}catch{return;}const target=doc.getElementById(id)||Array.from(doc.getElementsByName(id))[0];if(!target)return;const index=pages.findIndex(p=>p.contains(target));if(index<0)return;e.preventDefault();show(index,target);write();});
+  }
+  frame.addEventListener('load',mount);if(frame.contentDocument?.readyState==='complete')mount();
+ }
  function dossier(c){
+  if(c.standalone_report)return standaloneDossier(c);
   const ss=sections(c),s=ss.find(x=>x.id===active)||ss[0];active=s.id;const i=ss.indexOf(s),groups=[...new Set(ss.map(groupOf))],list=navCompanies(),ci=list.findIndex(x=>x.id===c.id);
   const choices=groups.map(g=>'<optgroup label="'+esc(g)+'">'+ss.filter(x=>groupOf(x)===g).map(x=>option(x.id,x.title,s.id)).join('')+'</optgroup>').join('');
   const adjacent=(delta)=>list[ci+delta];
@@ -323,7 +522,7 @@
    const out={codec:'JSON-syntax-dictionary-v4',root:p.root,atoms:[],schemas:[],nodes:[]},fields=['atoms','schemas','nodes'],ordinals={atoms:0,schemas:0,nodes:0};let lastField=-1;
    for(const part of p.parts){
     const field=fields.indexOf(part.field);if(field<lastField||field<0||!boundedPositive(part.ordinal,1000)||part.ordinal!==ordinals[part.field]+1||!Number.isSafeInteger(part.start)||part.start<0||part.start!==out[part.field].length||!boundedPositive(part.count,a[part.field])||part.start+part.count>a[part.field]||part.path!=='sme/'+entry.id+'/'+part.field+'-'+String(part.ordinal).padStart(3,'0')+'.json'||!boundedPositive(part.bytes,8000000))throw Error('Invalid research component address or order.');
-    const values=await checkedTransportJSON(await fetch(part.path+'?v='+part.sha256.slice(0,16),{mode:'same-origin',redirect:'error',credentials:'same-origin'}),part);
+    const values=await checkedTransportJSON(await fetchResearchGzip(part.path),part);
     if(!Array.isArray(values)||values.length!==part.count||out[part.field].length+values.length>a[part.field])throw Error('Research component row-count mismatch.');
     for(const value of values)out[part.field].push(value);ordinals[part.field]++;lastField=field;
    }
@@ -366,7 +565,7 @@
   for(let i=0;i<manifest.parts.length;i++){const p=manifest.parts[i];if(!p||!positive340(p.ordinal,64)||p.ordinal!==i+1||!Number.isSafeInteger(p.offset)||p.offset<0||p.offset!==nextOffset||!positive340(p.bytes,4000000)||p.bytes>a.dictionary_bytes-nextOffset||!hash340(p.sha256)||p.path!=='sme/'+entry.id+'/dictionary-'+String(i+1).padStart(3,'0')+'.jsonpart')throw Error('Invalid research fragment address or order.');nextOffset+=p.bytes;}
   if(nextOffset!==a.dictionary_bytes)throw Error('Incomplete research fragment manifest.');
   const all=new Uint8Array(a.dictionary_bytes);
-  for(const p of manifest.parts){assert340Active(job);const response=await fetch(p.path+'?v='+p.sha256.slice(0,16),{mode:'same-origin',redirect:'error',credentials:'same-origin',signal:job.controller.signal});const bytes=await bytes340(response,p,job);assert340Active(job);all.set(bytes,p.offset);}
+  for(const p of manifest.parts){assert340Active(job);const response=await fetchResearchGzip(p.path,{signal:job.controller.signal});const bytes=await bytes340(response,p,job);assert340Active(job);all.set(bytes,p.offset);}
   const digest=await globalThis.crypto.subtle.digest('SHA-256',all);assert340Active(job);const actual=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');
   if(actual!==a.dictionary_sha256)throw Error('Complete research dictionary integrity check failed.');
   const p=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(all));assert340Active(job);
@@ -383,25 +582,28 @@
    // Legacy loaders cannot be aborted without changing their proven behavior. Let them settle before allocating a new dictionary.
    while(loading.size){await Promise.allSettled(Array.from(loading.values()));assert340Active(job);}
    releasePrior320Cache();assert340Active(job);
-   const response=await fetch(entry.dossier+'?v='+encodeURIComponent(entry.dossier_version||''),{mode:'same-origin',redirect:'error',credentials:'same-origin',signal:job.controller.signal});const raw=await bytes340(response,entry.transport_file,job);const manifest=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(raw));const c=await decode340Transport(manifest,entry,job);assert340Active(job);if(c.id!==entry.id||c.isin!==entry.isin)throw Error('Company identity mismatch.');loaded.set(c.id,c);completed340Id=c.id;return c;})().finally(()=>{if(active340Load===job)active340Load=null;});
+   const response=await fetchResearchGzip(entry.dossier,{signal:job.controller.signal});const raw=await bytes340(response,entry.transport_file,job);const manifest=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(raw));const c=await decode340Transport(manifest,entry,job);assert340Active(job);if(c.id!==entry.id||c.isin!==entry.isin)throw Error('Company identity mismatch.');loaded.set(c.id,c);completed340Id=c.id;return c;})().finally(()=>{if(active340Load===job)active340Load=null;});
   return job.promise;
  }
  async function ensureDossier(entry){
+  if(entry.standalone_report){loaded.set(entry.id,entry);return entry;}
+  if(isBatch359(entry)){const ownerVersion=requestVersion,ownerId=current?.id;const own=()=>{if(ownerId!==entry.id||requestVersion!==ownerVersion||current?.id!==entry.id)throw Error('Research route superseded.');};own();while(loading.size){await Promise.allSettled(Array.from(loading.values()));own();}own();releasePrior320Cache();own();const c=await new359.load(entry);own();loaded.clear();loaded.set(c.id,c);return c;}
   if(isBatch340(entry))return ensure340Dossier(entry);
   if(loaded.has(entry.id))return loaded.get(entry.id);
   if(loading.has(entry.id))return loading.get(entry.id);
   if(entry.dossier!=='sme/'+entry.id+'.json'||!/^[A-Z0-9]{12}$/.test(entry.id))throw Error('Invalid dossier address.');
-  const promise=fetch(entry.dossier+'?v='+encodeURIComponent(entry.dossier_version||''),isBatch320(entry)?{mode:'same-origin',redirect:'error',credentials:'same-origin'}:undefined).then(r=>{if(isBatch320(entry))return checkedTransportJSON(r,entry.transport_file);if(!r.ok)throw Error('Company research could not load ('+r.status+').');return r.json();}).then(async c=>{if(isBatch320(entry)){c=await decodeNewBatchTransport(c,entry);loaded.clear();}else c=decodeDossierTransport(c,entry);if(c.id!==entry.id||c.isin!==entry.isin)throw Error('Company identity mismatch.');loaded.set(c.id,c);return c;}).finally(()=>loading.delete(entry.id));
+  const promise=fetchResearchGzip(entry.dossier).then(r=>{if(isBatch320(entry))return checkedTransportJSON(r,entry.transport_file);if(!r.ok)throw Error('Company research could not load ('+r.status+').');return r.json();}).then(async c=>{if(isBatch320(entry)){c=await decodeNewBatchTransport(c,entry);loaded.clear();}else c=decodeDossierTransport(c,entry);if(c.id!==entry.id||c.isin!==entry.isin)throw Error('Company identity mismatch.');loaded.set(c.id,c);return c;}).finally(()=>loading.delete(entry.id));
   loading.set(entry.id,promise);return promise;
  }
  function pending(c){return {...c,summary:'Company-specific research has not yet been published. No investment conclusion or score has been issued.',identity_note:'Name, ticker and ISIN originate from the submitted universe. Current listing classification still requires verification.',sections:[],sources:[],limitations:['Research pending.'],next_steps:[]};}
  function draw(){
+  new359.cancelOther(current?.id);new359.unmount();if(!isBatch359(current))new359.cancel();
   if(!isBatch340(current))cancel340Load();
   modelChunks.clear();modelChunkSerial=0;
   const version=++requestVersion;document.getElementById('indexIntro').hidden=!!current;document.getElementById('methodology').hidden=!!current;document.title=current?current.name+' | Wallstrat SME Research':'SME Research | Wallstrat';
   if(!current){root.innerHTML=index();return;}
   if(current.research_status==='pending'){root.innerHTML=dossier(pending(current));return;}
-  const cached=loaded.get(current.id);if(cached){current=cached;root.innerHTML=dossier(cached);return;}
+  const cached=loaded.get(current.id);if(cached){current=cached;root.innerHTML=dossier(cached);if(isBatch359(cached))new359.mount(root.querySelector('[data-research359]'),cached);if(cached.standalone_report)mountStandalone(cached,version);return;}
   const entry=byId.get(current.id);root.innerHTML='<section id="research"><a href="'+address(null,'')+'" data-back>← Back to SME index</a><h2>'+esc(current.name)+'</h2><p role="status">Opening company research…</p></section>';
   ensureDossier(entry).then(c=>{if(version!==requestVersion||current?.id!==c.id)return;current=c;draw();}).catch(e=>{if(version!==requestVersion)return;root.innerHTML='<section id="research"><a href="'+address(null,'')+'" data-back>← Back to SME index</a><p role="alert">'+esc(e.message)+'</p><button data-retry>Try again</button></section>';});
  }
@@ -430,3 +632,5 @@
  window.addEventListener('hashchange',route);window.addEventListener('popstate',route);
  fetch('sme-data.json').then(r=>{if(!r.ok)throw Error('Research index could not load ('+r.status+').');return r.json();}).then(d=>{metadata=d.metadata||{};data=d.companies; if(!Array.isArray(data)||!data.length)throw Error('The SME collection has no published records yet.');data.sort((a,b)=>a.name.localeCompare(b.name));byId=new Map(data.map(c=>[c.id,c]));document.getElementById('companyChoices').innerHTML=data.map(c=>'<option value="'+esc(c.symbol||c.isin)+'">'+esc(c.name)+'</option>').join('');document.getElementById('coverageCount').textContent=data.some(isRecovered)?(count('deep')-data.filter(isRecovered).length)+' full structured reviews + '+data.filter(isRecovered).length+' recovered narrative editions · '+count('pending')+' pending':metadata.reviewed_companies+' of '+data.length+' companies reviewed · '+count('pending')+' pending';route();window.SME_RESEARCH={companies:data,sections,eligible,ordering,ready:true,getLoadedCount:()=>loaded.size};}).catch(e=>{root.innerHTML='<p class="sme-note" role="alert">'+esc(e.message)+'</p><button id="retryLoad">Try again</button>';document.getElementById('retryLoad').onclick=()=>location.reload();});
 })();
+
+})().catch(error=>{const app=document.getElementById("app");if(app){app.textContent=error.message;app.setAttribute("role","alert");}});

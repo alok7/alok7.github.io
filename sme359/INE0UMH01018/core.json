@@ -1,0 +1,861 @@
+{"format":"wallstrat-research-envelope-v1","identity":{"route_id":"INE0UMH01018","isin":"INE0UMH01018","accepted_canonical_sha256":"5ef5dbb16658fa142540c9a59a2f9f5cb9008154bccb942a314d634fcb3172b8","root_acceptance_receipt_sha256":"c697d326085bfb7cc4b4e5d5e5c340a2ac4adbd4f811a69ef9fc8fd72f32cc37","original_research_id_preserved":true},"research":{
+  "company": "Safety Controls & Devices Limited",
+  "symbol": "SCDL",
+  "isin": "INE0UMH01018",
+  "position": 347,
+  "information_cutoff": "2026-10-20",
+  "market_cutoff": "2026-10-19",
+  "price": "79.06",
+  "price_status": "Secondary dated conditional input, not official exchange close",
+  "shares": 19826999,
+  "input_hashes": {
+    "financial_inputs.json": "03257979b80ec4bfb2ead0fed4cec168c71d90eb0f4c0dfb88571c178803a007",
+    "audit_inputs.json": "5e6c07282b08f105661e90db9f151e1e8c34e5131ceff06f3dee6bb2a92965c5",
+    "original_audit_extract.json": "c7a5b2a5110e12d251d5e59e299e338372d0b3060dd4ddef1b9c8bbedb386f84",
+    "financial_sources.json": "b5207d5c7d14d74a1f661816b2157593c058e2aa440147277ed54952b80c3699",
+    "business_inputs.json": "ab9d7d70e2c17c89a0d0df3ecba368a77cebde9ae22dd4196bdce017a28928c5",
+    "peer_inputs.json": "250841ddcd7b6683d6e728b286211da85ca424785273d4f8f3f49f1d80181b44",
+    "business_sources.json": "792573c5565d412ab323064a157ac5ad92f445ad1aaca988ff7104fb320232c0",
+    "ratings_inputs.json": "1439217dcafec49ad9195ff0ded94bd7facbd0f2a92af5e854cbff0aa95df03e",
+    "security_inputs.json": "401ca17a517367187c02c1fcdf62f86a6ba2ec6bd4b0b5cac3a45d5d1f46231e",
+    "market_extract.json": "bff7e3ae6d7cc90a9eb11083925791b16c22b62c73e955f808f0dad9b4c3d68f",
+    "market_attempts.json": "038d7d117719fd04cde1577755ed2a38ca37f9cf8afaa994d96b7748fac496d8",
+    "model_inputs.json": "3d42e748e0f0faf36463c3ea617ef0b9bcd8786b3fe7cb6cc435219844eee143",
+    "score_inputs.json": "c5c9bf470281d60e53d4663af943c22b0266c65d33c8ad9612eda390772f13af",
+    "evidence_ledger.json": "69bf111f705110cebe283ee331d48a176b6f12e1c9e50223e92a25ef2f76604c",
+    "framework_provenance.json": "3bb7d28fc8469ceabae4771a0645e60e69478213a228ec5fac931999a50c698f",
+    "report_template.md": "7374506a8fdc9833e22f6aef7317dc708d87763e36b2fdf67dedcfed35d1088a",
+    "README.md": "67151cf93a9abfc437d3d82cd179c5e9f9ecc442452f5c71d8866a73b896b49c",
+    "build.py": "5e8f07c12ef6b74e0da702b72e04deaa3cc8c07bf90afb77ac88574551bb608a",
+    "model_engine.py": "e836bd0e2d61f69b0305957490559c7557a66311bc54b13a9ce993c994d809f5",
+    "verify.py": "7dcab82ab4af3744d0eeddbe6c3def16b26abaa0f9a59d1bd8e41db92aa7cb32",
+    "guarded_rebuild.py": "1ff4ee30437322e7146f2ebfd97abf82818958c916da9435863a17d43985ef90"
+  },
+  "model_refs": {
+    "bear_no_new_finance": "path_c8ef0d63ffc0d48ce4b4ae89",
+    "bear_bounded_optional": "path_9b53e822c4949192503a34c6",
+    "base_no_new_finance": "path_ce64972655c0ce1514efa14d",
+    "base_bounded_optional": "path_1b19f471e08a2af50e385260",
+    "bull_no_new_finance": "path_8a6a080a7e022d1878218a66",
+    "bull_bounded_optional": "path_7154d9392d19ebfb559f5328"
+  },
+  "path_count": 142,
+  "surviving_paths": 43,
+  "scores": {
+    "BQS": null,
+    "GQS": null,
+    "IAS": null
+  },
+  "classification": "Hold — unresolved",
+  "external_data_dependency": false,
+  "publication": "No Git or Site publication performed."
+,"name":"Safety Controls & Devices Limited","as_of":"2026-10-20","report_markdown":"# Safety Controls & Devices Limited\n## 1. Executive Verdict\n\n**Hold — unresolved. Not rank-eligible; no current buy recommendation.** Safety Controls & Devices Limited is an electrical-infrastructure EPC contractor, not a safety-equipment manufacturer with a demonstrated recurring product franchise. Its apparent low earnings multiple is not sufficient compensation evidence when cash conversion, historical accounting and current funding cannot be reconciled reliably.\n\nFY26 revenue increased to ₹117.01 crore and PAT to ₹14.42 crore. Yet CFO was **negative ₹11.22 crore**, trade receivables plus retention reached **₹158.71 crore**, and unrestricted cash was only **₹0.22 crore** at 31 March 2026. A ₹48 crore fresh IPO followed in April. This changes the funding picture materially, but audited March cash cannot be added to gross IPO money and called October unrestricted cash. Fees, restricted objects, debt repayment and subsequent working-capital use matter.\n\nThe strongest adverse evidence is the original FY25 ₹16.56 crore vendor-loss charge to reserves, subsequent restatement differences, a genuine February 2026 bank-guarantee/overutilisation default, and weak cash conversion. The strongest counterevidence is equally important: the lender confirmed regularisation on 13 April, Acuité upgraded to BB+/Stable/A4+ on 31 August after the curing period, and FY26 carries an unmodified audit opinion and satisfactory IFC opinion. **Historical default is not a claim of current default; accounting contradictions are not proof of fraud.** [E01–E10]\n\nThe common-entry monthly model gives no ordinary shareholder return for the base case because terminal debt retirement and operating reserves are not cash-funded. The bull case survives and produces a conditional ₹213.72 exit price and 21.03% net annual return, but requires better collections and margins than a conservative underwriting case. It is a hypothesis to falsify, not a price target.\n\n## 2. Research Header, Gates and Data Confidence\n\n| Field | Research basis |\n|---|---|\n| Exact issuer / security | Safety Controls & Devices Limited; BSE SME 544746 / SCDL; ISIN INE0UMH01018 |\n| Sector / rubric | Electrical substation and allied infrastructure EPC; standard non-financial v3.0 rubric |\n| Information / market cutoffs | 20 October 2026 / 19 October 2026; later information excluded |\n| Retrieval date | 24 October 2026; document publication dates retained separately |\n| Accounting / scope | Standalone Indian GAAP / Accounting Standards; not Ind AS; March year-end |\n| Capital / market lot | 19,826,999 issued shares and 1,600-share lot from 19 October official exchange interoperability master |\n| Conditional price | ₹79.06, secondary dated 19 October close; not verified official executable close |\n| History | Original FY21–26 and restated FY23–25 retained as separate datasets; no artificial continuous earnings/cash series |\n| Framework | Full v3.0; hash in framework_provenance.json; 13 factors, four gates, 15 report sections and 16 checks |\n\nG1 governance: **Conditional**. Disclosure/reconciliation and stewardship weaknesses justify GOV 4; the evidence is not sufficient to assert abuse or invoke a GOV≤3 override. G2 financial reliability: **Hold — unresolved**, driven by reserve-loss treatment, original/restated cash/profit discontinuities, audit/default and contractual-JV inconsistencies. G3 solvency/funding: **Hold — unresolved**, not Fail based on an assumed forecast. Latest Acuité cure evidence is positive, while October cash/debt/claims and IPO deployment remain unverified. G4 investability: **Hold — unresolved**, because actual 20/60-session turnover, zero trades, spreads and executable depth are missing.\n\nFacts are F, management representations M, analyst assumptions A, secondary facts explicitly marked, and unresolved data ND/NS. Source-level confidence is High for inspected balances and dated rating actions, Medium for comparable net-GST revenue, and Low for normalized cash earnings, current liquidity and future project economics. Reproducible arithmetic does not raise evidence confidence.\n\n## 3. Scorecard and Calculation Audit\n\n| Score | Final | Evidence coverage | Missing-data bound | Override |\n|---|---:|---:|---:|---|\n| BQS | NS | 88% | 3.94–5.02 | None |\n| GQS | NS | 85% | 5.00–6.35 | GQS cap 5; NS retained |\n| IAS | NS | 20% | 1.40–8.60 | None |\n\nCanonical factors are reused, never substituted between scores. BQS = .20 GOV + .20 MOAT + .12 REV + .10 DUR + .12 CAP + .10 CASH + .08 BAL + .08 EXEC. GQS = .40 REV + .20 DUR + .15 EARN + .15 CAP + .10 CASH. IAS = .25 Q + .35 R + .20 D + .10 P + .10 L, where Q is final BQS. Each vector sums exactly to 1 using Decimal arithmetic.\n\nBQS known contribution is 3.82, missing weight .12: the unrenormalised bound is 3.94–5.02. GQS known contribution is 4.85, missing weight .15: raw bound 5.00–6.35. Persistent CASH≤3 caps a computable GQS at 5; it does **not** convert missing CAP into an invented GQS 5. IAS known contribution is .60, missing weight .80: bound 1.40–8.60. These are missing-data bounds, not statistical confidence intervals. Raw and final composites remain NS; no midpoint, zero substitution or renormalisation is used.\n\n| Factor | Score | Confidence | Decisive basis | Counterevidence | Evidence |\n|---|---:|---|---|---|---|\n| GOV | 4 | Medium | Material disclosure and stewardship weaknesses without sufficient evidence of fraud or minority abuse. | Restatement transparency, clean FY26 opinion/IFC and credit cure prevent an automatic governance-fail conclusion. | E03, E05, E06, E09 |\n| MOAT | 4 | Medium | Qualification history helps tenders, but concentrated counterparties and procurement pass-through give little demonstrated pricing power. | 19 completed substations and technical execution experience create entry friction. | E11, E18, E20 |\n| REV | 8 | Medium | Comparable three-year net-GST entity revenue CAGR 34.70% starts at 9; limited comparable history caps REV at 8. No additional small-base deduction. | FY24 contraction, uneven project recognition and unseparated price/volume undermine extrapolation. | E02, E12, E21 |\n| DUR | 5 | Medium | Dated ₹327.62 crore backlog supports visibility, but tender concentration, billing and collection delays limit durability. | July backlog increased and transmission/renewable infrastructure demand offers opportunities. | E11, E13 |\n| CAP | NS | Low | Valid multi-year incremental NOPAT/IC returns cannot be separated from reserve losses and accounting discontinuities. | Indicative original FY25–26 ROIC 20.39% and positive incremental proxy show potential, not proven reinvestment economics. | E03, E24, E23 |\n| CASH | 2 | High | FY23–25 restated CFO/PAT ratio of sums is −2.33; FY25–26 original is −0.96; debt and supplier funding bridge profits. | Working-capital model and public-sector retention can produce later receipts; FY25 capex reclassification does not explain all negative CFO. | E01, E02, E22, E24 |\n| BAL | 3 | Medium | Very low unrestricted cash, large pledged deposits, expensive debt and historically invoked BGs create fragile liquidity. | Acuite reports the February default regularised and curing completed; this does not independently resolve CRISIL’s separate 27 August delinquency concern or verify October status. | E01, E07, E08 |\n| EXEC | 4 | Medium | Sales/operating margins improved, but receivable forecast was missed and project cash/default chronology show execution strain. | Revenue grew 14.09% in FY26 and order book remains substantial. | E11, E13, E22 |\n| EARN | 3 | Medium | GST correction, vendor-loss reserve treatment, tax credit and EPS denominator changes weaken repeatability of headline growth. | FY26 is unmodified and PAT remains positive without prior-tax credit. | E03, E04, E21, E24 |\n| R | NS | Low | Reliable base-case funded ordinary return is not established, and entry price remains secondary. | A fully specified bull scenario survives and yields a conditional return, not the base return used for R. | E17, E23 |\n| D | 3 | Medium | Concentrated EPC receivables and pledged collateral leave meaningful impairment/recapitalisation risk; stress breaks bounded funding. | IPO capital, bank regularisation and public counterparties offer recovery routes. | E07, E08, E22, E23 |\n| P | NS | Low | Low displayed current-share P/E cannot establish mispricing until cash, normalised earnings and executable quote are reconciled. | Market price is near the ₹80 IPO price while earnings grew; this is a hypothesis, not proven expectation gap. | E14, E17, E21, E24 |\n| L | NS | Low | Official 20/60-session actual turnover, zero trades, spreads and current executable depth are missing. | Primary 1,600-share lot and a dated secondary volume permit a transparent one-day size illustration. | E15, E17 |\n\nREV uses the preselected comparable three-year window because five-year comparability fails. The ≥30% schedule starts at 9 and limited verified comparable history applies the ceiling 8; no extra small-base penalty is applied. CAP is not inferred from headline ROCE. CASH measures realised conversion, EARN accounting repeatability, BAL dated financing resilience, and D impairment severity. The adverse same facts are not repeatedly used for unexplained discretionary haircuts. A one-point GOV change shifts BQS known bounds .20; a one-point REV change shifts BQS .12 and GQS .40. Gates remain binding.\n\n## 4. Business Overview\n\nSafety designs, procures, installs, tests and commissions electrical substations and allied works. Its disclosed technical envelope includes AIS substations up to 400 kV and GIS up to 220 kV, with solar, fire-fighting and hospital/infrastructure work. These are principally project businesses: qualification and award lead to equipment procurement, construction, certification, milestone billing and collection. They are not subscription revenues. Management reports 19 commissioned substations and 60 employees; outsourced suppliers and project execution resources are therefore important. [RHP pp 136–156; E11]\n\nA sale is not cash. Percentage-of-completion/certification, customer advances, vendor advances and 15–30% retention terms produce long financing cycles. Materials consumed were ₹81.25 crore against FY26 revenue ₹117.01 crore. Procurement pass-through and changing contract mix can move sales and margins without equivalent proprietary value added. Public-sector/utility customers can lower ultimate counterparty-loss risk while increasing certification and payment timing risk. Principal disclosed geography is Uttar Pradesh and Bihar; government tender demand does not guarantee company-level order access or settlement.\n\nNo material acquisition, amalgamation, divestment or revaluation is identified over the disclosed ten-year lookback. The RHP says there are no subsidiaries/associates and at one point no joint venture, but separately describes a 19 January 2024 joint-bid deed with K. Ramachandra Rao Transmission & Projects Private Limited for BSPTCL NIT 38/PR/2023 with joint/several responsibilities. This could be a contractual consortium rather than an equity JV. We do not invent an acquired subsidiary or conclude the obligations are zero. Obtain the deed, work-share and guarantee schedule before closing scope risk. [RHP pp 174–175; E12]\n\n## 5. Moat / Industry Position\n\nTender credentials, technical capability, bank-guarantee access and completion history create real entry friction. They do not establish switching costs, pricing power, brand dominance or recurring service economics. In FY25 the largest customer represented 65.07% of revenue, the largest three 94.10%, and top five 97.80%; the largest supplier represented 56.64% of purchase/direct-expense concentration and top three 66.61%. The supplier table's misleading column label is not treated as a revenue ratio. Ten months to January 2026 top customer concentration eased to 41.55%, but top three remained 90.91%. [RHP; E11]\n\nThere is no verified market-share numerator/denominator, proprietary-IP economic record or price-volume realization bridge. MOAT 4 reflects a capable small contractor with qualifications, not a demonstrated protected franchise. Further growth may require both more procurement credit and more BG collateral, limiting the apparent asset-light advantage.\n\nThe economic peers below are independently read primary annual reports at the common FY25 period. Margins are ratios, not percentage points. They are not a current valuation peer group.\n\n| Peer | Scope | Revenue ₹ cr | EBITDA margin ratio | PAT ₹ cr | CFO ₹ cr | Single-year CFO/PAT | Source |\n|---|---|---:|---:|---:|---:|---:|---|\n| Viviana Power Tech Limited | Standalone | 188.37 | 0.14 | 17.01 | -2.93 | -0.17 | VIVIANA25 |\n| Oriana Power Limited | Consolidated | 987.17 | 0.24 | 158.54 | 290.49 | 1.83 | ORIANA25 |\n| Rajesh Power Services Limited | Consolidated with proportionate JV under AS27 | 1107.44 | 0.12 | 93.37 | -16.28 | -0.17 | RAJESH25 |\n\nViviana is the closest electrical T&D/substation EPC comparison; its negative CFO shows the industry's working-capital problem is not unique to Safety. Rajesh Power is much larger with EHV/HV cables/substations and proportionate joint-venture accounting, and also had negative CFO. Its current receivables exclude separately presented long retention, so a simplistic DSO comparison would be misleading. Oriana combines solar EPC with RESCO/SPV economics. Its ₹290.49 crore CFO includes ₹40.28 crore FD release, ₹141.52 crore payable growth and ₹317.56 crore other-liability growth; it is not pure cash generated from collected profit. Excluding FD release and reversing the operating-classified debt decrease gives ₹250.51 crore, still requiring funding-composition interpretation. No same-date primary peer-price/capital set was obtained, so current peer P/E rankings are NS. [E18–E20]\n\n## 6. Revenue Growth & Scale\n\nReported net-GST revenue grew from ₹47.88 crore FY23 to ₹44.71 crore FY24, ₹102.56 crore FY25 and ₹117.01 crore FY26. The three-year CAGR is **34.70%**, using exactly three annual intervals. Annual additions are −₹3.16 crore, +₹57.85 crore and +₹14.45 crore. FY24 contracted 6.61%, FY25 increased 129.38%, and FY26 increased 14.09%. This is uneven project scaling, not a stable 35% annual engine. [E02,E21]\n\nThe revenue endpoints are same-entity and net-GST, and FY25 revenue reconciles between original and restated records. No acquired revenue is identified, making organic-like entity growth the defensible basis, with Medium confidence. An exact organic volume/real-price split is **not** available: equipment prices, pass-through procurement, contract mix and POC recognition could contribute. Thus the report does not call 34.70% underlying physical-volume growth.\n\nOriginal FY21 sales were ₹32.25314 crore, not the rounded ₹27 crore sometimes displayed by aggregators, but the GST/presentation basis cannot be reconciled sufficiently to FY26. Five-year CAGR is NS rather than a selectively convenient number. Ten-year CAGR is also NS. FY23 original, later-comparative and prospectus profits/cash differ; these cannot be used interchangeably to claim a decade of quality growth. The listed history since April 2026 is too short to infer stable trading or minority-shareholder outcomes.\n\nRHP current orders included TUSCO ₹83.53 crore dated 19 August 2025 and RVNL ₹55.65 crore dated 19 December 2025. The later Acuité aggregate unexecuted order book was ₹327.62 crore at 31 July 2026 versus ₹314.81 crore a year earlier. These dates/scopes differ, so the two orders are not added to the total and the old single-order DRHP table is not called current backlog. A complete opening backlog + intake − execution − cancellation bridge and project-level margin/collection schedule remain ND. [E13]\n\n## 7. Growth Quality & Reinvestment Runway\n\nThe growth opportunity is real: transmission/substation additions and renewable grid integration require EPC capacity. But company-level reinvestment is dominated by working capital and collateral, not just PPE. FY26 cash capex was only ₹0.0351 crore; this does not explain negative CFO, nor establish that growth needs no capital. FY26 IC grew ₹36.42 crore, driven by ₹37.33 crore additional operating working capital while restricted-BG deposits released ₹0.56 crore. [financial_inputs.json reinvestment_bridges]\n\nIC is reconciled from both sides with component-level records. Financing IC = equity + gross debt + net DTL + income-tax provision − unrestricted cash; required restricted BG collateral remains invested capital. Asset-side IC includes PPE, collateral, receivables, retention, inventory, vendor/government/security advances and prepaids, less non-interest operating liabilities. FY26 financing IC is ₹113.8132 crore versus asset-side ₹113.8133 crore, a ₹0.0001 crore rounding difference. FY25 original opening IC ₹77.3974 crore yields average IC ₹95.6053 crore. At an explicit 25.17% normalized tax assumption, FY26 EBIT ₹26.0469 crore gives NOPAT ₹19.4909 crore and indicative ROIC **20.39%**. This is not an audited project IRR. [E01,E03,E24]\n\nReinvestment bridges, in ₹ lakh: FY24 restated ΔIC 1565.57 = .53 capex −14.96 DA +1689.68 ΔONWC −106.09 BG −3.61 security +.02 rounding. FY25 restated ΔIC 2956.07 = 472.03 −31.60 +2256.03 +264.02 −4.40 −.01. FY26 original ΔIC 3641.61 = 3.51 −37.18 +3732.67 −56.17 −1.22. Financing and asset components are retained for every observation, not reconstructed from revenue multiples.\n\nThe one-year incremental proxy is ΔNOPAT/ΔIC using original FY25–26; it is diagnostic only because margin improvement, old-contract recognition and reserve losses distort causation. A valid three/five-year incremental-return numerator and denominator cannot be isolated across the accounting discontinuities. CAP remains NS. No high ROIC is used to give a second boost to REV or a compounder designation.\n\nThe forecast requires incremental fixed capital above an explicitly hypothetical ₹150 crore sales envelope, maintenance capex and full target operating working capital; added capacity faces a three-month qualification lag. These are A, not management disclosed capacity plans. Growth earns value only if incremental cash returns exceed the 16–22% model discount rate; faster sales financed by mounting receivables can destroy rather than create value.\n\n## 8. Management, Governance & Execution\n\nPromoters held 9,199,305 shares or 46.40% in the issuer's 10 April 2026 pattern. The official October capital master reconciles total issued shares, but the April 15,410,999 locked shares are not treated as October free float. No unverified pledge-free/current-beneficial-holding assertion is made. [E15,E16]\n\nThe major stewardship question is the FY25 ₹16.5565 crore vendor-advance loss charged directly to reserves. On the original FY25 result, charging that loss through profit would turn ₹7.6441 crore PAT into an approximately ₹8.9124 crore loss. The prospectus restatement instead assigns ₹2.2335 crore loss to FY23 and ₹2.8863 crore to FY24, with earlier losses in opening reserves. Those losses are not charged again to FY25 in this analysis. Counterparty identity, relatedness, board approval, recoverability attempts and allocation rationale require primary records. This is a documented treatment issue, not a finding of diversion or fraud. [E03]\n\nFY26 MD remuneration was ₹34 lakh, Abhishek remuneration ₹16.2 lakh, and sitting fees ₹10.2 lakh. The MD loan bridge broadly reconciles: opening 69.81 + received 296.56 − repaid 100.69 = 265.68 lakh, close to note 6/board 265.67 but not note 27's 262.19. Note 6 classifies short-term, whereas the board narrative says non-current. Anjali remuneration 3.25 lakh in the board table versus nil in note 27 also needs reconciliation. These are specific small inconsistencies, not an invented large RPT siphoning. Proposed MD compensation from 1 July 2026 to 30 June 2029 was fixed ₹80 lakh plus 2% of Section 198 profit and business reimbursements; AGM approval outcome is unverified, so proposed terms are not called approved. [E06]\n\nEarlier RPT history is also qualified: the FY24 original note28 shows Rajnish remuneration ₹60 lakh, Anjali ₹1.2 lakh and Abhishek ₹16.2 lakh in each of FY23 and FY24. FY24 Rajnish loans taken ₹147.05 lakh and repaid ₹96.40 lakh suggest a ₹50.65 lakh movement, but the printed table places ₹50.65 lakh under FY23 receivable, with no FY24 closing payable. That anomalous layout is preserved, not silently repaired into a promoter-loan roll-forward. FY22 note25 RPT tables are effectively blank, which is not evidence that no transactions occurred. Full five-year RPT completeness is therefore not established. [O22 note25; O24 note28]\n\nAudit trail by year: FY21 unmodified with COVID emphasis; CARO referenced but missing from the accessible original, IFC clean. FY22 unmodified/CARO read; referenced IFC and own cash-flow page missing. FY23 unmodified/CARO/IFC; edit-log rule not yet applicable until April 2023. FY24 qualified for GST-inclusive grossing, IFC described as inapplicable, edit-log wording only confirms a feature. The issuer FY25 file does not include the full original opinion/CARO/IFC; RHP disclosure and the original reserve note are not substitutes for claiming the missing original opinion was read. FY26 unmodified opinion and satisfactory IFC, but CARO records Canara payment delays ₹290,840 for 56 days and ₹286,359 for 28 days, no internal-audit system, and audit-trail feature existence rather than complete operation/tamper/preservation assurance. [E04,E05; original_audit_extract.json]\n\nRHP discloses Doshi resignation 11 August 2025 and Panchal appointment 12 August; FY26 CARO says no auditor resignation. The resolution could concern scope/timing/interpretation, but no reconciliation is supplied. RHP and final prospectus no-default assertions conflict with the subsequently established February bank event. Note 32's ₹200 lakh FY25 Section 42 penalty becomes nil FY26, while RHP describes cheque, tax and ROC matters. Nil closing accounting balance or audit wording is not a settlement order. Obtain orders and current case status before claiming clearance. [E05–E10]\n\nExecution is measured by collection as well as awards. The prospectus FY26 receivable projection ₹96.52 crore was below actual ₹121.60 crore excluding retention, a ₹25.08 crore miss. Forecast 240 days and agency 379 days use potentially different denominators; they are not subtracted as if identical. Low material cost helped FY26 margin expansion; sustained project economics, rather than a procurement-price benefit alone, must be demonstrated.\n\n### Dated representations versus delivery\n\n| Representation / date | Outcome by cutoff | Assessment |\n|---|---|---|\n| RHP management working-capital estimate, 26 February 2026: FY26 trade receivables ₹96.5246 crore and projected holding 240 days | Audited 31 March trade receivables ₹121.6044 crore, with retention ₹37.1049 crore separately; agency debtor metric379 days | Like-for-like receivable balance missed by ₹25.0798 crore; day definitions differ. Negative execution evidence, not an invented cash shortfall of that exact amount. |\n| March/April 2026 issue objects: fresh IPO ₹48 crore, debt ₹6 crore and working capital ₹31.5 crore | Listed13 April; rating confirms regularisation13 April and liquidity support | Issue completed; bank-account utilisation and exact fee/GCP reconciliation remain unresolved. |\n| July2025 backlog ₹314.81 crore as reported in rating comparison | July2026 backlog ₹327.62 crore; FY26 sales ₹117.01 crore | Dated operating representation, not a management promise of annual revenue. Backlog persists but intake/execution/cancellations are not reconciled. |\n\n## 9. Financial Forensics\n\nHistorical observations below are deliberately labeled by accounting basis. ₹ crore except EPS/shares. FCF proxy is CFO minus cash capex, not FCFF; interest sits in financing cash flow under these statements.\n\n| Period / basis | Revenue | EBITDA | EBIT | PAT | Reported-basis EPS | CFO | Cash capex | CFO−capex | Gross debt | Free cash | Equity |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n| FY2023_restatement | 47.88 | 2.63 | 2.47 | 0.43 | 0.45 | -13.28 | 0.16 | -13.44 | 18.52 | 0.06 | 12.47 |\n| FY2024_restatement | 44.71 | 8.27 | 8.12 | 4.01 | 4.01 | -10.52 | 0.01 | -10.52 | 29.79 | 0.14 | 17.48 |\n| FY2025_restatement | 102.56 | 17.27 | 16.96 | 8.99 | 6.98 | -7.43 | 4.72 | -12.15 | 33.84 | 0.04 | 42.17 |\n| 10M_Jan2026_restatement | 67.44 | 16.21 | 15.91 | 8.52 | 6.28 | -1.76 | 0.04 | -1.80 | 39.18 | 0.28 | 54.47 |\n| FY2025_original_comparative_AR26 | 102.56 | 17.03 | 16.72 | 7.64 | 5.94 | -10.04 | 2.11 | -12.15 | 33.84 | 0.04 | 40.57 |\n| FY2026_original | 117.01 | 26.42 | 26.05 | 14.42 | 10.60 | -11.22 | 0.04 | -11.25 | 49.13 | 0.22 | 58.76 |\n\nThe older originals are separately disclosed below and are not spliced into the restated series or scored as comparable growth. ₹ crore. CFO is from the year-specific original where available; missing pages remain NS. Exception: FY22 CFO ₹5.2123 crore is the FY22 comparative printed in the FY23 original, because the own-year FY22 cash-flow page was absent. FY25 own-year CFO −₹10.0356 crore differs by ₹0.0001 crore from the FY26 comparative, a rounding-level difference. Neither exception resolves the larger original/restated breaks.\n\n| Original fiscal year | Revenue | PAT | CFO | Gross debt | Equity |\n|---|---:|---:|---:|---:|---:|\n| FY2021 | 32.25 | 0.77 | NS | 8.32 | 21.43 |\n| FY2022 | 54.65 | 2.21 | 5.21 | 15.00 | 23.64 |\n| FY2023 | 55.39 | 3.09 | -6.26 | NS | 26.73 |\n| FY2024 | 53.35 | 6.59 | -9.09 | 29.79 | 33.78 |\n| FY2025 | 102.56 | 7.64 | -10.04 | 33.84 | 40.57 |\n\nFY26 bridge, ₹ crore: PBT 17.8793 + finance 9.2120 + DA .3718 − interest income 1.0444 = pre-working-capital 26.4187. Then security release .0122 − inventory .7362 − trade-receivables 62.6586 − advances 5.1459 − other assets 8.1846 + payables 36.2909 + gratuity .0381 + other-current-liabilities 3.0700 yields cash before tax approximately −10.8955. Cash tax .3244 gives CFO −11.2198, subject to printed rounding. CFI +1.5710 comprises capex −.0351, FD release +.5617 and interest +1.0444. Financing cash +9.8343 includes net debt +15.2807 and capital +3.7656 less interest 9.2120. Net cash + .1855 gives demand cash .2209. [AR26]\n\nFY26 CFO/PAT is −0.778; subtracting financing-classified interest yields cash after interest −₹20.43 crore and capex-adjusted −₹20.47 crore. Cumulative FY23–25 restated CFO/PAT uses sums: −₹31.2243 crore/₹13.4295 crore = −2.3251. FY25–26 original sum ratio is −0.9632. There is no fabricated five-year sum or average of annual ratios. Original FY23 CFO differs from FY24's comparative and RHP restatement; all are retained in the original extract rather than silently overwritten. FY25 original CFO −₹10.0357 crore versus restated −₹7.4289 crore and capex ₹2.1136 versus ₹4.7203 differ almost identically, leaving FCF −₹12.1493 versus −₹12.1492. That reclassification explains aggregate FCF consistency, not all underlying lines or the original cash-tax 1871.49 lakh versus restated 218.69 lakh discrepancy. [E24]\n\nTrade receivables ₹121.6044 crore plus retention ₹37.1049 crore total 135.63% of annual sales. Closing trade-only DSO 379.32 days versus average 281.59; including retention closing 495.06 versus average 383.72. Of trade receivables, ₹85.76 crore is <6 months, ₹23.59 crore 6–12 months, ₹10.25 crore 1–2 years, ₹1.71 crore 2–3 years and ₹0.30 crore >3 years; all considered good with nil provision. The RHP F-30 gives retention ageing at 31 January 2026: total ₹29.1956 crore, including ₹10.5436 crore aged 1–2 years, ₹6.6735 crore aged 2–3 years and ₹3.3588 crore older than 3 years. Thus ₹20.5759 crore, or 70.48%, was older than one year. March 2026 retention ageing and subsequent receipts remain ND. Government-client credit quality does not remove certification, dispute, offset or timing risk. [E22]\n\nMarch gross debt ₹49.1255 crore includes LT ₹4.8324 crore and ST ₹44.2931 crore. ST includes cash credit ₹28.7462, current maturities ₹5.0161, other term ₹7.8740 and shareholder ₹2.6567 crore; current maturities are not added again. BG-margin FD ₹14.4084 crore with maturity >12 months is restricted, never available cash. Equity ₹58.7576 crore includes ₹13.8270 crore capital and ₹44.9306 crore reserves. Current ratio from audited figures 1.341 differs from agency 1.45; definition unreconciled. EBIT/full finance cost coverage 2.8275 differs from rating PBDIT coverage 2.98; neither replaces the other without a definition bridge. [E01,E08]\n\nFY26 PAT contains ₹1.0147 crore prior-period tax credit. Removing it leaves ₹13.4091 crore. Reported EPS ₹10.60 uses weighted 13,612,914 shares, not current 19,826,999 post IPO shares. Current-share EPS is ₹7.2748 and ex credit ₹6.7631. PPE note 11 printed net 827.03 lakh conflicts with row 439.02 and balance-sheet 439.03; the latter is used and issue retained. No capitalised lease liability is disclosed, operating rent is expensed; future lease commitments are ND rather than asserted zero. Contingencies and BG calls are not treated as ordinary debt until separately modeled. [E21]\n\nRating chronology is material: Infomerics 24 April BB−/Negative/INC/A4 cites missing NDS from September 2025; Acuité 21 August D/C/A4 establishes February default and April cure; CRISIL 27 August D/D/INC explicitly says the delinquency remained and management/banker clarification was awaited, with limited dated information; no later CRISIL restoration or withdrawal was located; Acuité 31 August BB+/Stable/A4+ is latest located cure-seasoned view on ₹100 crore. It comprises ₹17 crore funded limits and ₹83 crore nonfunded limits, not ₹100 crore free cash. Bank utilisation 87.98% funded/77.09% nonfunded is 9-month average through July, not committed available October headroom. [E07–E10]\n\n## 10. Valuation & Market Expectations\n\nAt conditional ₹79.06 and 19,826,999 shares, market capitalisation is ₹156.75 crore. Current-share FY26 P/E is 10.87× and ex-prior-tax-credit 11.69×. The common shortcut 79.06/10.60 materially understates P/E after IPO dilution. March debt/cash plus October post IPO market cap produces only a stale-date EV bridge, not current EV. Neither EPS normalisation nor a low multiple resolves negative cash conversion or source discrepancies. R and P remain NS.\n\n### Funding and timing model\n\nAll scenarios start with 31 March 2026 observed balances and the same seven-period analytical bridge to 19 October 2026. No H1FY27 cash flow was available within cutoff. April 1–12 daily cash movements are unobserved; IPO availability on 13 April is assumed from listing/cure chronology, not bank statement. Ordinary April flows settle on 30 April. This explicit gap means the model is not a verified historical survival reconstruction. Post entry bear/base/bull divergence begins 20 October and first modeled payment 19 November 2026.\n\nOpening available cash ₹.2209 crore is separate from ₹14.4084 crore pledged FD and ₹.3481 crore government advance, neither spent. IPO gross ₹48 crore less detailed fees ₹5.76 crore yields ₹42.24 crore earmarked: ₹6 crore debt repayment, ₹31.5 crore eligible WC and ₹4.74 crore GCP. Actual gross issuance is not issued twice in shares. WC proceeds release only against supplier/operating cash payments, not again as a reduction of ΔWC. Unspent pools are excluded from terminal cash. The competing ₹43.14 crore net-proceeds summary is tested as ₹.90 crore fee relief, not silently used. Fees ex/inclusive GST wording is ambiguous; an additional ₹1.0368 crore 18%-of-detailed-fee sensitivity is also retained. Already incurred ₹.207 crore IPO expenses are within the fee budget, not added again. [E14]\n\nOpening statutory dues ₹4.0466 crore settle 30 April A; income tax ₹6.087 crore in four ₹1.52175 crore installments June/September/December/March A; current gratuity ₹.10 crore September A. Prepayment fee ₹.24 crore is 4% of ₹6 crore A, separate from principal and IPO fees. Long gratuity ₹.2322 crore is retained terminal claim. Payroll/expense/customer-advance liabilities remain in ONWC and are not paid a second time. First year current maturities ₹5.0161 crore are modeled monthly in addition to IPO ₹6 crore repayment, with 0/50/100% overlap sensitivities because exact facility allocation is unverified. Full overlap preserves more terminal debt, not free cash. Remaining opening debt incurs 20% annual interest A, sensitised 16–24%, and is cash-retired once at terminal. April charges the full opening debt for 12 days before the assumed 13 April repayment and the post-repayment balance for 18 days; this adds ₹0.03945 crore versus incorrectly applying the lower debt throughout April. Actual penal interest and bank debit dates remain unverified.\n\nEach month has two supplier front/collection cycles; 60% of cost is paid before each collection. Every event checks ₹.10 crore minimum cash, not just year-end. Receivables, inventory, retention/vendor assets, payables and accruals are explicit stock rollforwards. Growth fixed capex pays upfront above the ₹150 crore inflation-adjusted envelope at ₹.06 per incremental revenue ₹1; qualification lag 3 months. Maintenance is max(.5% sales, 5% opening PPE); depreciation 8% PPE; tax 25.17% on positive profit, with no invented tax-loss refund. These are assumptions, not audited contractual terms.\n\nExisting ₹14.4084 crore BG collateral remains blocked. Additional cash-funded collateral rises with peak annual revenue above the audited ₹117.0147 crore base, at 15% / 10% / 8% in bear / base / bull. No release is assumed. It is a separate intraperiod payment, does not qualify for IPO working-capital releases in this model, enters operating capital, and is reinvested at terminal growth. Ratios 0% / 5% / 15% / 20% are separately tested. At terminal, additional collateral reinvestment equals growth × collateral ratio × the greater of final-year realised revenue and ending annual sales run-rate. This retains the full marginal requirement, rather than growing only collateral above the historical revenue offset. It replaces, rather than adds to, g × existing additional collateral within terminal ONWC growth. Actual bank collateral terms are ND; assuming no additional collateral silently would overstate growth affordability.\n\n| Assumption | Bear | Base | Bull |\n|---|---:|---:|---:|\n| Immediate revenue shock / subsequent annual growth | −35% / 0% | 0% / 12% | 0% / 22% |\n| Operating / terminal EBITDA margin | 12% / 12% | 18% / 17% | 23% / 21% |\n| Trade DSO | 460 | 340 | 260 |\n| Inventory / other operating assets as sales | 13% / 38% | 10% / 32% | 8% / 25% |\n| Payables / operating accruals as sales | 30% / 10% | 40% / 15% | 40% / 16% |\n| Terminal growth / discount rate | 2% / 22% | 3% / 18% | 4% / 16% |\n| Additional loss/call at first post entry month | ₹12.16 cr receivable, ₹1.28 cr inventory, ₹5 cr BG call | Nil | Nil |\n\nOptional financing is bounded, uncommitted and available only after entry: bank lifetime gross ₹2.0434 crore (17×12.02% average unused), 20% interest, 2% fee, 6 month grace and 36 month amortisation. Whole-share equity at ₹60 incurs 6% fee and cannot exceed ₹1.038006 crore gross or 173,001 shares, the 20 million authorised headroom. No automatic increase in authorised capital or unlimited rescue is assumed. ₹40/60/79.06 issue price and zero-bank sensitivity are explicit. The engine uses ceil shares needed, then floors available cash/authorisation cap. Any cash breach stops new rescue finance and suppresses ordinary return, while failed diagnostic cash paths remain visible.\n\n| Scenario / funding | Final-year sales ₹ cr | First intraperiod breach | Terminal cash shortfall ₹ cr | Ordinary exit ₹ | Net annual return |\n|---|---:|---|---:|---:|---:|\n| bear_no_new_finance | 84.50 | 2027-02-19 supplier_front_1 | 42.26 | NS | NS |\n| bear_bounded_optional | 84.50 | 2027-03-19 supplier_front_1 | 41.96 | NS | NS |\n| base_no_new_finance | 222.97 | No intraperiod breach | 26.64 | NS | NS |\n| base_bounded_optional | 222.97 | No intraperiod breach | 26.64 | NS | NS |\n| bull_no_new_finance | 335.51 | No intraperiod breach | 0.00 | 213.72 | 21.03% |\n| bull_bounded_optional | 335.51 | No intraperiod breach | 0.00 | 213.72 | 21.03% |\n\nBase terminal cash is insufficient by ₹26.64 crore despite no earlier breach. Positive diagnostic EV is not a liquid funding source. Bear optional finance can delay rather than cure breach. The bullish ₹213.72 exit reflects collection improvement and margin persistence, not unqualified upside.\n\nTerminal FCFF is earned from next-year NOPAT + DA − maintenance − fixed growth − growth ONWC − reserve reinvestment. A 12-month continuation schedule retires all remaining debt and senior claims once, funds supplier front payments and capex, and solves the minimum operating reserve iteratively. Only excess cash above claims/reserve is added to equity; restricted FD and earmarked IPO money are excluded. This is a conservative no-new-finance continuation condition, not a legal requirement to retire all facilities precisely in 2031. Rollover could improve it but is not assumed certain. Terminal ROIC, terminal-value share, explicit FCFF and 8/10/12/15/18/20× EBIT crosschecks are retained for every path.\n\nNominal INR equity hurdles are 12/15/18%, distinct from business discount rates. Net return includes 2% entry and 2% exit costs and dilution; no dividends double counted. Each path calculates required exit price and maximum entry price at all three hurdles. Entry/exit 0/2/5% cost sensitivities expose SME execution risk. No finite “buy below” is asserted from an unfunded base.\n\nThe common modeled 19 October entry has cash ₹25.53 crore, debt ₹40.20 crore and no remaining IPO earmarked balance. This is an analytical roll-forward, not a reported October balance sheet.\n\n| Case | Terminal cash | Debt | Operating reserve | Earned next-year FCFF | Terminal ROIC | PV terminal-value share |\n|---|---:|---:|---:|---:|---:|---:|\n| bear | -1.89 | 38.11 | 2.03 | 4.75 | 5.39% | 95.22% |\n| base | 16.61 | 38.11 | 4.91 | 21.93 | 12.76% | 80.67% |\n| bull | 94.86 | 38.11 | 7.03 | 44.91 | 23.69% | 70.61% |\n\n### Reverse expectations and sensitivity\n\n| Cash-economics hypothesis | Lowest tested growth meeting 15% net | Failed funding trials / total |\n|---|---:|---:|\n| base | None in tested range | 27 / 31 |\n| bull | 12.00% | 15 / 31 |\n\nAll 31 growth trials per hypothesis from 0% to 60% in steps of 2 percentage points are stored, including failures. Lowest tested feasible is not an interpolated continuous root. Bull's threshold 12.00% requires bull collections/margins as well as growth; changing only sales cannot repair inadequate funding. Margin/DSO grids 14/18/22%×260/340/420 days, terminal discount rate/growth 14/18/22%×2/3/4%, supplier front 30/90%, assets 25/40%, payables 25/45%, debt 16/24%, capex 3/12 paise and IPO/principal variants are all recomputed. Exact results and every trial reference live in sensitivity_results.json and canonical paths, not cherry-picked favorable cells.\n\n## 11. Bear Case & Permanent-Loss Path\n\nThe strongest bear case is that apparently profitable EPC growth keeps consuming cash through uncertified receivables, retention and vendor advances; a supplier or BG event then forces repayment while tender customers delay cash. Historical vendor loss and February BG invocation show this mechanism is not purely abstract. A 35% revenue fall is below the FY25 largest customer 65.07% exposure, but is still an analyst stress, not a forecast customer loss. Receivable 10%/inventory 10% haircuts and ₹5 crore BG call are assumptions, not discovered impairments.\n\nThe no-finance stress breaches a supplier front payment; bounded bank/equity only delays breach. Capital can then be impaired through forced asset collection discounts, lien priority, project termination penalties, dilutive capital or insolvency costs. We do not report a normal IRR after such breach. The balance-sheet book equity is not a liquidation floor: BG FD is encumbered, receivables require certification, current liabilities and statutory claims have priority, and missing claim details prevent a robust net recoverable value. Downside can be severe, including complete equity loss; no fabricated probability is assigned.\n\nThe decisive thesis-break variable is **cash collection net of new working-capital commitments**, not revenue or announced orders. Countercase: public clients eventually settle, IPO working capital restores execution and Acuite upgrade persists. Evidence needed to choose between these cases is post-cutoff monitoring, not optimistic multiple expansion at the cutoff.\n\n## 12. 5× / 10× Feasibility\n\nRequired gross price CAGRs are 37.97% for 5× in 5 years, 58.49% for 10× in 5 years, 17.46% for 5× in 10 years and 25.89% for 10× in 10 years. Net return after costs is lower; dilution means enterprise growth must outpace per share growth. Tests use both base and bull cash economics, 10/20/30/40/50/60% sales growth, both horizons and both targets. They retain every trial's revenue, new operating capital, finance debt/equity/fees, shares, survival and 8× EBIT lower-multiple crosscheck.\n\n| Years | Target | Cash-economics hypothesis | Lowest tested growth meeting gross price target | Successful / total trials |\n|---:|---:|---|---:|---:|\n| 5 | 5× | base | None | 0 / 6 |\n| 5 | 5× | bull | None | 0 / 6 |\n| 5 | 10× | base | None | 0 / 6 |\n| 5 | 10× | bull | None | 0 / 6 |\n| 10 | 5× | base | None | 0 / 6 |\n| 10 | 5× | bull | 20.00% | 2 / 6 |\n| 10 | 10× | base | None | 0 / 6 |\n| 10 | 10× | bull | 30.00% | 1 / 6 |\n\nNone is called probable merely because a formula reaches the target. Very high growth requires additional qualified projects, BG access, procurement credit, staffing and collection capacity; a ₹327.62 crore July backlog does not establish decade-long replenishment. Some cash paths fail even when terminal business value looks large. Any mathematically successful bull trial is classified **Speculative / unsupported**, not a multibagger candidate, until comparable accounts, sustainable incremental returns and funded order access are demonstrated. Full results in multibagger_tests.json prevent terminal multiple-only storytelling.\n\n## 13. Monitoring Plan\n\n| Evidence and dated baseline | Review timing / expected milestone | Warning threshold | Thesis break or gate consequence |\n|---|---|---|---|\n| FY25 ₹16.56 crore vendor loss and original/restated differences; unresolved20 October2026 | Before any initiation, and at next audited filing: signed original opinion, loss allocation and CFO/tax bridge | Missing requested documents or unexplained new reclassifications | Adverse evidence of material abuse could trigger G1 Fail; unresolved reconciliation retains G2 Hold |\n| March cash₹.2209cr, debt₹49.1255cr; April IPO₹48cr; Acuite31 August cure-seasoned upgrade | At next IPO utilisation/monitoring statement and next financial results: bank balances, expenditure ledger and maturity ladder | Uses do not reconcile to net proceeds, restricted cash counted free, or renewal dependent on unsupported assumptions | Confirmed unregularised payment default or unfunded dated mandatory claim triggers G3 reassessment; no automatic fail from a missing statement |\n| March trade+retention₹158.71cr; January retention>1year70.48% | Next half-year results and project collection statements: dated subsequent receipts against old balances | Trade days fail to improve from379 closing days, older retention not collected, or cash growth trails new commitments | Sustained inability to collect certified balances or recurring writeoffs destroys the collection thesis; CFO must be judged after working-capital and interest needs |\n| Acuite31August BB+/Stable/A4+; CRISIL27August D/INC unresolved; Infomerics24April BB−/INC | Each new agency release and lender confirmation; compare agencies separately | Fresh noncooperation, missing NDS, BG invocation or downgrade | Verified new default, creditor enforcement or failed cure changes solvency conclusion; old INC alone does not establish default |\n| FY26 audit resignation wording, joint-bid deed, Section42 balance and proposed July remuneration | Before initiation and on next annual/AGM update: letters, deed, settlement orders and voting outcome | Narrative conflicts persist, significant obligations omitted or remuneration differs from approval | Material misstatement or minority abuse, if substantiated, changes governance gate; nil accounting balance alone is not clearance |\n| July2026 backlog₹327.62cr; FY25 topthree customers94.10% | Each half-year and major award/cancellation: backlog movement and project margin/cash milestones | Backlog growth without certified billing/receipts, cancellation or concentration rising | Loss of key award/qualification or cash-negative execution invalidates durable-growth premise; no arbitrary revenue-only trigger |\n| October19 shares19,826,999/lot1600; official60-session turnover/depth missing | Before any trade, then each contemplated size/exit: complete official rolling20/60session data and current lockins | Incomplete history, zero-trade clusters, price-band constraints or sub-lot participation capacity | G4 stays Hold until ₹5lakh reference position has an evidence-based executable route; no finite exit promise from a single day's volume |\n\n\n₹5 lakh reference position at ₹79.06: one 1600-share lot ₹126,496; floor 3 lots/4800 shares ₹379,488; ceil 4 lots/6400 shares ₹505,984. At 2/5/10% participation, one lot requires 80,000/32,000/16,000 actual daily shares. The single 19 October secondary 72,000-share observation permits 0/2/4 whole lots respectively; it is not a 60-session exit forecast. Missing official days are not zero-filled, actual turnover is not invented from close×volume, and no finite general exit day estimate is claimed. Corporate actions/lockins and price bands need current official verification before execution.\n\n## 14. Final Classification & Conditional Action\n\n**Hold — unresolved; not a compounder; not an investable or multibagger ranking entry.** BQS/GQS/IAS remain NS with explicit coverage and bounds. A governance Avoid label would require stronger substantiated adverse evidence, while a clean low P/E buy would require much better reliability, cash and execution evidence. Neither shortcut is justified.\n\nThere is no executable entry price, target allocation or rank based on this record. Before consideration, reconcile G2/G3, obtain official liquidity and revise the cash model with dated bank/claim terms. Then require a funded base case meeting at least 15% net INR return and a survivable bear case at a position that suits actual whole-lot liquidity. No portfolio suitability facts about the user are assumed. No Git or website publication was performed.\n\n## 15. Sources, Assumptions & Open Questions\n\nSource IDs above map to primary public records below. Source files were inspected, including original scans/OCR; raw PDF/OCR are excluded from the delivery archives. Source URLs, dates, locators and hashes where available are in source_register.json. Missing original audit pages, bank statements, turnover and resolution orders remain visible. Forecasts and pre entry interpolation are A, not backfilled facts. Source contradictions are preserved and fairly resolved only where actual evidence permits.\n\n- AR26: [Annual Report 2025–26](https://drive.google.com/file/d/1tNyu_NoVHSAyvRIvkOI4do569zBGFNGk/view?usp=sharing), 2026-08-31 (board report); 2026-05-30 (audited financial statements). Printed page; PDF page = printed + 1. 109 PDF pages.\n- RHP: [Red Herring Prospectus dated 27 March 2026](https://aibi.org.in/Current_DOC/26270001.pdf), 2026-03-27; restatement report 2026-02-26. Printed numbered page or F-number. Financial F-1=PDF203; F-7=PDF209; F-17=PDF219.\n- FR26: [Audited results for year ended 31 March 2026](https://drive.google.com/file/d/1UtnI2Jy-X9ULq_C_6VexedvEjAcY_-Mm/view?usp=sharing), 2026-05-30. 1-based PDF page\n- O21: [Original FY2021 issuer-linked financial statements](https://drive.google.com/file/d/1LBiEzHqDAZJAqU86NIchQytY1Tjr61v7/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O22: [Original FY2022 issuer-linked financial statements](https://drive.google.com/file/d/1PVeXFL9w7xJVlylipGYdhEYyUTHnLi1l/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O23: [Original FY2023 issuer-linked financial statements](https://drive.google.com/file/d/1zyWHVZmbUN8XH_DepG69JS_Ad7l-z2EL/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O24: [Original FY2024 issuer-linked financial statements](https://drive.google.com/file/d/15SL_kZMpr0fcwGcGs60Ed0WnIIMDD2N7/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O25: [Original FY2025 issuer-linked financial statements](https://drive.google.com/file/d/14ww5U54S5rSKVkX-l7sApMnxK0EFr-Qc/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- PROS: [Final Prospectus dated 9 April 2026](https://drive.google.com/file/d/166KghZQZwvcgVnZKqaU8zOCnAnV46E9W/view?usp=sharing), 2026-04-09. Printed numbered page; PDF page=printed+4 until financial annexure. F7=PDF209; F18=PDF220.\n- ACUITE21: [ACUITE21](https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/21st_Aug_26), 2026-08-21. Rationale, bank feedback, liquidity and rating history\n- ACUITE31: [ACUITE31](https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/31st_Aug_26), 2026-08-31. Rationale, drivers, liquidity, facilities and history\n- SHAREAPR: [SHAREAPR](https://drive.google.com/file/d/1lUHWfzNStlDPP9ud1AXf-THUSpOohNhr/view?usp=sharing), 2026-04-10. Issuer-linked shareholding pattern; capital/promoter/lockin tables\n- VIVIANA25: [VIVIANA25](https://www.vivianagroup.in/annual-report-fy-24-25.pdf), 2025-05-06. Standalone accounts pp82–85\n- ORIANA25: [ORIANA25](https://orianapower.com/wp-content/uploads/2025/09/Intimation-Notice-of-Agm-24-25.pdf), 2025-05-28. Consolidated accounts pp112–115\n- RAJESH25: [RAJESH25](https://www.rajeshpower.com/img/Annual-Report-Rajesh-Power-2024-25-Final.pdf), 2025-05-15. Consolidated accounts pp114–117\n- SECONDARY_PRICE: [SECONDARY_PRICE](https://www.equitypandit.com/historical-data/544746), 2026-10-19. Dated OHLCV row and 60 observed bars only; no actual turnover\n- CRISIL27: [CRISIL27](https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SafetyControlsandDevicesLimited_August%2027_%202026_RR_404286.html), 2026-08-27. Primary text read through public web retrieval; raw download unavailable\n- INFOMERICS24: [INFOMERICS24](https://www.infomerics.com/admin/uploads/PR-Safety-Controls-and-Devices24April26.pdf), 2026-04-24. Primary text read through public web retrieval; raw download unavailable\n- SECURITY19: [SECURITY19](https://nsearchives.nseindia.com/content/cm/interop/NSE_CM_security_19102026.csv.gz), 2026-10-19. Issuer-only rows retained in security_inputs.json\n\nOpen priority questions: (1) Who incurred and approved the vendor loss and why the allocation? (2) What reconciles original/restated tax/CFO and FY25 opinion? (3) What are current unrestricted cash, IPO utilisation, debt maturities and nonfunded claims? (4) Which retentions are certified, collectible and subsequently received? (5) What does the joint-bid deed obligate and how do no-default/auditor resignation statements reconcile? (6) Are litigation/penalty balances resolved by orders and remuneration approved? (7) What is the actual 60-session turnover/depth and current tradeability?\n\n### Update log\n\n| Research date | Evidence / correction | Effect |\n|---|---|---|\n| 24 October 2026, cutoff unchanged | Resolved exact issuer/capital, read original FY21–26 and prospectus restatement | Rejected stitched profit/cash history; current-share EPS corrected |\n| Same | Separated Acuite 21/31 Aug, CRISIL 27 Aug and Infomerics 24 Apr | Historical default/cure distinguished from dated noncooperation |\n| Same | Detailed IPO fees versus summary; original principal overlap and GST ambiguity | Conservative net proceeds and explicit structural sensitivities |\n| Same | Common pre entry cash bridge, whole-share bounded finance, earned terminal FCFF/reserve | Failed paths retain NS returns; no rescue after breach |\n\n### Required 16 quality checks\n\n1. Correct issuer/ISIN/scope and separate price/information dates: PASS; price is conditional.\n2. Primary records read for material claims; F/M/A separation: PASS; missing raw pages explicitly ND.\n3. Audit/RPT/finance/dilution reviewed and proportionate gates: PASS WITH LIMITATION; full five-year RPT completeness is not established; no fraud allegation inferred.\n4. Comparable periods/units, no overlapping TTM or invented quarterly cash: PASS; original/restated kept distinct.\n5. Revenue versus profit/acquisitions/pass-through/base: PASS WITH LIMITATION; price/volume ND, selected net-GST entity growth disclosed.\n6. CFO/PAT ratio of sums and capex not excuse: PASS; incompatible five-year sum NS.\n7. Incremental return numerator/denominator/timing: PASS WITH LIMITATION; valid multi-year CAP NS.\n8. Earnings/tax/lease/claims/dilution consistency: PASS WITH LIMITATION; missing claims/lease commitments not invented zero.\n9. Bear/base/bull cash/reinvestment/finance reconciliation: PASS for conditional model; actual post IPO cash not verified.\n10. Canonical factor reuse/exact 100% weights: PASS, machine checked.\n11. NS/coverage/bounds/confidence: PASS, no zero or average substitution.\n12. Raw/final/cap reconciliation: PASS; CASH cap 5 does not fill missing GQS.\n13. Matrix/compounder criteria: PASS; Hold unresolved, no compounder designation.\n14. Stated position size/liquidity/quote execution: PASS WITH LIMITATION; L/G4 unresolved.\n15. Strongest bear/thesis-break variable: PASS; collections net of new WC decisive.\n16. Common framework/tie/ranking unfinished status: PASS; excluded from numeric/investable rankings, no fabricated tie order.\n\nRecovery generates 142 complete distinct cash paths with failed trials. Author-only guarded deletion/rebuild and in-guard verification attestations accompany the final package; they validate reproducibility, not factual certainty or investment fitness. The central question remains unanswered: can this contractor reliably turn rising project revenue into cash and sustainably increase intrinsic value per share? At the cutoff, the evidence is insufficient for a positive investable conclusion.\n","sections":[{"number":1,"title":"Executive Verdict","content_markdown":"\n**Hold — unresolved. Not rank-eligible; no current buy recommendation.** Safety Controls & Devices Limited is an electrical-infrastructure EPC contractor, not a safety-equipment manufacturer with a demonstrated recurring product franchise. Its apparent low earnings multiple is not sufficient compensation evidence when cash conversion, historical accounting and current funding cannot be reconciled reliably.\n\nFY26 revenue increased to ₹117.01 crore and PAT to ₹14.42 crore. Yet CFO was **negative ₹11.22 crore**, trade receivables plus retention reached **₹158.71 crore**, and unrestricted cash was only **₹0.22 crore** at 31 March 2026. A ₹48 crore fresh IPO followed in April. This changes the funding picture materially, but audited March cash cannot be added to gross IPO money and called October unrestricted cash. Fees, restricted objects, debt repayment and subsequent working-capital use matter.\n\nThe strongest adverse evidence is the original FY25 ₹16.56 crore vendor-loss charge to reserves, subsequent restatement differences, a genuine February 2026 bank-guarantee/overutilisation default, and weak cash conversion. The strongest counterevidence is equally important: the lender confirmed regularisation on 13 April, Acuité upgraded to BB+/Stable/A4+ on 31 August after the curing period, and FY26 carries an unmodified audit opinion and satisfactory IFC opinion. **Historical default is not a claim of current default; accounting contradictions are not proof of fraud.** [E01–E10]\n\nThe common-entry monthly model gives no ordinary shareholder return for the base case because terminal debt retirement and operating reserves are not cash-funded. The bull case survives and produces a conditional ₹213.72 exit price and 21.03% net annual return, but requires better collections and margins than a conservative underwriting case. It is a hypothesis to falsify, not a price target.\n\n"},{"number":2,"title":"Research Header, Gates and Data Confidence","content_markdown":"\n| Field | Research basis |\n|---|---|\n| Exact issuer / security | Safety Controls & Devices Limited; BSE SME 544746 / SCDL; ISIN INE0UMH01018 |\n| Sector / rubric | Electrical substation and allied infrastructure EPC; standard non-financial v3.0 rubric |\n| Information / market cutoffs | 20 October 2026 / 19 October 2026; later information excluded |\n| Retrieval date | 24 October 2026; document publication dates retained separately |\n| Accounting / scope | Standalone Indian GAAP / Accounting Standards; not Ind AS; March year-end |\n| Capital / market lot | 19,826,999 issued shares and 1,600-share lot from 19 October official exchange interoperability master |\n| Conditional price | ₹79.06, secondary dated 19 October close; not verified official executable close |\n| History | Original FY21–26 and restated FY23–25 retained as separate datasets; no artificial continuous earnings/cash series |\n| Framework | Full v3.0; hash in framework_provenance.json; 13 factors, four gates, 15 report sections and 16 checks |\n\nG1 governance: **Conditional**. Disclosure/reconciliation and stewardship weaknesses justify GOV 4; the evidence is not sufficient to assert abuse or invoke a GOV≤3 override. G2 financial reliability: **Hold — unresolved**, driven by reserve-loss treatment, original/restated cash/profit discontinuities, audit/default and contractual-JV inconsistencies. G3 solvency/funding: **Hold — unresolved**, not Fail based on an assumed forecast. Latest Acuité cure evidence is positive, while October cash/debt/claims and IPO deployment remain unverified. G4 investability: **Hold — unresolved**, because actual 20/60-session turnover, zero trades, spreads and executable depth are missing.\n\nFacts are F, management representations M, analyst assumptions A, secondary facts explicitly marked, and unresolved data ND/NS. Source-level confidence is High for inspected balances and dated rating actions, Medium for comparable net-GST revenue, and Low for normalized cash earnings, current liquidity and future project economics. Reproducible arithmetic does not raise evidence confidence.\n\n"},{"number":3,"title":"Scorecard and Calculation Audit","content_markdown":"\n| Score | Final | Evidence coverage | Missing-data bound | Override |\n|---|---:|---:|---:|---|\n| BQS | NS | 88% | 3.94–5.02 | None |\n| GQS | NS | 85% | 5.00–6.35 | GQS cap 5; NS retained |\n| IAS | NS | 20% | 1.40–8.60 | None |\n\nCanonical factors are reused, never substituted between scores. BQS = .20 GOV + .20 MOAT + .12 REV + .10 DUR + .12 CAP + .10 CASH + .08 BAL + .08 EXEC. GQS = .40 REV + .20 DUR + .15 EARN + .15 CAP + .10 CASH. IAS = .25 Q + .35 R + .20 D + .10 P + .10 L, where Q is final BQS. Each vector sums exactly to 1 using Decimal arithmetic.\n\nBQS known contribution is 3.82, missing weight .12: the unrenormalised bound is 3.94–5.02. GQS known contribution is 4.85, missing weight .15: raw bound 5.00–6.35. Persistent CASH≤3 caps a computable GQS at 5; it does **not** convert missing CAP into an invented GQS 5. IAS known contribution is .60, missing weight .80: bound 1.40–8.60. These are missing-data bounds, not statistical confidence intervals. Raw and final composites remain NS; no midpoint, zero substitution or renormalisation is used.\n\n| Factor | Score | Confidence | Decisive basis | Counterevidence | Evidence |\n|---|---:|---|---|---|---|\n| GOV | 4 | Medium | Material disclosure and stewardship weaknesses without sufficient evidence of fraud or minority abuse. | Restatement transparency, clean FY26 opinion/IFC and credit cure prevent an automatic governance-fail conclusion. | E03, E05, E06, E09 |\n| MOAT | 4 | Medium | Qualification history helps tenders, but concentrated counterparties and procurement pass-through give little demonstrated pricing power. | 19 completed substations and technical execution experience create entry friction. | E11, E18, E20 |\n| REV | 8 | Medium | Comparable three-year net-GST entity revenue CAGR 34.70% starts at 9; limited comparable history caps REV at 8. No additional small-base deduction. | FY24 contraction, uneven project recognition and unseparated price/volume undermine extrapolation. | E02, E12, E21 |\n| DUR | 5 | Medium | Dated ₹327.62 crore backlog supports visibility, but tender concentration, billing and collection delays limit durability. | July backlog increased and transmission/renewable infrastructure demand offers opportunities. | E11, E13 |\n| CAP | NS | Low | Valid multi-year incremental NOPAT/IC returns cannot be separated from reserve losses and accounting discontinuities. | Indicative original FY25–26 ROIC 20.39% and positive incremental proxy show potential, not proven reinvestment economics. | E03, E24, E23 |\n| CASH | 2 | High | FY23–25 restated CFO/PAT ratio of sums is −2.33; FY25–26 original is −0.96; debt and supplier funding bridge profits. | Working-capital model and public-sector retention can produce later receipts; FY25 capex reclassification does not explain all negative CFO. | E01, E02, E22, E24 |\n| BAL | 3 | Medium | Very low unrestricted cash, large pledged deposits, expensive debt and historically invoked BGs create fragile liquidity. | Acuite reports the February default regularised and curing completed; this does not independently resolve CRISIL’s separate 27 August delinquency concern or verify October status. | E01, E07, E08 |\n| EXEC | 4 | Medium | Sales/operating margins improved, but receivable forecast was missed and project cash/default chronology show execution strain. | Revenue grew 14.09% in FY26 and order book remains substantial. | E11, E13, E22 |\n| EARN | 3 | Medium | GST correction, vendor-loss reserve treatment, tax credit and EPS denominator changes weaken repeatability of headline growth. | FY26 is unmodified and PAT remains positive without prior-tax credit. | E03, E04, E21, E24 |\n| R | NS | Low | Reliable base-case funded ordinary return is not established, and entry price remains secondary. | A fully specified bull scenario survives and yields a conditional return, not the base return used for R. | E17, E23 |\n| D | 3 | Medium | Concentrated EPC receivables and pledged collateral leave meaningful impairment/recapitalisation risk; stress breaks bounded funding. | IPO capital, bank regularisation and public counterparties offer recovery routes. | E07, E08, E22, E23 |\n| P | NS | Low | Low displayed current-share P/E cannot establish mispricing until cash, normalised earnings and executable quote are reconciled. | Market price is near the ₹80 IPO price while earnings grew; this is a hypothesis, not proven expectation gap. | E14, E17, E21, E24 |\n| L | NS | Low | Official 20/60-session actual turnover, zero trades, spreads and current executable depth are missing. | Primary 1,600-share lot and a dated secondary volume permit a transparent one-day size illustration. | E15, E17 |\n\nREV uses the preselected comparable three-year window because five-year comparability fails. The ≥30% schedule starts at 9 and limited verified comparable history applies the ceiling 8; no extra small-base penalty is applied. CAP is not inferred from headline ROCE. CASH measures realised conversion, EARN accounting repeatability, BAL dated financing resilience, and D impairment severity. The adverse same facts are not repeatedly used for unexplained discretionary haircuts. A one-point GOV change shifts BQS known bounds .20; a one-point REV change shifts BQS .12 and GQS .40. Gates remain binding.\n\n"},{"number":4,"title":"Business Overview","content_markdown":"\nSafety designs, procures, installs, tests and commissions electrical substations and allied works. Its disclosed technical envelope includes AIS substations up to 400 kV and GIS up to 220 kV, with solar, fire-fighting and hospital/infrastructure work. These are principally project businesses: qualification and award lead to equipment procurement, construction, certification, milestone billing and collection. They are not subscription revenues. Management reports 19 commissioned substations and 60 employees; outsourced suppliers and project execution resources are therefore important. [RHP pp 136–156; E11]\n\nA sale is not cash. Percentage-of-completion/certification, customer advances, vendor advances and 15–30% retention terms produce long financing cycles. Materials consumed were ₹81.25 crore against FY26 revenue ₹117.01 crore. Procurement pass-through and changing contract mix can move sales and margins without equivalent proprietary value added. Public-sector/utility customers can lower ultimate counterparty-loss risk while increasing certification and payment timing risk. Principal disclosed geography is Uttar Pradesh and Bihar; government tender demand does not guarantee company-level order access or settlement.\n\nNo material acquisition, amalgamation, divestment or revaluation is identified over the disclosed ten-year lookback. The RHP says there are no subsidiaries/associates and at one point no joint venture, but separately describes a 19 January 2024 joint-bid deed with K. Ramachandra Rao Transmission & Projects Private Limited for BSPTCL NIT 38/PR/2023 with joint/several responsibilities. This could be a contractual consortium rather than an equity JV. We do not invent an acquired subsidiary or conclude the obligations are zero. Obtain the deed, work-share and guarantee schedule before closing scope risk. [RHP pp 174–175; E12]\n\n"},{"number":5,"title":"Moat / Industry Position","content_markdown":"\nTender credentials, technical capability, bank-guarantee access and completion history create real entry friction. They do not establish switching costs, pricing power, brand dominance or recurring service economics. In FY25 the largest customer represented 65.07% of revenue, the largest three 94.10%, and top five 97.80%; the largest supplier represented 56.64% of purchase/direct-expense concentration and top three 66.61%. The supplier table's misleading column label is not treated as a revenue ratio. Ten months to January 2026 top customer concentration eased to 41.55%, but top three remained 90.91%. [RHP; E11]\n\nThere is no verified market-share numerator/denominator, proprietary-IP economic record or price-volume realization bridge. MOAT 4 reflects a capable small contractor with qualifications, not a demonstrated protected franchise. Further growth may require both more procurement credit and more BG collateral, limiting the apparent asset-light advantage.\n\nThe economic peers below are independently read primary annual reports at the common FY25 period. Margins are ratios, not percentage points. They are not a current valuation peer group.\n\n| Peer | Scope | Revenue ₹ cr | EBITDA margin ratio | PAT ₹ cr | CFO ₹ cr | Single-year CFO/PAT | Source |\n|---|---|---:|---:|---:|---:|---:|---|\n| Viviana Power Tech Limited | Standalone | 188.37 | 0.14 | 17.01 | -2.93 | -0.17 | VIVIANA25 |\n| Oriana Power Limited | Consolidated | 987.17 | 0.24 | 158.54 | 290.49 | 1.83 | ORIANA25 |\n| Rajesh Power Services Limited | Consolidated with proportionate JV under AS27 | 1107.44 | 0.12 | 93.37 | -16.28 | -0.17 | RAJESH25 |\n\nViviana is the closest electrical T&D/substation EPC comparison; its negative CFO shows the industry's working-capital problem is not unique to Safety. Rajesh Power is much larger with EHV/HV cables/substations and proportionate joint-venture accounting, and also had negative CFO. Its current receivables exclude separately presented long retention, so a simplistic DSO comparison would be misleading. Oriana combines solar EPC with RESCO/SPV economics. Its ₹290.49 crore CFO includes ₹40.28 crore FD release, ₹141.52 crore payable growth and ₹317.56 crore other-liability growth; it is not pure cash generated from collected profit. Excluding FD release and reversing the operating-classified debt decrease gives ₹250.51 crore, still requiring funding-composition interpretation. No same-date primary peer-price/capital set was obtained, so current peer P/E rankings are NS. [E18–E20]\n\n"},{"number":6,"title":"Revenue Growth & Scale","content_markdown":"\nReported net-GST revenue grew from ₹47.88 crore FY23 to ₹44.71 crore FY24, ₹102.56 crore FY25 and ₹117.01 crore FY26. The three-year CAGR is **34.70%**, using exactly three annual intervals. Annual additions are −₹3.16 crore, +₹57.85 crore and +₹14.45 crore. FY24 contracted 6.61%, FY25 increased 129.38%, and FY26 increased 14.09%. This is uneven project scaling, not a stable 35% annual engine. [E02,E21]\n\nThe revenue endpoints are same-entity and net-GST, and FY25 revenue reconciles between original and restated records. No acquired revenue is identified, making organic-like entity growth the defensible basis, with Medium confidence. An exact organic volume/real-price split is **not** available: equipment prices, pass-through procurement, contract mix and POC recognition could contribute. Thus the report does not call 34.70% underlying physical-volume growth.\n\nOriginal FY21 sales were ₹32.25314 crore, not the rounded ₹27 crore sometimes displayed by aggregators, but the GST/presentation basis cannot be reconciled sufficiently to FY26. Five-year CAGR is NS rather than a selectively convenient number. Ten-year CAGR is also NS. FY23 original, later-comparative and prospectus profits/cash differ; these cannot be used interchangeably to claim a decade of quality growth. The listed history since April 2026 is too short to infer stable trading or minority-shareholder outcomes.\n\nRHP current orders included TUSCO ₹83.53 crore dated 19 August 2025 and RVNL ₹55.65 crore dated 19 December 2025. The later Acuité aggregate unexecuted order book was ₹327.62 crore at 31 July 2026 versus ₹314.81 crore a year earlier. These dates/scopes differ, so the two orders are not added to the total and the old single-order DRHP table is not called current backlog. A complete opening backlog + intake − execution − cancellation bridge and project-level margin/collection schedule remain ND. [E13]\n\n"},{"number":7,"title":"Growth Quality & Reinvestment Runway","content_markdown":"\nThe growth opportunity is real: transmission/substation additions and renewable grid integration require EPC capacity. But company-level reinvestment is dominated by working capital and collateral, not just PPE. FY26 cash capex was only ₹0.0351 crore; this does not explain negative CFO, nor establish that growth needs no capital. FY26 IC grew ₹36.42 crore, driven by ₹37.33 crore additional operating working capital while restricted-BG deposits released ₹0.56 crore. [financial_inputs.json reinvestment_bridges]\n\nIC is reconciled from both sides with component-level records. Financing IC = equity + gross debt + net DTL + income-tax provision − unrestricted cash; required restricted BG collateral remains invested capital. Asset-side IC includes PPE, collateral, receivables, retention, inventory, vendor/government/security advances and prepaids, less non-interest operating liabilities. FY26 financing IC is ₹113.8132 crore versus asset-side ₹113.8133 crore, a ₹0.0001 crore rounding difference. FY25 original opening IC ₹77.3974 crore yields average IC ₹95.6053 crore. At an explicit 25.17% normalized tax assumption, FY26 EBIT ₹26.0469 crore gives NOPAT ₹19.4909 crore and indicative ROIC **20.39%**. This is not an audited project IRR. [E01,E03,E24]\n\nReinvestment bridges, in ₹ lakh: FY24 restated ΔIC 1565.57 = .53 capex −14.96 DA +1689.68 ΔONWC −106.09 BG −3.61 security +.02 rounding. FY25 restated ΔIC 2956.07 = 472.03 −31.60 +2256.03 +264.02 −4.40 −.01. FY26 original ΔIC 3641.61 = 3.51 −37.18 +3732.67 −56.17 −1.22. Financing and asset components are retained for every observation, not reconstructed from revenue multiples.\n\nThe one-year incremental proxy is ΔNOPAT/ΔIC using original FY25–26; it is diagnostic only because margin improvement, old-contract recognition and reserve losses distort causation. A valid three/five-year incremental-return numerator and denominator cannot be isolated across the accounting discontinuities. CAP remains NS. No high ROIC is used to give a second boost to REV or a compounder designation.\n\nThe forecast requires incremental fixed capital above an explicitly hypothetical ₹150 crore sales envelope, maintenance capex and full target operating working capital; added capacity faces a three-month qualification lag. These are A, not management disclosed capacity plans. Growth earns value only if incremental cash returns exceed the 16–22% model discount rate; faster sales financed by mounting receivables can destroy rather than create value.\n\n"},{"number":8,"title":"Management, Governance & Execution","content_markdown":"\nPromoters held 9,199,305 shares or 46.40% in the issuer's 10 April 2026 pattern. The official October capital master reconciles total issued shares, but the April 15,410,999 locked shares are not treated as October free float. No unverified pledge-free/current-beneficial-holding assertion is made. [E15,E16]\n\nThe major stewardship question is the FY25 ₹16.5565 crore vendor-advance loss charged directly to reserves. On the original FY25 result, charging that loss through profit would turn ₹7.6441 crore PAT into an approximately ₹8.9124 crore loss. The prospectus restatement instead assigns ₹2.2335 crore loss to FY23 and ₹2.8863 crore to FY24, with earlier losses in opening reserves. Those losses are not charged again to FY25 in this analysis. Counterparty identity, relatedness, board approval, recoverability attempts and allocation rationale require primary records. This is a documented treatment issue, not a finding of diversion or fraud. [E03]\n\nFY26 MD remuneration was ₹34 lakh, Abhishek remuneration ₹16.2 lakh, and sitting fees ₹10.2 lakh. The MD loan bridge broadly reconciles: opening 69.81 + received 296.56 − repaid 100.69 = 265.68 lakh, close to note 6/board 265.67 but not note 27's 262.19. Note 6 classifies short-term, whereas the board narrative says non-current. Anjali remuneration 3.25 lakh in the board table versus nil in note 27 also needs reconciliation. These are specific small inconsistencies, not an invented large RPT siphoning. Proposed MD compensation from 1 July 2026 to 30 June 2029 was fixed ₹80 lakh plus 2% of Section 198 profit and business reimbursements; AGM approval outcome is unverified, so proposed terms are not called approved. [E06]\n\nEarlier RPT history is also qualified: the FY24 original note28 shows Rajnish remuneration ₹60 lakh, Anjali ₹1.2 lakh and Abhishek ₹16.2 lakh in each of FY23 and FY24. FY24 Rajnish loans taken ₹147.05 lakh and repaid ₹96.40 lakh suggest a ₹50.65 lakh movement, but the printed table places ₹50.65 lakh under FY23 receivable, with no FY24 closing payable. That anomalous layout is preserved, not silently repaired into a promoter-loan roll-forward. FY22 note25 RPT tables are effectively blank, which is not evidence that no transactions occurred. Full five-year RPT completeness is therefore not established. [O22 note25; O24 note28]\n\nAudit trail by year: FY21 unmodified with COVID emphasis; CARO referenced but missing from the accessible original, IFC clean. FY22 unmodified/CARO read; referenced IFC and own cash-flow page missing. FY23 unmodified/CARO/IFC; edit-log rule not yet applicable until April 2023. FY24 qualified for GST-inclusive grossing, IFC described as inapplicable, edit-log wording only confirms a feature. The issuer FY25 file does not include the full original opinion/CARO/IFC; RHP disclosure and the original reserve note are not substitutes for claiming the missing original opinion was read. FY26 unmodified opinion and satisfactory IFC, but CARO records Canara payment delays ₹290,840 for 56 days and ₹286,359 for 28 days, no internal-audit system, and audit-trail feature existence rather than complete operation/tamper/preservation assurance. [E04,E05; original_audit_extract.json]\n\nRHP discloses Doshi resignation 11 August 2025 and Panchal appointment 12 August; FY26 CARO says no auditor resignation. The resolution could concern scope/timing/interpretation, but no reconciliation is supplied. RHP and final prospectus no-default assertions conflict with the subsequently established February bank event. Note 32's ₹200 lakh FY25 Section 42 penalty becomes nil FY26, while RHP describes cheque, tax and ROC matters. Nil closing accounting balance or audit wording is not a settlement order. Obtain orders and current case status before claiming clearance. [E05–E10]\n\nExecution is measured by collection as well as awards. The prospectus FY26 receivable projection ₹96.52 crore was below actual ₹121.60 crore excluding retention, a ₹25.08 crore miss. Forecast 240 days and agency 379 days use potentially different denominators; they are not subtracted as if identical. Low material cost helped FY26 margin expansion; sustained project economics, rather than a procurement-price benefit alone, must be demonstrated.\n\n### Dated representations versus delivery\n\n| Representation / date | Outcome by cutoff | Assessment |\n|---|---|---|\n| RHP management working-capital estimate, 26 February 2026: FY26 trade receivables ₹96.5246 crore and projected holding 240 days | Audited 31 March trade receivables ₹121.6044 crore, with retention ₹37.1049 crore separately; agency debtor metric379 days | Like-for-like receivable balance missed by ₹25.0798 crore; day definitions differ. Negative execution evidence, not an invented cash shortfall of that exact amount. |\n| March/April 2026 issue objects: fresh IPO ₹48 crore, debt ₹6 crore and working capital ₹31.5 crore | Listed13 April; rating confirms regularisation13 April and liquidity support | Issue completed; bank-account utilisation and exact fee/GCP reconciliation remain unresolved. |\n| July2025 backlog ₹314.81 crore as reported in rating comparison | July2026 backlog ₹327.62 crore; FY26 sales ₹117.01 crore | Dated operating representation, not a management promise of annual revenue. Backlog persists but intake/execution/cancellations are not reconciled. |\n\n"},{"number":9,"title":"Financial Forensics","content_markdown":"\nHistorical observations below are deliberately labeled by accounting basis. ₹ crore except EPS/shares. FCF proxy is CFO minus cash capex, not FCFF; interest sits in financing cash flow under these statements.\n\n| Period / basis | Revenue | EBITDA | EBIT | PAT | Reported-basis EPS | CFO | Cash capex | CFO−capex | Gross debt | Free cash | Equity |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n| FY2023_restatement | 47.88 | 2.63 | 2.47 | 0.43 | 0.45 | -13.28 | 0.16 | -13.44 | 18.52 | 0.06 | 12.47 |\n| FY2024_restatement | 44.71 | 8.27 | 8.12 | 4.01 | 4.01 | -10.52 | 0.01 | -10.52 | 29.79 | 0.14 | 17.48 |\n| FY2025_restatement | 102.56 | 17.27 | 16.96 | 8.99 | 6.98 | -7.43 | 4.72 | -12.15 | 33.84 | 0.04 | 42.17 |\n| 10M_Jan2026_restatement | 67.44 | 16.21 | 15.91 | 8.52 | 6.28 | -1.76 | 0.04 | -1.80 | 39.18 | 0.28 | 54.47 |\n| FY2025_original_comparative_AR26 | 102.56 | 17.03 | 16.72 | 7.64 | 5.94 | -10.04 | 2.11 | -12.15 | 33.84 | 0.04 | 40.57 |\n| FY2026_original | 117.01 | 26.42 | 26.05 | 14.42 | 10.60 | -11.22 | 0.04 | -11.25 | 49.13 | 0.22 | 58.76 |\n\nThe older originals are separately disclosed below and are not spliced into the restated series or scored as comparable growth. ₹ crore. CFO is from the year-specific original where available; missing pages remain NS. Exception: FY22 CFO ₹5.2123 crore is the FY22 comparative printed in the FY23 original, because the own-year FY22 cash-flow page was absent. FY25 own-year CFO −₹10.0356 crore differs by ₹0.0001 crore from the FY26 comparative, a rounding-level difference. Neither exception resolves the larger original/restated breaks.\n\n| Original fiscal year | Revenue | PAT | CFO | Gross debt | Equity |\n|---|---:|---:|---:|---:|---:|\n| FY2021 | 32.25 | 0.77 | NS | 8.32 | 21.43 |\n| FY2022 | 54.65 | 2.21 | 5.21 | 15.00 | 23.64 |\n| FY2023 | 55.39 | 3.09 | -6.26 | NS | 26.73 |\n| FY2024 | 53.35 | 6.59 | -9.09 | 29.79 | 33.78 |\n| FY2025 | 102.56 | 7.64 | -10.04 | 33.84 | 40.57 |\n\nFY26 bridge, ₹ crore: PBT 17.8793 + finance 9.2120 + DA .3718 − interest income 1.0444 = pre-working-capital 26.4187. Then security release .0122 − inventory .7362 − trade-receivables 62.6586 − advances 5.1459 − other assets 8.1846 + payables 36.2909 + gratuity .0381 + other-current-liabilities 3.0700 yields cash before tax approximately −10.8955. Cash tax .3244 gives CFO −11.2198, subject to printed rounding. CFI +1.5710 comprises capex −.0351, FD release +.5617 and interest +1.0444. Financing cash +9.8343 includes net debt +15.2807 and capital +3.7656 less interest 9.2120. Net cash + .1855 gives demand cash .2209. [AR26]\n\nFY26 CFO/PAT is −0.778; subtracting financing-classified interest yields cash after interest −₹20.43 crore and capex-adjusted −₹20.47 crore. Cumulative FY23–25 restated CFO/PAT uses sums: −₹31.2243 crore/₹13.4295 crore = −2.3251. FY25–26 original sum ratio is −0.9632. There is no fabricated five-year sum or average of annual ratios. Original FY23 CFO differs from FY24's comparative and RHP restatement; all are retained in the original extract rather than silently overwritten. FY25 original CFO −₹10.0357 crore versus restated −₹7.4289 crore and capex ₹2.1136 versus ₹4.7203 differ almost identically, leaving FCF −₹12.1493 versus −₹12.1492. That reclassification explains aggregate FCF consistency, not all underlying lines or the original cash-tax 1871.49 lakh versus restated 218.69 lakh discrepancy. [E24]\n\nTrade receivables ₹121.6044 crore plus retention ₹37.1049 crore total 135.63% of annual sales. Closing trade-only DSO 379.32 days versus average 281.59; including retention closing 495.06 versus average 383.72. Of trade receivables, ₹85.76 crore is <6 months, ₹23.59 crore 6–12 months, ₹10.25 crore 1–2 years, ₹1.71 crore 2–3 years and ₹0.30 crore >3 years; all considered good with nil provision. The RHP F-30 gives retention ageing at 31 January 2026: total ₹29.1956 crore, including ₹10.5436 crore aged 1–2 years, ₹6.6735 crore aged 2–3 years and ₹3.3588 crore older than 3 years. Thus ₹20.5759 crore, or 70.48%, was older than one year. March 2026 retention ageing and subsequent receipts remain ND. Government-client credit quality does not remove certification, dispute, offset or timing risk. [E22]\n\nMarch gross debt ₹49.1255 crore includes LT ₹4.8324 crore and ST ₹44.2931 crore. ST includes cash credit ₹28.7462, current maturities ₹5.0161, other term ₹7.8740 and shareholder ₹2.6567 crore; current maturities are not added again. BG-margin FD ₹14.4084 crore with maturity >12 months is restricted, never available cash. Equity ₹58.7576 crore includes ₹13.8270 crore capital and ₹44.9306 crore reserves. Current ratio from audited figures 1.341 differs from agency 1.45; definition unreconciled. EBIT/full finance cost coverage 2.8275 differs from rating PBDIT coverage 2.98; neither replaces the other without a definition bridge. [E01,E08]\n\nFY26 PAT contains ₹1.0147 crore prior-period tax credit. Removing it leaves ₹13.4091 crore. Reported EPS ₹10.60 uses weighted 13,612,914 shares, not current 19,826,999 post IPO shares. Current-share EPS is ₹7.2748 and ex credit ₹6.7631. PPE note 11 printed net 827.03 lakh conflicts with row 439.02 and balance-sheet 439.03; the latter is used and issue retained. No capitalised lease liability is disclosed, operating rent is expensed; future lease commitments are ND rather than asserted zero. Contingencies and BG calls are not treated as ordinary debt until separately modeled. [E21]\n\nRating chronology is material: Infomerics 24 April BB−/Negative/INC/A4 cites missing NDS from September 2025; Acuité 21 August D/C/A4 establishes February default and April cure; CRISIL 27 August D/D/INC explicitly says the delinquency remained and management/banker clarification was awaited, with limited dated information; no later CRISIL restoration or withdrawal was located; Acuité 31 August BB+/Stable/A4+ is latest located cure-seasoned view on ₹100 crore. It comprises ₹17 crore funded limits and ₹83 crore nonfunded limits, not ₹100 crore free cash. Bank utilisation 87.98% funded/77.09% nonfunded is 9-month average through July, not committed available October headroom. [E07–E10]\n\n"},{"number":10,"title":"Valuation & Market Expectations","content_markdown":"\nAt conditional ₹79.06 and 19,826,999 shares, market capitalisation is ₹156.75 crore. Current-share FY26 P/E is 10.87× and ex-prior-tax-credit 11.69×. The common shortcut 79.06/10.60 materially understates P/E after IPO dilution. March debt/cash plus October post IPO market cap produces only a stale-date EV bridge, not current EV. Neither EPS normalisation nor a low multiple resolves negative cash conversion or source discrepancies. R and P remain NS.\n\n### Funding and timing model\n\nAll scenarios start with 31 March 2026 observed balances and the same seven-period analytical bridge to 19 October 2026. No H1FY27 cash flow was available within cutoff. April 1–12 daily cash movements are unobserved; IPO availability on 13 April is assumed from listing/cure chronology, not bank statement. Ordinary April flows settle on 30 April. This explicit gap means the model is not a verified historical survival reconstruction. Post entry bear/base/bull divergence begins 20 October and first modeled payment 19 November 2026.\n\nOpening available cash ₹.2209 crore is separate from ₹14.4084 crore pledged FD and ₹.3481 crore government advance, neither spent. IPO gross ₹48 crore less detailed fees ₹5.76 crore yields ₹42.24 crore earmarked: ₹6 crore debt repayment, ₹31.5 crore eligible WC and ₹4.74 crore GCP. Actual gross issuance is not issued twice in shares. WC proceeds release only against supplier/operating cash payments, not again as a reduction of ΔWC. Unspent pools are excluded from terminal cash. The competing ₹43.14 crore net-proceeds summary is tested as ₹.90 crore fee relief, not silently used. Fees ex/inclusive GST wording is ambiguous; an additional ₹1.0368 crore 18%-of-detailed-fee sensitivity is also retained. Already incurred ₹.207 crore IPO expenses are within the fee budget, not added again. [E14]\n\nOpening statutory dues ₹4.0466 crore settle 30 April A; income tax ₹6.087 crore in four ₹1.52175 crore installments June/September/December/March A; current gratuity ₹.10 crore September A. Prepayment fee ₹.24 crore is 4% of ₹6 crore A, separate from principal and IPO fees. Long gratuity ₹.2322 crore is retained terminal claim. Payroll/expense/customer-advance liabilities remain in ONWC and are not paid a second time. First year current maturities ₹5.0161 crore are modeled monthly in addition to IPO ₹6 crore repayment, with 0/50/100% overlap sensitivities because exact facility allocation is unverified. Full overlap preserves more terminal debt, not free cash. Remaining opening debt incurs 20% annual interest A, sensitised 16–24%, and is cash-retired once at terminal. April charges the full opening debt for 12 days before the assumed 13 April repayment and the post-repayment balance for 18 days; this adds ₹0.03945 crore versus incorrectly applying the lower debt throughout April. Actual penal interest and bank debit dates remain unverified.\n\nEach month has two supplier front/collection cycles; 60% of cost is paid before each collection. Every event checks ₹.10 crore minimum cash, not just year-end. Receivables, inventory, retention/vendor assets, payables and accruals are explicit stock rollforwards. Growth fixed capex pays upfront above the ₹150 crore inflation-adjusted envelope at ₹.06 per incremental revenue ₹1; qualification lag 3 months. Maintenance is max(.5% sales, 5% opening PPE); depreciation 8% PPE; tax 25.17% on positive profit, with no invented tax-loss refund. These are assumptions, not audited contractual terms.\n\nExisting ₹14.4084 crore BG collateral remains blocked. Additional cash-funded collateral rises with peak annual revenue above the audited ₹117.0147 crore base, at 15% / 10% / 8% in bear / base / bull. No release is assumed. It is a separate intraperiod payment, does not qualify for IPO working-capital releases in this model, enters operating capital, and is reinvested at terminal growth. Ratios 0% / 5% / 15% / 20% are separately tested. At terminal, additional collateral reinvestment equals growth × collateral ratio × the greater of final-year realised revenue and ending annual sales run-rate. This retains the full marginal requirement, rather than growing only collateral above the historical revenue offset. It replaces, rather than adds to, g × existing additional collateral within terminal ONWC growth. Actual bank collateral terms are ND; assuming no additional collateral silently would overstate growth affordability.\n\n| Assumption | Bear | Base | Bull |\n|---|---:|---:|---:|\n| Immediate revenue shock / subsequent annual growth | −35% / 0% | 0% / 12% | 0% / 22% |\n| Operating / terminal EBITDA margin | 12% / 12% | 18% / 17% | 23% / 21% |\n| Trade DSO | 460 | 340 | 260 |\n| Inventory / other operating assets as sales | 13% / 38% | 10% / 32% | 8% / 25% |\n| Payables / operating accruals as sales | 30% / 10% | 40% / 15% | 40% / 16% |\n| Terminal growth / discount rate | 2% / 22% | 3% / 18% | 4% / 16% |\n| Additional loss/call at first post entry month | ₹12.16 cr receivable, ₹1.28 cr inventory, ₹5 cr BG call | Nil | Nil |\n\nOptional financing is bounded, uncommitted and available only after entry: bank lifetime gross ₹2.0434 crore (17×12.02% average unused), 20% interest, 2% fee, 6 month grace and 36 month amortisation. Whole-share equity at ₹60 incurs 6% fee and cannot exceed ₹1.038006 crore gross or 173,001 shares, the 20 million authorised headroom. No automatic increase in authorised capital or unlimited rescue is assumed. ₹40/60/79.06 issue price and zero-bank sensitivity are explicit. The engine uses ceil shares needed, then floors available cash/authorisation cap. Any cash breach stops new rescue finance and suppresses ordinary return, while failed diagnostic cash paths remain visible.\n\n| Scenario / funding | Final-year sales ₹ cr | First intraperiod breach | Terminal cash shortfall ₹ cr | Ordinary exit ₹ | Net annual return |\n|---|---:|---|---:|---:|---:|\n| bear_no_new_finance | 84.50 | 2027-02-19 supplier_front_1 | 42.26 | NS | NS |\n| bear_bounded_optional | 84.50 | 2027-03-19 supplier_front_1 | 41.96 | NS | NS |\n| base_no_new_finance | 222.97 | No intraperiod breach | 26.64 | NS | NS |\n| base_bounded_optional | 222.97 | No intraperiod breach | 26.64 | NS | NS |\n| bull_no_new_finance | 335.51 | No intraperiod breach | 0.00 | 213.72 | 21.03% |\n| bull_bounded_optional | 335.51 | No intraperiod breach | 0.00 | 213.72 | 21.03% |\n\nBase terminal cash is insufficient by ₹26.64 crore despite no earlier breach. Positive diagnostic EV is not a liquid funding source. Bear optional finance can delay rather than cure breach. The bullish ₹213.72 exit reflects collection improvement and margin persistence, not unqualified upside.\n\nTerminal FCFF is earned from next-year NOPAT + DA − maintenance − fixed growth − growth ONWC − reserve reinvestment. A 12-month continuation schedule retires all remaining debt and senior claims once, funds supplier front payments and capex, and solves the minimum operating reserve iteratively. Only excess cash above claims/reserve is added to equity; restricted FD and earmarked IPO money are excluded. This is a conservative no-new-finance continuation condition, not a legal requirement to retire all facilities precisely in 2031. Rollover could improve it but is not assumed certain. Terminal ROIC, terminal-value share, explicit FCFF and 8/10/12/15/18/20× EBIT crosschecks are retained for every path.\n\nNominal INR equity hurdles are 12/15/18%, distinct from business discount rates. Net return includes 2% entry and 2% exit costs and dilution; no dividends double counted. Each path calculates required exit price and maximum entry price at all three hurdles. Entry/exit 0/2/5% cost sensitivities expose SME execution risk. No finite “buy below” is asserted from an unfunded base.\n\nThe common modeled 19 October entry has cash ₹25.53 crore, debt ₹40.20 crore and no remaining IPO earmarked balance. This is an analytical roll-forward, not a reported October balance sheet.\n\n| Case | Terminal cash | Debt | Operating reserve | Earned next-year FCFF | Terminal ROIC | PV terminal-value share |\n|---|---:|---:|---:|---:|---:|---:|\n| bear | -1.89 | 38.11 | 2.03 | 4.75 | 5.39% | 95.22% |\n| base | 16.61 | 38.11 | 4.91 | 21.93 | 12.76% | 80.67% |\n| bull | 94.86 | 38.11 | 7.03 | 44.91 | 23.69% | 70.61% |\n\n### Reverse expectations and sensitivity\n\n| Cash-economics hypothesis | Lowest tested growth meeting 15% net | Failed funding trials / total |\n|---|---:|---:|\n| base | None in tested range | 27 / 31 |\n| bull | 12.00% | 15 / 31 |\n\nAll 31 growth trials per hypothesis from 0% to 60% in steps of 2 percentage points are stored, including failures. Lowest tested feasible is not an interpolated continuous root. Bull's threshold 12.00% requires bull collections/margins as well as growth; changing only sales cannot repair inadequate funding. Margin/DSO grids 14/18/22%×260/340/420 days, terminal discount rate/growth 14/18/22%×2/3/4%, supplier front 30/90%, assets 25/40%, payables 25/45%, debt 16/24%, capex 3/12 paise and IPO/principal variants are all recomputed. Exact results and every trial reference live in sensitivity_results.json and canonical paths, not cherry-picked favorable cells.\n\n"},{"number":11,"title":"Bear Case & Permanent-Loss Path","content_markdown":"\nThe strongest bear case is that apparently profitable EPC growth keeps consuming cash through uncertified receivables, retention and vendor advances; a supplier or BG event then forces repayment while tender customers delay cash. Historical vendor loss and February BG invocation show this mechanism is not purely abstract. A 35% revenue fall is below the FY25 largest customer 65.07% exposure, but is still an analyst stress, not a forecast customer loss. Receivable 10%/inventory 10% haircuts and ₹5 crore BG call are assumptions, not discovered impairments.\n\nThe no-finance stress breaches a supplier front payment; bounded bank/equity only delays breach. Capital can then be impaired through forced asset collection discounts, lien priority, project termination penalties, dilutive capital or insolvency costs. We do not report a normal IRR after such breach. The balance-sheet book equity is not a liquidation floor: BG FD is encumbered, receivables require certification, current liabilities and statutory claims have priority, and missing claim details prevent a robust net recoverable value. Downside can be severe, including complete equity loss; no fabricated probability is assigned.\n\nThe decisive thesis-break variable is **cash collection net of new working-capital commitments**, not revenue or announced orders. Countercase: public clients eventually settle, IPO working capital restores execution and Acuite upgrade persists. Evidence needed to choose between these cases is post-cutoff monitoring, not optimistic multiple expansion at the cutoff.\n\n"},{"number":12,"title":"5× / 10× Feasibility","content_markdown":"\nRequired gross price CAGRs are 37.97% for 5× in 5 years, 58.49% for 10× in 5 years, 17.46% for 5× in 10 years and 25.89% for 10× in 10 years. Net return after costs is lower; dilution means enterprise growth must outpace per share growth. Tests use both base and bull cash economics, 10/20/30/40/50/60% sales growth, both horizons and both targets. They retain every trial's revenue, new operating capital, finance debt/equity/fees, shares, survival and 8× EBIT lower-multiple crosscheck.\n\n| Years | Target | Cash-economics hypothesis | Lowest tested growth meeting gross price target | Successful / total trials |\n|---:|---:|---|---:|---:|\n| 5 | 5× | base | None | 0 / 6 |\n| 5 | 5× | bull | None | 0 / 6 |\n| 5 | 10× | base | None | 0 / 6 |\n| 5 | 10× | bull | None | 0 / 6 |\n| 10 | 5× | base | None | 0 / 6 |\n| 10 | 5× | bull | 20.00% | 2 / 6 |\n| 10 | 10× | base | None | 0 / 6 |\n| 10 | 10× | bull | 30.00% | 1 / 6 |\n\nNone is called probable merely because a formula reaches the target. Very high growth requires additional qualified projects, BG access, procurement credit, staffing and collection capacity; a ₹327.62 crore July backlog does not establish decade-long replenishment. Some cash paths fail even when terminal business value looks large. Any mathematically successful bull trial is classified **Speculative / unsupported**, not a multibagger candidate, until comparable accounts, sustainable incremental returns and funded order access are demonstrated. Full results in multibagger_tests.json prevent terminal multiple-only storytelling.\n\n"},{"number":13,"title":"Monitoring Plan","content_markdown":"\n| Evidence and dated baseline | Review timing / expected milestone | Warning threshold | Thesis break or gate consequence |\n|---|---|---|---|\n| FY25 ₹16.56 crore vendor loss and original/restated differences; unresolved20 October2026 | Before any initiation, and at next audited filing: signed original opinion, loss allocation and CFO/tax bridge | Missing requested documents or unexplained new reclassifications | Adverse evidence of material abuse could trigger G1 Fail; unresolved reconciliation retains G2 Hold |\n| March cash₹.2209cr, debt₹49.1255cr; April IPO₹48cr; Acuite31 August cure-seasoned upgrade | At next IPO utilisation/monitoring statement and next financial results: bank balances, expenditure ledger and maturity ladder | Uses do not reconcile to net proceeds, restricted cash counted free, or renewal dependent on unsupported assumptions | Confirmed unregularised payment default or unfunded dated mandatory claim triggers G3 reassessment; no automatic fail from a missing statement |\n| March trade+retention₹158.71cr; January retention>1year70.48% | Next half-year results and project collection statements: dated subsequent receipts against old balances | Trade days fail to improve from379 closing days, older retention not collected, or cash growth trails new commitments | Sustained inability to collect certified balances or recurring writeoffs destroys the collection thesis; CFO must be judged after working-capital and interest needs |\n| Acuite31August BB+/Stable/A4+; CRISIL27August D/INC unresolved; Infomerics24April BB−/INC | Each new agency release and lender confirmation; compare agencies separately | Fresh noncooperation, missing NDS, BG invocation or downgrade | Verified new default, creditor enforcement or failed cure changes solvency conclusion; old INC alone does not establish default |\n| FY26 audit resignation wording, joint-bid deed, Section42 balance and proposed July remuneration | Before initiation and on next annual/AGM update: letters, deed, settlement orders and voting outcome | Narrative conflicts persist, significant obligations omitted or remuneration differs from approval | Material misstatement or minority abuse, if substantiated, changes governance gate; nil accounting balance alone is not clearance |\n| July2026 backlog₹327.62cr; FY25 topthree customers94.10% | Each half-year and major award/cancellation: backlog movement and project margin/cash milestones | Backlog growth without certified billing/receipts, cancellation or concentration rising | Loss of key award/qualification or cash-negative execution invalidates durable-growth premise; no arbitrary revenue-only trigger |\n| October19 shares19,826,999/lot1600; official60-session turnover/depth missing | Before any trade, then each contemplated size/exit: complete official rolling20/60session data and current lockins | Incomplete history, zero-trade clusters, price-band constraints or sub-lot participation capacity | G4 stays Hold until ₹5lakh reference position has an evidence-based executable route; no finite exit promise from a single day's volume |\n\n\n₹5 lakh reference position at ₹79.06: one 1600-share lot ₹126,496; floor 3 lots/4800 shares ₹379,488; ceil 4 lots/6400 shares ₹505,984. At 2/5/10% participation, one lot requires 80,000/32,000/16,000 actual daily shares. The single 19 October secondary 72,000-share observation permits 0/2/4 whole lots respectively; it is not a 60-session exit forecast. Missing official days are not zero-filled, actual turnover is not invented from close×volume, and no finite general exit day estimate is claimed. Corporate actions/lockins and price bands need current official verification before execution.\n\n"},{"number":14,"title":"Final Classification & Conditional Action","content_markdown":"\n**Hold — unresolved; not a compounder; not an investable or multibagger ranking entry.** BQS/GQS/IAS remain NS with explicit coverage and bounds. A governance Avoid label would require stronger substantiated adverse evidence, while a clean low P/E buy would require much better reliability, cash and execution evidence. Neither shortcut is justified.\n\nThere is no executable entry price, target allocation or rank based on this record. Before consideration, reconcile G2/G3, obtain official liquidity and revise the cash model with dated bank/claim terms. Then require a funded base case meeting at least 15% net INR return and a survivable bear case at a position that suits actual whole-lot liquidity. No portfolio suitability facts about the user are assumed. No Git or website publication was performed.\n\n"},{"number":15,"title":"Sources, Assumptions & Open Questions","content_markdown":"\nSource IDs above map to primary public records below. Source files were inspected, including original scans/OCR; raw PDF/OCR are excluded from the delivery archives. Source URLs, dates, locators and hashes where available are in source_register.json. Missing original audit pages, bank statements, turnover and resolution orders remain visible. Forecasts and pre entry interpolation are A, not backfilled facts. Source contradictions are preserved and fairly resolved only where actual evidence permits.\n\n- AR26: [Annual Report 2025–26](https://drive.google.com/file/d/1tNyu_NoVHSAyvRIvkOI4do569zBGFNGk/view?usp=sharing), 2026-08-31 (board report); 2026-05-30 (audited financial statements). Printed page; PDF page = printed + 1. 109 PDF pages.\n- RHP: [Red Herring Prospectus dated 27 March 2026](https://aibi.org.in/Current_DOC/26270001.pdf), 2026-03-27; restatement report 2026-02-26. Printed numbered page or F-number. Financial F-1=PDF203; F-7=PDF209; F-17=PDF219.\n- FR26: [Audited results for year ended 31 March 2026](https://drive.google.com/file/d/1UtnI2Jy-X9ULq_C_6VexedvEjAcY_-Mm/view?usp=sharing), 2026-05-30. 1-based PDF page\n- O21: [Original FY2021 issuer-linked financial statements](https://drive.google.com/file/d/1LBiEzHqDAZJAqU86NIchQytY1Tjr61v7/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O22: [Original FY2022 issuer-linked financial statements](https://drive.google.com/file/d/1PVeXFL9w7xJVlylipGYdhEYyUTHnLi1l/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O23: [Original FY2023 issuer-linked financial statements](https://drive.google.com/file/d/1zyWHVZmbUN8XH_DepG69JS_Ad7l-z2EL/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O24: [Original FY2024 issuer-linked financial statements](https://drive.google.com/file/d/15SL_kZMpr0fcwGcGs60Ed0WnIIMDD2N7/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- O25: [Original FY2025 issuer-linked financial statements](https://drive.google.com/file/d/14ww5U54S5rSKVkX-l7sApMnxK0EFr-Qc/view?usp=sharing), See original_audit_extract.json. 1-based PDF page\n- PROS: [Final Prospectus dated 9 April 2026](https://drive.google.com/file/d/166KghZQZwvcgVnZKqaU8zOCnAnV46E9W/view?usp=sharing), 2026-04-09. Printed numbered page; PDF page=printed+4 until financial annexure. F7=PDF209; F18=PDF220.\n- ACUITE21: [ACUITE21](https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/21st_Aug_26), 2026-08-21. Rationale, bank feedback, liquidity and rating history\n- ACUITE31: [ACUITE31](https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/31st_Aug_26), 2026-08-31. Rationale, drivers, liquidity, facilities and history\n- SHAREAPR: [SHAREAPR](https://drive.google.com/file/d/1lUHWfzNStlDPP9ud1AXf-THUSpOohNhr/view?usp=sharing), 2026-04-10. Issuer-linked shareholding pattern; capital/promoter/lockin tables\n- VIVIANA25: [VIVIANA25](https://www.vivianagroup.in/annual-report-fy-24-25.pdf), 2025-05-06. Standalone accounts pp82–85\n- ORIANA25: [ORIANA25](https://orianapower.com/wp-content/uploads/2025/09/Intimation-Notice-of-Agm-24-25.pdf), 2025-05-28. Consolidated accounts pp112–115\n- RAJESH25: [RAJESH25](https://www.rajeshpower.com/img/Annual-Report-Rajesh-Power-2024-25-Final.pdf), 2025-05-15. Consolidated accounts pp114–117\n- SECONDARY_PRICE: [SECONDARY_PRICE](https://www.equitypandit.com/historical-data/544746), 2026-10-19. Dated OHLCV row and 60 observed bars only; no actual turnover\n- CRISIL27: [CRISIL27](https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SafetyControlsandDevicesLimited_August%2027_%202026_RR_404286.html), 2026-08-27. Primary text read through public web retrieval; raw download unavailable\n- INFOMERICS24: [INFOMERICS24](https://www.infomerics.com/admin/uploads/PR-Safety-Controls-and-Devices24April26.pdf), 2026-04-24. Primary text read through public web retrieval; raw download unavailable\n- SECURITY19: [SECURITY19](https://nsearchives.nseindia.com/content/cm/interop/NSE_CM_security_19102026.csv.gz), 2026-10-19. Issuer-only rows retained in security_inputs.json\n\nOpen priority questions: (1) Who incurred and approved the vendor loss and why the allocation? (2) What reconciles original/restated tax/CFO and FY25 opinion? (3) What are current unrestricted cash, IPO utilisation, debt maturities and nonfunded claims? (4) Which retentions are certified, collectible and subsequently received? (5) What does the joint-bid deed obligate and how do no-default/auditor resignation statements reconcile? (6) Are litigation/penalty balances resolved by orders and remuneration approved? (7) What is the actual 60-session turnover/depth and current tradeability?\n\n### Update log\n\n| Research date | Evidence / correction | Effect |\n|---|---|---|\n| 24 October 2026, cutoff unchanged | Resolved exact issuer/capital, read original FY21–26 and prospectus restatement | Rejected stitched profit/cash history; current-share EPS corrected |\n| Same | Separated Acuite 21/31 Aug, CRISIL 27 Aug and Infomerics 24 Apr | Historical default/cure distinguished from dated noncooperation |\n| Same | Detailed IPO fees versus summary; original principal overlap and GST ambiguity | Conservative net proceeds and explicit structural sensitivities |\n| Same | Common pre entry cash bridge, whole-share bounded finance, earned terminal FCFF/reserve | Failed paths retain NS returns; no rescue after breach |\n\n### Required 16 quality checks\n\n1. Correct issuer/ISIN/scope and separate price/information dates: PASS; price is conditional.\n2. Primary records read for material claims; F/M/A separation: PASS; missing raw pages explicitly ND.\n3. Audit/RPT/finance/dilution reviewed and proportionate gates: PASS WITH LIMITATION; full five-year RPT completeness is not established; no fraud allegation inferred.\n4. Comparable periods/units, no overlapping TTM or invented quarterly cash: PASS; original/restated kept distinct.\n5. Revenue versus profit/acquisitions/pass-through/base: PASS WITH LIMITATION; price/volume ND, selected net-GST entity growth disclosed.\n6. CFO/PAT ratio of sums and capex not excuse: PASS; incompatible five-year sum NS.\n7. Incremental return numerator/denominator/timing: PASS WITH LIMITATION; valid multi-year CAP NS.\n8. Earnings/tax/lease/claims/dilution consistency: PASS WITH LIMITATION; missing claims/lease commitments not invented zero.\n9. Bear/base/bull cash/reinvestment/finance reconciliation: PASS for conditional model; actual post IPO cash not verified.\n10. Canonical factor reuse/exact 100% weights: PASS, machine checked.\n11. NS/coverage/bounds/confidence: PASS, no zero or average substitution.\n12. Raw/final/cap reconciliation: PASS; CASH cap 5 does not fill missing GQS.\n13. Matrix/compounder criteria: PASS; Hold unresolved, no compounder designation.\n14. Stated position size/liquidity/quote execution: PASS WITH LIMITATION; L/G4 unresolved.\n15. Strongest bear/thesis-break variable: PASS; collections net of new WC decisive.\n16. Common framework/tie/ranking unfinished status: PASS; excluded from numeric/investable rankings, no fabricated tie order.\n\nRecovery generates 142 complete distinct cash paths with failed trials. Author-only guarded deletion/rebuild and in-guard verification attestations accompany the final package; they validate reproducibility, not factual certainty or investment fitness. The central question remains unanswered: can this contractor reliably turn rising project revenue into cash and sustainably increase intrinsic value per share? At the cutoff, the evidence is insufficient for a positive investable conclusion.\n"}],"reader_score_audit":{
+  "weights": {
+    "BQS": {
+      "GOV": ".20",
+      "MOAT": ".20",
+      "REV": ".12",
+      "DUR": ".10",
+      "CAP": ".12",
+      "CASH": ".10",
+      "BAL": ".08",
+      "EXEC": ".08"
+    },
+    "GQS": {
+      "REV": ".40",
+      "DUR": ".20",
+      "EARN": ".15",
+      "CAP": ".15",
+      "CASH": ".10"
+    },
+    "IAS": {
+      "Q": ".25",
+      "R": ".35",
+      "D": ".20",
+      "P": ".10",
+      "L": ".10"
+    }
+  },
+  "factors": {
+    "GOV": {
+      "score": 4,
+      "confidence": "Medium",
+      "reason": "Material disclosure and stewardship weaknesses without sufficient evidence of fraud or minority abuse.",
+      "counterevidence": "Restatement transparency, clean FY26 opinion/IFC and credit cure prevent an automatic governance-fail conclusion.",
+      "evidence_ids": [
+        "E03",
+        "E05",
+        "E06",
+        "E09"
+      ]
+    },
+    "MOAT": {
+      "score": 4,
+      "confidence": "Medium",
+      "reason": "Qualification history helps tenders, but concentrated counterparties and procurement pass-through give little demonstrated pricing power.",
+      "counterevidence": "19 completed substations and technical execution experience create entry friction.",
+      "evidence_ids": [
+        "E11",
+        "E18",
+        "E20"
+      ]
+    },
+    "REV": {
+      "score": 8,
+      "confidence": "Medium",
+      "reason": "Comparable three-year net-GST entity revenue CAGR 34.70% starts at 9; limited comparable history caps REV at 8. No additional small-base deduction.",
+      "counterevidence": "FY24 contraction, uneven project recognition and unseparated price/volume undermine extrapolation.",
+      "evidence_ids": [
+        "E02",
+        "E12",
+        "E21"
+      ]
+    },
+    "DUR": {
+      "score": 5,
+      "confidence": "Medium",
+      "reason": "Dated ₹327.62 crore backlog supports visibility, but tender concentration, billing and collection delays limit durability.",
+      "counterevidence": "July backlog increased and transmission/renewable infrastructure demand offers opportunities.",
+      "evidence_ids": [
+        "E11",
+        "E13"
+      ]
+    },
+    "CAP": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Valid multi-year incremental NOPAT/IC returns cannot be separated from reserve losses and accounting discontinuities.",
+      "counterevidence": "Indicative original FY25–26 ROIC 20.39% and positive incremental proxy show potential, not proven reinvestment economics.",
+      "evidence_ids": [
+        "E03",
+        "E24",
+        "E23"
+      ]
+    },
+    "CASH": {
+      "score": 2,
+      "confidence": "High",
+      "reason": "FY23–25 restated CFO/PAT ratio of sums is −2.33; FY25–26 original is −0.96; debt and supplier funding bridge profits.",
+      "counterevidence": "Working-capital model and public-sector retention can produce later receipts; FY25 capex reclassification does not explain all negative CFO.",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E22",
+        "E24"
+      ]
+    },
+    "BAL": {
+      "score": 3,
+      "confidence": "Medium",
+      "reason": "Very low unrestricted cash, large pledged deposits, expensive debt and historically invoked BGs create fragile liquidity.",
+      "counterevidence": "Acuite reports the February default regularised and curing completed; this does not independently resolve CRISIL’s separate 27 August delinquency concern or verify October status.",
+      "evidence_ids": [
+        "E01",
+        "E07",
+        "E08"
+      ]
+    },
+    "EXEC": {
+      "score": 4,
+      "confidence": "Medium",
+      "reason": "Sales/operating margins improved, but receivable forecast was missed and project cash/default chronology show execution strain.",
+      "counterevidence": "Revenue grew 14.09% in FY26 and order book remains substantial.",
+      "evidence_ids": [
+        "E11",
+        "E13",
+        "E22"
+      ]
+    },
+    "EARN": {
+      "score": 3,
+      "confidence": "Medium",
+      "reason": "GST correction, vendor-loss reserve treatment, tax credit and EPS denominator changes weaken repeatability of headline growth.",
+      "counterevidence": "FY26 is unmodified and PAT remains positive without prior-tax credit.",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E21",
+        "E24"
+      ]
+    },
+    "R": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Reliable base-case funded ordinary return is not established, and entry price remains secondary.",
+      "counterevidence": "A fully specified bull scenario survives and yields a conditional return, not the base return used for R.",
+      "evidence_ids": [
+        "E17",
+        "E23"
+      ]
+    },
+    "D": {
+      "score": 3,
+      "confidence": "Medium",
+      "reason": "Concentrated EPC receivables and pledged collateral leave meaningful impairment/recapitalisation risk; stress breaks bounded funding.",
+      "counterevidence": "IPO capital, bank regularisation and public counterparties offer recovery routes.",
+      "evidence_ids": [
+        "E07",
+        "E08",
+        "E22",
+        "E23"
+      ]
+    },
+    "P": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Low displayed current-share P/E cannot establish mispricing until cash, normalised earnings and executable quote are reconciled.",
+      "counterevidence": "Market price is near the ₹80 IPO price while earnings grew; this is a hypothesis, not proven expectation gap.",
+      "evidence_ids": [
+        "E14",
+        "E17",
+        "E21",
+        "E24"
+      ]
+    },
+    "L": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Official 20/60-session actual turnover, zero trades, spreads and current executable depth are missing.",
+      "counterevidence": "Primary 1,600-share lot and a dated secondary volume permit a transparent one-day size illustration.",
+      "evidence_ids": [
+        "E15",
+        "E17"
+      ]
+    }
+  },
+  "gates": {
+    "G1": {
+      "status": "Conditional",
+      "reason": "Sufficient adverse reporting/stewardship concerns for GOV 4, not enough to assert abuse or force GOV≤3. Signed resolutions required."
+    },
+    "G2": {
+      "status": "Hold — unresolved",
+      "reason": "Original/restated cash/profit discontinuities, reserve loss and conflicting default/JV disclosures prevent reliable normalised valuation."
+    },
+    "G3": {
+      "status": "Hold — unresolved",
+      "reason": "Latest Acuite confirms historical cure, but current post-IPO cash/debt/claims deployment not reconciled. Model breach is not actual default."
+    },
+    "G4": {
+      "status": "Hold — unresolved",
+      "reason": "No official 60-session turnover/depth verification; executable price and reference-position exit uncertain."
+    }
+  },
+  "classification": "Hold — unresolved",
+  "ranking_eligible": false,
+  "BQS": {
+    "raw": null,
+    "final": null,
+    "display": "NS",
+    "coverage": "0.88",
+    "missing_weight": "0.12",
+    "known_contribution": "3.82",
+    "contributions": {
+      "GOV": "0.80",
+      "MOAT": "0.80",
+      "REV": "0.96",
+      "DUR": "0.50",
+      "CAP": null,
+      "CASH": "0.20",
+      "BAL": "0.24",
+      "EXEC": "0.32"
+    },
+    "missing_data_bound": [
+      "3.94",
+      "5.02"
+    ],
+    "cap": null,
+    "capped_bound": [
+      "3.94",
+      "5.02"
+    ],
+    "confidence": "Low on critical reliability/valuation; factor confidence shown separately",
+    "override": "No extra numeric haircut."
+  },
+  "GQS": {
+    "raw": null,
+    "final": null,
+    "display": "NS",
+    "coverage": "0.85",
+    "missing_weight": "0.15",
+    "known_contribution": "4.85",
+    "contributions": {
+      "REV": "3.20",
+      "DUR": "1.00",
+      "EARN": "0.45",
+      "CAP": null,
+      "CASH": "0.20"
+    },
+    "missing_data_bound": [
+      "5.00",
+      "6.35"
+    ],
+    "cap": 5,
+    "capped_bound": [
+      "5.00",
+      "5"
+    ],
+    "confidence": "Low on critical reliability/valuation; factor confidence shown separately",
+    "override": "Persistent poorCASH triggersGQS cap5, not a replacement forNS"
+  },
+  "IAS": {
+    "raw": null,
+    "final": null,
+    "display": "NS",
+    "coverage": "0.20",
+    "missing_weight": "0.80",
+    "known_contribution": "0.60",
+    "contributions": {
+      "Q": null,
+      "R": null,
+      "D": "0.60",
+      "P": null,
+      "L": null
+    },
+    "missing_data_bound": [
+      "1.40",
+      "8.60"
+    ],
+    "cap": null,
+    "capped_bound": [
+      "1.40",
+      "8.60"
+    ],
+    "confidence": "Low on critical reliability/valuation; factor confidence shown separately",
+    "override": "No extra numeric haircut."
+  },
+  "judgment_sensitivity": {
+    "GOV_plus_minus_1_changes_BQS_known_bound_by": ".20",
+    "REV_plus_minus_1_changes_BQS_known_bound_by": ".12",
+    "REV_plus_minus_1_changes_GQS_known_bound_by": ".40",
+    "gates_remain_binding": true
+  }
+},"reader_factors":{
+    "GOV": {
+      "score": 4,
+      "confidence": "Medium",
+      "reason": "Material disclosure and stewardship weaknesses without sufficient evidence of fraud or minority abuse.",
+      "counterevidence": "Restatement transparency, clean FY26 opinion/IFC and credit cure prevent an automatic governance-fail conclusion.",
+      "evidence_ids": [
+        "E03",
+        "E05",
+        "E06",
+        "E09"
+      ]
+    },
+    "MOAT": {
+      "score": 4,
+      "confidence": "Medium",
+      "reason": "Qualification history helps tenders, but concentrated counterparties and procurement pass-through give little demonstrated pricing power.",
+      "counterevidence": "19 completed substations and technical execution experience create entry friction.",
+      "evidence_ids": [
+        "E11",
+        "E18",
+        "E20"
+      ]
+    },
+    "REV": {
+      "score": 8,
+      "confidence": "Medium",
+      "reason": "Comparable three-year net-GST entity revenue CAGR 34.70% starts at 9; limited comparable history caps REV at 8. No additional small-base deduction.",
+      "counterevidence": "FY24 contraction, uneven project recognition and unseparated price/volume undermine extrapolation.",
+      "evidence_ids": [
+        "E02",
+        "E12",
+        "E21"
+      ]
+    },
+    "DUR": {
+      "score": 5,
+      "confidence": "Medium",
+      "reason": "Dated ₹327.62 crore backlog supports visibility, but tender concentration, billing and collection delays limit durability.",
+      "counterevidence": "July backlog increased and transmission/renewable infrastructure demand offers opportunities.",
+      "evidence_ids": [
+        "E11",
+        "E13"
+      ]
+    },
+    "CAP": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Valid multi-year incremental NOPAT/IC returns cannot be separated from reserve losses and accounting discontinuities.",
+      "counterevidence": "Indicative original FY25–26 ROIC 20.39% and positive incremental proxy show potential, not proven reinvestment economics.",
+      "evidence_ids": [
+        "E03",
+        "E24",
+        "E23"
+      ]
+    },
+    "CASH": {
+      "score": 2,
+      "confidence": "High",
+      "reason": "FY23–25 restated CFO/PAT ratio of sums is −2.33; FY25–26 original is −0.96; debt and supplier funding bridge profits.",
+      "counterevidence": "Working-capital model and public-sector retention can produce later receipts; FY25 capex reclassification does not explain all negative CFO.",
+      "evidence_ids": [
+        "E01",
+        "E02",
+        "E22",
+        "E24"
+      ]
+    },
+    "BAL": {
+      "score": 3,
+      "confidence": "Medium",
+      "reason": "Very low unrestricted cash, large pledged deposits, expensive debt and historically invoked BGs create fragile liquidity.",
+      "counterevidence": "Acuite reports the February default regularised and curing completed; this does not independently resolve CRISIL’s separate 27 August delinquency concern or verify October status.",
+      "evidence_ids": [
+        "E01",
+        "E07",
+        "E08"
+      ]
+    },
+    "EXEC": {
+      "score": 4,
+      "confidence": "Medium",
+      "reason": "Sales/operating margins improved, but receivable forecast was missed and project cash/default chronology show execution strain.",
+      "counterevidence": "Revenue grew 14.09% in FY26 and order book remains substantial.",
+      "evidence_ids": [
+        "E11",
+        "E13",
+        "E22"
+      ]
+    },
+    "EARN": {
+      "score": 3,
+      "confidence": "Medium",
+      "reason": "GST correction, vendor-loss reserve treatment, tax credit and EPS denominator changes weaken repeatability of headline growth.",
+      "counterevidence": "FY26 is unmodified and PAT remains positive without prior-tax credit.",
+      "evidence_ids": [
+        "E03",
+        "E04",
+        "E21",
+        "E24"
+      ]
+    },
+    "R": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Reliable base-case funded ordinary return is not established, and entry price remains secondary.",
+      "counterevidence": "A fully specified bull scenario survives and yields a conditional return, not the base return used for R.",
+      "evidence_ids": [
+        "E17",
+        "E23"
+      ]
+    },
+    "D": {
+      "score": 3,
+      "confidence": "Medium",
+      "reason": "Concentrated EPC receivables and pledged collateral leave meaningful impairment/recapitalisation risk; stress breaks bounded funding.",
+      "counterevidence": "IPO capital, bank regularisation and public counterparties offer recovery routes.",
+      "evidence_ids": [
+        "E07",
+        "E08",
+        "E22",
+        "E23"
+      ]
+    },
+    "P": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Low displayed current-share P/E cannot establish mispricing until cash, normalised earnings and executable quote are reconciled.",
+      "counterevidence": "Market price is near the ₹80 IPO price while earnings grew; this is a hypothesis, not proven expectation gap.",
+      "evidence_ids": [
+        "E14",
+        "E17",
+        "E21",
+        "E24"
+      ]
+    },
+    "L": {
+      "score": null,
+      "confidence": "Low",
+      "reason": "Official 20/60-session actual turnover, zero trades, spreads and current executable depth are missing.",
+      "counterevidence": "Primary 1,600-share lot and a dated secondary volume permit a transparent one-day size illustration.",
+      "evidence_ids": [
+        "E15",
+        "E17"
+      ]
+    }
+  },"reader_gates":{
+    "G1": {
+      "status": "Conditional",
+      "reason": "Sufficient adverse reporting/stewardship concerns for GOV 4, not enough to assert abuse or force GOV≤3. Signed resolutions required."
+    },
+    "G2": {
+      "status": "Hold — unresolved",
+      "reason": "Original/restated cash/profit discontinuities, reserve loss and conflicting default/JV disclosures prevent reliable normalised valuation."
+    },
+    "G3": {
+      "status": "Hold — unresolved",
+      "reason": "Latest Acuite confirms historical cure, but current post-IPO cash/debt/claims deployment not reconciled. Model breach is not actual default."
+    },
+    "G4": {
+      "status": "Hold — unresolved",
+      "reason": "No official 60-session turnover/depth verification; executable price and reference-position exit uncertain."
+    }
+  },"reader_score_points":{"BQS":null,"GQS":null,"IAS":null},"reader_source_registers":{"business_sources.json":[
+  {
+    "id": "ACUITE21",
+    "url": "https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/21st_Aug_26",
+    "document_date": "2026-08-21",
+    "locator": "Rationale, bank feedback, liquidity and rating history",
+    "primary": true,
+    "sha256": "35e1feb179759c3a5fffb1630cfba14acba9bf7c9b6b70cff7d4d845db66a5c6",
+    "bytes": 98489
+  },
+  {
+    "id": "ACUITE31",
+    "url": "https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/31st_Aug_26",
+    "document_date": "2026-08-31",
+    "locator": "Rationale, drivers, liquidity, facilities and history",
+    "primary": true,
+    "sha256": "9cfe81471809ce2cf66b51513c1231dcf4546ca0eaaaab340690342f28376c9e",
+    "bytes": 106995
+  },
+  {
+    "id": "SHAREAPR",
+    "url": "https://drive.google.com/file/d/1lUHWfzNStlDPP9ud1AXf-THUSpOohNhr/view?usp=sharing",
+    "document_date": "2026-04-10",
+    "locator": "Issuer-linked shareholding pattern; capital/promoter/lockin tables",
+    "primary": true,
+    "sha256": "fc49a8282324ef72883f3732d4e4b332c7584df604163aa346088dcc10c7ab1f",
+    "bytes": 521060
+  },
+  {
+    "id": "VIVIANA25",
+    "url": "https://www.vivianagroup.in/annual-report-fy-24-25.pdf",
+    "document_date": "2025-05-06",
+    "locator": "Standalone accounts pp82–85",
+    "primary": true,
+    "sha256": "b110c2d6b9c9831cf735b68002a6a653e1f7bf06977708ff4b499784efe64961",
+    "bytes": 13284462
+  },
+  {
+    "id": "ORIANA25",
+    "url": "https://orianapower.com/wp-content/uploads/2025/09/Intimation-Notice-of-Agm-24-25.pdf",
+    "document_date": "2025-05-28",
+    "locator": "Consolidated accounts pp112–115",
+    "primary": true,
+    "sha256": "6c8ffd9f3b1064237bd773357758bf5992bfe538691e215db02ed6ffd2c1e270",
+    "bytes": 1930118
+  },
+  {
+    "id": "RAJESH25",
+    "url": "https://www.rajeshpower.com/img/Annual-Report-Rajesh-Power-2024-25-Final.pdf",
+    "document_date": "2025-05-15",
+    "locator": "Consolidated accounts pp114–117",
+    "primary": true,
+    "sha256": "c468d7035eed77387c8034bd5de5da847196493f206ec16801f168413a51d71c",
+    "bytes": 5889084
+  },
+  {
+    "id": "SECONDARY_PRICE",
+    "url": "https://www.equitypandit.com/historical-data/544746",
+    "document_date": "2026-10-19",
+    "locator": "Dated OHLCV row and 60 observed bars only; no actual turnover",
+    "primary": false,
+    "sha256": "4c55042945f9fada6b37c813fa0ccdcb5c131526318007d41cced37ee8a230fb",
+    "bytes": 139058
+  },
+  {
+    "id": "CRISIL27",
+    "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SafetyControlsandDevicesLimited_August%2027_%202026_RR_404286.html",
+    "document_date": "2026-08-27",
+    "locator": "Primary text read through public web retrieval; raw download unavailable",
+    "sha256": null,
+    "primary": true
+  },
+  {
+    "id": "INFOMERICS24",
+    "url": "https://www.infomerics.com/admin/uploads/PR-Safety-Controls-and-Devices24April26.pdf",
+    "document_date": "2026-04-24",
+    "locator": "Primary text read through public web retrieval; raw download unavailable",
+    "sha256": null,
+    "primary": true
+  }
+]
+,"financial_sources.json":{
+  "company": "Safety Controls & Devices Limited",
+  "cutoff": "2026-10-20 Asia/Kolkata",
+  "retrieved_utc": "2026-10-24",
+  "sources": [
+    {
+      "id": "AR26",
+      "title": "Annual Report 2025–26",
+      "url": "https://drive.google.com/file/d/1tNyu_NoVHSAyvRIvkOI4do569zBGFNGk/view?usp=sharing",
+      "document_date": "2026-08-31 (board report); 2026-05-30 (audited financial statements)",
+      "locator_convention": "Printed page; PDF page = printed + 1. 109 PDF pages.",
+      "source_type": "primary issuer disclosure",
+      "sha256": "6d9f8e11a379c64d38304812d1dc92f64ab140219a5c633944170240513a6fa2",
+      "limitations": "Located through issuer https://safetygroup.in/corporate_announcements.php. FY25 comparatives are original statutory basis, not prospectus restated basis."
+    },
+    {
+      "id": "RHP",
+      "title": "Red Herring Prospectus dated 27 March 2026",
+      "url": "https://aibi.org.in/Current_DOC/26270001.pdf",
+      "document_date": "2026-03-27; restatement report 2026-02-26",
+      "locator_convention": "Printed numbered page or F-number. Financial F-1=PDF203; F-7=PDF209; F-17=PDF219.",
+      "source_type": "primary issuer disclosure",
+      "sha256": "5e95a97c55a19f4f8998c3721cca8fdc6268d64181ca89c462bb3dc1e773a529",
+      "limitations": "Same document available from https://www.kotaksecurities.com/pdf/ipo/safety-controls-and-device-ltd.pdf. Audited-restated FY23–25 and 10 months to Jan2026. Not a new/reissued original statutory opinion."
+    },
+    {
+      "id": "FR26",
+      "title": "Audited results for year ended 31 March 2026",
+      "url": "https://drive.google.com/file/d/1UtnI2Jy-X9ULq_C_6VexedvEjAcY_-Mm/view?usp=sharing",
+      "document_date": "2026-05-30",
+      "locator_convention": "1-based PDF page",
+      "source_type": "primary issuer disclosure",
+      "sha256": "b4b23f1790c434ea111270f74a13c63c81670b583d4f891ec4347248d3d91689",
+      "limitations": "Located through https://safetygroup.in/financialinfo.php. FY25 cash-flow working-capital presentation differs from AR26 though total CFO identical."
+    },
+    {
+      "id": "O21",
+      "title": "Original FY2021 issuer-linked financial statements",
+      "url": "https://drive.google.com/file/d/1LBiEzHqDAZJAqU86NIchQytY1Tjr61v7/view?usp=sharing",
+      "document_date": "See original_audit_extract.json",
+      "locator_convention": "1-based PDF page",
+      "source_type": "primary issuer disclosure",
+      "sha256": "8fca845137badfa9cb26c7ea6028ef204f9a8a22fd93126baa8cbabf6fbf96ce",
+      "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+    },
+    {
+      "id": "O22",
+      "title": "Original FY2022 issuer-linked financial statements",
+      "url": "https://drive.google.com/file/d/1PVeXFL9w7xJVlylipGYdhEYyUTHnLi1l/view?usp=sharing",
+      "document_date": "See original_audit_extract.json",
+      "locator_convention": "1-based PDF page",
+      "source_type": "primary issuer disclosure",
+      "sha256": "709537d07a26ac0bac693970075728ebb1b5b521494c55d74a1841b56a1a1ebd",
+      "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+    },
+    {
+      "id": "O23",
+      "title": "Original FY2023 issuer-linked financial statements",
+      "url": "https://drive.google.com/file/d/1zyWHVZmbUN8XH_DepG69JS_Ad7l-z2EL/view?usp=sharing",
+      "document_date": "See original_audit_extract.json",
+      "locator_convention": "1-based PDF page",
+      "source_type": "primary issuer disclosure",
+      "sha256": "d3c15498aadef5b341316a3e09b7e258f4c4248421bcae6f76026dcc72b6d24e",
+      "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+    },
+    {
+      "id": "O24",
+      "title": "Original FY2024 issuer-linked financial statements",
+      "url": "https://drive.google.com/file/d/15SL_kZMpr0fcwGcGs60Ed0WnIIMDD2N7/view?usp=sharing",
+      "document_date": "See original_audit_extract.json",
+      "locator_convention": "1-based PDF page",
+      "source_type": "primary issuer disclosure",
+      "sha256": "cff1ee42e6508f051c0d1c9dfa8c6deb29d633de696270467694b26cfb93531a",
+      "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+    },
+    {
+      "id": "O25",
+      "title": "Original FY2025 issuer-linked financial statements",
+      "url": "https://drive.google.com/file/d/14ww5U54S5rSKVkX-l7sApMnxK0EFr-Qc/view?usp=sharing",
+      "document_date": "See original_audit_extract.json",
+      "locator_convention": "1-based PDF page",
+      "source_type": "primary issuer disclosure",
+      "sha256": "2682ca94b0f8ada91b871a12ec7bf78fee1ed66f104ef77203316f6ecb22b12a",
+      "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+    },
+    {
+      "id": "PROS",
+      "title": "Final Prospectus dated 9 April 2026",
+      "url": "https://drive.google.com/file/d/166KghZQZwvcgVnZKqaU8zOCnAnV46E9W/view?usp=sharing",
+      "listing_url": "https://safetygroup.in/IPO.php",
+      "source_type": "primaryissuer finaloffer document",
+      "document_date": "2026-04-09",
+      "sha256": "1d07c46537c53528ab6bebc86689836a3943854bd039cce37e568bebb77872f2",
+      "locator_convention": "Printed numbered page; PDF page=printed+4 until financial annexure. F7=PDF209; F18=PDF220.",
+      "limitations": "Internalnetproceeds/GCP andGSTfee contradictions. Do not claim actualdeployment from prospectus."
+    }
+  ],
+  "access_notes": [
+    "BSE original annual attachment f4aa7094-9d81-4794-86c2-86fb5599b1df.pdf returned403 in both AnnPdfOpen and AttachLive/AttachHis; equivalent issuer annual source successfully read.",
+    "Public issuer Google Drive downloads were accessible. Raw source PDFs, OCR and images retained only in dedicated temporary source directory, not included in research deliverables.",
+    "No financial aggregator numbers are used as primary inputs."
+  ]
+}
+,"source_register.json":[
+  {
+    "id": "AR26",
+    "title": "Annual Report 2025–26",
+    "url": "https://drive.google.com/file/d/1tNyu_NoVHSAyvRIvkOI4do569zBGFNGk/view?usp=sharing",
+    "document_date": "2026-08-31 (board report); 2026-05-30 (audited financial statements)",
+    "locator_convention": "Printed page; PDF page = printed + 1. 109 PDF pages.",
+    "source_type": "primary issuer disclosure",
+    "sha256": "6d9f8e11a379c64d38304812d1dc92f64ab140219a5c633944170240513a6fa2",
+    "limitations": "Located through issuer https://safetygroup.in/corporate_announcements.php. FY25 comparatives are original statutory basis, not prospectus restated basis."
+  },
+  {
+    "id": "RHP",
+    "title": "Red Herring Prospectus dated 27 March 2026",
+    "url": "https://aibi.org.in/Current_DOC/26270001.pdf",
+    "document_date": "2026-03-27; restatement report 2026-02-26",
+    "locator_convention": "Printed numbered page or F-number. Financial F-1=PDF203; F-7=PDF209; F-17=PDF219.",
+    "source_type": "primary issuer disclosure",
+    "sha256": "5e95a97c55a19f4f8998c3721cca8fdc6268d64181ca89c462bb3dc1e773a529",
+    "limitations": "Same document available from https://www.kotaksecurities.com/pdf/ipo/safety-controls-and-device-ltd.pdf. Audited-restated FY23–25 and 10 months to Jan2026. Not a new/reissued original statutory opinion."
+  },
+  {
+    "id": "FR26",
+    "title": "Audited results for year ended 31 March 2026",
+    "url": "https://drive.google.com/file/d/1UtnI2Jy-X9ULq_C_6VexedvEjAcY_-Mm/view?usp=sharing",
+    "document_date": "2026-05-30",
+    "locator_convention": "1-based PDF page",
+    "source_type": "primary issuer disclosure",
+    "sha256": "b4b23f1790c434ea111270f74a13c63c81670b583d4f891ec4347248d3d91689",
+    "limitations": "Located through https://safetygroup.in/financialinfo.php. FY25 cash-flow working-capital presentation differs from AR26 though total CFO identical."
+  },
+  {
+    "id": "O21",
+    "title": "Original FY2021 issuer-linked financial statements",
+    "url": "https://drive.google.com/file/d/1LBiEzHqDAZJAqU86NIchQytY1Tjr61v7/view?usp=sharing",
+    "document_date": "See original_audit_extract.json",
+    "locator_convention": "1-based PDF page",
+    "source_type": "primary issuer disclosure",
+    "sha256": "8fca845137badfa9cb26c7ea6028ef204f9a8a22fd93126baa8cbabf6fbf96ce",
+    "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+  },
+  {
+    "id": "O22",
+    "title": "Original FY2022 issuer-linked financial statements",
+    "url": "https://drive.google.com/file/d/1PVeXFL9w7xJVlylipGYdhEYyUTHnLi1l/view?usp=sharing",
+    "document_date": "See original_audit_extract.json",
+    "locator_convention": "1-based PDF page",
+    "source_type": "primary issuer disclosure",
+    "sha256": "709537d07a26ac0bac693970075728ebb1b5b521494c55d74a1841b56a1a1ebd",
+    "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+  },
+  {
+    "id": "O23",
+    "title": "Original FY2023 issuer-linked financial statements",
+    "url": "https://drive.google.com/file/d/1zyWHVZmbUN8XH_DepG69JS_Ad7l-z2EL/view?usp=sharing",
+    "document_date": "See original_audit_extract.json",
+    "locator_convention": "1-based PDF page",
+    "source_type": "primary issuer disclosure",
+    "sha256": "d3c15498aadef5b341316a3e09b7e258f4c4248421bcae6f76026dcc72b6d24e",
+    "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+  },
+  {
+    "id": "O24",
+    "title": "Original FY2024 issuer-linked financial statements",
+    "url": "https://drive.google.com/file/d/15SL_kZMpr0fcwGcGs60Ed0WnIIMDD2N7/view?usp=sharing",
+    "document_date": "See original_audit_extract.json",
+    "locator_convention": "1-based PDF page",
+    "source_type": "primary issuer disclosure",
+    "sha256": "cff1ee42e6508f051c0d1c9dfa8c6deb29d633de696270467694b26cfb93531a",
+    "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+  },
+  {
+    "id": "O25",
+    "title": "Original FY2025 issuer-linked financial statements",
+    "url": "https://drive.google.com/file/d/14ww5U54S5rSKVkX-l7sApMnxK0EFr-Qc/view?usp=sharing",
+    "document_date": "See original_audit_extract.json",
+    "locator_convention": "1-based PDF page",
+    "source_type": "primary issuer disclosure",
+    "sha256": "2682ca94b0f8ada91b871a12ec7bf78fee1ed66f104ef77203316f6ecb22b12a",
+    "limitations": "Issuer https://safetygroup.in/financialinfo.php. Scanned originals OCR verified; FY25 file excludes full independent audit report. Later comparatives can differ from prior original statements."
+  },
+  {
+    "id": "PROS",
+    "title": "Final Prospectus dated 9 April 2026",
+    "url": "https://drive.google.com/file/d/166KghZQZwvcgVnZKqaU8zOCnAnV46E9W/view?usp=sharing",
+    "listing_url": "https://safetygroup.in/IPO.php",
+    "source_type": "primaryissuer finaloffer document",
+    "document_date": "2026-04-09",
+    "sha256": "1d07c46537c53528ab6bebc86689836a3943854bd039cce37e568bebb77872f2",
+    "locator_convention": "Printed numbered page; PDF page=printed+4 until financial annexure. F7=PDF209; F18=PDF220.",
+    "limitations": "Internalnetproceeds/GCP andGSTfee contradictions. Do not claim actualdeployment from prospectus."
+  },
+  {
+    "id": "ACUITE21",
+    "url": "https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/21st_Aug_26",
+    "document_date": "2026-08-21",
+    "locator": "Rationale, bank feedback, liquidity and rating history",
+    "primary": true,
+    "sha256": "35e1feb179759c3a5fffb1630cfba14acba9bf7c9b6b70cff7d4d845db66a5c6",
+    "bytes": 98489
+  },
+  {
+    "id": "ACUITE31",
+    "url": "https://connect.acuite.in/fcompany-details/SAFETY_CONTROLS_AND_DEVICES_LIMITED/31st_Aug_26",
+    "document_date": "2026-08-31",
+    "locator": "Rationale, drivers, liquidity, facilities and history",
+    "primary": true,
+    "sha256": "9cfe81471809ce2cf66b51513c1231dcf4546ca0eaaaab340690342f28376c9e",
+    "bytes": 106995
+  },
+  {
+    "id": "SHAREAPR",
+    "url": "https://drive.google.com/file/d/1lUHWfzNStlDPP9ud1AXf-THUSpOohNhr/view?usp=sharing",
+    "document_date": "2026-04-10",
+    "locator": "Issuer-linked shareholding pattern; capital/promoter/lockin tables",
+    "primary": true,
+    "sha256": "fc49a8282324ef72883f3732d4e4b332c7584df604163aa346088dcc10c7ab1f",
+    "bytes": 521060
+  },
+  {
+    "id": "VIVIANA25",
+    "url": "https://www.vivianagroup.in/annual-report-fy-24-25.pdf",
+    "document_date": "2025-05-06",
+    "locator": "Standalone accounts pp82–85",
+    "primary": true,
+    "sha256": "b110c2d6b9c9831cf735b68002a6a653e1f7bf06977708ff4b499784efe64961",
+    "bytes": 13284462
+  },
+  {
+    "id": "ORIANA25",
+    "url": "https://orianapower.com/wp-content/uploads/2025/09/Intimation-Notice-of-Agm-24-25.pdf",
+    "document_date": "2025-05-28",
+    "locator": "Consolidated accounts pp112–115",
+    "primary": true,
+    "sha256": "6c8ffd9f3b1064237bd773357758bf5992bfe538691e215db02ed6ffd2c1e270",
+    "bytes": 1930118
+  },
+  {
+    "id": "RAJESH25",
+    "url": "https://www.rajeshpower.com/img/Annual-Report-Rajesh-Power-2024-25-Final.pdf",
+    "document_date": "2025-05-15",
+    "locator": "Consolidated accounts pp114–117",
+    "primary": true,
+    "sha256": "c468d7035eed77387c8034bd5de5da847196493f206ec16801f168413a51d71c",
+    "bytes": 5889084
+  },
+  {
+    "id": "SECONDARY_PRICE",
+    "url": "https://www.equitypandit.com/historical-data/544746",
+    "document_date": "2026-10-19",
+    "locator": "Dated OHLCV row and 60 observed bars only; no actual turnover",
+    "primary": false,
+    "sha256": "4c55042945f9fada6b37c813fa0ccdcb5c131526318007d41cced37ee8a230fb",
+    "bytes": 139058
+  },
+  {
+    "id": "CRISIL27",
+    "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SafetyControlsandDevicesLimited_August%2027_%202026_RR_404286.html",
+    "document_date": "2026-08-27",
+    "locator": "Primary text read through public web retrieval; raw download unavailable",
+    "sha256": null,
+    "primary": true
+  },
+  {
+    "id": "INFOMERICS24",
+    "url": "https://www.infomerics.com/admin/uploads/PR-Safety-Controls-and-Devices24April26.pdf",
+    "document_date": "2026-04-24",
+    "locator": "Primary text read through public web retrieval; raw download unavailable",
+    "sha256": null,
+    "primary": true
+  },
+  {
+    "id": "SECURITY19",
+    "url": "https://nsearchives.nseindia.com/content/cm/interop/NSE_CM_security_19102026.csv.gz",
+    "document_date": "2026-10-19",
+    "sha256_decompressed": "6d41d331c8f7270758a9a6aa58e679b1bed4e5d6e7cc1c9b514ec2958bfdd594",
+    "locator": "Issuer-only rows retained in security_inputs.json",
+    "source_type": "Official exchange interoperability security master, nottradinghistory"
+  }
+]
+},"reader_ranking_qualification":false}
+,"companion_registry":[{"name":"audit_inputs.json","kind":"json","original_sha256":"5e6c07282b08f105661e90db9f151e1e8c34e5131ceff06f3dee6bb2a92965c5","original_bytes":27068,"projected_sha256":"5e6c07282b08f105661e90db9f151e1e8c34e5131ceff06f3dee6bb2a92965c5","projected_bytes":27068,"approved_editorial_projection":false},{"name":"business_inputs.json","kind":"json","original_sha256":"ab9d7d70e2c17c89a0d0df3ecba368a77cebde9ae22dd4196bdce017a28928c5","original_bytes":6423,"projected_sha256":"ab9d7d70e2c17c89a0d0df3ecba368a77cebde9ae22dd4196bdce017a28928c5","projected_bytes":6423,"approved_editorial_projection":false},{"name":"business_sources.json","kind":"json","original_sha256":"792573c5565d412ab323064a157ac5ad92f445ad1aaca988ff7104fb320232c0","original_bytes":3077,"projected_sha256":"792573c5565d412ab323064a157ac5ad92f445ad1aaca988ff7104fb320232c0","projected_bytes":3077,"approved_editorial_projection":false},{"name":"canonical.json","kind":"json","original_sha256":"5ef5dbb16658fa142540c9a59a2f9f5cb9008154bccb942a314d634fcb3172b8","original_bytes":2954,"projected_sha256":"5ef5dbb16658fa142540c9a59a2f9f5cb9008154bccb942a314d634fcb3172b8","projected_bytes":2954,"approved_editorial_projection":false},{"name":"canonical_path_index.json","kind":"json","original_sha256":"48836790c9e529242b9230383d1bee0e2ef4dd23c7f92f4db56548d1ec35016e","original_bytes":31614,"projected_sha256":"48836790c9e529242b9230383d1bee0e2ef4dd23c7f92f4db56548d1ec35016e","projected_bytes":31614,"approved_editorial_projection":false},{"name":"canonical_paths.json.gz","kind":"sparse-model","original_sha256":"6c686f8a74fffb6eb7998b22e16d4404b009c93fb1724087da79d89c6ce22888","original_bytes":7907296,"projected_sha256":"6c686f8a74fffb6eb7998b22e16d4404b009c93fb1724087da79d89c6ce22888","projected_bytes":7907296,"approved_editorial_projection":false},{"name":"evidence_ledger.json","kind":"json","original_sha256":"69bf111f705110cebe283ee331d48a176b6f12e1c9e50223e92a25ef2f76604c","original_bytes":11319,"projected_sha256":"69bf111f705110cebe283ee331d48a176b6f12e1c9e50223e92a25ef2f76604c","projected_bytes":11319,"approved_editorial_projection":false},{"name":"financial_inputs.json","kind":"json","original_sha256":"03257979b80ec4bfb2ead0fed4cec168c71d90eb0f4c0dfb88571c178803a007","original_bytes":70660,"projected_sha256":"03257979b80ec4bfb2ead0fed4cec168c71d90eb0f4c0dfb88571c178803a007","projected_bytes":70660,"approved_editorial_projection":false},{"name":"financial_sources.json","kind":"json","original_sha256":"b5207d5c7d14d74a1f661816b2157593c058e2aa440147277ed54952b80c3699","original_bytes":6497,"projected_sha256":"b5207d5c7d14d74a1f661816b2157593c058e2aa440147277ed54952b80c3699","projected_bytes":6497,"approved_editorial_projection":false},{"name":"framework_provenance.json","kind":"json","original_sha256":"3bb7d28fc8469ceabae4771a0645e60e69478213a228ec5fac931999a50c698f","original_bytes":527,"projected_sha256":"3bb7d28fc8469ceabae4771a0645e60e69478213a228ec5fac931999a50c698f","projected_bytes":527,"approved_editorial_projection":false},{"name":"historical_metrics.json","kind":"json","original_sha256":"e9e7d65ce32257ffa92520708678d40f2376a26e5ff5afbae029d4090cb21519","original_bytes":41798,"projected_sha256":"e9e7d65ce32257ffa92520708678d40f2376a26e5ff5afbae029d4090cb21519","projected_bytes":41798,"approved_editorial_projection":false},{"name":"liquidity_metrics.json","kind":"json","original_sha256":"e58c244f159deab20aac24a111f75f9cdeb9461b569aa043dadfe46f8f015350","original_bytes":1586,"projected_sha256":"e58c244f159deab20aac24a111f75f9cdeb9461b569aa043dadfe46f8f015350","projected_bytes":1586,"approved_editorial_projection":false},{"name":"market_attempts.json","kind":"json","original_sha256":"038d7d117719fd04cde1577755ed2a38ca37f9cf8afaa994d96b7748fac496d8","original_bytes":2112,"projected_sha256":"038d7d117719fd04cde1577755ed2a38ca37f9cf8afaa994d96b7748fac496d8","projected_bytes":2112,"approved_editorial_projection":false},{"name":"market_extract.json","kind":"json","original_sha256":"bff7e3ae6d7cc90a9eb11083925791b16c22b62c73e955f808f0dad9b4c3d68f","original_bytes":14693,"projected_sha256":"bff7e3ae6d7cc90a9eb11083925791b16c22b62c73e955f808f0dad9b4c3d68f","projected_bytes":14693,"approved_editorial_projection":false},{"name":"model_inputs.json","kind":"json","original_sha256":"3d42e748e0f0faf36463c3ea617ef0b9bcd8786b3fe7cb6cc435219844eee143","original_bytes":14494,"projected_sha256":"3d42e748e0f0faf36463c3ea617ef0b9bcd8786b3fe7cb6cc435219844eee143","projected_bytes":14494,"approved_editorial_projection":false},{"name":"multibagger_tests.json","kind":"json","original_sha256":"afd8c58d01fc659190a9eadaa18d7fe782590067824514964eb7c932dd08e70a","original_bytes":32866,"projected_sha256":"afd8c58d01fc659190a9eadaa18d7fe782590067824514964eb7c932dd08e70a","projected_bytes":32866,"approved_editorial_projection":false},{"name":"original_audit_extract.json","kind":"json","original_sha256":"c7a5b2a5110e12d251d5e59e299e338372d0b3060dd4ddef1b9c8bbedb386f84","original_bytes":60191,"projected_sha256":"c7a5b2a5110e12d251d5e59e299e338372d0b3060dd4ddef1b9c8bbedb386f84","projected_bytes":60191,"approved_editorial_projection":false},{"name":"peer_inputs.json","kind":"json","original_sha256":"250841ddcd7b6683d6e728b286211da85ca424785273d4f8f3f49f1d80181b44","original_bytes":3922,"projected_sha256":"250841ddcd7b6683d6e728b286211da85ca424785273d4f8f3f49f1d80181b44","projected_bytes":3922,"approved_editorial_projection":false},{"name":"peer_metrics.json","kind":"json","original_sha256":"602cd30e13eaa36f469532d8505426749fe772885ae55ebb49b6d8e7afa5e43b","original_bytes":1389,"projected_sha256":"602cd30e13eaa36f469532d8505426749fe772885ae55ebb49b6d8e7afa5e43b","projected_bytes":1389,"approved_editorial_projection":false},{"name":"ratings_inputs.json","kind":"json","original_sha256":"1439217dcafec49ad9195ff0ded94bd7facbd0f2a92af5e854cbff0aa95df03e","original_bytes":3094,"projected_sha256":"1439217dcafec49ad9195ff0ded94bd7facbd0f2a92af5e854cbff0aa95df03e","projected_bytes":3094,"approved_editorial_projection":false},{"name":"report.md","kind":"text","original_sha256":"36f63b18f8a2550c958d681494781c7259e1cfe8b2676257e8ebe422bbcfc77e","original_bytes":55055,"projected_sha256":"36f63b18f8a2550c958d681494781c7259e1cfe8b2676257e8ebe422bbcfc77e","projected_bytes":55055,"approved_editorial_projection":false},{"name":"reverse_trials.json","kind":"json","original_sha256":"f9e20721968ea5e18605d657566d3167acc8340642729395d6bb56d3b098f30d","original_bytes":27378,"projected_sha256":"f9e20721968ea5e18605d657566d3167acc8340642729395d6bb56d3b098f30d","projected_bytes":27378,"approved_editorial_projection":false},{"name":"scenario_summary.json","kind":"json","original_sha256":"b9514c035641d8a44af1c9fa759865611f0147ee53cbba0e374f9b227bdcf666","original_bytes":85352,"projected_sha256":"b9514c035641d8a44af1c9fa759865611f0147ee53cbba0e374f9b227bdcf666","projected_bytes":85352,"approved_editorial_projection":false},{"name":"score_inputs.json","kind":"json","original_sha256":"c5c9bf470281d60e53d4663af943c22b0266c65d33c8ad9612eda390772f13af","original_bytes":6771,"projected_sha256":"c5c9bf470281d60e53d4663af943c22b0266c65d33c8ad9612eda390772f13af","projected_bytes":6771,"approved_editorial_projection":false},{"name":"scores.json","kind":"json","original_sha256":"403978b81783b9be67dad0948e72e384c6236f6053406404d5137d9fb1eac04d","original_bytes":8860,"projected_sha256":"403978b81783b9be67dad0948e72e384c6236f6053406404d5137d9fb1eac04d","projected_bytes":8860,"approved_editorial_projection":false},{"name":"security_inputs.json","kind":"json","original_sha256":"401ca17a517367187c02c1fcdf62f86a6ba2ec6bd4b0b5cac3a45d5d1f46231e","original_bytes":7315,"projected_sha256":"401ca17a517367187c02c1fcdf62f86a6ba2ec6bd4b0b5cac3a45d5d1f46231e","projected_bytes":7315,"approved_editorial_projection":false},{"name":"sensitivity_results.json","kind":"json","original_sha256":"e86d94d6d77b05cd0746f6b5e180b7a70e9b96b759ccf13e0d0543e0cff8606c","original_bytes":710113,"projected_sha256":"e86d94d6d77b05cd0746f6b5e180b7a70e9b96b759ccf13e0d0543e0cff8606c","projected_bytes":710113,"approved_editorial_projection":false},{"name":"source_register.json","kind":"json","original_sha256":"e5e2d624edef06ff07fcebade4e9da13825aa4667cb084b6a8ce174aeaaf6aa6","original_bytes":9203,"projected_sha256":"e5e2d624edef06ff07fcebade4e9da13825aa4667cb084b6a8ce174aeaaf6aa6","projected_bytes":9203,"approved_editorial_projection":false}],"deferred_aliases":[{"pointer":"/analytical_companions","resolution":"Complete companion registry; full accepted values are fetched and viewed without embedding them into the small core. No summary substitutes for the logical alias.","files":["audit_inputs.json","business_inputs.json","business_sources.json","canonical_path_index.json","canonical_paths.json.gz","evidence_ledger.json","financial_inputs.json","financial_sources.json","framework_provenance.json","historical_metrics.json","liquidity_metrics.json","market_attempts.json","market_extract.json","model_inputs.json","multibagger_tests.json","original_audit_extract.json","peer_inputs.json","peer_metrics.json","ratings_inputs.json","reverse_trials.json","scenario_summary.json","score_inputs.json","scores.json","security_inputs.json","sensitivity_results.json","source_register.json"]}]}
