@@ -84,10 +84,11 @@
       if (!response || response.status !== 200 || response.redirected || response.type === 'opaque') fail('Research resource could not load safely.');
       if (response.url && new URL(response.url).href !== url.href) fail('Research response address changed.');
       const encoding = response.headers?.get?.('content-encoding');
-      if (encoding !== null && encoding !== undefined && encoding.trim().toLowerCase() !== 'identity')
-        fail('The server transformed compressed research bytes; loading was stopped.');
+      // Fetch exposes HTTP-decoded bytes; Content-Length describes the wire representation.
+      // Authenticate the bounded body below before any application-level gzip inflation.
+      const identity = encoding == null || encoding.trim().toLowerCase() === 'identity';
       const length = response.headers?.get?.('content-length');
-      if (length !== null && length !== undefined && (!/^(0|[1-9][0-9]*)$/.test(length) || !Number.isSafeInteger(Number(length)) || Number(length) !== binding.bytes))
+      if (identity && length !== null && length !== undefined && (!/^(0|[1-9][0-9]*)$/.test(length) || !Number.isSafeInteger(Number(length)) || Number(length) !== binding.bytes))
         fail('Research response declared a different byte count.');
       const bytes = await readBounded(response.body, binding.bytes, cap, signal);
       if (await sha(bytes) !== binding.sha256) fail('Research stored-byte integrity check failed.');
