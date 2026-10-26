@@ -1,0 +1,33 @@
+{
+  "format": "wallstrat-exact-zip-parts-v1",
+  "filename": "INE0RNZ01014.zip",
+  "bytes": 16272125,
+  "sha256": "5765eede85d8b2ed0216e1a821c54e4db4e8980814560b3b994f144c865bcc79",
+  "parts": [
+    {
+      "path": "INE0RNZ01014.zip.000.zippart",
+      "bytes": 4000000,
+      "sha256": "204fef3a0caa31c2b698e200eed433c7dd9e6a87a1f72abc44ddfbd92cb27a6e"
+    },
+    {
+      "path": "INE0RNZ01014.zip.001.zippart",
+      "bytes": 4000000,
+      "sha256": "0a78995a4564494b1d0eb19456431f5c8e04b1d4c98d388489e4fb914e1c3338"
+    },
+    {
+      "path": "INE0RNZ01014.zip.002.zippart",
+      "bytes": 4000000,
+      "sha256": "e48776bebebfdc26a4bc9a2753819bfaf033aeb69f7773ddb8c9658ec1b5d738"
+    },
+    {
+      "path": "INE0RNZ01014.zip.003.zippart",
+      "bytes": 4000000,
+      "sha256": "b1a13e796e9d9cdcc2129ab9048e07ee10387791754a7fb77bf4d4eb18c379ac"
+    },
+    {
+      "path": "INE0RNZ01014.zip.004.zippart",
+      "bytes": 272125,
+      "sha256": "f7454a8ffb5fb54aa8bb95ee34118140b58b8413e83e826ef47090775c2dc038"
+    }
+  ]
+}

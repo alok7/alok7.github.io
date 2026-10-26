@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SJP Ultrasonics | Wallstrat SME 381</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>body{max-width:1100px;margin:auto;padding:36px;font:16px/1.65 system-ui;background:#f8fafc;color:#172335}h1,h2{color:#12395b}table{display:block;overflow:auto;font-size:13px;margin:24px 0;border-collapse:collapse}td,th{padding:9px;border:1px solid #cbd5e1;min-width:85px}a{color:#075985}h2{border-top:2px solid #bed3e0;padding-top:22px}</style></head>
+<body>
+<header id="title-block-header">
+<h1 class="title">SJP Ultrasonics | Wallstrat SME 381</h1>
+</header>
+<h1 id="sjp-ultrasonics-limited-position-381">SJP Ultrasonics Limited —
+Position 381</h1>
+<p><strong>Wallstrat SME research • Framework v 3.0 • Information cutoff
+20 October 2026 (IST) • Market reference 19 October 2026</strong></p>
+<h2 id="executive-verdict">1. Executive Verdict</h2>
+<p>SJP supplies plastic-joining machinery, custom industrial automation
+and laser solutions—not medical ultrasound. It has
+application-engineering know-how and growing recent automation orders,
+but the decisive weakness is cash realization: FY 2024–26 ₹12.8171 crore
+restated PAT generated <strong>negative ₹5.4261 crore CFO</strong>.
+Five-year revenue CAGR is only 5.74%, not the superficially attractive
+32.36% three-year recovery. Fresh IPO capital can support the
+machinery/WC expansion, but it is committed capital, not free surplus.
+At the dated secondary ₹96.22 reference, the base model returns about
+7.6%, below the 15% hurdle; IAS remains NS because executable liquidity
+is unverified. This is a mixed-quality capital-expenditure execution
+watchlist, not an evidence-backed compounder. Collections,
+supplier-advance conversion and independently verified commissioning—not
+a higher quote—would improve the thesis. [S01;S03;S04;S06;C01;A01]</p>
+<h2 id="research-header-gates-and-data-confidence">2. Research Header,
+Gates and Data Confidence</h2>
+<p>Exact legal identity is <strong>SJP Ultrasonics Limited</strong>,
+formerly SJP Ultrasonics Private Limited; CIN U29253MH2012PLC226489;
+ISIN <strong>INE0S4601017</strong>; BSE SME <strong>544980 /
+SJP</strong>. No NSE listing inferred from the interoperability master’s
+SJP$ rows. October 8,2026 listing,12,940,000 shares,₹10 face
+and2,000-share lot are corroborated by issuer capital structure,
+mirrored BSE notice20261007-37 and exchange security-master rows.
+[S01;S05;security_master_evidence.json]</p>
+<p>Standalone AS/Indian GAAP, not Ind AS; no subsidiaries. Units ₹crore
+unless indicated. Five-year illustrative investment horizon ends 20
+October 2031; nominal pre-investor-tax equity hurdle 15%, tested
+12%/18%. DCF WACC14–18%, independently assumed—not equated to the equity
+hurdle. Illustrative liquidity reference ₹5 lakh, not a recommended
+position. FY 2027 comparable interim/TTM is ND as of cutoff. Data
+retrieved 25 October but only pre-cutoff facts used; undated peer pages
+corroborate products only. [S01;S02;A01]</p>
+<p>The ₹96.22 observation is a <strong>19 October dated secondary
+intraday LTP</strong>, not a verified BSE closing/executable price. It
+is 0calendar days stale versus market reference,1 day before information
+cutoff. Later quotes excluded. Calculated market cap ₹124.50868 crore
+rejects the secondary article’s inconsistent ₹118.58 crore. One lot
+₹192,440; two ₹384,880; three ₹577,320. Round-lot constraints make an
+exact ₹5 lakh purchase impossible at this quote. [S06;C01]</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gate</th>
+<th>State</th>
+<th>Evidence / consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>G1</td>
+<td>Conditional</td>
+<td>Compliance lapses/admitted unpaid historical contributions; no
+demonstrated material diversion or severe minority harm. No governance
+override.</td>
+</tr>
+<tr class="even">
+<td>G2</td>
+<td>Conditional</td>
+<td>Audited/restated core statements usable with exact reconciliation;
+.0036 crore equity and asset-label/marketing KPI discrepancies retained,
+not treated as proven unreliable entire accounts. Balance confirmations
+and development classification must improve.</td>
+</tr>
+<tr class="odd">
+<td>G3</td>
+<td>Conditional</td>
+<td>IPO proforma supports core bear; actual cutoff liquidity/deployment
+and callable funding uncertain. Historical EMI delays disclosed; not
+ongoing proved default. Linked-model gap not G3 Fail evidence.</td>
+</tr>
+<tr class="even">
+<td>G4</td>
+<td>Hold — unresolved</td>
+<td>BSE daily series/spread not verified;8 potential sessions and
+circuits. L NS; quote not executable.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confidence:</strong> Medium on restated financial inputs,
+identity, business and governance disclosures; Medium on growth
+direction but low on clean price/volume separation; Medium on proxy
+capital-return evidence, low on exact operating-IC bridge; Medium on
+assumption-driven valuation and low on actual cutoff liquidity and
+trading implementation. The weakest material area for a new-purchase
+conclusion is liquidity: Hold. All quality factors remain individually
+assessed; missing liquidity does not turn business quality into zero or
+genericNS.</p>
+<h2 id="scorecard-and-calculation-audit">3. Scorecard and Calculation
+Audit</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th>Raw</th>
+<th>Final</th>
+<th>Coverage</th>
+<th>Eligible</th>
+<th>Missing bound / override</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BQS</td>
+<td>4.300</td>
+<td>4.3</td>
+<td>100.00%</td>
+<td>True</td>
+<td>[4.3, 4.3]; No override</td>
+</tr>
+<tr class="even">
+<td>GQS</td>
+<td>4.400</td>
+<td>4.4</td>
+<td>100.00%</td>
+<td>True</td>
+<td>[4.4, 4.4]; GQS cap 5 for persistent CASH 2; raw below cap</td>
+</tr>
+<tr class="odd">
+<td>IAS</td>
+<td>NS</td>
+<td>NS</td>
+<td>90.00%</td>
+<td>False</td>
+<td>[2.875, 3.775]; No override</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th>Score</th>
+<th>BQS contribution</th>
+<th>GQS contribution</th>
+<th>Evidence / interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GOV</td>
+<td>4</td>
+<td>0.800</td>
+<td>0.000</td>
+<td>S01 pp 18–20,51–57,190; repeated statutory lapses and unresolved
+quantified exposure/confirmation, countered by disclosed regularization,
+no severe minority harm proved.</td>
+</tr>
+<tr class="even">
+<td>MOAT</td>
+<td>5</td>
+<td>1.000</td>
+<td>0.000</td>
+<td>S01 pp 125–149, peer evidence: custom qualification/application
+know-how but concentrated PO customers and no evidenced pricing
+power.</td>
+</tr>
+<tr class="odd">
+<td>REV</td>
+<td>5</td>
+<td>0.600</td>
+<td>2.000</td>
+<td>S01 and S03/S04: fixed five-year 5.74% gives 4 plus 1 for sustained
+FY 2024–26 expansion; not 3 yr 32.36% cherry-pick.</td>
+</tr>
+<tr class="even">
+<td>DUR</td>
+<td>5</td>
+<td>0.500</td>
+<td>1.000</td>
+<td>S01 pp 76–89: existing utilization 89% but proposed tripling
+uncommissioned, FY 2026 automation-led demand.</td>
+</tr>
+<tr class="odd">
+<td>CAP</td>
+<td>4</td>
+<td>0.480</td>
+<td>0.600</td>
+<td>S01 audited reinvestment bridge: incremental 2024–26 proxy below
+14–18% cost-of-capital range; large WC capital, no proven high-return
+IPO cohort.</td>
+</tr>
+<tr class="even">
+<td>CASH</td>
+<td>2</td>
+<td>0.200</td>
+<td>0.200</td>
+<td>S01 FY 2024–26 cumulative CFO/PAT−.423; persistent negative
+conversion despite profits, not just capex; cash score 2 triggers GQS
+cap 5.</td>
+</tr>
+<tr class="odd">
+<td>BAL</td>
+<td>5</td>
+<td>0.400</td>
+<td>0.000</td>
+<td>S01 debt EBITDA&lt;1 x and fresh IPO support, offset demand bank
+loans and high working capital; core bear funded but linked shock
+fails.</td>
+</tr>
+<tr class="even">
+<td>EXEC</td>
+<td>4</td>
+<td>0.320</td>
+<td>0.000</td>
+<td>S01 capacity utilization stable; machine growth 2.37% FY 2026, old
+low revenue years, delayed development and IPO machinery still
+quotations; no strong multicycle delivery.</td>
+</tr>
+<tr class="odd">
+<td>EARN</td>
+<td>4</td>
+<td>0.000</td>
+<td>0.600</td>
+<td>Restated profit increases but FY 2026 weightedEPS5.55 vs 6.75; cash
+conversion distinct CASH, here mix-led margins and dilution lower
+per-share growth quality.</td>
+</tr>
+<tr class="even">
+<td>IAS factor</td>
+<td>Score</td>
+<td>Weight</td>
+<td>Contribution</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Q</td>
+<td>4.300</td>
+<td>25.00%</td>
+<td>1.075</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>R</td>
+<td>2.000</td>
+<td>35.00%</td>
+<td>0.700</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>3.000</td>
+<td>20.00%</td>
+<td>0.600</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>P</td>
+<td>4.000</td>
+<td>10.00%</td>
+<td>0.400</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>L</td>
+<td>NS</td>
+<td>10.00%</td>
+<td>ND</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>R uses base IRR 7.59% minus 15% = -7.407 percentage points: v 3.0
+spread −10 to &lt;−7 gives R = 2. D = 3 reflects funded bear price loss
+and linked financing risk; P = 4 reflects demanding cash/terminal
+assumptions, not duplicate penalties.</p>
+<p>Nine canonical factors reused exactly. EARN enters GQS, not BQS. IAS
+uses final unrounded BQS once; GQS is not added again. All weights match
+v 3.0. GOV 4 is not a governance-override trigger; compliance
+deficiencies do not establish diversion. CASH 2 reflects persistent poor
+realization, so GQS cap 5 applies, although raw GQS already lies below
+it. No G3 funding-failure cap is imposed from a hypothetical stress
+path. BQS/GQS are quality-ranking eligible at Medium material
+confidence; IAS is not. The IAS missing-data interval is mathematical,
+not a confidence interval or rankable score. A one-point change in both
+GOV/MOAT shifts BQS by 0.4; REV/CAP ±1 shifts GQS by 0.55. Adjacent
+scores should not be overinterpreted.</p>
+<h2 id="business-overview">4. Business Overview</h2>
+<p>SJP designs/integrates custom plastic joining, industrial automation
+and laser machinery, tooling and service solutions. Its B2B clients are
+principally automotive manufacturers, with applications in medical,
+electronics, textiles, packaging and others. These application lists do
+not establish balanced end-market revenue. Vasai manufacturing and
+regional demonstration/service presence enable design, delivery,
+installation and support. Imported machine technology combines with
+local tools and integration. Revenue is collected through customer
+orders/advances and subsequent receivables, exposing the supplier to OEM
+credit terms. Purchase orders, rather than long-term offtake contracts,
+dominate. [S01 pp 125–149]</p>
+<p>FY 2026 domestic sales ₹22.7802 crore, SEZ ₹.1078 crore and other
+exports ₹3.6697 crore total ₹26.5577 crore. Manufacturing/sales/service
+mix changed substantially; no clean same-product ASP series exists.
+Reported segment and machine-count bridges below are preferable to
+claiming all growth is volume. [S01 p 211]</p>
+<h2 id="moat-industry-position">5. Moat / Industry Position</h2>
+<p>Custom application knowledge, qualified fixtures, integration and
+installed-process familiarity create switching friction. They do not
+demonstrate industry-wide pricing power, patented monopoly or dominant
+share. Customer concentration remains material: top 10/top 5 FY 2026
+sales 55.28%/38.52%, versus 54.46%/41.58% FY 2025. Supplier
+concentration worsened: top 10/top 5 purchases 88.64%/77.18%, versus
+58.76%/40.66%. No binding long-term supplier contracts eliminate
+supply/FX risk. [S01 pp 20–22]</p>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparator</th>
+<th>Evidence period/scope</th>
+<th style="text-align: right;">Revenue ₹cr</th>
+<th style="text-align: right;">EBITDA margin</th>
+<th>Economic use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SJP</td>
+<td>FY 2025 restated standalone</td>
+<td style="text-align: right;">21.0573</td>
+<td style="text-align: right;">32.47%</td>
+<td>High margin, negative CFO</td>
+</tr>
+<tr class="even">
+<td>Rinco Ultrasonics India</td>
+<td>FY 2025 issuer-reproduced MCA accounts</td>
+<td style="text-align: right;">12.2081</td>
+<td style="text-align: right;">16.65%</td>
+<td>Closest unlisted ultrasonic specialist; technology-backed
+competition</td>
+</tr>
+<tr class="odd">
+<td>Unique Circle Automation</td>
+<td>FY 2025 issuer-reproduced MCA accounts</td>
+<td style="text-align: right;">26.2812</td>
+<td style="text-align: right;">9.57%</td>
+<td>Near-scale custom automotive automation; weaker margins</td>
+</tr>
+<tr class="even">
+<td>TEAL</td>
+<td>FY 2025 CRISIL, includes TEAL USA</td>
+<td style="text-align: right;">~868</td>
+<td style="text-align: right;">~19%</td>
+<td>Stronger parent-supported automation/aerospace comparator; not pure
+peer</td>
+</tr>
+</tbody>
+</table>
+<p>No listed pure peer is established; no fabricated median P/E. Rinco /
+Unique primary corporate sites corroborate products, but their statutory
+financials were not independently downloaded; the prospectus is primary
+issuer disclosure of peer data, not independent verification. TEAL’s
+official 2 July 2025 CRISIL rationale cites 246-day
+gross-current-assets,₹511 crore adjusted net worth and 0.17 x gearing.
+Parent support/scale and aerospace change its economics. SJP’s cash
+weakness cannot be excused simply because the industry uses working
+capital. Peer CFO is ND; malformed prospectus pp 123–124 copied/shifted
+rows were excluded rather than treated as evidence. [S01 pp
+95–98;PEER-R;PEER-U;PEER-T]</p>
+<h2 id="revenue-growth-scale">6. Revenue Growth &amp; Scale</h2>
+<table>
+<thead>
+<tr class="header">
+<th>FY</th>
+<th>Revenue ₹cr</th>
+<th>YoY ₹ addition</th>
+<th>YoY %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2021</td>
+<td>20.0918000</td>
+<td>ND</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>11.7114157</td>
+<td>-8.380</td>
+<td>-41.71%</td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td>11.4532648</td>
+<td>-0.258</td>
+<td>-2.20%</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td>15.2107000</td>
+<td>3.757</td>
+<td>32.81%</td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td>21.0573000</td>
+<td>5.847</td>
+<td>38.44%</td>
+</tr>
+<tr class="even">
+<td>2026</td>
+<td>26.5577000</td>
+<td>5.500</td>
+<td>26.12%</td>
+</tr>
+</tbody>
+</table>
+<p>Five-year FY 2021–26: (26.5577 / 20.0918)^(1/5) − 1 = 5.74%;
+three-year FY 2023–26 = 32.36%. Five-year average annual addition is
+₹1.29318 crore, not the latest annual addition.</p>
+<p>The measurement window was fixed at five years because six audited
+revenue observations exist. FY 2021 was not discarded: no evidenced
+COVID windfall or accounting/perimeter break was located. FY 2024’s move
+toward higher-value custom special-purpose machines changes mix, not
+necessarily comparability. REV starts 4 for 5.74% CAGR, then rises at
+most 1 for three consecutive years of expansion; no further small-base
+penalty or TAM bonus. The 32.36% three-year CAGR is contextual, not the
+scoring window. [S03;S04;S01]</p>
+<table>
+<thead>
+<tr class="header">
+<th>Segment ₹cr</th>
+<th style="text-align: right;">FY 2024</th>
+<th style="text-align: right;">FY 2025</th>
+<th style="text-align: right;">FY 2026</th>
+<th style="text-align: right;">FY 2026 addition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Plastic joining</td>
+<td style="text-align: right;">8.4587</td>
+<td style="text-align: right;">15.6724</td>
+<td style="text-align: right;">12.3553</td>
+<td style="text-align: right;">-3.3171</td>
+</tr>
+<tr class="even">
+<td>Industrial automation</td>
+<td style="text-align: right;">6.0930</td>
+<td style="text-align: right;">5.1651</td>
+<td style="text-align: right;">13.4052</td>
+<td style="text-align: right;">8.2401</td>
+</tr>
+<tr class="odd">
+<td>Laser</td>
+<td style="text-align: right;">.6590</td>
+<td style="text-align: right;">.2198</td>
+<td style="text-align: right;">.7972</td>
+<td style="text-align: right;">.5774</td>
+</tr>
+</tbody>
+</table>
+<p>Machine output 579/634/649 grew 9.50% then 2.37%, versus revenue
+38.44% then 26.12%. FY 2026 plastic joining declined 21.16%; automation
+rose 159.53%. Growth is mix/order-value led, not proven equivalent
+volume growth. Revenue per machine is not a valid unit ASP because
+products/services/trading and machine complexity differ. No
+acquired-revenue contribution is disclosed; this does not make
+constant-price organic growth measurable. [S01 pp 17,85,125]</p>
+<h2 id="growth-quality-reinvestment-runway">7. Growth Quality &amp;
+Reinvestment Runway</h2>
+<p>Installed capacity 650/700/730 machines and utilization 89%/90%/89%
+FY 2024–26 indicate existing activity, but planned capacity 2,150/2,300
+and production 2,050/2,150 FY 2027/28 remain estimates, not orders. IPO
+gross ₹23.45 crore less expenses ₹2.2636 crore gives net ₹21.1864 crore:
+machinery ₹13.2164 crore, working capital ₹4.92 crore, general corporate
+₹3.05 crore. Machinery was at quotation stage without definitive
+purchase contracts at prospectus date; all deployment targeted FY 2027.
+[S01 pp 76–89]</p>
+<p>Capex is roughly 16times FY 2026 net tangible PPE, making
+commissioning/customer qualification substantial execution work. The
+affordable runway is narrower than the addressable market: profits are
+tied up in stock, supplier advances and collections. Historical
+incremental funding-IC proxy returns 11.56% FY 2024–26 fall below the
+14–18% assumed cost-of-capital range despite high historical average
+ROCE. This is not proof every new machine destroys value, but it does
+not substantiate superior reinvestment. Revenue must become cash before
+repeated dilution is ruled out. CASH 2 caps GQS5; no capex excuse is
+used for CFO weakness. [C01;A01]</p>
+<h2 id="management-governance-execution">8. Management, Governance &amp;
+Execution</h2>
+<p>Repeated admitted control deficiencies matter: EPF/ESIC registration
+and contributions were not complied with before 15 June 2024; notices to
+authorities were sent July/August 2025. No fine had been imposed as of
+prospectus, but exposure is not zero and quantum remains unresolved. ROC
+forms were delayed up to 4,079 days, subsequently regularized with fees.
+An unregistered historical loan charge was disclosed with loan stated
+repaid. These are factual compliance weaknesses—not automatic fraud,
+abusive RPT or current default. [S01 pp 18–24]</p>
+<p>Auditor changes in 2023 and 2024 cite professional
+reasons/pre-occupancy; current auditor Chirag N Shah appointed 16
+September 2024. FY 2026 audit opinion is unmodified, with an emphasis
+concerning ₹.641619 crore Pune project not yet capitalized; elsewhere
+the restated prospectus labels the same amount software under
+development. That identity/asset-use discrepancy remains open. An
+audit-report template reference to a qualified opinion is not elevated
+over the actual opinion paragraph without clarification. Balance
+confirmations are qualified by notes as subject to
+confirmation/reconciliation. These limit confidence but are not proof
+all earnings fictitious. [S01 pp 195–227;S02]</p>
+<p>FY 2026 three Toyota EMIs were delayed September–November 2025; FY
+2025 one Anand Rathi EMI was delayed. CARO says not declared wilful
+defaulter. Review settled/current status rather than label an active
+default without evidence. ₹.136235 crore disputed income-tax dues and
+₹.618723 crore accumulated MSME interest are relevant obligations. [S01
+p 205–206;S02 CARO]</p>
+<p>Promoter demand loans ₹1.0772 crore at FY 2026 support financing but
+create callable exposure. Related-party FY 2026 sale ₹.01 crore and
+repayments/advances are disclosed; LUFT advance ₹.0586 crore FY 2024 was
+repaid FY 2025. Director accrual remuneration ₹.18 crore/₹.1501 crore
+should not be confused with cash paid. No severe minority harm is
+demonstrated. A reciprocal India noncompete with the promoter-linked
+partnership contains prior-consent/permitted-activity carve-outs; it
+does not irrevocably assign every opportunity to SJP. [S01 pp
+51–52,190]</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dated statement/milestone</th>
+<th>Evidence by cutoff</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FY 2024 shift to custom SPM</td>
+<td>Machine counts/revenue mix diverge FY 2025–26</td>
+<td>Executed mix change; pricing power not established</td>
+</tr>
+<tr class="even">
+<td>26 May 2026 engineer capacity certificate</td>
+<td>FY 2026 actual 649 machines/89% utilization</td>
+<td>Historical utilization verified disclosure, forecast 2,050 not
+actual</td>
+</tr>
+<tr class="odd">
+<td>24 September 2026 machinery plan</td>
+<td>Quotations; no definitive orders</td>
+<td>Commissioning pending, not failed promise yet</td>
+</tr>
+<tr class="even">
+<td>June 2026 development capitalization</td>
+<td>₹.6416 crore still incomplete after 2 years</td>
+<td>Execution watch; asset-label clarification required</td>
+</tr>
+<tr class="odd">
+<td>Historical statutory lapse remediation</td>
+<td>Registration and self-intimation disclosed</td>
+<td>Partial action; final liability/closure not established</td>
+</tr>
+</tbody>
+</table>
+<h2 id="financial-forensics">9. Financial Forensics</h2>
+<table>
+<thead>
+<tr class="header">
+<th>₹cr unless EPS/shares</th>
+<th>FY 2024</th>
+<th>FY 2025</th>
+<th>FY 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>revenue</td>
+<td>15.2107</td>
+<td>21.0573</td>
+<td>26.5577</td>
+</tr>
+<tr class="even">
+<td>other_income</td>
+<td>0.0129</td>
+<td>0.0974</td>
+<td>0.0770</td>
+</tr>
+<tr class="odd">
+<td>ebitda</td>
+<td>5.4150</td>
+<td>6.8368</td>
+<td>8.2381</td>
+</tr>
+<tr class="even">
+<td>ebit</td>
+<td>5.0963</td>
+<td>6.3319</td>
+<td>7.8361</td>
+</tr>
+<tr class="odd">
+<td>pat</td>
+<td>3.4020</td>
+<td>4.1725</td>
+<td>5.2426</td>
+</tr>
+<tr class="even">
+<td>eps</td>
+<td>6.1900</td>
+<td>6.7500</td>
+<td>5.5500</td>
+</tr>
+<tr class="odd">
+<td>cfo</td>
+<td>0.1494</td>
+<td>-2.8768</td>
+<td>-2.6987</td>
+</tr>
+<tr class="even">
+<td>capex</td>
+<td>0.9280</td>
+<td>0.5860</td>
+<td>0.4024</td>
+</tr>
+<tr class="odd">
+<td>fcf_proxy</td>
+<td>-0.7786</td>
+<td>-3.4628</td>
+<td>-3.1011</td>
+</tr>
+<tr class="even">
+<td>debt</td>
+<td>2.0061</td>
+<td>2.4192</td>
+<td>5.7809</td>
+</tr>
+<tr class="odd">
+<td>cash</td>
+<td>1.0790</td>
+<td>1.0313</td>
+<td>0.4789</td>
+</tr>
+<tr class="even">
+<td>equity</td>
+<td>6.7349</td>
+<td>14.8473</td>
+<td>20.0899</td>
+</tr>
+<tr class="odd">
+<td>inventory</td>
+<td>8.7915</td>
+<td>10.6025</td>
+<td>16.4303</td>
+</tr>
+<tr class="even">
+<td>receivables</td>
+<td>4.0485</td>
+<td>11.6257</td>
+<td>9.7819</td>
+</tr>
+<tr class="odd">
+<td>payables</td>
+<td>1.8314</td>
+<td>2.5652</td>
+<td>2.4020</td>
+</tr>
+<tr class="even">
+<td>supplier_advances</td>
+<td>0.8561</td>
+<td>1.3683</td>
+<td>5.9239</td>
+</tr>
+<tr class="odd">
+<td>ppe</td>
+<td>1.1448</td>
+<td>1.0537</td>
+<td>0.8279</td>
+</tr>
+<tr class="even">
+<td>intangibles</td>
+<td>0.4266</td>
+<td>0.2760</td>
+<td>0.1835</td>
+</tr>
+<tr class="odd">
+<td>development</td>
+<td>0.0000</td>
+<td>0.3229</td>
+<td>0.6416</td>
+</tr>
+<tr class="even">
+<td>shares_crore</td>
+<td>0.1100</td>
+<td>0.9440</td>
+<td>0.9440</td>
+</tr>
+</tbody>
+</table>
+<p>Restated FY 2024–26 are a consistent standalone perimeter. Older FY
+2021–23 statutory vintages are retained separately below, not merged
+into cash conversion. No quarter or TTM cash flow invented. Gross profit
+is analytically revenue less materials, traded purchases and inventory
+movement, excluding payroll/overhead—not a directly comparable peer
+gross margin. It equals 75.30%/64.22%/61.58%; contradictory prospectus
+marketing gross-margin rows are not used. FY 2026 recurring EBITDA
+includes the ₹.0328 crore prior-period charge conservatively; no
+automatic addback. [S01 pp 47–49,211–224]</p>
+<table>
+<thead>
+<tr class="header">
+<th>Older original vintage</th>
+<th>FY 2021</th>
+<th>FY 2022</th>
+<th>FY 2023</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>revenue</td>
+<td>20.0918000</td>
+<td>11.7114157</td>
+<td>11.4532648</td>
+</tr>
+<tr class="even">
+<td>pat</td>
+<td>0.6236270</td>
+<td>0.2574071</td>
+<td>1.6479363</td>
+</tr>
+<tr class="odd">
+<td>cfo</td>
+<td>ND</td>
+<td>ND</td>
+<td>ND</td>
+</tr>
+</tbody>
+</table>
+<p>Full older balance-sheet facts and conflicting presentations remain
+in older_financials.json; no unsupported normalized CFO.</p>
+<p>FY 2022 original CFO has ambiguous presentation/tax sign; FY 2023 CFO
+was not located. FY 2023 original receivables₹4.599267crore differ from
+the prospectus risk-table₹3.1629crore. Negative FY 2022 receivables
+suggest historical presentation/netting issues; they are not silently
+recast into normalized receivables. Revenue history is still usable at
+Medium confidence; five-year CFO/ROIC is not claimed.
+[S03;S04;older_financials.json]</p>
+<p>FY 2025 statutory PAT ₹4.1524 crore−income-tax adjustment ₹.0612
+crore+deferred-tax adjustment ₹.0813 crore=restated ₹4.1725 crore. FY
+2024₹3.5240−₹.1220=₹3.4020 crore. Restated equity FY 2024 face ₹6.7349
+crore versus reconciliation ₹6.7313 crore differs ₹.0036 crore; face
+retained and sensitivity bounded rather than forcing equality. Gratuity
+accounting-policy conversion is separately disclosed; not subtracted a
+second time. [S01 p 220]</p>
+<p>FY 2026 CFO bridge: PBT ₹7.0235+DA ₹.4020+finance ₹.8896+gratuity
+₹.0812−other income ₹.0770=₹8.3193 crore before working capital.
+Inventory−₹5.8278, receivables+₹1.8438, loans/advances−₹4.5396, other
+assets−₹.1239, payables−₹.1632 and other liabilities−₹.4538 lead
+to−₹.9452 crore before tax; tax paid ₹1.7535 gives CFO−₹2.6987 crore.
+Interest ₹.8896 crore is financing cash flow, so reported CFO is before
+financing interest. Cash capex ₹.4024 gives FCF proxy−₹3.1011 crore;
+interest-paid cash deficit is worse. Inventory/supplier-advance
+accumulation, not just capital expenditure, explains weak CFO. [S01 p
+49]</p>
+<p>Receivables fell to ₹9.7819 crore, but ₹3.1152 crore is over 1 year,
+including ₹.6933 crore over 3 years; all classified good without doubt
+allowance in the note. Improvement in headline AR does not prove
+recovery of old balances. Cash ₹.4789 crore is mainly ₹.4585 crore cash
+on hand, bank only ₹.0204 crore; bank-only sensitivity is retained.
+Inventory ₹16.4303 crore comprises raw ₹6.7424, WIP ₹5.5893 and finished
+₹4.0986. Supplier advances ₹5.9239 crore require delivery/recovery
+checks. The IPO’s 4.92 croreWC allocation is not the entire economic
+working-capital requirement. [S01 pp 209–211]</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Calculated measure (funding IC in INR crore)</th>
+<th>FY 2024</th>
+<th>FY 2025</th>
+<th>FY 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>closing_ar_sales_days</td>
+<td>97.149</td>
+<td>201.516</td>
+<td>134.439</td>
+</tr>
+<tr class="even">
+<td>inventory_sales_days</td>
+<td>210.963</td>
+<td>183.780</td>
+<td>225.812</td>
+</tr>
+<tr class="odd">
+<td>netdebt_ebitda</td>
+<td>0.171</td>
+<td>0.203</td>
+<td>0.644</td>
+</tr>
+<tr class="even">
+<td>interest_cover</td>
+<td>13.871</td>
+<td>6.847</td>
+<td>8.809</td>
+</tr>
+<tr class="odd">
+<td>funding_ic_proxy</td>
+<td>7.6620</td>
+<td>16.2352</td>
+<td>25.3919</td>
+</tr>
+<tr class="even">
+<td>roe</td>
+<td>ND</td>
+<td>38.67%</td>
+<td>30.01%</td>
+</tr>
+<tr class="odd">
+<td>roce_funding_proxy</td>
+<td>ND</td>
+<td>52.99%</td>
+<td>37.65%</td>
+</tr>
+<tr class="even">
+<td>roic_funding_proxy</td>
+<td>ND</td>
+<td>39.65%</td>
+<td>28.17%</td>
+</tr>
+<tr class="odd">
+<td>incremental_roic_proxy</td>
+<td>ND</td>
+<td>10.78%</td>
+<td>12.29%</td>
+</tr>
+</tbody>
+</table>
+<p>Cumulative CFO/PAT = -5.4261/12.8171 = -0.42335 x. Cash capex
+₹1.9164; FCF proxy ₹-7.3425. FY 2024–26 incremental NOPAT/funding-IC =
+11.56%. FY 2025–26 operating-IC increment ₹8.1664; incremental NOPAT
+₹1.1256, ratio 13.78%.</p>
+<p>Funding IC proxy=equity+interest-bearing debt−cash; average
+opening/closing denominators; NOPAT=EBIT×74.83%. It includes tax/other
+non-operating differences and is <strong>not exact operating
+ROIC</strong>. Direct FY 2026 ONWC from receivables+inventory+supplier
+advances+prepaids−supplier payables−customer advances−expense accruals
+is ₹25.8837 crore; add PPE/intangibles/development/deposits for
+operating IC. Funding/operating definitions differ because
+provisions/tax/other claims are not identically classified; detailed
+metric JSON preserves both, no false reconciliation. FY 2025–26
+incremental operating proxy is a cross-check, not causal cohort
+economics. Pre-IPO rights/IPO timing can distort average-capital
+measures. [C01]</p>
+<p>Bonus 4:1 July 2024 was not financing; rights 3.94 million shares at
+₹10 January 2025 raised ₹3.94 crore. FY 2024 EPS denominator 5.5 million
+bonus-adjusted differs actual 1.1 million; FY 2025 weighted 6.180055
+million differs closing 9.44 million. IPO adds 3.5 million, taking 12.94
+million: FY 2026 profit on current shares is ₹4.0515 EPS, not historical
+₹5.55. No warrants/options/convertibles disclosed in prospectus capital
+structure; future stress equity is an explicit assumption, not an
+existing claim. [S01 pp 63–65,228]</p>
+<h2 id="valuation-market-expectations">10. Valuation &amp; Market
+Expectations</h2>
+<p>At ₹96.22, calculated current-share FY 2026P/E23.75 x. Market cap
+₹124.50868 crore+March debt ₹5.7809−March cash ₹.4789=EV ₹129.81068
+crore. Proforma adding netIPO ₹21.1864 gives EV ₹108.62428
+crore/EBITDA13.19 x; proforma P/B3.02 x. Neither is actual October EV
+because intervening operations/deployment are ND. FCF yield is negative
+and not an attractive positive-yield claim. No peer P/E average
+manufactured. [S01;S06;C01]</p>
+<p>The monthly model starts with FY 2026 operating scale and synthetic
+cash ₹21.6653 crore (March cash+netIPO). It spends machinery ₹13.2164
+crore in 6 months <strong>once</strong>, plus maintenance 2.5% sales;
+retains ₹1 crore minimum cushion; repays ₹1.0772 crore demand debt month
+1 and remaining original debt month 12 without assumed rollover.
+Straight annual revenue steps are allocated monthly, not claimed
+seasonal forecasts. ONWC moves over 6 months to scenario revenue ratios;
+the ratios summarize receivable/inventory/advance/customer-credit
+stress, not a forecast of a single line. Depreciation 15% WDV across
+opening/new operating assets is a simplification including development;
+it is not statutory guidance. Tax 25.17%, no tax credit for losses;
+interest 12% on opening debt. Operating rents stay in EBITDA; no
+fictitious Ind AS lease capitalization. No dividends. [A01]</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Growth Y1–5</th>
+<th>EBITDA margin Y1–5</th>
+<th>ONWC/sales</th>
+<th>Exit multiple</th>
+<th>Exit ₹</th>
+<th>Return</th>
+<th>Minimum cash</th>
+<th>Funded</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bear</td>
+<td>[-0.15, 0, 0.03, 0.05, 0.05]</td>
+<td>[0.18, 0.19, 0.2, 0.2, 0.2]</td>
+<td>1.1</td>
+<td>7</td>
+<td>40.42</td>
+<td>-15.92%</td>
+<td>6.199</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>[0.2, 0.18, 0.15, 0.12, 0.1]</td>
+<td>[0.29, 0.28, 0.27, 0.27, 0.27]</td>
+<td>0.9</td>
+<td>11</td>
+<td>138.74</td>
+<td>7.59%</td>
+<td>1.458</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>[0.3, 0.25, 0.22, 0.2, 0.18]</td>
+<td>[0.31, 0.31, 0.31, 0.31, 0.31]</td>
+<td>0.78</td>
+<td>15</td>
+<td>289.48</td>
+<td>24.64%</td>
+<td>2.836</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>linked_failure</td>
+<td>[-0.35, -0.1, 0, 0.02, 0.02]</td>
+<td>[0.04, 0.06, 0.1, 0.12, 0.12]</td>
+<td>1.65</td>
+<td>5</td>
+<td>12.22</td>
+<td>-33.82% DIAGNOSTIC</td>
+<td>-0.248</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Case</td>
+<td>Year 5 sales</td>
+<td>Year 5 EBITDA</td>
+<td>Cash</td>
+<td>Debt</td>
+<td>Shares crore</td>
+<td>EV</td>
+<td>Equity</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>bear</td>
+<td>25.635</td>
+<td>5.127</td>
+<td>16.418</td>
+<td>0.000</td>
+<td>1.294</td>
+<td>35.888</td>
+<td>52.306</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>53.280</td>
+<td>14.386</td>
+<td>21.284</td>
+<td>0.000</td>
+<td>1.294</td>
+<td>158.241</td>
+<td>179.525</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>bull</td>
+<td>74.553</td>
+<td>23.112</td>
+<td>27.916</td>
+<td>0.000</td>
+<td>1.294</td>
+<td>346.673</td>
+<td>374.589</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>linked_failure</td>
+<td>16.164</td>
+<td>1.940</td>
+<td>6.109</td>
+<td>0.000</td>
+<td>1.294</td>
+<td>9.698</td>
+<td>15.807</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The bear’s lower growth releases more working capital than base and
+therefore can have a higher cash minimum despite poorer terminal value:
+funding is not monotonic in growth. Linked failure combines customer
+loss, lower utilization/margin and slower stock/collections/supplier
+advances; month 12 gap occurs on debt repayment. Report both cushion
+shortfall and cash below zero. Diagnostic continuation after failure is
+<strong>not a realizable investment IRR</strong>, insolvency finding or
+forecast recovery. Alternative rescue issues equity at 60% entry price,
+with cash and dilution linked; no such financing is committed. Actual
+losses could exceed modeled continuation value. [A01]</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Path parameters</th>
+<th>Min cash</th>
+<th>First floor gap month</th>
+<th>Max unfunded gap</th>
+<th>Equity raised</th>
+<th>Dilution</th>
+<th>Return validity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>base {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 11,
+‘opening_cash’: 16.6653, ‘capex_delay’: 0, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0}</td>
+<td>-3.542</td>
+<td>12</td>
+<td>4.542</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>base {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 11,
+‘opening_cash’: 11.665299999999998, ‘capex_delay’: 0, ‘rescue’: False,
+‘wc_shift’: 0, ‘capex_overrun’: 0}</td>
+<td>-8.542</td>
+<td>5</td>
+<td>9.542</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>bear {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 7,
+‘opening_cash’: 16.6653, ‘capex_delay’: 0, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0}</td>
+<td>1.199</td>
+<td>None</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>bear {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 7,
+‘opening_cash’: 11.665299999999998, ‘capex_delay’: 0, ‘rescue’: False,
+‘wc_shift’: 0, ‘capex_overrun’: 0}</td>
+<td>-3.801</td>
+<td>6</td>
+<td>4.801</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>linked_failure {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 5,
+‘opening_cash’: 16.6653, ‘capex_delay’: 0, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0}</td>
+<td>-5.248</td>
+<td>6</td>
+<td>6.248</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>linked_failure {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 5,
+‘opening_cash’: 11.665299999999998, ‘capex_delay’: 0, ‘rescue’: False,
+‘wc_shift’: 0, ‘capex_overrun’: 0}</td>
+<td>-10.248</td>
+<td>4</td>
+<td>11.248</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>linked_failure {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 5,
+‘opening_cash’: 21.6653, ‘capex_delay’: 0, ‘rescue’: True, ‘wc_shift’:
+0, ‘capex_overrun’: 0}</td>
+<td>1.000</td>
+<td>12</td>
+<td>0.000</td>
+<td>1.248</td>
+<td>1.67%</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>base {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 11,
+‘opening_cash’: 21.6653, ‘capex_delay’: 12, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0}</td>
+<td>3.480</td>
+<td>None</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>base {‘growth_shift’: -0.1, ‘margin_shift’: 0, ‘multiple’: 11,
+‘opening_cash’: 21.6653, ‘capex_delay’: 12, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0}</td>
+<td>8.475</td>
+<td>None</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>base {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 11,
+‘opening_cash’: 21.6653, ‘capex_delay’: 0, ‘rescue’: False, ‘wc_shift’:
+0.2, ‘capex_overrun’: 0}</td>
+<td>-6.063</td>
+<td>12</td>
+<td>7.063</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>base {‘growth_shift’: 0, ‘margin_shift’: -0.06, ‘multiple’: 11,
+‘opening_cash’: 21.6653, ‘capex_delay’: 0, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0}</td>
+<td>-0.113</td>
+<td>13</td>
+<td>1.113</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>base {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 11,
+‘opening_cash’: 21.6653, ‘capex_delay’: 0, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0.2}</td>
+<td>-1.105</td>
+<td>13</td>
+<td>2.105</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>bear {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 7,
+‘opening_cash’: 16.6653, ‘capex_delay’: 0, ‘rescue’: False, ‘wc_shift’:
+0, ‘capex_overrun’: 0.2}</td>
+<td>-1.372</td>
+<td>12</td>
+<td>2.372</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>base {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 11,
+‘opening_cash’: 21.206799999999998, ‘capex_delay’: 0, ‘rescue’: False,
+‘wc_shift’: 0, ‘capex_overrun’: 0}</td>
+<td>1.000</td>
+<td>13</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.00%</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>linked_failure {‘growth_shift’: 0, ‘margin_shift’: 0, ‘multiple’: 5,
+‘opening_cash’: 21.6653, ‘capex_delay’: 0, ‘rescue’: True, ‘wc_shift’:
+0, ‘capex_overrun’: 0.2}</td>
+<td>1.000</td>
+<td>12</td>
+<td>0.000</td>
+<td>3.891</td>
+<td>5.21%</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<p>Deferred-expenditure-only 12 month delay is explicitly a timing
+sensitivity, not an execution downside. A separate linked 12
+monthdelay/−10 ppgrowth-shift case addresses commissioning/demand
+slippage. Additional bank-only liquidity,₹5/10 crore opening-cash
+shortfalls,20% capex overrun, margin−6 pp and WCratio+20 pp are
+retained. Proforma opening funds therefore cannot conceal deployment
+uncertainty. In the timing-only 12-month deferred-capex base
+sensitivity, subtracting the remaining machinery commitment from modeled
+cash leaves a minimum residual of ₹1.0574 crore, versus approximately
+₹3.480 crore minimum aggregate cash. These minima occur at different
+months. Aggregate modeled cash is not free surplus; restricted proceeds
+and actual deployment status do not establish available bank liquidity
+at the cutoff.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Base WACC</th>
+<th>Terminal g</th>
+<th>DCF ₹/original share</th>
+<th>Terminal PV / EV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>14.00%</td>
+<td>2.00%</td>
+<td>39.72</td>
+<td>100.61%</td>
+</tr>
+<tr class="even">
+<td>14.00%</td>
+<td>4.00%</td>
+<td>40.26</td>
+<td>100.60%</td>
+</tr>
+<tr class="odd">
+<td>14.00%</td>
+<td>5.00%</td>
+<td>40.53</td>
+<td>100.59%</td>
+</tr>
+<tr class="even">
+<td>16.00%</td>
+<td>2.00%</td>
+<td>33.35</td>
+<td>102.94%</td>
+</tr>
+<tr class="odd">
+<td>16.00%</td>
+<td>4.00%</td>
+<td>33.16</td>
+<td>102.97%</td>
+</tr>
+<tr class="even">
+<td>16.00%</td>
+<td>5.00%</td>
+<td>32.97</td>
+<td>102.99%</td>
+</tr>
+<tr class="odd">
+<td>18.00%</td>
+<td>2.00%</td>
+<td>28.67</td>
+<td>106.30%</td>
+</tr>
+<tr class="even">
+<td>18.00%</td>
+<td>4.00%</td>
+<td>28.16</td>
+<td>106.50%</td>
+</tr>
+<tr class="odd">
+<td>18.00%</td>
+<td>5.00%</td>
+<td>27.80</td>
+<td>106.66%</td>
+</tr>
+</tbody>
+</table>
+<p>Terminal share exceeds 100% where explicit-horizon FCFF present value
+is negative: this is disclosed, not clipped. DCF ~₹27.80–40.53 is
+substantially below the multiple-model hurdle-entry ₹68.98 because an 11
+x terminal EBITDA exit capitalizes earnings more generously than a
+mature 14% marginal-ROIC cash model. The disagreement is a warning about
+terminal economics, not evidence to choose the higher valuation.</p>
+<p>DCF FCFF=EBIT−cash operating tax+DA−capex−ΔONWC. Add opening cash and
+subtract opening debt once; terminal equity multiple separately adds
+terminal retained cash, with no dividends double count. Mature
+reinvestment uses growth/14% marginalROIC, explicitly lower than average
+historical returns. WACC14–18%, terminal growth 2/4/5%; all g&lt;WACC.
+Enterprise DCF assumes a surviving operation; after unfunded failure it
+is diagnostic only, and rescue DCF is pre-financing—not diluted
+incumbent fair value. [A01]</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Exit multiple</th>
+<th>Rescue assumed</th>
+<th>Growth-shift regime</th>
+<th>Funded / equity required / hurdle met</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7</td>
+<td>False</td>
+<td>-35.00% to 0.00%</td>
+<td>[True, False, False]</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>False</td>
+<td>1.00% to 100.00%</td>
+<td>[False, False, False]</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>False</td>
+<td>-35.00% to 0.00%</td>
+<td>[True, False, False]</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>False</td>
+<td>1.00% to 100.00%</td>
+<td>[False, False, False]</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>False</td>
+<td>-35.00% to 0.00%</td>
+<td>[True, False, False]</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>False</td>
+<td>1.00% to 100.00%</td>
+<td>[False, False, False]</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>True</td>
+<td>-35.00% to 0.00%</td>
+<td>[True, False, False]</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>True</td>
+<td>1.00% to 100.00%</td>
+<td>[True, True, False]</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>True</td>
+<td>-35.00% to 0.00%</td>
+<td>[True, False, False]</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>True</td>
+<td>1.00% to 14.00%</td>
+<td>[True, True, False]</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>True</td>
+<td>15.00% to 100.00%</td>
+<td>[True, True, True]</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>True</td>
+<td>-35.00% to 0.00%</td>
+<td>[True, False, False]</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>True</td>
+<td>1.00% to 1.00%</td>
+<td>[True, True, False]</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>True</td>
+<td>2.00% to 100.00%</td>
+<td>[True, True, True]</td>
+</tr>
+</tbody>
+</table>
+<p>Reverse expectations enumerate every1ppgrowth-shift point
+from−35to+100pp at7/11/15x multiples, with separate no-rescue and
+conditional-rescue regimes. Feasible regions, equity-issue regions and
+hurdle-met regions are recorded, not collapsed into a monotonic root.
+Gaps or disconnected intervals remain visible. The grid cannot claim
+sub-grid exact thresholds; <code>model_outputs.json</code> retains
+all816reverse points and funding states. [A01]</p>
+<table>
+<thead>
+<tr class="header">
+<th>Growth-shift</th>
+<th>Multiple</th>
+<th>Exit ₹</th>
+<th>IRR</th>
+<th>Funded</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-10.00%</td>
+<td>7</td>
+<td>71.99</td>
+<td>-5.64%</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>-10.00%</td>
+<td>11</td>
+<td>100.19</td>
+<td>0.81%</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>-10.00%</td>
+<td>15</td>
+<td>128.39</td>
+<td>5.94%</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>0.00%</td>
+<td>7</td>
+<td>94.27</td>
+<td>-0.41%</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>0.00%</td>
+<td>11</td>
+<td>138.74</td>
+<td>7.59%</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>0.00%</td>
+<td>15</td>
+<td>183.20</td>
+<td>13.75%</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>10.00%</td>
+<td>7</td>
+<td>124.79</td>
+<td>5.34%</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>10.00%</td>
+<td>11</td>
+<td>192.29</td>
+<td>14.85%</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>10.00%</td>
+<td>15</td>
+<td>259.78</td>
+<td>21.97%</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Hurdle</td>
+<td>Base conditional entry ₹</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>—</td>
+<td>—</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12.00%</td>
+<td>78.72</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15.00%</td>
+<td>68.98</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>18.00%</td>
+<td>60.64</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>One-way friction each end</td>
+<td>Base net IRR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>—</td>
+<td>—</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1.00%</td>
+<td>7.16%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3.00%</td>
+<td>6.31%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Full growth × margin × multiple grid (27 paths), all rows and funding
+flags retained in model_outputs.json.</p>
+<p>Hurdle 12/15/18% conditional base entry prices are reported with
+scenarios; these are assumption-dependent return thresholds, not
+observable fair value or buy recommendations. Illustrative 1%/3% one-way
+entry/exit friction sensitivities reduce returns; actual spread/market
+impact ND. L remainsNS: the formula ₹500,000/(participation×min(mean
+60,median 60)) at 2/5/10% cannot be evaluated without a reliable series.
+Eight potential weekdays since listing are not 60 observations;
+absent/prelisting days must not be filled with zero. Circuit-lock
+reports prevent equating traded price to execution. [S05;S06]</p>
+<h2 id="bear-case-permanent-loss-path">11. Bear Case &amp;
+Permanent-Loss Path</h2>
+<p>The key thesis-break variable is <strong>collection and conversion of
+working capital into cash</strong>. Customer loss can reduce
+utilization/margins while existing inventory and advances remain
+stranded; debt maturity then consumes the cushion, forcing capital
+raising or contraction just as IPO machinery needs utilization. Aged
+balances and concentrated suppliers make this linked path credible.
+Deteriorating operational earning power and dilution are permanent-loss
+mechanisms; a circuit-bound quoted drawdown alone is not. Impairment
+risk <strong>High</strong>, not a proven current distress event.
+Counterevidence: real recurring profits, improving headline receivables
+inFY 2026, netIPO cash and low historical net-debt/EBITDA permit the
+core bear to fund itself in the proforma model. Those facts prevent a
+blanket default/fraud narrative. [S01;A01]</p>
+<p>The financial-reliability question is proportionate:
+asset-label/old-account discrepancies, unconfirmed balances and mixed
+source tables require monitoring, but small bounded presentation
+differences do not alone establish earnings falsification. Evidence of
+disputed unrecoverable assets or material adverse audit changes would
+alterG2; explicit diversion would alterG1. Actual unfinanceable
+obligations would alterG3. Conditional model failure alone does none of
+those.</p>
+<h2 id="feasibility">12. 5× / 10× Feasibility</h2>
+<p>Unsupported as a central investment thesis. Five-year 5 x/10 x price
+outcomes require 37.97%/58.49% annual returns. With unchanged share
+count and 20 x exitP/E,₹481.10/₹962.20 target prices require
+₹31.1272/₹62.2543 crorePAT; at 20% netmargin that means
+₹155.636/₹311.271 croresales, around 42.4%/63.6% five-year revenueCAGR
+fromFY 2026. Growth of that scale would need substantially more working
+capital and operating capability than the present evidence establishes;
+equity issuance raises the requirement further. These are algebraic
+feasibility hurdles, not forecasts or probabilities. Lower 10 xexitP/E
+doubles required earnings again. Even the modeled bull does not
+establish 5 x. [C01;A01]</p>
+<h2 id="monitoring-plan">13. Monitoring Plan</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>KPI/event</th>
+<th>Baseline/date</th>
+<th>Milestone</th>
+<th>Warning</th>
+<th>Thesis-break evidence</th>
+<th>Review</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CFO/PAT</td>
+<td>FY 2024–26−.423 x</td>
+<td>Positive cumulative operating cash as expansion matures</td>
+<td>Another negative year despite profit</td>
+<td>Material unrecoverable collections, not simply one weak half</td>
+<td>Next audited/interim cash flow</td>
+</tr>
+<tr class="even">
+<td>Agedreceivables</td>
+<td>FY 2026over 1 year ₹3.1152 cr</td>
+<td>Demonstrated collection without write-off/re-aging</td>
+<td>Over 1 year pool rises while sales slow</td>
+<td>Material confirmed customer default/write-off undermines equity</td>
+<td>Ageing note/results</td>
+</tr>
+<tr class="odd">
+<td>Inventory/supplier advances</td>
+<td>FY 2026₹16.4303/₹5.9239 cr</td>
+<td>Documented conversion to delivery/invoices/cash</td>
+<td>Growth outpaces orders/collections</td>
+<td>Major stranded/connected advance loss</td>
+<td>Results plus auditor notes</td>
+</tr>
+<tr class="even">
+<td>IPO machinery</td>
+<td>₹13.2164 crplanned; quotation stage 24Sep</td>
+<td>Orders→delivery→commissioningFY 2027</td>
+<td>No staged proof while funds consumed</td>
+<td>Material diversion/abandonment</td>
+<td>Use-of-proceeds disclosures</td>
+</tr>
+<tr class="odd">
+<td>Funding cushion</td>
+<td>Synthetic minbase ₹1.4582 cr</td>
+<td>Actual bank cash/facilities/debt bridge reconciled</td>
+<td>Actual cushion below ₹1 cr assumption</td>
+<td>Verified unfinanceable maturity</td>
+<td>Nextbalance/proceeds report</td>
+</tr>
+<tr class="even">
+<td>Capacity/orders</td>
+<td>649 actualFY 2026vs 2050 estimatedFY 2027</td>
+<td>Qualified utilization not just equipmentcount</td>
+<td>Output/revenue mix misses commissioning case</td>
+<td>Sustained inability to monetize capacity</td>
+<td>Operational update</td>
+</tr>
+<tr class="odd">
+<td>Statutory exposure</td>
+<td>EPF/ESICquantumND</td>
+<td>Authority closure and accrued liability</td>
+<td>New demands without provisioning</td>
+<td>Material established concealment/diversion</td>
+<td>Audit/official orders</td>
+</tr>
+<tr class="even">
+<td>Governance/assets</td>
+<td>₹.6416 crsoftware/Pune discrepancy</td>
+<td>Single asset identity/ready-use evidence</td>
+<td>Further inconsistent asset/confirmation notes</td>
+<td>Material adverse reliability opinion</td>
+<td>Nextaudit</td>
+</tr>
+<tr class="odd">
+<td>Trading</td>
+<td>2,000 lot; short circuit-prone history</td>
+<td>Verified 20 / 60 session data andtwo-way depth</td>
+<td>Repeated one-sided sessions</td>
+<td>Suspension/effectively untradeable</td>
+<td>Before anyimplementation</td>
+</tr>
+</tbody>
+</table>
+<p>Thresholds are investigation triggers, not automated trading
+instructions or reminders. No recurring task created.</p>
+<h2 id="final-classification-conditional-action">14. Final
+Classification &amp; Conditional Action</h2>
+<p><strong>Hold — unresolved implementation; mixed-quality
+cash-conversion/capex execution watchlist.</strong> BQS/GQS describe
+supported historical quality; IAS cannot be ranked becauseL isNS andG4
+unresolved. No numeric matrix cell is forced for anNS aggregate. Even
+ignoring liquidity, base 7.6% modeled return misses 15% hurdle; this is
+not an attractive-entry designation. GOV/MOAT/REV/DUR/CAP andBQS/GQS
+also fail compounder requirements. Research priority: reconcile actual
+bank funds/proceeds, aged receivables/advances, commissioning and
+trading series before investment consideration. A lower price improves
+price-sensitive return only, not governance/cash quality. No buy/sell,
+portfolio allocation, global ranking or publication acceptance is
+authorized by this research handoff.</p>
+<h2 id="sources-assumptions-open-questions">15. Sources, Assumptions
+&amp; Open Questions</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Type/date</th>
+<th>Link or artifact</th>
+<th>Claims / limit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S01</td>
+<td>V/M / 2026-09-24</td>
+<td><a
+href="https://www.sjpultrasonics.in/static/files/ipo/SJP_Prospectus_24.09.2026_F.pdf">S01</a></td>
+<td>FY 2024–26 restated accounts; cash/debt/ageing; capital/proceeds;
+estimates labeled M; Core tables reconciled; disclosure errors retained;
+no guarantee of balances/counterparty collections</td>
+</tr>
+<tr class="even">
+<td>S02</td>
+<td>V / 2026-06-19</td>
+<td><a
+href="https://www.sjpultrasonics.in/static/files/financial-details/Annual%20Report/Annual%20Report_2025-26.pdf">S02</a></td>
+<td>Audit unmodified with development EOM; historical3EMI delays; no
+wilful defaulter; customer advances/expense payable; CWIP Pune label
+versus prospectus software-development label unresolved; template
+qualified-opinion cross-reference inconsistent with opinion
+paragraph</td>
+</tr>
+<tr class="odd">
+<td>S03</td>
+<td>V / 2022-08-18</td>
+<td><a
+href="https://www.sjpultrasonics.in/static/files/financial-details/Annual%20Report/Annual%20Report%202022.pdf">S03</a></td>
+<td>FY 2021 revenue20.0918cr, FY 2022 rounded11.7114cr; Older vintage
+not restated; no inventedCOVID windfall</td>
+</tr>
+<tr class="even">
+<td>S04</td>
+<td>V / 2023-09-05</td>
+<td><a
+href="https://www.sjpultrasonics.in/static/files/financial-details/Annual%20Report/Annual%20Report%202023.pdf">S04</a></td>
+<td>FY 2022/FY 2023 exact revenue and PAT; older capital structure; CFO
+ND; old AR balance differs later prospectus risk summary; not silently
+combined</td>
+</tr>
+<tr class="odd">
+<td>S05</td>
+<td>V via secondary mirror / 2026-10-07</td>
+<td><a
+href="https://noticeblue.com/circulars/7bf43394-a8f8-4050-866d-d08879aba8e8">S05</a></td>
+<td>544980/SJP/ISIN;Oct8listing;12.94mshares;2,000 lot;10daysTFT;
+Official notice PDF403; corroborated issuer capital table and exchange
+interoperability master, not proofNSElisting</td>
+</tr>
+<tr class="even">
+<td>S06</td>
+<td>Secondary dated market data / 2026-10-19</td>
+<td><a
+href="https://univest.in/blogs/why-sjp-share-upper-circuit-consecutive-2026">S06</a></td>
+<td>96.22INR quote19 Oct, circuit report; Reject
+erroneous118.58crcap/22.62PE; no primaryclose/orderbook; later
+datesexcluded</td>
+</tr>
+<tr class="odd">
+<td>C01</td>
+<td>C / derived</td>
+<td>financial_metrics.json</td>
+<td>5 yrCAGR5.7388%;3 yr32.3591%; cumulativeCFO/PAT−.42335; ratios and
+bridges; Funding IC proxy is not fully reconciled operating IC; older
+accounts separate</td>
+</tr>
+<tr class="even">
+<td>A01</td>
+<td>A / derived</td>
+<td>model_inputs.json</td>
+<td>Scenario
+growth/margins/WC;14–18%WACC;15%equityhurdle;14%matureROIC;funding/capex
+policy; Proforma cash notactual20 Oct; financing availability not
+presumed</td>
+</tr>
+<tr class="odd">
+<td>SJP-P</td>
+<td>Official issuer prospectus / 2026-09-24</td>
+<td><a
+href="https://www.sjpultrasonics.in/static/files/ipo/SJP_Prospectus_24.09.2026_F.pdf">SJP-P</a></td>
+<td>17–24,51–57,63–65,76–86,95–98,125–149,190;</td>
+</tr>
+<tr class="even">
+<td>SJP-22</td>
+<td>Official audited annual report / 2022-08-18</td>
+<td><a
+href="https://www.sjpultrasonics.in/static/files/financial-details/Annual%20Report/Annual%20Report%202022.pdf">SJP-22</a></td>
+<td>PDF46 note16;</td>
+</tr>
+<tr class="odd">
+<td>SJP-23</td>
+<td>Official audited annual report / 2023-09-05</td>
+<td><a
+href="https://www.sjpultrasonics.in/static/files/financial-details/Annual%20Report/Annual%20Report%202023.pdf">SJP-23</a></td>
+<td>PDF3 directors report;</td>
+</tr>
+<tr class="even">
+<td>PEER-R</td>
+<td>Official competitor product page / None</td>
+<td><a href="https://www.rincoultrasonics.com/en-in/">PEER-R</a></td>
+<td>; Undated live page read25Oct2026; product corroboration only, not
+historical numerical input</td>
+</tr>
+<tr class="odd">
+<td>PEER-U</td>
+<td>Official competitor product page / None</td>
+<td><a href="https://www.uniquecircleautomation.com/">PEER-U</a></td>
+<td>; Undated live page read25Oct2026; product corroboration only</td>
+</tr>
+<tr class="even">
+<td>PEER-T</td>
+<td>Official rating agency rationale / 2025-07-02</td>
+<td><a
+href="https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/TitanEngineeringandAutomationLimited_July%2002_%202025_RR_366558.html">PEER-T</a></td>
+<td>Detailed rationale/key rating drivers;</td>
+</tr>
+</tbody>
+</table>
+<p>Primary PDFs/OCR/images remain private research inputs and are
+excluded from source-safe archives. Public packages retain compact
+analyst-transcribed facts, source URLs, calculations, all scenario
+inputs, raw current outputs and reproducible vintages—not entire source
+documents or personal identifiers. Source references adjacent to claims
+distinguish Vverified disclosure, Ccalculation, Mmanagement estimate and
+Aanalyst assumption; a filing containing management estimates does not
+verify outcomes.</p>
+<p><strong>Open questions:</strong> actual20 Oct cash andproceeds
+utilization; bank facility renewals/covenants andsettlement of delayed
+instalments; EPF/ESICquantum; collection of&gt;1yearAR;
+delivery/recoverability ofsupplier advances; Pune-versussoftware asset
+identity; comparable old balance-sheet bridge; independent peer CFO;
+primary BSE trading history/spread. Blocked retrieval actions are
+recorded in<code>market_inputs.json</code>; BSE listingPDF403 was not
+bypassed/retried. Official prospectus was too large for web reader but
+standard public download completed successfully; this was a size
+limitation, not an access-control denial. No local Chromium, escalation,
+global registry, Library upload or public Git publication was used.</p>
+<p><strong>Update log:</strong>v 1 retained the initial coherent
+five-year cash/valuation engine. v 2 adds 20% capex overrun, bank-only
+cash, lower opening-liquidity cases, and explicit linked
+commissioning-delay/revenue stress alongside timing-only deferral. Core
+quality evidence did not change; robustness tests were expanded. A v 1
+metadata label feasible_without_rescue incorrectly treated rescued paths
+as feasible; v 2 corrects it, while v 1 equity amounts and funding dates
+remain intact and its limitation is recorded in the vintage manifest.
+Both versions retain failure states and exact inputs; archive cold
+rebuild deletes generated outputs and reconstructs them offline before
+comparison. Independent review/acceptance remains with the parent;
+producer tests are not self-acceptance.</p>
+</body>
+</html>

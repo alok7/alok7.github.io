@@ -1,0 +1,48 @@
+{
+  "format": "wallstrat-exact-zip-parts-v1",
+  "filename": "INE0OMF01015.zip",
+  "bytes": 30512268,
+  "sha256": "6d0d97df670e172b5e662c32b9da04cdb8f48265c01ffd84059ebd04e91fd54b",
+  "parts": [
+    {
+      "path": "INE0OMF01015.zip.000.zippart",
+      "bytes": 4000000,
+      "sha256": "fe12dfee2717d2ba82b30304cb3246c8bf01dded7653b61f574837d9d5f573a9"
+    },
+    {
+      "path": "INE0OMF01015.zip.001.zippart",
+      "bytes": 4000000,
+      "sha256": "14f3c76b8da9384474c2012e58e15f168cea51c3eeb44e7ae05f801b7dfa8ecf"
+    },
+    {
+      "path": "INE0OMF01015.zip.002.zippart",
+      "bytes": 4000000,
+      "sha256": "6a9eea70a93b95dba7fab4bd0305f7ea9974f2b1783b5eb6e015ce72f5c98138"
+    },
+    {
+      "path": "INE0OMF01015.zip.003.zippart",
+      "bytes": 4000000,
+      "sha256": "39c5979d980bc40ceb863aec05bba21f09d715d7a4b5f3063d5b5c297e327b0a"
+    },
+    {
+      "path": "INE0OMF01015.zip.004.zippart",
+      "bytes": 4000000,
+      "sha256": "c01f401a3d17bbc59bcebd459faecf6037bc41e371f23d493744d5d62a9689b4"
+    },
+    {
+      "path": "INE0OMF01015.zip.005.zippart",
+      "bytes": 4000000,
+      "sha256": "3d56b0d66c2f1ca8c0403188df73ac8153f85ac31ec6f0296e924f656b3b3b9f"
+    },
+    {
+      "path": "INE0OMF01015.zip.006.zippart",
+      "bytes": 4000000,
+      "sha256": "edc4dbed24d45def67e17cb4b135a75fbb46be78bfdb4bcc1055533bc16b754e"
+    },
+    {
+      "path": "INE0OMF01015.zip.007.zippart",
+      "bytes": 2512268,
+      "sha256": "cf68fcdf4d767b3a3b323476991099702912bc48a65652dd72efff0a61330081"
+    }
+  ]
+}

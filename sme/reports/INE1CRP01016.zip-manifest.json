@@ -1,0 +1,88 @@
+{
+  "format": "wallstrat-exact-zip-parts-v1",
+  "filename": "INE1CRP01016.zip",
+  "bytes": 63726093,
+  "sha256": "a6bf9ec31a456f0632de99e64049ab328ca06e338d31ca99969a674569085e11",
+  "parts": [
+    {
+      "path": "INE1CRP01016.zip.000.zippart",
+      "bytes": 4000000,
+      "sha256": "882bff4a8e62a7a36565eeda17fc850fab4b38524750c3daaf4798cf9cf3bd63"
+    },
+    {
+      "path": "INE1CRP01016.zip.001.zippart",
+      "bytes": 4000000,
+      "sha256": "b9dad781331e703c34a7239047834ed525df0c9fa81720d67ab00f408a61fdae"
+    },
+    {
+      "path": "INE1CRP01016.zip.002.zippart",
+      "bytes": 4000000,
+      "sha256": "d7351fe2fce2ffe60549437cf45d19021c44b449a0477fdaedd531ef6c9c2092"
+    },
+    {
+      "path": "INE1CRP01016.zip.003.zippart",
+      "bytes": 4000000,
+      "sha256": "06153acd0b34a8bb1b3bfae7e94786c02847f11a80adf835ad1e2e5635ad408f"
+    },
+    {
+      "path": "INE1CRP01016.zip.004.zippart",
+      "bytes": 4000000,
+      "sha256": "bbc3cad0c40d430ef7446a06e7224e22ad779cbafaf43d52cc12aefb143dbf5e"
+    },
+    {
+      "path": "INE1CRP01016.zip.005.zippart",
+      "bytes": 4000000,
+      "sha256": "ec4422385f4d9c7ae08c2d7cf4a579a55282cd3d3cd2f4d39ba257136e4e3149"
+    },
+    {
+      "path": "INE1CRP01016.zip.006.zippart",
+      "bytes": 4000000,
+      "sha256": "ce2c4aa7dc12d8d0cf61b3048d1ee6beedce06940ab6faf3cbdcfe4aeb247db4"
+    },
+    {
+      "path": "INE1CRP01016.zip.007.zippart",
+      "bytes": 4000000,
+      "sha256": "dd352451491ed7cfdb338ec51b7227441a19cdd7e0e8ca1c53926d5c71118e87"
+    },
+    {
+      "path": "INE1CRP01016.zip.008.zippart",
+      "bytes": 4000000,
+      "sha256": "52ddc659e29812b82c96b8eb23ae32696557eff35c97d47f7609d7028db1d58b"
+    },
+    {
+      "path": "INE1CRP01016.zip.009.zippart",
+      "bytes": 4000000,
+      "sha256": "84ddb882a2804ade013ccfb5f3727f8f7a6dd6e074d309f2fe24d40f08f19fab"
+    },
+    {
+      "path": "INE1CRP01016.zip.010.zippart",
+      "bytes": 4000000,
+      "sha256": "c69542e0f6f9e8bd15e1214bb4d72308c1bc051d53b07053cc61269c54a19cf5"
+    },
+    {
+      "path": "INE1CRP01016.zip.011.zippart",
+      "bytes": 4000000,
+      "sha256": "19f868715f6257f2c5c7a6367359a184202f2d7dc941d5b919a85f940d2047eb"
+    },
+    {
+      "path": "INE1CRP01016.zip.012.zippart",
+      "bytes": 4000000,
+      "sha256": "bf7cad5c90cd8643fca89ba5cc80eaca58b5658ba7d984b955a1e49aa71f17be"
+    },
+    {
+      "path": "INE1CRP01016.zip.013.zippart",
+      "bytes": 4000000,
+      "sha256": "0d89f89f21594fabcbb55cb14ca96c95b715cbf4cf9a4f74a177d0bb0af3390d"
+    },
+    {
+      "path": "INE1CRP01016.zip.014.zippart",
+      "bytes": 4000000,
+      "sha256": "44967cf984a4f1a400aa6e5ef65fc5d8c29e36eea4d72923b6b0be34a74da811"
+    },
+    {
+      "path": "INE1CRP01016.zip.015.zippart",
+      "bytes": 3726093,
+      "sha256": "46477e00ea38d704912bd09971397cbb0a570f0c2b8e19c13d35d2ec6d35824b"
+    }
+  ]
+}

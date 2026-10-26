@@ -1,17 +1,17 @@
 {
   "metadata": {
     "total_universe": 457,
-    "reviewed_companies": 373,
+    "reviewed_companies": 383,
     "research_cutoff": "2026-10-20",
     "publication_batch": 12,
-    "pending_companies": 84,
-    "full_structured_reviews": 363,
+    "pending_companies": 74,
+    "full_structured_reviews": 373,
     "recovered_narrative_editions": 10,
-    "currently_published_reviews": 373,
+    "currently_published_reviews": 383,
     "completed_unpublished_reviews": 0,
     "narrative_editions": 10,
-    "scope_status": "Completed research directory following the proposed 19-review release.",
-    "candidate_status": "Publication release through review 373; review 374 is excluded."
+    "scope_status": "Research directory through review 383.",
+    "candidate_status": "Publication release through review 383."
   },
   "companies": [
     {
@@ -9230,12 +9230,12 @@
     {
       "id": "INE0RNZ01014",
       "isin": "INE0RNZ01014",
-      "name": "Shri Balaji",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Shri Balaji Valve Components Limited",
+      "symbol": "SBVCL",
+      "exchange": "BSE SME",
       "sector": "Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -9245,77 +9245,109 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0RNZ01014.html",
+      "source_package": "sme/download-package.html?company=INE0RNZ01014",
+      "source_position": 374,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0OMF01015",
       "isin": "INE0OMF01015",
-      "name": "Shri Techtex",
+      "name": "Shri Techtex Limited",
       "symbol": "SHRITECH",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Plastic Products - Industrial",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 4.42,
+        "GQS": 4.75,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0OMF01015.html",
+      "source_package": "sme/download-package.html?company=INE0OMF01015",
+      "source_position": 375,
+      "score_display": {
+        "BQS": "4.4",
+        "GQS": "4.8",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE1CRP01016",
       "isin": "INE1CRP01016",
-      "name": "Shyam Dhani Ind.",
+      "name": "Shyam Dhani Industries Limited",
       "symbol": "SHYAMDHANI",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Other Food Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 4.76,
+        "GQS": 5.0,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE1CRP01016.html",
+      "source_package": "sme/download-package.html?company=INE1CRP01016",
+      "source_position": 376,
+      "score_display": {
+        "BQS": "4.8",
+        "GQS": "5.0",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0A1E01018",
       "isin": "INE0A1E01018",
-      "name": "Siddhika Coatins",
+      "name": "Siddhika Coatings Limited",
       "symbol": "SIDDHIKA",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Paints",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
-        "IAS": null
+        "BQS": 6.3,
+        "GQS": 6.8,
+        "IAS": 5.125
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
-        "IAS": false
+        "BQS": true,
+        "GQS": true,
+        "IAS": true
+      },
+      "standalone_report": "sme/reports/INE0A1E01018.html",
+      "source_package": "sme/download-package.html?company=INE0A1E01018",
+      "source_position": 377,
+      "score_display": {
+        "BQS": "6.3",
+        "GQS": "6.8",
+        "IAS": "5.1"
       }
     },
     {
       "id": "INE0STN01015",
       "isin": "INE0STN01015",
-      "name": "Silkflex Polymer",
+      "name": "Silkflex Polymers (India) Limited",
       "symbol": "SILKFLEX",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Specialty Chemicals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -9325,37 +9357,53 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0STN01015.html",
+      "source_package": "sme/reports/INE0STN01015.zip",
+      "source_position": 378,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE1EJ401023",
       "isin": "INE1EJ401023",
-      "name": "Silverstorm Parks",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "Silverstorm Parks and Resorts Limited",
+      "symbol": "SSPRL",
+      "exchange": "BSE SME",
       "sector": "Amusement Parks/ Other Recreation",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 5.36,
+        "GQS": 6.5,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE1EJ401023.html",
+      "source_package": "sme/download-package.html?company=INE1EJ401023",
+      "source_position": 379,
+      "score_display": {
+        "BQS": "5.4",
+        "GQS": "6.5",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE1K4J01018",
       "isin": "INE1K4J01018",
-      "name": "Simca Advertis.",
+      "name": "Simca Advertising Limited",
       "symbol": "SIMCA",
-      "exchange": "Listing verification pending",
+      "exchange": "NSE Emerge",
       "sector": "Advertising & Media Agencies",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -9365,37 +9413,53 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE1K4J01018.html",
+      "source_package": "sme/reports/INE1K4J01018.zip",
+      "source_position": 380,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE0S4601017",
       "isin": "INE0S4601017",
-      "name": "SJP Ultrasonics",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "SJP Ultrasonics Limited",
+      "symbol": "SJP",
+      "exchange": "BSE SME",
       "sector": "Industrial Products",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
-        "BQS": null,
-        "GQS": null,
+        "BQS": 4.3,
+        "GQS": 4.4,
         "IAS": null
       },
       "ranking_eligibility": {
-        "BQS": false,
-        "GQS": false,
+        "BQS": true,
+        "GQS": true,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE0S4601017.html",
+      "source_package": "sme/reports/INE0S4601017.zip",
+      "source_position": 381,
+      "score_display": {
+        "BQS": "4.3",
+        "GQS": "4.4",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE13YH01017",
       "isin": "INE13YH01017",
-      "name": "SK Minerals & Additives",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "SK Minerals & Additives Limited",
+      "symbol": "SKM",
+      "exchange": "BSE SME",
       "sector": "Specialty Chemicals",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -9405,17 +9469,25 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE13YH01017.html",
+      "source_package": "sme/download-package.html?company=INE13YH01017",
+      "source_position": 382,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {
       "id": "INE11XK01017",
       "isin": "INE11XK01017",
-      "name": "SMR Jewels",
-      "symbol": null,
-      "exchange": "Listing verification pending",
+      "name": "SMR Jewels Limited",
+      "symbol": "544774",
+      "exchange": "BSE SME",
       "sector": "Gems, Jewellery And Watches",
-      "research_status": "pending",
-      "as_of": null,
+      "research_status": "deep",
+      "as_of": "2026-10-20",
       "scores": {
         "BQS": null,
         "GQS": null,
@@ -9425,6 +9497,14 @@
         "BQS": false,
         "GQS": false,
         "IAS": false
+      },
+      "standalone_report": "sme/reports/INE11XK01017.html",
+      "source_package": "sme/reports/INE11XK01017.zip",
+      "source_position": 383,
+      "score_display": {
+        "BQS": "NS",
+        "GQS": "NS",
+        "IAS": "NS"
       }
     },
     {

@@ -1,6 +1,6 @@
 {
   "format": "wallstrat-complete-data-download-manifest-v1",
-  "scope": "Release through review 373: existing 340 plus exactly 341–373. Review 374 is excluded.",
+  "scope": "LOCAL_BATCH_CANDIDATE_NOT_PUBLISHED: incremental accepted reviews 374, 375, 376, 377, 378, 379, 380, 381, 382, 383; preexisting 373 review files preserved.",
   "authentication": "No account or permission change. Hash verification concerns byte integrity only.",
   "old_raw_resource_migration": {
     "count": 504,
@@ -12556,6 +12556,591 @@
         "parts": 5
       },
       "original_zip_filename": "INE0DM401012.zip"
+    }
+  ],
+  "incremental_batches": [
+    {
+      "positions": [
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383
+      ],
+      "base_commit": "067768bf4463feedad956b0ee3109af227a58075",
+      "complete_packages": [
+        {
+          "position": 374,
+          "isin": "INE0RNZ01014",
+          "source_archive_sha256": "3768ea7f6c1f802f8854276f9804579a54356180909cdbd879e6d8c162539380",
+          "source_record_sha256": "dc77b752522f327f6410fd6b12c4efd2e0462987767835bb7dbec96528a4d064",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {},
+          "manifest_layout": {},
+          "model_binding": {
+            "member": "canonical_paths.json.gz",
+            "stored_sha256": "8787e05b3e033bf6babcb6aa970a0e0fc8077fb83fdc426a807ef0f2086dc6e4",
+            "decoded_sha256": "0b0fff1526dcca5632a5d838b0fdeda4a73a6cd47ab85c1f1b5a81a565653d9e"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "1dd0f87812574be7533485fe6c703f9c88ca535e8984861ddf285877a5f975d9",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "1dd0f87812574be7533485fe6c703f9c88ca535e8984861ddf285877a5f975d9"
+          },
+          "report_path": "sme/reports/INE0RNZ01014.html",
+          "report_sha256": "1dd0f87812574be7533485fe6c703f9c88ca535e8984861ddf285877a5f975d9",
+          "package_path": "sme/download-package.html?company=INE0RNZ01014",
+          "package_sha256": "5765eede85d8b2ed0216e1a821c54e4db4e8980814560b3b994f144c865bcc79",
+          "package_bytes": 16272125,
+          "section_count": 15,
+          "members": 104,
+          "relative_links": [],
+          "package_transport": {
+            "kind": "exact-zip-parts",
+            "manifest": "sme/reports/INE0RNZ01014.zip-manifest.json",
+            "download_url": "sme/download-package.html?company=INE0RNZ01014",
+            "bytes": 16272125,
+            "sha256": "5765eede85d8b2ed0216e1a821c54e4db4e8980814560b3b994f144c865bcc79",
+            "parts": 5
+          },
+          "scores": {
+            "BQS": null,
+            "GQS": null,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": false,
+            "GQS": false,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "NS",
+            "GQS": "NS",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 375,
+          "isin": "INE0OMF01015",
+          "source_archive_sha256": "3f451f33c1af2444b80a4c432d3ce22c2592a96dac8a428ee65cdda7e7878019",
+          "source_record_sha256": "f5db64d45985e0585f2230d5fbab8fa1f6d1d30868ace67f2f0a31bea242dd45",
+          "record_member": "build_manifest.json",
+          "record_role": "build_integrity_manifest",
+          "artifact_layout": {
+            "kind": "split_verified_artifacts",
+            "archive_prefix": "Shri_Techtex_375/",
+            "record_member": "build_manifest.json",
+            "record_role": "build_integrity_manifest",
+            "identity_member": "market_inputs.json",
+            "identity_sha256": "82cf204d1660f469336cf433fe30b8e34f4665e2665bb672b406bbf1a9fb14ee",
+            "identity_key": "identity",
+            "scores_member": "scores.json",
+            "scores_sha256": "b15e8691914fa2b7a4093bdb880738f1bd196b6581063837c5f68421dbde02f7",
+            "reader_member": "report.html",
+            "report_member": "report.md",
+            "eligibility_mapping": {
+              "BQS": "quality",
+              "GQS": "quality",
+              "IAS": "investment"
+            }
+          },
+          "manifest_layout": {},
+          "model_binding": {
+            "member": "canonical_paths.json.gz",
+            "stored_sha256": "0d2882ba2cc4a73df476a8089bac92983a6ea1c26fb1c0f409207761b9a69ccd",
+            "decoded_sha256": "9f0e70aa1a5f87221fbe0c1225c5402d3cdebe10d8026f917323cae62dc2c650"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "87c5cf9ee43c797356a7d3f2777ade0a005d9b2b843d1d602334305429688e64",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "87c5cf9ee43c797356a7d3f2777ade0a005d9b2b843d1d602334305429688e64"
+          },
+          "report_path": "sme/reports/INE0OMF01015.html",
+          "report_sha256": "87c5cf9ee43c797356a7d3f2777ade0a005d9b2b843d1d602334305429688e64",
+          "package_path": "sme/download-package.html?company=INE0OMF01015",
+          "package_sha256": "6d0d97df670e172b5e662c32b9da04cdb8f48265c01ffd84059ebd04e91fd54b",
+          "package_bytes": 30512268,
+          "section_count": 15,
+          "members": 69,
+          "relative_links": [],
+          "package_transport": {
+            "kind": "exact-zip-parts",
+            "manifest": "sme/reports/INE0OMF01015.zip-manifest.json",
+            "download_url": "sme/download-package.html?company=INE0OMF01015",
+            "bytes": 30512268,
+            "sha256": "6d0d97df670e172b5e662c32b9da04cdb8f48265c01ffd84059ebd04e91fd54b",
+            "parts": 8
+          },
+          "scores": {
+            "BQS": 4.42,
+            "GQS": 4.75,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": true,
+            "GQS": true,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "4.4",
+            "GQS": "4.8",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 376,
+          "isin": "INE1CRP01016",
+          "source_archive_sha256": "18db0af793b60af6e106ec8fb3daad2b69cc4c25f70a877c6167413f86e635c6",
+          "source_record_sha256": "df829bf502e7f3f7bb3308b5c47703dd750b8aad6d9479cba227aa61fd304457",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {
+            "kind": "company_record",
+            "model_paths_member": "canonical_paths.json.gz",
+            "model_paths_sha256": "7ffadf3feabbd118b099e54567faf1717d3001c17a65578792af8b93f75bdf42"
+          },
+          "manifest_layout": {
+            "kind": "internal_complete_v1",
+            "schema": "source-safe-complete-manifest-v1",
+            "members_key": "files"
+          },
+          "model_binding": {
+            "member": "canonical_paths.json.gz",
+            "stored_sha256": "7ffadf3feabbd118b099e54567faf1717d3001c17a65578792af8b93f75bdf42",
+            "decoded_sha256": "559a92662394ce26c4152f470bb03a1751fcaf466ec11ac5ff3c424dc57eaf9e"
+          },
+          "standalone_reader_projection": {
+            "policy": "Root-approved presentation-only demotion of exactly three unnumbered financial subheadings within numbered section 9; original report.html retained unchanged inside package.",
+            "original_reader_sha256": "1c07d544390180713cae3e6cefe5fe91b42254e07690aad1380c8ac974729e7a",
+            "demoted_h2_titles": [
+              "Cash bridge, working capital and quality",
+              "Returns and per-share economics",
+              "Funding and liquidity inputs for monthly model"
+            ],
+            "derived_reader_sha256": "cd3d05c8d32196cc890194a8e2b057cded0330319ed8b744818ac852c9f84d5e"
+          },
+          "report_path": "sme/reports/INE1CRP01016.html",
+          "report_sha256": "cd3d05c8d32196cc890194a8e2b057cded0330319ed8b744818ac852c9f84d5e",
+          "package_path": "sme/download-package.html?company=INE1CRP01016",
+          "package_sha256": "a6bf9ec31a456f0632de99e64049ab328ca06e338d31ca99969a674569085e11",
+          "package_bytes": 63726093,
+          "section_count": 15,
+          "members": 108,
+          "relative_links": [],
+          "package_transport": {
+            "kind": "exact-zip-parts",
+            "manifest": "sme/reports/INE1CRP01016.zip-manifest.json",
+            "download_url": "sme/download-package.html?company=INE1CRP01016",
+            "bytes": 63726093,
+            "sha256": "a6bf9ec31a456f0632de99e64049ab328ca06e338d31ca99969a674569085e11",
+            "parts": 16
+          },
+          "scores": {
+            "BQS": 4.76,
+            "GQS": 5.0,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": true,
+            "GQS": true,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "4.8",
+            "GQS": "5.0",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 377,
+          "isin": "INE0A1E01018",
+          "source_archive_sha256": "b5c9cdd9daac6ea29d97cdb09dac306081d4107555e7559c95cc364bbec024ee",
+          "source_record_sha256": "a0018677fe8afdd28fbf113d60867ed138bb41dd46b190a8836d44b29a706e56",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {
+            "kind": "company_record",
+            "model_paths_member": "canonical_paths.json.gz",
+            "model_paths_sha256": "23fa2d4946c1f785b167c6211128f7d9cf8837d2f4cd0f322fce621830fa06e2"
+          },
+          "manifest_layout": {
+            "kind": "internal_file_list",
+            "members_key": "files",
+            "archive_role": "full",
+            "privacy_basis": "root_accepted_source_safe_with_full_member_scan"
+          },
+          "model_binding": {
+            "member": "canonical_paths.json.gz",
+            "stored_sha256": "23fa2d4946c1f785b167c6211128f7d9cf8837d2f4cd0f322fce621830fa06e2",
+            "decoded_sha256": "4cf5913488729aa71eda8a3ccde1908fc9d578c21edaebee769fa139444c2128"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "ef592acd0b2d6ce3a0a8ba06816ba12cef430dc101f0b074e6c014f0fa79fb8c",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "ef592acd0b2d6ce3a0a8ba06816ba12cef430dc101f0b074e6c014f0fa79fb8c"
+          },
+          "report_path": "sme/reports/INE0A1E01018.html",
+          "report_sha256": "ef592acd0b2d6ce3a0a8ba06816ba12cef430dc101f0b074e6c014f0fa79fb8c",
+          "package_path": "sme/download-package.html?company=INE0A1E01018",
+          "package_sha256": "a3d7044b723ab6c3c28789df19a89d83f080a146df182a2d5c7df2df5a72d241",
+          "package_bytes": 23818411,
+          "section_count": 15,
+          "members": 66,
+          "relative_links": [],
+          "package_transport": {
+            "kind": "exact-zip-parts",
+            "manifest": "sme/reports/INE0A1E01018.zip-manifest.json",
+            "download_url": "sme/download-package.html?company=INE0A1E01018",
+            "bytes": 23818411,
+            "sha256": "a3d7044b723ab6c3c28789df19a89d83f080a146df182a2d5c7df2df5a72d241",
+            "parts": 6
+          },
+          "scores": {
+            "BQS": 6.3,
+            "GQS": 6.8,
+            "IAS": 5.125
+          },
+          "ranking_eligibility": {
+            "BQS": true,
+            "GQS": true,
+            "IAS": true
+          },
+          "score_display": {
+            "BQS": "6.3",
+            "GQS": "6.8",
+            "IAS": "5.1"
+          }
+        },
+        {
+          "position": 378,
+          "isin": "INE0STN01015",
+          "source_archive_sha256": "b224d7d0cade96aefdc4586e40f878083cddd23d3ec72a687edc03331f8d74c4",
+          "source_record_sha256": "0864e3b2eff9915ebabf74766fd7d38a996b1d68817132a1f1b8cc73e1c7e568",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {
+            "kind": "company_record",
+            "model_paths_member": "model_paths.json.gz",
+            "model_paths_sha256": "2a7a935109795c7ad564763b1f95018f804fb99df8e7057053eb9a23e3cffcda"
+          },
+          "manifest_layout": {
+            "kind": "external_archive_sidecar",
+            "path": "incremental_batch/bindings/378_archive_manifest.json",
+            "archive_role": "full",
+            "members_key": "members",
+            "hash_value_kind": "sha256_string"
+          },
+          "model_binding": {
+            "member": "model_paths.json.gz",
+            "stored_sha256": "2a7a935109795c7ad564763b1f95018f804fb99df8e7057053eb9a23e3cffcda",
+            "decoded_sha256": "4506b7624ab4e0d68a8913e53b9421b7ade57c64ca434159b45644ed48c595f7"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "fa14b9f9d046f7d4752e248ae1c2ee67993e1f511934bd8d2c7eb86b0b5cfb21",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "fa14b9f9d046f7d4752e248ae1c2ee67993e1f511934bd8d2c7eb86b0b5cfb21"
+          },
+          "report_path": "sme/reports/INE0STN01015.html",
+          "report_sha256": "fa14b9f9d046f7d4752e248ae1c2ee67993e1f511934bd8d2c7eb86b0b5cfb21",
+          "package_path": "sme/reports/INE0STN01015.zip",
+          "package_sha256": "fac6b0f652dc8198c69a0d88af9432f10275a0e9d6ab364a6a2a057b40ba57c3",
+          "package_bytes": 8991446,
+          "section_count": 15,
+          "members": 53,
+          "relative_links": [],
+          "scores": {
+            "BQS": null,
+            "GQS": null,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": false,
+            "GQS": false,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "NS",
+            "GQS": "NS",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 379,
+          "isin": "INE1EJ401023",
+          "source_archive_sha256": "19e6e521d90201515d719c73dc82e406ef091d9502f2b5087cf62bd3fed3c166",
+          "source_record_sha256": "e6787203b34ce8eff947aa76db984bceea6923cf8ca5ae0f5c473aa1b7380d6c",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {
+            "kind": "company_record",
+            "model_paths_member": "canonical_paths.json.gz",
+            "model_paths_sha256": "e1bc84a27d27508d990a89cb24902af1dae1064ca4089fab7464eefb8bb31950"
+          },
+          "manifest_layout": {
+            "schema": "source_safe_integrity_v1",
+            "members_key": "members",
+            "source_documents_excluded_flag": "source_pdfs_ocr_images_excluded"
+          },
+          "model_binding": {
+            "member": "canonical_paths.json.gz",
+            "stored_sha256": "e1bc84a27d27508d990a89cb24902af1dae1064ca4089fab7464eefb8bb31950",
+            "decoded_sha256": "973e68e8f92ac20aef994d4e3cb02b5c01aacdb50c8bb60ce306b57efaeec236"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "624e588617a1f9588f325e0cab7fe4c4156ec5f1266aeb64bec14d38c07ca520",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "624e588617a1f9588f325e0cab7fe4c4156ec5f1266aeb64bec14d38c07ca520"
+          },
+          "report_path": "sme/reports/INE1EJ401023.html",
+          "report_sha256": "624e588617a1f9588f325e0cab7fe4c4156ec5f1266aeb64bec14d38c07ca520",
+          "package_path": "sme/download-package.html?company=INE1EJ401023",
+          "package_sha256": "58aefcb589d22f9b5a9a989fa24ae29c3b92b8e73872668febfe0f20c7ad0731",
+          "package_bytes": 15111360,
+          "section_count": 15,
+          "members": 60,
+          "relative_links": [],
+          "package_transport": {
+            "kind": "exact-zip-parts",
+            "manifest": "sme/reports/INE1EJ401023.zip-manifest.json",
+            "download_url": "sme/download-package.html?company=INE1EJ401023",
+            "bytes": 15111360,
+            "sha256": "58aefcb589d22f9b5a9a989fa24ae29c3b92b8e73872668febfe0f20c7ad0731",
+            "parts": 4
+          },
+          "scores": {
+            "BQS": 5.36,
+            "GQS": 6.5,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": true,
+            "GQS": true,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "5.4",
+            "GQS": "6.5",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 380,
+          "isin": "INE1K4J01018",
+          "source_archive_sha256": "5f4d684a3ff080ae2a2f9270f02cf9f1fa02557b3b879e54d68ce255c69f44e7",
+          "source_record_sha256": "323ee5a9eb6e633b194900276c8ca2d0706d0b956a55d3fa19f7e13af45a1802",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {
+            "kind": "company_record",
+            "model_paths_member": "model_outputs.json",
+            "model_paths_sha256": "c0c62091d08b4e29a9ad0ab308c6d6b5a616ea1edb8e834f8e11dfd677c59ba1"
+          },
+          "manifest_layout": {
+            "kind": "external_archive_sidecar",
+            "path": "incremental_batch/bindings/380_archive_manifest.json",
+            "archive_role": "full",
+            "members_key": "members",
+            "hash_value_kind": "sha256_string"
+          },
+          "model_binding": {
+            "member": "model_outputs.json",
+            "stored_sha256": "c0c62091d08b4e29a9ad0ab308c6d6b5a616ea1edb8e834f8e11dfd677c59ba1",
+            "decoded_sha256": "c0c62091d08b4e29a9ad0ab308c6d6b5a616ea1edb8e834f8e11dfd677c59ba1"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "540624bdcf0d5fde87086e4e686af3e3747a5bbe241561647c0fee8beeb5ceb8",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "540624bdcf0d5fde87086e4e686af3e3747a5bbe241561647c0fee8beeb5ceb8"
+          },
+          "report_path": "sme/reports/INE1K4J01018.html",
+          "report_sha256": "540624bdcf0d5fde87086e4e686af3e3747a5bbe241561647c0fee8beeb5ceb8",
+          "package_path": "sme/reports/INE1K4J01018.zip",
+          "package_sha256": "61121c36a881d8e05230d48e7b90489ec47366a7597c37048cfa24c1b758d1ae",
+          "package_bytes": 649323,
+          "section_count": 15,
+          "members": 33,
+          "relative_links": [],
+          "scores": {
+            "BQS": null,
+            "GQS": null,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": false,
+            "GQS": false,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "NS",
+            "GQS": "NS",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 381,
+          "isin": "INE0S4601017",
+          "source_archive_sha256": "431939d6822cbe6e288a8de5ac73eba5b99bd9f263095ff7e656bbffd998104e",
+          "source_record_sha256": "3cdc993995b2fa4e4084bf48d2e8b19ec270f587e1528c8c49830ede7947f2d9",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {
+            "kind": "company_record",
+            "model_paths_member": "model_outputs.json",
+            "model_paths_sha256": "c8d5ff6078d79ca7c30de1872b852763c63bdbc185bb0b38dad2137baab0ebdc"
+          },
+          "manifest_layout": {
+            "schema": "source_safe_integrity_v1",
+            "members_key": "members",
+            "source_safe_flag": "source_safe",
+            "privacy_basis": "root_accepted_source_safe_with_full_member_scan"
+          },
+          "model_binding": {
+            "member": "model_outputs.json",
+            "stored_sha256": "c8d5ff6078d79ca7c30de1872b852763c63bdbc185bb0b38dad2137baab0ebdc",
+            "decoded_sha256": "c8d5ff6078d79ca7c30de1872b852763c63bdbc185bb0b38dad2137baab0ebdc"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "310713ba4976c3a46978b9e63ca098b658dd65aad07f9a23a76282721a8aa534",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "310713ba4976c3a46978b9e63ca098b658dd65aad07f9a23a76282721a8aa534"
+          },
+          "report_path": "sme/reports/INE0S4601017.html",
+          "report_sha256": "310713ba4976c3a46978b9e63ca098b658dd65aad07f9a23a76282721a8aa534",
+          "package_path": "sme/reports/INE0S4601017.zip",
+          "package_sha256": "811adad6fa387aa8ff7fd608d4c5fffa4e983e0467f16311749cba9afcab3cf4",
+          "package_bytes": 848950,
+          "section_count": 15,
+          "members": 38,
+          "relative_links": [],
+          "scores": {
+            "BQS": 4.3,
+            "GQS": 4.4,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": true,
+            "GQS": true,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "4.3",
+            "GQS": "4.4",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 382,
+          "isin": "INE13YH01017",
+          "source_archive_sha256": "84d40936d258d28d52145b4173a910641a3498f7112902ef49c8ac13500ce675",
+          "source_record_sha256": "da16f7556e19851a223890046dba1690b0374f68ffae51a0dfa59d7f21b92e70",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {},
+          "manifest_layout": {},
+          "model_binding": {
+            "member": "canonical_paths.json.gz",
+            "stored_sha256": "e5e55c1fb802d09fcda2273c05166f9b03aaddffbd650ac070a00e6365c4b046",
+            "decoded_sha256": "e6eededc37b8acedb82eebb8df448deea6b934a571340cead88aa5bc528041e5"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "a7493c1de6c31d7db7b064a4a44f9c24776c9017f205e66d0d33e3be8034617f",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "a7493c1de6c31d7db7b064a4a44f9c24776c9017f205e66d0d33e3be8034617f"
+          },
+          "report_path": "sme/reports/INE13YH01017.html",
+          "report_sha256": "a7493c1de6c31d7db7b064a4a44f9c24776c9017f205e66d0d33e3be8034617f",
+          "package_path": "sme/download-package.html?company=INE13YH01017",
+          "package_sha256": "bafd65dcc51295884cee6f662a79b7d8384e482ce0e8c79def5e31047177769e",
+          "package_bytes": 13472249,
+          "section_count": 15,
+          "members": 34,
+          "relative_links": [],
+          "package_transport": {
+            "kind": "exact-zip-parts",
+            "manifest": "sme/reports/INE13YH01017.zip-manifest.json",
+            "download_url": "sme/download-package.html?company=INE13YH01017",
+            "bytes": 13472249,
+            "sha256": "bafd65dcc51295884cee6f662a79b7d8384e482ce0e8c79def5e31047177769e",
+            "parts": 4
+          },
+          "scores": {
+            "BQS": null,
+            "GQS": null,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": false,
+            "GQS": false,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "NS",
+            "GQS": "NS",
+            "IAS": "NS"
+          }
+        },
+        {
+          "position": 383,
+          "isin": "INE11XK01017",
+          "source_archive_sha256": "4bdd3ab3aaadb36219f47ba436893694240beacaa38b75510af1b1fb30cfd8c1",
+          "source_record_sha256": "6c39d37416fb55c6ef2a1e592fd70dacd9105606a05a6d1b952be98fbc17f348",
+          "record_member": "company_record.json",
+          "record_role": "company_record",
+          "artifact_layout": {},
+          "manifest_layout": {},
+          "model_binding": {
+            "member": "canonical_paths.json.gz",
+            "stored_sha256": "a4f882112d1cbf6d4dbf4804e46d8b75c904e59efed665bab1fc6c4c41a1fa2b",
+            "decoded_sha256": "23c016b22374f6af53746859deabfef8d90733c5135c4258e290183a76abfec5"
+          },
+          "standalone_reader_projection": {
+            "policy": "No heading projection",
+            "original_reader_sha256": "3a39851f37d7e66113d1a4c389a37f157136ac83b95dd5237e1f2a58a435c757",
+            "demoted_h2_titles": [],
+            "derived_reader_sha256": "2a00f38d26d5a74ece7f8e5fbf08871b5a90227f1f9957ad8b13bb6c6b47b67b"
+          },
+          "report_path": "sme/reports/INE11XK01017.html",
+          "report_sha256": "2a00f38d26d5a74ece7f8e5fbf08871b5a90227f1f9957ad8b13bb6c6b47b67b",
+          "package_path": "sme/reports/INE11XK01017.zip",
+          "package_sha256": "7cc5db6afd359dc24c4182cb9c88d0efe47f029e3de3742b7981e4da9b4c0794",
+          "package_bytes": 157510,
+          "section_count": 15,
+          "members": 25,
+          "relative_links": [
+            "financial_inputs.json",
+            "model_inputs.json"
+          ],
+          "scores": {
+            "BQS": null,
+            "GQS": null,
+            "IAS": null
+          },
+          "ranking_eligibility": {
+            "BQS": false,
+            "GQS": false,
+            "IAS": false
+          },
+          "score_display": {
+            "BQS": "NS",
+            "GQS": "NS",
+            "IAS": "NS"
+          }
+        }
+      ]
     }
   ]
 }
