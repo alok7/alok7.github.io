@@ -1,0 +1,85 @@
+{
+  "asOf": "2026-11-01",
+  "riskFreeAnnual": 0.065,
+  "resultsType": "Historical simulations; not live or audited returns",
+  "strategies": [
+    {
+      "id": "vpt",
+      "name": "VPT Equity Momentum",
+      "status": "Promoted rules \u00b7 historical walk-forward",
+      "start": "2022-08-04",
+      "end": "2026-08-28",
+      "totalReturn": 262.4291672383119,
+      "cagr": 37.97671004313878,
+      "sharpe": 1.5362,
+      "drawdown": 23.451489864004937,
+      "trades": 356,
+      "initialCapital": 1000000.0,
+      "averageProfit": 18.557948388221725,
+      "averageLoss": -7.343531105167106,
+      "combinedStressSharpe": 1.2594,
+      "accounting": "Daily marked-to-market simulation"
+    },
+    {
+      "id": "leader",
+      "name": "VPT Leader Volume",
+      "status": "Research candidate \u00b7 not promoted",
+      "start": "2022-08-04",
+      "end": "2026-08-28",
+      "totalReturn": 305.2568408823947,
+      "cagr": 41.88372721752289,
+      "sharpe": 1.7042,
+      "drawdown": 17.2616933264253,
+      "trades": 353,
+      "initialCapital": 1000000.0,
+      "averageProfit": 19.71492996204614,
+      "averageLoss": -6.899477886795202,
+      "combinedStressSharpe": 1.1619,
+      "accounting": "Daily marked-to-market simulation"
+    },
+    {
+      "id": "strangle",
+      "name": "Nifty Short Strangle",
+      "status": "Archived exploratory simulation \u00b7 validation pending",
+      "start": "2019-02-12",
+      "end": "2026-10-13",
+      "totalReturn": 233.56098275360347,
+      "cagr": 17.324728738389904,
+      "sharpe": 1.2699,
+      "drawdown": 8.072768425779419,
+      "trades": 394,
+      "initialCapital": 10000000.0,
+      "averageProfit": null,
+      "averageLoss": null,
+      "accounting": "P&L booked at expiry; not daily marked-to-market"
+    }
+  ],
+  "sources": [
+    {
+      "strategy": "vpt",
+      "artifact": "strategies/vpt_leader_volume/runs/20261029_packaging_validation/control_c1_d0/equity.csv",
+      "sha256": "c1946d49408f60e69af7a96ca40310c16c4f8aad84252861f2569c6de3f77871"
+    },
+    {
+      "strategy": "leader",
+      "artifact": "strategies/vpt_leader_volume/runs/20261029_packaging_validation/leader_volume_w20_c1_d0/equity.csv",
+      "sha256": "1cd4be66d90813187ff99c904e188bd9b4c0c755af81e1e5958a164690575b99"
+    },
+    {
+      "strategy": "strangle",
+      "artifact": "strategies/nifty_short_strangle/results/backtest_trades.csv",
+      "sha256": "245013a2402f132d25bc26d37730e3f7c681a2faeb272ee0b7db9bec3f6db166"
+    },
+    {
+      "strategy": "strangle",
+      "artifact": "strategies/nifty_short_strangle/results/backtest_summary.csv",
+      "sha256": "745ca5ee37a8f5e9013dc3eb4fa4c289307b17a9ce6410028a158a3421f86179"
+    }
+  ],
+  "notes": [
+    "Different evaluation periods and accounting methods; do not rank all three as comparable live portfolios.",
+    "Cash earns no interest. Investor taxes and management/performance fees are not included.",
+    "Prior research reused the historical data. No independent performance audit is claimed.",
+    "VPT and Leader Volume share a strategy foundation; no diversification benefit is established."
+  ]
+}

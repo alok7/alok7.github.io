@@ -1,0 +1,4 @@
+name,status,start,end,totalReturn,cagr,sharpe,drawdown,trades,accounting
+VPT Equity Momentum,Promoted rules · historical walk-forward,2022-08-04,2026-08-28,262.4291672383119,37.97671004313878,1.5362,23.451489864004937,356,Daily marked-to-market simulation
+VPT Leader Volume,Research candidate · not promoted,2022-08-04,2026-08-28,305.2568408823947,41.88372721752289,1.7042,17.2616933264253,353,Daily marked-to-market simulation
+Nifty Short Strangle,Archived exploratory simulation · validation pending,2019-02-12,2026-10-13,233.56098275360347,17.324728738389904,1.2699,8.072768425779419,394,P&L booked at expiry; not daily marked-to-market
