@@ -4,9 +4,10 @@ Single-page strategy dashboard at https://wallstrat.com. GitHub Pages serves the
 root of `master`. Preserve `CNAME` and `.nojekyll`. No build server, external
 fonts, analytics or JavaScript dependencies are required.
 
-The page contains three strategies, each with separate Live and Backtest views.
-VPT's live view uses the manually executed account; missing live books are shown
-explicitly. Historical positions are labelled with the backtest endpoint.
+The page currently contains VPT only, with separate Live and Backtest views.
+The live view uses the manually executed account. Historical positions are
+labelled with the backtest endpoint. Charts open on Return %, followed by P&L
+and Drawdown. Secondary statistics use dark text on a cool near-white grey background.
 
 ## Refresh
 
@@ -45,10 +46,8 @@ Capital flows are excluded from P&L; return uses a beginning-of-day flow
 convention. The exporter refuses inconsistent cash, holdings, dates or missing
 held-symbol prices. These are account-record reconstructions, not an audit.
 
-Backtests retain their original periods and accounting. VPT and Leader Volume
-use daily marks. Index Volatility is an exploratory expiry-booked archive with
-a proxy futures hedge; it does not establish intraday drawdown or validate the
-corrected execution code. Backtest Sharpe uses a 6.5% annual risk-free rate.
+The VPT backtest retains its original period and daily marked-to-market
+accounting. Backtest Sharpe uses a 6.5% annual risk-free rate.
 
 ## Search
 

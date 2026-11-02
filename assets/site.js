@@ -23,7 +23,7 @@
     if (!container) return null;
     const svg = container.querySelector('svg');
     const tooltip = container.querySelector('.tooltip');
-    let view = 'pnl';
+    let view = 'returnPct';
     let coordinates = [];
     let cursor = record.points.length - 1;
     let hoverLine, hoverDot;
@@ -85,7 +85,7 @@
         svg.append(node('text', {x: x(index), y: height-7, 'text-anchor': i === 0 ? 'start' : i === ticks-1 ? 'end' : 'middle'}, label));
       }
       hoverLine = node('line', {y1: top, y2: height-bottom, stroke: color, 'stroke-dasharray': '3 4', visibility: 'hidden'});
-      hoverDot = node('circle', {r: 3, fill: color, stroke: '#fafaf8', 'stroke-width': 2, visibility: 'hidden'});
+      hoverDot = node('circle', {r: 3, fill: color, stroke: '#f8f9fa', 'stroke-width': 2, visibility: 'hidden'});
       svg.append(hoverLine, hoverDot);
       coordinates = points.map((p, i) => ({x: x(i), y: y(p[view]), point: p}));
     }
