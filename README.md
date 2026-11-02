@@ -1,49 +1,58 @@
 # Wallstrat
 
-Static GitHub Pages site for https://wallstrat.com. Publish the repository root
-from `master`; preserve `CNAME` and `.nojekyll`. No build step, package install,
-external font, analytics, framework or CDN is required.
+Single-page strategy dashboard at https://wallstrat.com. GitHub Pages serves the
+root of `master`. Preserve `CNAME` and `.nojekyll`. No build server, external
+fonts, analytics or JavaScript dependencies are required.
 
-The site presents historical strategy research, not a live investment track record.
-Dates, accounting differences and research limitations are part of the published
-content. Do not replace them with unqualified performance claims.
+The page contains three strategies, each with separate Live and Backtest views.
+VPT's live view uses the manually executed account; missing live books are shown
+explicitly. Historical positions are labelled with the backtest endpoint.
 
-## Updating the evidence
+## Refresh
 
-`assets/evidence.json` identifies the source artifacts and SHA-256 hashes.
-`assets/performance.csv` contains the summary. `assets/performance.js` contains
-aggregate chart observations, mirrored in `assets/equity.csv`. Charts use these
-observations, not an illustrative or smoothed curve. Source trading records,
-private books and credentials must not be added to this repository.
+Run from the private research checkout, after the trading run has saved its book:
 
-When results change, update both the static table/headline and chart data, dates,
-disclosures, social metadata and sitemap `lastmod`. Verify returns, drawdowns,
-trade counts, metric conventions and provenance before publication. In particular,
-the strangle archive books P&L at expiry and does not validate its corrected live
-implementation.
+```sh
+venv/bin/python tools/build_wallstrat.py
+venv/bin/python tools/build_wallstrat.py --commit
+venv/bin/python tools/build_wallstrat.py --push --message "Refresh strategy performance"
+```
 
-## Search visibility
+The first invocation clones this repository into `tools/wallstrat_site/`.
+Subsequent invocations pull with `--ff-only` before applying generated outputs.
+Default mode only generates; `--commit` commits locally; `--push` also pushes.
+The tool preserves unrelated edits and never force-pushes or resets history.
+Previously generated, unedited output can be safely rebuilt. `--offline` skips
+synchronization for preview and cannot be combined with `--push`.
 
-- The homepage has a canonical HTTPS URL, semantic HTML, descriptive title and
-  meta description, WebSite/WebPage JSON-LD, social image metadata, robots.txt
-  and a sitemap.
-- After publication, verify the `wallstrat.com` domain in Google Search Console
-  and Bing Webmaster Tools, submit `https://wallstrat.com/sitemap.xml`, and inspect
-  the homepage URL. Verification requires the domain owner's account or DNS access.
-- Check actual deployed Core Web Vitals and indexing coverage. Local browser
-  tests and a small payload do not establish field performance or search ranking.
-- Removed legacy URLs return the custom 404 page. Do not redirect unrelated old
-  research pages to the homepage merely to conceal missing content.
+The source templates and explicit data mappings live in `tools/wallstrat/` in
+the research checkout. Update the templates there, since generated files are
+replaced on refresh. No broker access or trading occurs during publication.
+The page is a dated snapshot, not a streaming feed; refresh after the book and
+market cache have both been updated. No recurring job is installed automatically.
 
-See Google's [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
-and [sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
+## Data
 
-## Repository size
+`assets/dashboard.json` is the public dataset, also packaged as a local script
+for file-based previews. CSV downloads contain performance, chart observations
+and positions. Public exports contain only selected financial fields: no broker
+credentials, order identifiers, runtime state or private logs.
 
-This replacement is designed for one new root commit, without an old parent tree.
-Normal subsequent updates can be ordinary commits. Avoid repeatedly rewriting
-history. Keep large datasets and generated run archives outside the website repo.
+Live P&L includes estimated recorded fees. Open-position P&L includes remaining
+entry fees; realised P&L includes allocated entry and exit fees. Charts replay
+confirmed fills against cached daily closes, using recorded execution dates.
+Capital flows are excluded from P&L; return uses a beginning-of-day flow
+convention. The exporter refuses inconsistent cash, holdings, dates or missing
+held-symbol prices. These are account-record reconstructions, not an audit.
 
-A history reset removes old commits from the new branch ancestry; GitHub may
-retain unreachable objects/cached commits until its own cleanup. It is not a
-guaranteed permanent purge of every remote copy.
+Backtests retain their original periods and accounting. VPT and Leader Volume
+use daily marks. Index Volatility is an exploratory expiry-booked archive with
+a proxy futures hedge; it does not establish intraday drawdown or validate the
+corrected execution code. Backtest Sharpe uses a 6.5% annual risk-free rate.
+
+## Search
+
+The page has static strategy headings, metrics and charts, an HTTPS canonical,
+descriptive metadata, structured data, robots.txt and a sitemap. Submit
+`https://wallstrat.com/sitemap.xml` in the domain owner's Google Search Console
+and Bing Webmaster Tools accounts. Indexing and ranking are not guaranteed.

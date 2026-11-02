@@ -1,112 +1,157 @@
 'use strict';
 (() => {
-  const data = window.WALLSTRAT_DATA;
-  if (!data || !Array.isArray(data.strategies)) return;
-  const $ = (id) => document.getElementById(id);
-  const svg = $('performance-chart');
-  const tooltip = $('chart-tooltip');
-  const tabs = [...document.querySelectorAll('[role="tab"]')];
-  let selected = data.strategies[0];
-  let view = 'equity';
-  let coordinates = [];
-  const format = (v, digits = 2) => Number(v).toLocaleString('en-IN', { minimumFractionDigits: digits, maximumFractionDigits: digits });
-  const dateLabel = (d) => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  const notes = {
-    vpt: 'Historical rolling ensemble simulation with quarterly selection. Research reused this history. Promoted rules do not make these live or independently audited results.',
-    leader: 'Research candidate, not promoted. With doubled costs and an extra bar of entry delay, Sharpe falls to 1.1619 versus VPT’s 1.2594. The gate was developed on reused history; the headline is not independent validation.',
-    strangle: 'Archived exploratory result. P&L is booked at expiry, not marked to market daily; the drawdown can understate intratrade risk. Intraday futures hedges use an index proxy. The corrected execution implementation does not yet have a validated multi-year result. Short options have no fixed loss cap.'
-  };
-  function element(name, attributes, content) {
-    const node = document.createElementNS('http://www.w3.org/2000/svg', name);
-    Object.entries(attributes || {}).forEach(([key, value]) => node.setAttribute(key, value));
-    if (content !== undefined) node.textContent = content;
-    return node;
-  }
-  function draw() {
-    tooltip.hidden = true;
-    const width = Math.max(320, svg.parentElement.clientWidth);
-    const height = width < 650 ? 220 : 340;
-    const left = 44, right = 12, top = 22, bottom = 35;
-    const pts = selected.points;
-    const col = view === 'equity' ? 1 : 2;
-    const values = pts.map(p => p[col]);
-    const isGrowth = view === 'equity';
-    const min = isGrowth ? Math.floor(Math.min(...values, 100) / 25) * 25 : Math.floor(Math.min(...values) / 5) * 5;
-    const max = isGrowth ? Math.ceil(Math.max(...values) / 50) * 50 : 0;
-    const span = max - min || 1;
-    const x = (i) => left + i / Math.max(pts.length - 1, 1) * (width - left - right);
-    const y = (v) => top + (max - v) / span * (height - top - bottom);
-    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-    svg.replaceChildren();
-    svg.append(element('title', {id: 'plot-svg-title'}, `${selected.name}: historical ${isGrowth ? 'growth of 100' : 'drawdown'}`));
-    svg.append(element('desc', {id: 'plot-svg-description'}, `${dateLabel(selected.start)} to ${dateLabel(selected.end)}. Simulated return ${format(selected.totalReturn)}%; reported maximum drawdown ${format(selected.drawdown)}%. ${selected.accounting}.`));
-    for (let i = 0; i <= 4; i++) {
-      const value = min + i * span / 4;
-      svg.append(element('line', {x1: left, x2: width-right, y1: y(value), y2: y(value), stroke: '#ced8cc', 'stroke-width': .7}));
-      svg.append(element('text', {x: left-9, y: y(value)+4, 'text-anchor': 'end', fill: '#596665', 'font-size': 10}, `${Math.round(value)}${isGrowth ? '' : '%'}`));
-    }
-    const d = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(2)},${y(p[col]).toFixed(2)}`).join(' ');
-    const baseline = y(isGrowth ? min : 0);
-    svg.append(element('path', {d: `${d} L${x(pts.length-1)},${baseline} L${left},${baseline} Z`, fill: '#236957', opacity: .065}));
-    svg.append(element('path', {d, fill: 'none', stroke: '#236957', 'stroke-width': width < 650 ? 1.5 : 1.8, 'stroke-linejoin': 'round'}));
-    const count = width < 650 ? 3 : 5;
-    for (let i = 0; i < count; i++) {
-      const idx = Math.round(i / (count-1) * (pts.length-1));
-      const label = new Date(`${pts[idx][0]}T00:00:00Z`).toLocaleDateString('en-GB', {month: 'short', year: 'numeric', timeZone: 'UTC'});
-      svg.append(element('text', {x: x(idx), y: height-9, 'text-anchor': i === 0 ? 'start' : i === count-1 ? 'end' : 'middle', fill: '#596665', 'font-size': 10}, label));
-    }
-    coordinates = pts.map((p, i) => ({x: x(i), y: y(p[col]), point: p}));
-    svg.append(element('line', {id: 'hover-line', x1: 0, x2: 0, y1: top, y2: height-bottom, stroke: '#617e6a', 'stroke-dasharray': '3 4', visibility: 'hidden'}));
-    svg.append(element('circle', {id: 'hover-dot', r: 3.2, fill: '#236957', stroke: '#edf0ea', 'stroke-width': 2, visibility: 'hidden'}));
-  }
-  function select(id) {
-    selected = data.strategies.find(s => s.id === id) || data.strategies[0];
-    tabs.forEach(tab => { const active = tab.dataset.strategy === selected.id; tab.setAttribute('aria-selected', String(active)); tab.tabIndex = active ? 0 : -1; });
-    $('performance-panel').setAttribute('aria-labelledby', `tab-${selected.id}`);
-    $('selected-name').textContent = selected.name;
-    $('selected-period').textContent = `${dateLabel(selected.start)} – ${dateLabel(selected.end)}`;
-    $('selected-status').textContent = selected.status;
-    $('stat-cagr').textContent = `${format(selected.cagr)}%`;
-    $('stat-return').textContent = `${format(selected.totalReturn)}%`;
-    $('stat-sharpe').textContent = format(selected.sharpe, 4);
-    $('stat-dd').textContent = `${format(selected.drawdown)}%${selected.id === 'strangle' ? '*' : ''}`;
-    $('stat-trades').textContent = selected.trades;
-    $('selected-caveat').textContent = notes[selected.id];
-    $('selected-caveat').classList.toggle('warning', selected.id !== 'vpt');
-    updateView();
-  }
-  function updateView() {
-    $('plot-title').textContent = `${view === 'equity' ? 'Growth of 100' : 'Drawdown from peak'} · ${selected.id === 'strangle' ? 'expiry-booked, not daily MTM' : 'daily marked-to-market'}`;
-    document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === view)));
-    draw();
-  }
-  document.querySelectorAll('[data-strategy]').forEach(b => b.addEventListener('click', () => select(b.dataset.strategy)));
-  tabs.forEach((tab, index) => tab.addEventListener('keydown', event => {
-    let next;
-    if (event.key === 'ArrowRight') next = (index+1)%tabs.length;
-    if (event.key === 'ArrowLeft') next = (index+tabs.length-1)%tabs.length;
-    if (event.key === 'Home') next = 0;
-    if (event.key === 'End') next = tabs.length-1;
-    if (next !== undefined) { event.preventDefault(); tabs[next].focus(); select(tabs[next].dataset.strategy); }
-  }));
-  document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { view = b.dataset.view; updateView(); }));
-  svg.addEventListener('pointermove', event => {
-    if (!coordinates.length) return;
-    const rect = svg.getBoundingClientRect();
-    const pos = (event.clientX-rect.left)*svg.viewBox.baseVal.width/rect.width;
-    const first = coordinates[0], last = coordinates[coordinates.length-1];
-    const idx = Math.max(0, Math.min(coordinates.length-1, Math.round((pos-first.x)/(last.x-first.x)*(coordinates.length-1))));
-    const p = coordinates[idx];
-    const line = $('hover-line'), dot = $('hover-dot');
-    line.setAttribute('x1', p.x); line.setAttribute('x2', p.x); line.setAttribute('visibility', 'visible');
-    dot.setAttribute('cx', p.x); dot.setAttribute('cy', p.y); dot.setAttribute('visibility', 'visible');
-    tooltip.textContent = `${dateLabel(p.point[0])} · ${format(p.point[view === 'equity' ? 1 : 2])}${view === 'drawdown' ? '%' : ''}`;
-    tooltip.hidden = false;
-    tooltip.style.left = `${Math.max(0, Math.min(rect.width-tooltip.offsetWidth, event.clientX-rect.left+12))}px`;
-    tooltip.style.top = `${Math.max(0, p.y*rect.height/svg.viewBox.baseVal.height-37)}px`;
+  const data = window.WALLSTRAT_DASHBOARD;
+  if (!data) return;
+  const charts = [];
+  const ns = 'http://www.w3.org/2000/svg';
+  const fmt = (v, digits = 2) => Number(v).toLocaleString('en-IN', {
+    minimumFractionDigits: digits, maximumFractionDigits: digits
   });
-  svg.addEventListener('pointerleave', () => { tooltip.hidden = true; $('hover-line')?.setAttribute('visibility', 'hidden'); $('hover-dot')?.setAttribute('visibility', 'hidden'); });
+  const money = v => `${v < 0 ? '−' : ''}₹${fmt(Math.abs(v), 0)}`;
+  const day = value => new Date(value.length === 10 ? `${value}T12:00:00+05:30` : value);
+  const dateLabel = value => day(value).toLocaleDateString('en-GB', {
+    day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata'
+  });
+  function node(tag, attrs = {}, text) {
+    const el = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+    if (text !== undefined) el.textContent = text;
+    return el;
+  }
+  function chart(panel, record, name) {
+    const container = panel.querySelector('.chart');
+    if (!container) return null;
+    const svg = container.querySelector('svg');
+    const tooltip = container.querySelector('.tooltip');
+    let view = 'pnl';
+    let coordinates = [];
+    let cursor = record.points.length - 1;
+    let hoverLine, hoverDot;
+    function value(v) { return view === 'pnl' ? money(v) : `${fmt(v)}%`; }
+    function hide() {
+      tooltip.hidden = true;
+      hoverLine?.setAttribute('visibility', 'hidden');
+      hoverDot?.setAttribute('visibility', 'hidden');
+    }
+    function inspect(index) {
+      if (!coordinates.length) return;
+      cursor = Math.max(0, Math.min(index, coordinates.length - 1));
+      const p = coordinates[cursor];
+      hoverLine.setAttribute('x1', p.x); hoverLine.setAttribute('x2', p.x);
+      hoverLine.setAttribute('visibility', 'visible');
+      hoverDot.setAttribute('cx', p.x); hoverDot.setAttribute('cy', p.y);
+      hoverDot.setAttribute('visibility', 'visible');
+      tooltip.textContent = `${dateLabel(p.point.date)} · ${value(p.point[view])}`;
+      tooltip.hidden = false;
+      tooltip.style.left = `${Math.max(0, Math.min(container.clientWidth - tooltip.offsetWidth, p.x + 12))}px`;
+      tooltip.style.top = `${Math.max(0, p.y - 37)}px`;
+    }
+    function draw() {
+      if (panel.hidden || !container.clientWidth) return;
+      hide();
+      const width = container.clientWidth;
+      const height = width < 650 ? 230 : 290;
+      const left = width < 650 ? 46 : 66, right = 10, top = 20, bottom = 32;
+      const points = record.points;
+      const values = points.map(p => p[view]);
+      let lo = Math.min(0, ...values), hi = Math.max(0, ...values);
+      const padding = (hi - lo || 1) * .08;
+      lo -= padding; hi += padding;
+      const x = i => left + i / Math.max(1, points.length - 1) * (width - left - right);
+      const y = v => top + (hi - v) / (hi - lo) * (height - top - bottom);
+      const color = view === 'drawdown' || values.at(-1) < 0 ? '#a4483d' : '#246451';
+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+      svg.setAttribute('aria-label', `${name}: ${view === 'pnl' ? 'cumulative P&L' : view === 'returnPct' ? 'total return' : 'drawdown'}`);
+      svg.replaceChildren(node('title', {}, svg.getAttribute('aria-label')),
+        node('desc', {}, `${dateLabel(record.start)} to ${dateLabel(record.end)}. ${record.label}. ${record.valuation}.`));
+      for (let i = 0; i < 5; i++) {
+        const v = lo + i / 4 * (hi - lo);
+        const label = view === 'pnl'
+          ? `${v < 0 ? '−' : ''}₹${Math.abs(v) >= 100000 ? `${fmt(Math.abs(v)/100000, 1)}L` : Math.abs(v) >= 1000 ? `${fmt(Math.abs(v)/1000, 0)}k` : fmt(Math.abs(v), 0)}`
+          : `${fmt(v, Math.abs(hi-lo) < 10 ? 1 : 0)}%`;
+        svg.append(node('line', {x1: left, x2: width-right, y1: y(v), y2: y(v), class: 'grid'}),
+          node('text', {x: left-9, y: y(v)+4, 'text-anchor': 'end'}, label));
+      }
+      svg.append(node('line', {x1: left, x2: width-right, y1: y(0), y2: y(0), stroke: '#b8c2b9', 'stroke-width': .65, 'stroke-dasharray': '3 5'}));
+      const path = points.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(2)},${y(p[view]).toFixed(2)}`).join(' ');
+      svg.append(node('path', {d: `${path} L${x(points.length-1)},${y(0)} L${left},${y(0)} Z`, fill: color, opacity: .035}),
+        node('path', {d: path, fill: 'none', stroke: color, 'stroke-width': 1.8, 'stroke-linejoin': 'round'}));
+      const ticks = width < 650 ? 3 : 5;
+      for (let i = 0; i < ticks; i++) {
+        const index = Math.round(i/(ticks-1)*(points.length-1));
+        const label = day(points[index].date).toLocaleDateString('en-GB', {
+          ...(points.length < 80 ? {day: 'numeric'} : {year: 'numeric'}), month: 'short', timeZone: 'Asia/Kolkata'
+        });
+        svg.append(node('text', {x: x(index), y: height-7, 'text-anchor': i === 0 ? 'start' : i === ticks-1 ? 'end' : 'middle'}, label));
+      }
+      hoverLine = node('line', {y1: top, y2: height-bottom, stroke: color, 'stroke-dasharray': '3 4', visibility: 'hidden'});
+      hoverDot = node('circle', {r: 3, fill: color, stroke: '#fafaf8', 'stroke-width': 2, visibility: 'hidden'});
+      svg.append(hoverLine, hoverDot);
+      coordinates = points.map((p, i) => ({x: x(i), y: y(p[view]), point: p}));
+    }
+    panel.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => {
+      view = button.dataset.view;
+      panel.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      panel.querySelector('.chart-title').textContent = view === 'pnl' ? 'Cumulative P&L' : view === 'returnPct' ? 'Cumulative return' : 'Drawdown from peak';
+      draw();
+    }));
+    svg.addEventListener('pointermove', event => {
+      if (!coordinates.length) return;
+      const position = event.clientX - svg.getBoundingClientRect().left;
+      const first = coordinates[0].x, last = coordinates.at(-1).x;
+      inspect(Math.round((position-first)/(last-first)*(coordinates.length-1)));
+    });
+    svg.addEventListener('pointerleave', hide);
+    container.addEventListener('keydown', event => {
+      if (!['ArrowLeft','ArrowRight','Home','End','Escape'].includes(event.key)) return;
+      event.preventDefault();
+      if (event.key === 'Escape') { hide(); return; }
+      inspect(event.key === 'Home' ? 0 : event.key === 'End' ? record.points.length-1 : cursor + (event.key === 'ArrowLeft' ? -1 : 1));
+    });
+    container.addEventListener('blur', hide);
+    return {draw};
+  }
+  for (const strategy of data.strategies) {
+    const section = document.querySelector(`[data-strategy="${strategy.id}"]`);
+    const tabs = [...section.querySelectorAll('[role="tab"]')];
+    const ownCharts = {};
+    for (const mode of ['live','backtest']) {
+      const panel = document.getElementById(`panel-${strategy.id}-${mode}`);
+      ownCharts[mode] = chart(panel, strategy[mode], strategy.name);
+      if (ownCharts[mode]) charts.push(ownCharts[mode]);
+    }
+    function select(mode) {
+      tabs.forEach(tab => {
+        const active = tab.dataset.mode === mode;
+        tab.setAttribute('aria-selected', String(active)); tab.tabIndex = active ? 0 : -1;
+        document.getElementById(`panel-${strategy.id}-${tab.dataset.mode}`).hidden = !active;
+      });
+      ownCharts[mode]?.draw();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(tab.dataset.mode));
+      tab.addEventListener('keydown', event => {
+        const indexByKey = {ArrowLeft: (index+1)%2, ArrowRight: (index+1)%2, Home: 0, End: 1};
+        if (!(event.key in indexByKey)) return;
+        event.preventDefault();
+        const next = tabs[indexByKey[event.key]];
+        next.focus(); select(next.dataset.mode);
+      });
+    });
+    section.querySelectorAll('.expand-positions').forEach(button => {
+      const table = document.getElementById(button.getAttribute('aria-controls'));
+      const count = table.querySelectorAll('tbody tr').length;
+      button.addEventListener('click', () => {
+        const expanded = table.classList.toggle('expanded');
+        button.setAttribute('aria-expanded', String(expanded));
+        button.textContent = expanded ? 'Show fewer positions ↑' : `View all ${count} positions ↓`;
+      });
+    });
+    select(strategy.live.available ? 'live' : 'backtest');
+  }
   let timer;
-  window.addEventListener('resize', () => {clearTimeout(timer);timer=setTimeout(draw,100);});
-  select('vpt');
+  window.addEventListener('resize', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => charts.forEach(c => c.draw()), 80);
+  });
 })();
