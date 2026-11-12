@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T20:49:34+05:30",
+  "generatedAt": "2026-11-12T20:48:37+05:30",
   "riskFreeAnnual": 0.065,
   "strategies": [
     {
@@ -11,17 +11,17 @@
         "available": true,
         "label": "Live",
         "start": "2026-10-07",
-        "end": "2026-11-11",
-        "asOf": "2026-11-11",
+        "end": "2026-11-12",
+        "asOf": "2026-11-12",
         "valuation": "Daily close \u00b7 estimated fees",
         "initialCapital": 500000.0,
         "contributed": 500000.0,
-        "equity": 469059.02,
-        "totalPnl": -30940.98,
-        "totalReturn": -6.188196,
+        "equity": 471990.43,
+        "totalPnl": -28009.57,
+        "totalReturn": -5.601914,
         "cash": 52512.35,
         "realised": -24426.51,
-        "unrealised": -6514.48,
+        "unrealised": -3583.07,
         "drawdown": 9.784666,
         "trades": 7,
         "exitFills": 12,
@@ -33,180 +33,180 @@
             "qty": 28,
             "since": "2026-10-07",
             "entryPrice": 1766.8,
-            "lastPrice": 1736.0,
-            "value": 48608.0,
-            "pnl": -921.76,
-            "returnPct": -1.861
+            "lastPrice": 1725.4,
+            "value": 48311.2,
+            "pnl": -1218.56,
+            "returnPct": -2.4603
           },
           {
             "symbol": "CASTROLIND",
             "qty": 249,
             "since": "2026-10-07",
             "entryPrice": 198.8648,
-            "lastPrice": 191.3,
-            "value": 47633.7,
-            "pnl": -1943.06,
-            "returnPct": -3.9193
+            "lastPrice": 191.05,
+            "value": 47571.45,
+            "pnl": -2005.31,
+            "returnPct": -4.0449
           },
           {
             "symbol": "ZYDUSLIFE",
             "qty": 34,
             "since": "2026-10-07",
             "entryPrice": 1152.9,
-            "lastPrice": 1189.3,
-            "value": 40436.2,
-            "pnl": 1190.56,
-            "returnPct": 3.0336
+            "lastPrice": 1204.5,
+            "value": 40953.0,
+            "pnl": 1707.36,
+            "returnPct": 4.3504
           },
           {
             "symbol": "PVRINOX",
             "qty": 23,
             "since": "2026-11-11",
             "entryPrice": 1595.9,
-            "lastPrice": 1584.0,
-            "value": 36432.0,
-            "pnl": -317.75,
-            "returnPct": -0.8646
+            "lastPrice": 1650.0,
+            "value": 37950.0,
+            "pnl": 1200.25,
+            "returnPct": 3.266
           },
           {
             "symbol": "INDHOTEL",
             "qty": 38,
             "since": "2026-10-28",
             "entryPrice": 804.95,
-            "lastPrice": 867.05,
-            "value": 32947.9,
-            "pnl": 2323.09,
-            "returnPct": 7.5856
+            "lastPrice": 880.9,
+            "value": 33474.2,
+            "pnl": 2849.39,
+            "returnPct": 9.3042
           },
           {
             "symbol": "WELSPUNLIV",
             "qty": 122,
             "since": "2026-10-07",
             "entryPrice": 238.1878,
-            "lastPrice": 254.5,
-            "value": 31049.0,
-            "pnl": 1955.22,
-            "returnPct": 6.7204
+            "lastPrice": 248.11,
+            "value": 30269.42,
+            "pnl": 1175.64,
+            "returnPct": 4.0409
           },
           {
             "symbol": "KAJARIACER",
             "qty": 24,
             "since": "2026-10-07",
             "entryPrice": 1220.6,
-            "lastPrice": 1191.1,
-            "value": 28586.4,
-            "pnl": -743.16,
-            "returnPct": -2.5338
+            "lastPrice": 1195.0,
+            "value": 28680.0,
+            "pnl": -649.56,
+            "returnPct": -2.2147
           },
           {
             "symbol": "ENGINERSIN",
             "qty": 73,
             "since": "2026-10-07",
             "entryPrice": 311.8808,
-            "lastPrice": 313.0,
-            "value": 22849.0,
-            "pnl": 54.38,
-            "returnPct": 0.2386
+            "lastPrice": 308.35,
+            "value": 22509.55,
+            "pnl": -285.07,
+            "returnPct": -1.2506
           },
           {
             "symbol": "RATNAVEER",
             "qty": 50,
             "since": "2026-10-07",
             "entryPrice": 347.9,
-            "lastPrice": 369.1,
-            "value": 18455.0,
-            "pnl": 1039.13,
-            "returnPct": 5.9666
+            "lastPrice": 372.8,
+            "value": 18640.0,
+            "pnl": 1224.13,
+            "returnPct": 7.0288
           },
           {
             "symbol": "LTTS",
             "qty": 4,
             "since": "2026-11-03",
             "entryPrice": 4246.8,
-            "lastPrice": 4220.0,
-            "value": 16880.0,
-            "pnl": -127.58,
-            "returnPct": -0.7501
+            "lastPrice": 4265.0,
+            "value": 17060.0,
+            "pnl": 52.42,
+            "returnPct": 0.3082
           },
           {
             "symbol": "PPLPHARMA",
             "qty": 63,
             "since": "2026-11-05",
             "entryPrice": 240.07,
-            "lastPrice": 245.33,
-            "value": 15455.79,
-            "pnl": 313.23,
-            "returnPct": 2.0685
+            "lastPrice": 245.81,
+            "value": 15486.03,
+            "pnl": 343.47,
+            "returnPct": 2.2682
           },
           {
             "symbol": "AETHER",
             "qty": 9,
             "since": "2026-10-07",
             "entryPrice": 1781.3,
-            "lastPrice": 1637.0,
-            "value": 14733.0,
-            "pnl": -1317.94,
-            "returnPct": -8.211
-          },
-          {
-            "symbol": "MARSONS",
-            "qty": 77,
-            "since": "2026-11-11",
-            "entryPrice": 154.3495,
-            "lastPrice": 152.9,
-            "value": 11773.3,
-            "pnl": -125.87,
-            "returnPct": -1.0578
+            "lastPrice": 1679.0,
+            "value": 15111.0,
+            "pnl": -939.94,
+            "returnPct": -5.856
           },
           {
             "symbol": "ACUTAAS",
             "qty": 3,
             "since": "2026-10-30",
             "entryPrice": 3963.0,
-            "lastPrice": 3910.2,
-            "value": 11730.6,
-            "pnl": -172.67,
-            "returnPct": -1.4506
+            "lastPrice": 3997.6,
+            "value": 11992.8,
+            "pnl": 89.53,
+            "returnPct": 0.7521
           },
           {
             "symbol": "TDPOWERSYS",
             "qty": 19,
             "since": "2026-10-07",
             "entryPrice": 813.85,
-            "lastPrice": 614.8,
-            "value": 11681.2,
-            "pnl": -3800.51,
-            "returnPct": -24.5484
+            "lastPrice": 626.6,
+            "value": 11905.4,
+            "pnl": -3576.31,
+            "returnPct": -23.1002
+          },
+          {
+            "symbol": "MARSONS",
+            "qty": 77,
+            "since": "2026-11-11",
+            "entryPrice": 154.3495,
+            "lastPrice": 153.99,
+            "value": 11857.23,
+            "pnl": -41.94,
+            "returnPct": -0.3525
           },
           {
             "symbol": "MOTISONS",
             "qty": 794,
             "since": "2026-10-07",
             "entryPrice": 17.74,
-            "lastPrice": 14.07,
-            "value": 11171.58,
-            "pnl": -2930.88,
-            "returnPct": -20.7828
+            "lastPrice": 14.1,
+            "value": 11195.4,
+            "pnl": -2907.06,
+            "returnPct": -20.6139
           },
           {
             "symbol": "GRAPHITE",
             "qty": 12,
             "since": "2026-10-07",
             "entryPrice": 844.45,
-            "lastPrice": 774.5,
-            "value": 9294.0,
-            "pnl": -851.56,
-            "returnPct": -8.3934
+            "lastPrice": 799.7,
+            "value": 9596.4,
+            "pnl": -549.16,
+            "returnPct": -5.4128
           },
           {
             "symbol": "UNOMINDA",
             "qty": 5,
             "since": "2026-11-11",
             "entryPrice": 1391.8,
-            "lastPrice": 1366.0,
-            "value": 6830.0,
-            "pnl": -137.35,
-            "returnPct": -1.9713
+            "lastPrice": 1383.0,
+            "value": 6915.0,
+            "pnl": -52.35,
+            "returnPct": -0.7514
           }
         ],
         "points": [
@@ -387,10 +387,17 @@
           },
           {
             "date": "2026-11-11T15:30:00+05:30",
-            "equity": 469059.02,
-            "pnl": -30940.98,
-            "returnPct": -6.188196,
-            "drawdown": -6.188196
+            "equity": 469670.54,
+            "pnl": -30329.46,
+            "returnPct": -6.065892,
+            "drawdown": -6.065892
+          },
+          {
+            "date": "2026-11-12T15:30:00+05:30",
+            "equity": 471990.43,
+            "pnl": -28009.57,
+            "returnPct": -5.601914,
+            "drawdown": -5.601914
           }
         ],
         "note": "Net of estimated fees. Chart reconstructed from confirmed fills and daily closes. Sharpe requires 63 sessions; CAGR requires 252 sessions."
